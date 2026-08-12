@@ -785,6 +785,143 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       LICENSED_FAQ,
     ],
   },
+
+  'garbage-disposal': {
+    quickAnswer:
+      'We repair jammed and failed garbage disposals and replace units that are past saving, across ' +
+      'the whole service area including Chattanooga. Disposal work needs no permit, so we do it ' +
+      'everywhere we drive.',
+    lede:
+      'A garbage disposal is a small appliance that fails in loud, inconvenient ways. Most of the ' +
+      'time it is a jam or a reset, sometimes it is a leak at the connections, and eventually every ' +
+      'unit reaches the end. All of it is permit-free work we can handle anywhere we serve.',
+    whatWeDo: [
+      'Clearing jams and freeing seized units',
+      'Diagnosing units that seem dead but only tripped a reset',
+      'Replacing failed or leaking disposals',
+      'Clean drain and dishwasher connections that do not leak under the sink',
+    ],
+    intro: [
+      'The good news with disposals is that a dead-sounding unit is often not dead. A jam or a ' +
+        'tripped reset mimics a failed motor, and clearing it is quick. When a unit truly is done, ' +
+        'usually from a seized motor or a leaking body, a replacement is straightforward and the ' +
+        'connections underneath are where the care actually matters.',
+    ],
+    signs: [
+      'A hum with no spin, which usually means a jam rather than a dead motor',
+      'Nothing at all when you flip the switch (often a tripped reset)',
+      'Water leaking from under the unit or at the drain connection',
+      'Persistent bad smell that cleaning does not fix',
+      'Loud rattling that suggests something is loose inside',
+    ],
+    sections: [
+      {
+        heading: 'Jam, reset, or genuinely finished',
+        paragraphs: [
+          'A disposal that only hums is almost always jammed, not burned out, and freeing it brings ' +
+            'it back. A unit that is completely silent has often just tripped its reset button. We ' +
+            'check the simple things first, because replacing a disposal that only needed a reset is ' +
+            'the kind of unnecessary sale we do not make.',
+          'When a unit is genuinely done — a seized motor or a leaking housing — replacement is quick, ' +
+            'and the part that matters is doing the drain and dishwasher connections cleanly so the new ' +
+            'one does not leak under the sink.',
+        ],
+      },
+    ],
+    process: [
+      { name: 'Check the simple faults', text: 'Jam and reset first, because those masquerade as a dead unit and cost nothing to rule out.' },
+      { name: 'Find any leak', text: 'Confirm whether water is coming from the unit body or the connections.' },
+      { name: 'Repair or replace honestly', text: 'Free a jam and it lives; replace it only when it is truly finished.' },
+      { name: 'Seal the connections', text: 'Drain and dishwasher lines connected cleanly so the new unit does not leak.' },
+    ],
+    related: [
+      { label: 'Drain cleaning', href: '/services/drain-cleaning' },
+      { label: 'Fixture repair', href: '/services/fixture-repair' },
+      { label: 'Leak detection', href: '/services/leak-detection' },
+    ],
+    faqs: [
+      { q: 'My disposal just hums. Is it dead?', a: 'Usually not. A hum with no spin is almost always a jam, and freeing it brings the unit back. We check that before ever talking about replacement.' },
+      { q: 'Do you cover disposal work in Chattanooga?', a: 'Yes. Disposal repair and replacement need no permit, so we do them inside Chattanooga city limits the same as everywhere.' },
+      { q: 'Is it worth repairing or should I replace it?', a: 'A jam or a reset is a repair, full stop. A seized motor or a leaking body is a replacement, and we will tell you plainly which one you have.' },
+      { q: 'Can you fix a disposal that is leaking?', a: 'Yes. We find whether the leak is the unit body or the connections. A connection leak is often a simple fix; a leaking body means the unit is done.' },
+      WARRANTY_FAQ,
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'camera-inspection': {
+    quickAnswer:
+      'We run a sewer camera down the line so you can see the actual problem before anyone digs or ' +
+      'quotes a repair. Camera inspection needs no permit, so we do it across the whole service area ' +
+      'including Chattanooga.',
+    lede:
+      'A camera turns a guess into a picture. Instead of cabling the same recurring clog every few ' +
+      'months or breaking concrete to find out what is wrong, we put a camera down the line and show ' +
+      'you exactly what is there. It is permit-free, and it is the difference between deciding blind ' +
+      'and deciding with the facts.',
+    whatWeDo: [
+      'Sewer camera runs to locate the real cause of a backup',
+      'Pre-purchase sewer line inspections before you close',
+      'Verifying a line’s condition before any dig or replacement',
+      'Showing you the footage so a repair is something you can confirm',
+    ],
+    intro: [
+      'Most of the value in a camera inspection is that it prevents the wrong repair. A line that ' +
+        'keeps backing up in the same spot has a cause, and the camera tells you whether that cause ' +
+        'is roots, a belly, grease, or a broken section — which are four very different fixes.',
+      'It is also the honest way to sell a big repair. If we are going to tell you a sewer line needs ' +
+        'work, you should get to see the same thing we are seeing.',
+    ],
+    signs: [
+      'A drain that keeps clogging in the same place no matter how often it is cleared',
+      'Multiple fixtures backing up at once, pointing to the main line',
+      'You are buying a home and want to know the sewer line’s real condition',
+      'A quote to dig or replace a line, and you want to confirm it first',
+      'Sewage smell or wet spots in the yard over the sewer run',
+    ],
+    sections: [
+      {
+        heading: 'Seeing the cause instead of guessing at it',
+        paragraphs: [
+          'Roots, a belly where the pipe has settled and holds water, grease buildup, and a cracked ' +
+            'or collapsed section all cause backups, and they all need different answers. Cabling ' +
+            'clears roots for a while; it does nothing for a belly or a break. The camera tells us ' +
+            'which one you actually have so the money goes to the right fix.',
+          'On older lines common along the corridor and in Chattanooga’s older neighborhoods, that ' +
+            'distinction matters a lot, because clay and cast iron fail in ways a cable cannot solve.',
+        ],
+      },
+      {
+        heading: 'Before you buy, and before you dig',
+        paragraphs: [
+          'A camera inspection is worth doing at two moments in particular: before buying a home, so ' +
+            'the sewer line is not an expensive surprise after closing, and before any dig or ' +
+            'replacement, so you can confirm the work is actually needed. Either way, you see the ' +
+            'footage, not just our word for it.',
+        ],
+      },
+    ],
+    process: [
+      { name: 'Access the line', text: 'We enter through the right cleanout so the camera reaches the section that matters.' },
+      { name: 'Run and record', text: 'The camera travels the line while we watch for roots, bellies, grease, and breaks.' },
+      { name: 'Show you the footage', text: 'You see exactly what we see, so a repair recommendation is something you can verify.' },
+      { name: 'Match the fix to the cause', text: 'Cleaning for a clog, repair for a break — decided from the picture, not a guess.' },
+    ],
+    related: [
+      { label: 'Drain cleaning', href: '/services/drain-cleaning' },
+      { label: 'Sewer line repair', href: '/services/sewer-line-repair' },
+      { label: 'Emergency & backups', href: '/services/emergency-plumbing' },
+    ],
+    faqs: [
+      { q: 'When is a camera inspection worth it?', a: 'When a drain keeps clogging in the same spot, when you are buying a home, or before any dig or line replacement so you can confirm the work is needed.' },
+      { q: 'Do you cover camera inspections in Chattanooga?', a: 'Yes. It needs no permit, so it is covered inside Chattanooga city limits along with the rest of the corridor.' },
+      { q: 'Will I get to see the footage?', a: 'Yes. The whole point is that you see what we see, so any repair recommendation is something you can verify rather than take on faith.' },
+      { q: 'Can a camera tell me if I need a repair or just a cleaning?', a: 'That is exactly what it is for. Roots and grease are a cleaning; a belly or a break is a repair. The camera shows which one you have.' },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
 }
 
 /**
