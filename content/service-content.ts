@@ -190,6 +190,63 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       'When water is running where it should not be, the first job is to make it safe, then fix it ' +
       'right. Emergency and repair work carries no permit requirement, so we can respond across the ' +
       'entire service area, Chattanooga included.',
+    intro: [
+      'A plumbing emergency is really two problems at once: the damage happening right now, and the ' +
+        'repair underneath it. The order matters. We stop the water first so the damage stops ' +
+        'growing, then we deal with the fix once the situation is stable and you know what it costs.',
+      'Because emergency and repair work needs no permit, we can move fast anywhere we serve without ' +
+        'a jurisdiction question getting in the way. That is the whole reason we can promise the same ' +
+        'urgency in Chattanooga that we bring to Charleston.',
+    ],
+    signs: [
+      'Water actively leaking and you cannot find or reach the shutoff',
+      'No water in the house at all, or a sudden loss of pressure everywhere',
+      'A burst or frozen pipe, especially in a wall, crawlspace, or garage',
+      'Sewage backing up into a tub, floor drain, or the lowest fixtures',
+      'A water heater dumping water or leaking from the tank body',
+      'A steady drip inside a wall or ceiling that is spreading',
+    ],
+    sections: [
+      {
+        heading: 'The first thing to do is shut the water off',
+        paragraphs: [
+          'While we are on the way, the single most useful thing you can do is close the main shutoff. ' +
+            'In most homes it is where the water line enters the house — often in a crawlspace, ' +
+            'basement, garage, or an outside box near the meter. Turning that valve clockwise until it ' +
+            'stops isolates the whole house and stops the damage clock.',
+          'If you cannot find it or it will not turn, call and we will talk you to it while we drive. ' +
+            'For a single fixture, the smaller shutoff under the sink or behind the toilet may be ' +
+            'enough. This is exactly why we flag old shutoff valves that no longer close on ordinary ' +
+            'service calls — the middle of an emergency is the worst time to discover one is seized.',
+        ],
+      },
+      {
+        heading: 'Same-visit repairs, and the ones that need a permit',
+        paragraphs: [
+          'Most emergencies are resolved the same visit: a burst section replaced, a failed valve ' +
+            'swapped, a leak found and repaired, a water heater repaired. None of that needs a permit, ' +
+            'so it happens fast and everywhere we serve.',
+          'The exception is when the emergency reveals a job that is genuinely permitted work — a full ' +
+            'water heater replacement, a repipe, a sewer line. In that case we make the situation safe ' +
+            'now and schedule the permitted repair properly, in the towns where we can pull a permit. ' +
+            'Inside Chattanooga city limits that permitted portion goes to a licensed partner. We tell ' +
+            'you which is which instead of doing permitted work off the books.',
+        ],
+      },
+    ],
+    process: [
+      { name: 'Make it safe', text: 'Stop the water at the shutoff and get the active damage under control before anything else.' },
+      { name: 'Find the real source', text: 'Track the leak or failure to its actual origin, including hidden leaks behind walls, so the fix is targeted.' },
+      { name: 'Stabilize', text: 'Get you back to usable water where we can, even if the full repair is a follow-up.' },
+      { name: 'Quote before we repair', text: 'You get a price to approve before the repair work starts, even at 9 p.m.' },
+      { name: 'Fix it and flag the cause', text: 'Repair it to code, and tell you honestly if it points to a larger job worth planning.' },
+    ],
+    related: [
+      { label: 'Leak detection', href: '/services/leak-detection' },
+      { label: 'Drain cleaning & backups', href: '/services/drain-cleaning' },
+      { label: 'Water heater repair', href: '/services/water-heater-repair' },
+      { label: 'Water heater replacement', href: '/services/water-heater-replacement' },
+    ],
     whatWeDo: [
       'Burst and frozen-pipe leaks',
       'Finding and closing the shutoff when you cannot',
@@ -235,6 +292,59 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     lede:
       'A leak you cannot see still shows up on the water bill and in the framing. The value is ' +
       'finding it precisely, so the repair is one clean cut instead of a wall full of guesses.',
+    intro: [
+      'The expensive part of a hidden leak is rarely the repair. It is the water quietly running ' +
+        'for weeks into a wall, a slab, or the ground, rotting framing and driving up the bill before ' +
+        'anyone sees a drop. Finding it accurately is what turns a demolition project back into a ' +
+        'small, targeted fix.',
+      'We locate first and open second. The goal is one access point in the right spot, not a series ' +
+        'of exploratory holes hunting for the source.',
+    ],
+    signs: [
+      'A water bill that jumped with no change in how much you use',
+      'The sound of running water when every fixture is off',
+      'A warm spot on the floor, which often means a hot-water slab leak',
+      'A damp, musty smell, or mold and staining on a wall or ceiling',
+      'Low water pressure that came on gradually',
+      'The water meter still creeping when nothing is running',
+    ],
+    sections: [
+      {
+        heading: 'How we find a leak without opening the whole wall',
+        paragraphs: [
+          'We narrow a leak down before we open anything, using a combination of acoustic listening, ' +
+            'line pressure testing, and following the evidence the house gives us. Pressure testing ' +
+            'isolates the system and confirms whether you are actually losing water and roughly where. ' +
+            'Acoustic tools help pinpoint the spot behind a finished surface.',
+          'The point of all of it is precision. A leak located to a square foot means we cut once, fix ' +
+            'the line, and patch a small area, instead of chasing a stain across a whole wall.',
+        ],
+      },
+      {
+        heading: 'Slab leaks and why they matter',
+        paragraphs: [
+          'A slab leak is a leak in a water line running under the concrete foundation. They are easy ' +
+            'to ignore because the water often has nowhere obvious to go, but a hot-water slab leak can ' +
+            'warm a section of floor, spike the bill, and undermine the slab over time.',
+          'We locate slab leaks from the surface so the repair is planned rather than a guess at where ' +
+            'to break concrete. If the find turns out to be well-system or septic-system work rather ' +
+            'than house plumbing, we say so and refer it to the right licensed contractor.',
+        ],
+      },
+    ],
+    process: [
+      { name: 'Confirm there is a leak', text: 'Pressure test the system so we are certain you are losing water before we chase where.' },
+      { name: 'Narrow the location', text: 'Acoustic and thermal clues plus the evidence in the house pinpoint the spot.' },
+      { name: 'Access precisely', text: 'One small opening in the right place instead of exploratory demolition.' },
+      { name: 'Repair or refer', text: 'Fix it when it is house plumbing; refer it honestly if it is a well or septic system.' },
+      { name: 'Confirm it is dry', text: 'Re-test to make sure the loss is gone, not just hidden again.' },
+    ],
+    related: [
+      { label: 'Emergency & burst pipes', href: '/services/emergency-plumbing' },
+      { label: 'Fixture repair', href: '/services/fixture-repair' },
+      { label: 'Whole-house repiping', href: '/services/repiping' },
+      { label: 'Drain cleaning', href: '/services/drain-cleaning' },
+    ],
     whatWeDo: [
       'Locating leaks in walls, ceilings, and under concrete slabs',
       'Tracking down the cause of a water bill that jumped for no reason',
@@ -281,6 +391,61 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       'Most fixture work is a same-visit job. Swapping a failed faucet, toilet, or valve for a new ' +
       'one in the same place carries no permit, which is why we can do it everywhere we drive. The ' +
       'line to watch is relocation — moving a fixture is a different, permitted job.',
+    intro: [
+      'Fixtures are the plumbing you actually touch every day, so when one fails it is both an ' +
+        'annoyance and, quietly, a cost. A dripping faucet or a running toilet wastes more water than ' +
+        'people expect, and a fixture installed poorly leaks in places you do not see until there is ' +
+        'a stain on the ceiling below.',
+      'We install fixtures we supply or ones you have already bought, and either way we do the parts ' +
+        'that matter but never show — the shutoff, the supply line, the seal — properly, so the new ' +
+        'fixture is not the source of the next call.',
+    ],
+    signs: [
+      'A faucet that drips no matter how hard you turn it off',
+      'A toilet that runs, refills on its own, or rocks when you sit',
+      'Low flow from a single faucet or showerhead',
+      'A shutoff valve under a sink that no longer closes fully',
+      'A corroded or weeping supply line behind a fixture',
+      'A fixture you want moved, not just replaced',
+    ],
+    sections: [
+      {
+        heading: 'Like-for-like versus relocation: where the permit line falls',
+        paragraphs: [
+          'Replacing a fixture in the same spot — a new faucet where the old one was, a new toilet on ' +
+            'the same flange — is permit-free work. That is why we can do it across the whole service ' +
+            'area, Chattanooga included, with no jurisdiction question.',
+          'Moving a fixture to a new location is a different job. It changes the supply and drain runs, ' +
+            'which means it needs a permit, and we handle those relocations in the corridor towns where ' +
+            'we are cleared to pull one. Inside Chattanooga a relocation goes to a licensed partner. We ' +
+            'will tell you up front which side of that line your project is on.',
+        ],
+      },
+      {
+        heading: 'Old shutoffs and supply lines are worth doing now',
+        paragraphs: [
+          'The small valve under a sink or behind a toilet is the thing that lets you stop water at ' +
+            'that fixture in a hurry. On older homes those valves are often seized, and the braided or ' +
+            'plastic supply lines feeding them have a real service life. Neither is expensive to ' +
+            'replace on a planned visit.',
+          'Both become expensive on an unplanned one. A supply line that lets go while you are out is a ' +
+            'flooded floor; a shutoff that will not close turns a five-minute fix into an emergency. ' +
+            'When we are already under a sink, replacing a tired valve or line is cheap insurance.',
+        ],
+      },
+    ],
+    process: [
+      { name: 'Confirm repair or replace', text: 'Some fixtures are a quick internal repair; some are past it. We tell you which, honestly.' },
+      { name: 'Handle the hidden parts', text: 'Shutoff, supply line, and seal done right, since that is where the next leak starts.' },
+      { name: 'Set it true', text: 'Fixtures mounted level and sealed so they do not rock, drip, or weep.' },
+      { name: 'Test under real use', text: 'Run it, fill it, and check for leaks before we call it done.' },
+    ],
+    related: [
+      { label: 'Leak detection', href: '/services/leak-detection' },
+      { label: 'Garbage disposal', href: '/services/garbage-disposal' },
+      { label: 'Emergency plumbing', href: '/services/emergency-plumbing' },
+      { label: 'Water heater repair', href: '/services/water-heater-repair' },
+    ],
     whatWeDo: [
       'Faucet, toilet, sink, and tub repair and replacement',
       'Shutoff valve and supply line replacement',
@@ -327,6 +492,61 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       'Not every water heater problem is a replacement. Many are a thermocouple, an element, or a ' +
       'valve, and a repair carries no permit, so we can do it everywhere we serve. When a tank is ' +
       'genuinely done, we will tell you rather than sell you a repair that will not hold.',
+    intro: [
+      'A water heater rarely fails politely. It goes out on the coldest morning, or it starts leaking ' +
+        'the day before company arrives. The good news is that a lot of what looks like a dead heater ' +
+        'is a single failed part, and parts are a permit-free repair we can do anywhere we serve.',
+      'The judgment call that matters is repair versus replace, and it is one people get sold on ' +
+        'wrong all the time. We give you the honest version: a young tank with a bad part is worth ' +
+        'repairing, and a tank leaking from its body is not.',
+    ],
+    signs: [
+      'No hot water at all, or it runs out far faster than it used to',
+      'A pilot light that will not stay lit on a gas unit',
+      'Popping, rumbling, or crackling from the tank (usually sediment)',
+      'Rusty or discolored hot water',
+      'Water pooling around the base of the heater',
+      'A recovery time that keeps getting longer between showers',
+    ],
+    sections: [
+      {
+        heading: 'Gas versus electric: what actually fails',
+        paragraphs: [
+          'On a gas water heater, the usual suspects are the thermocouple or the gas control valve — ' +
+            'the parts that keep the pilot lit and the burner firing. A pilot that will not stay lit is ' +
+            'one of the most common calls we get, and it is usually an affordable repair, not a new ' +
+            'unit.',
+          'On an electric water heater, it is typically a heating element or a thermostat. A single ' +
+            'failed element is why a lot of people suddenly get lukewarm water or run out fast. Both ' +
+            'are common, both are repairs, and neither needs a permit.',
+        ],
+      },
+      {
+        heading: 'Repair or replace: how we decide with you',
+        paragraphs: [
+          'Age and failure mode decide it. Under roughly ten years with a bad part, a repair is ' +
+            'usually the right money and we will do it. A tank leaking from the body itself is failed ' +
+            'and no repair fixes that — that one is a replacement, and we will say so plainly rather ' +
+            'than patch it to get through the week.',
+          'Sediment plays into it too. In the hard water common across southeast Tennessee, minerals ' +
+            'collect in the bottom of the tank, which is what causes the rumbling and shortens the ' +
+            'unit’s life. It is worth knowing whether treatment makes sense so the next heater ' +
+            'lasts longer than this one did.',
+        ],
+      },
+    ],
+    process: [
+      { name: 'Diagnose the real fault', text: 'Pin down whether it is a part, sediment, or a failed tank before quoting anything.' },
+      { name: 'Repair what is worth repairing', text: 'Thermocouples, valves, elements, and thermostats are permit-free fixes we do on the spot.' },
+      { name: 'Be straight about replacement', text: 'If the tank is done, we say so and lay out the replacement honestly rather than a repair that will not hold.' },
+      { name: 'Flag the cause', text: 'If hard water is eating your heaters, we tell you, because a fourth failed tank is not bad luck.' },
+    ],
+    related: [
+      { label: 'Water heater replacement', href: '/services/water-heater-replacement' },
+      { label: 'Tankless installation', href: '/services/tankless-water-heater-installation' },
+      { label: 'Whole-house filtration', href: '/services/whole-house-water-filtration' },
+      { label: 'Emergency plumbing', href: '/services/emergency-plumbing' },
+    ],
     whatWeDo: [
       'No-hot-water and not-enough-hot-water diagnostics',
       'Pilot, thermocouple, and gas-valve repairs',
@@ -374,6 +594,59 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       'A water heater replacement is a permitted job, and that permit is not a formality — it is ' +
       'the record that the gas, venting, and connections were done to code. We pull it where we are ' +
       'cleared to, size the tank to how the house actually uses hot water, and take the old one with us.',
+    intro: [
+      'A replacement is the job people most often get sold wrong, because the easy version is to pull ' +
+        'the old tank and drop in whatever is on the truck. Done that way it usually works, and it ' +
+        'usually costs you either capacity you needed or money you did not.',
+      'We treat it as a real install: the right size for how your household actually uses hot water, ' +
+        'the gas and venting connected to code, the expansion tank and safety pieces the code calls ' +
+        'for, the old unit hauled off, and a permit pulled where we are cleared to pull one.',
+    ],
+    signs: [
+      'The tank is leaking from its body, not a fitting — this one is not repairable',
+      'The unit is past about ten to twelve years old',
+      'Persistent rusty water even after the lines run clear',
+      'You are on the second or third repair in a short span',
+      'It can no longer keep up with the household’s hot-water demand',
+      'Heavy rumbling from years of sediment that flushing no longer fixes',
+    ],
+    sections: [
+      {
+        heading: 'Sizing it to the house, not the box it came in',
+        paragraphs: [
+          'The right size is set by how many people draw hot water at the same time, not by square ' +
+            'footage or by matching whatever number was on the old tank. An undersized unit leaves you ' +
+            'cold at the end of a morning; an oversized one costs more to buy and to keep hot.',
+          'We size it to real use, and we will tell you honestly if your existing tank was the wrong ' +
+            'size all along. Getting this right is most of the value of doing a replacement properly.',
+        ],
+      },
+      {
+        heading: 'The permit, and why Chattanooga is different',
+        paragraphs: [
+          'A replacement changes gas, water, and venting connections, so it is permitted work, and the ' +
+            'permit is the record it was inspected and done to code. We pull it in the Bradley–McMinn ' +
+            'corridor towns as we confirm each jurisdiction.',
+          'A Tennessee Limited Licensed Plumber is not accepted to pull permits inside Chattanooga city ' +
+            'limits, so a replacement there goes to a licensed partner. We will still take the call, ' +
+            'make the introduction, and handle the permit-free repairs and drain work in the city ' +
+            'ourselves. What we will not do is quietly do permitted work without a permit.',
+        ],
+      },
+    ],
+    process: [
+      { name: 'Size it to your household', text: 'Match the tank to real simultaneous demand, not the number on the old one.' },
+      { name: 'Pull the permit', text: 'Where we are cleared to, so the work is on the record and inspected. Chattanooga goes to a partner.' },
+      { name: 'Install to code', text: 'Gas, water, and venting done right, plus the expansion tank and safety pieces the code requires.' },
+      { name: 'Haul the old one off', text: 'The old tank leaves with us — disposal is part of the job.' },
+      { name: 'Talk about longevity', text: 'If hard water shortened the last one, we cover what would make this one last.' },
+    ],
+    related: [
+      { label: 'Water heater repair', href: '/services/water-heater-repair' },
+      { label: 'Tankless installation', href: '/services/tankless-water-heater-installation' },
+      { label: 'Whole-house filtration', href: '/services/whole-house-water-filtration' },
+      { label: 'Gas line services', href: '/services/gas-line-services' },
+    ],
     whatWeDo: [
       'Tank replacement sized to the household, not just swapped like-for-like',
       'Correct gas, water, and venting connections to code',
@@ -420,6 +693,62 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       'Going tankless is not just a swap — it usually means new gas sizing and new venting, which is ' +
       'exactly why it is permitted work. Done right it gives you endless hot water and floor space ' +
       'back. Done as a quick swap it underperforms, so we do the gas and venting properly or not at all.',
+    intro: [
+      'Tankless is genuinely great for the right house and genuinely oversold for the wrong one. It ' +
+        'heats water on demand instead of keeping a tank hot around the clock, so you get endless hot ' +
+        'water and reclaim the floor space the old tank used. That is real, when the install is done ' +
+        'right.',
+      'The catch is that the install is the whole game. A tankless unit pulls far more gas at once ' +
+        'than a tank does, and it vents differently, so a proper conversion usually means new gas ' +
+        'sizing and new venting. Skip that and you get an expensive unit that runs lukewarm under ' +
+        'load. We would rather talk you out of it than install one that disappoints.',
+    ],
+    signs: [
+      'You keep running out of hot water as the household has grown',
+      'You want the floor space the old tank takes up',
+      'Your tank is due for replacement anyway and you are weighing options',
+      'High hot-water usage where on-demand heating pays off',
+      'You are tired of paying to keep a tank hot when no one is using it',
+      'Hard water keeps shortening the life of your tank heaters',
+    ],
+    sections: [
+      {
+        heading: 'Why tankless costs more to install than a tank',
+        paragraphs: [
+          'A tankless unit fires hard to heat water instantly, which means it needs a gas line sized ' +
+            'to feed that demand and venting rated for it. On a lot of homes the existing gas line and ' +
+            'flue were sized for a tank and are not enough. Upgrading them is most of the cost ' +
+            'difference, and it is not optional if you want the unit to perform.',
+          'This is exactly why it is permitted work, and why a quick swap that ignores the gas and ' +
+            'venting is the classic way to end up unhappy with tankless. We do the full conversion or ' +
+            'we tell you it is not worth it for your setup.',
+        ],
+      },
+      {
+        heading: 'Hard water and keeping a tankless unit alive',
+        paragraphs: [
+          'Tankless units are more sensitive to hard water than tanks are, because scale builds up ' +
+            'inside the heat exchanger, which is the expensive part. In the hard water common across ' +
+            'southeast Tennessee, that matters.',
+          'That is why we talk through water treatment when it fits a tankless install. Our water ' +
+            'quality work is how the scale problem gets handled properly, and it is the difference ' +
+            'between a tankless unit that lasts and one that needs service far too soon.',
+        ],
+      },
+    ],
+    process: [
+      { name: 'Check if it fits your house', text: 'Honest read on gas, venting, and hot-water habits before anyone commits to tankless.' },
+      { name: 'Size to peak flow', text: 'Sized by how many fixtures run hot at once and the incoming water temperature, not house size.' },
+      { name: 'Upgrade gas and venting', text: 'The larger gas line and correct venting the unit actually needs, permit pulled where we can.' },
+      { name: 'Install and commission', text: 'Set it, test it under load, and confirm it holds temperature, not just lights up.' },
+      { name: 'Set up for longevity', text: 'Cover hard-water protection so the heat exchanger is not the first thing to go.' },
+    ],
+    related: [
+      { label: 'Water heater replacement', href: '/services/water-heater-replacement' },
+      { label: 'Water heater repair', href: '/services/water-heater-repair' },
+      { label: 'Whole-house filtration', href: '/services/whole-house-water-filtration' },
+      { label: 'Gas line services', href: '/services/gas-line-services' },
+    ],
     whatWeDo: [
       'Tank-to-tankless conversions, gas and venting included',
       'Gas line sizing to feed the higher demand a tankless unit needs',

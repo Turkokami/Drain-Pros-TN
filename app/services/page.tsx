@@ -1,15 +1,16 @@
 /**
- * SERVICES HUB
+ * SERVICES HUB — redesigned.
  *
  * Groups the registry by pillar in market-priority order: core (the permit-free
- * revenue engine that runs everywhere) first, then water heating, water quality,
- * and well/septic property work. Permit status is shown as spec data, not hidden.
+ * revenue engine) first, then water heating, water quality, and well/septic
+ * property work. Permit status shows as spec data, never hidden.
  */
 
-import type { Metadata } from 'next'
 import { servicesByPillar, type Pillar } from '@/config/services'
 import { CredentialStrip } from '@/components/ScopeStrip'
-import { PrimaryCTA } from '@/components/CTA'
+import { PrimaryCTA, CTABand } from '@/components/CTA'
+import { Section, SectionHeading, Eyebrow, FeatureCard } from '@/components/ui'
+import { buildMetadata } from '@/lib/seo'
 import {
   buildGraph,
   websiteNode,
@@ -24,19 +25,19 @@ const PILLARS: Array<{ key: Pillar; title: string; blurb: string }> = [
     key: 'core',
     title: 'Core plumbing — drains, emergencies, repairs',
     blurb:
-      'Permit-free work that runs at full strength in every town we serve, Chattanooga included. This is the revenue engine.',
+      'Permit-free work that runs at full strength in every town we serve, Chattanooga included. This is the revenue engine and what most people call about first.',
   },
   {
     key: 'water-heating',
     title: 'Water heaters & tankless',
     blurb:
-      'Repair everywhere; replacement and tankless are permitted work, handled in the corridor towns where we can pull a permit.',
+      'Repair everywhere, since repairs need no permit. Replacement and tankless are permitted work, handled in the corridor towns where we can pull a permit.',
   },
   {
     key: 'water-quality',
     title: 'Water quality & filtration',
     blurb:
-      'Treating hard water, iron, sulfur, and sediment at the main line — including on private-well properties, house side only.',
+      'Treating hard water, iron, sulfur, and sediment at the main line — including on private-well properties, always house side only.',
   },
   {
     key: 'well-septic-property',
@@ -50,11 +51,17 @@ const DESCRIPTION =
   'Drain cleaning, emergency repair, leak detection, water heaters, tankless, and water quality ' +
   'across Charleston, Cleveland, Athens, the US-11 corridor, and greater Chattanooga. TN license #5045.'
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: 'Plumbing Services — Charleston & the Bradley–McMinn Corridor',
   description: DESCRIPTION,
-  alternates: { canonical: '/services' },
-}
+  path: '/services',
+  keywords: [
+    'plumbing services Cleveland TN',
+    'drain cleaning Charleston TN',
+    'water heater Athens TN',
+    'emergency plumber Bradley County',
+  ],
+})
 
 export default function ServicesHub() {
   const path = '/services'
@@ -73,52 +80,49 @@ export default function ServicesHub() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />
 
-      <div className="mx-auto max-w-6xl px-5 py-12">
-        <p className="font-mono text-spec uppercase text-steel">What we do · TN LLP #5045</p>
-        <h1 className="mt-2 text-display-xl">Plumbing services</h1>
-        <p className="mt-6 max-w-prose border-l-2 border-copper pl-4 text-lg text-ink">
-          {DESCRIPTION}
-        </p>
+      {/* HERO */}
+      <section className="bg-pine bg-blueprint bg-grid text-paper">
+        <div className="container-x py-16 md:py-24">
+          <div className="max-w-4xl reveal">
+            <Eyebrow className="text-mist">What we do · TN LLP #5045</Eyebrow>
+            <h1 className="mt-4 text-display-xl">Plumbing that stays inside the license, and says so.</h1>
+            <p className="mt-6 max-w-prose text-lead text-paper/85 speakable">{DESCRIPTION}</p>
+            <div className="mt-8">
+              <PrimaryCTA label="Book a plumber" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <div className="mt-10 grid gap-10 md:grid-cols-[1.6fr_1fr]">
-          <div className="space-y-12">
+      <Section tone="paper">
+        <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr] lg:items-start">
+          <div className="space-y-14">
             {PILLARS.map((pillar) => {
               const services = servicesByPillar(pillar.key)
               if (services.length === 0) return null
               return (
                 <section key={pillar.key}>
-                  <h2 className="text-display-lg">{pillar.title}</h2>
-                  <p className="mt-2 max-w-prose text-ink/80">{pillar.blurb}</p>
-                  <ul className="mt-5 divide-y divide-ink/10 border-y border-ink/10">
+                  <SectionHeading eyebrow={`${services.length} services`} title={pillar.title} intro={pillar.blurb} />
+                  <div className="mt-8 grid gap-5 sm:grid-cols-2">
                     {services.map((s) => (
-                      <li key={s.slug}>
-                        <a
-                          href={`/services/${s.slug}`}
-                          className="group flex items-baseline justify-between gap-4 py-4"
-                        >
-                          <span className="min-w-0">
-                            <span className="font-display text-lg text-ink group-hover:text-copper">
-                              {s.name}
-                            </span>
-                            <span className="mt-1 block max-w-prose text-sm text-steel">
-                              {s.summary}
-                            </span>
-                          </span>
-                          <span className="shrink-0 font-mono text-spec uppercase text-steel">
-                            {s.requiresPermit ? 'permit req.' : 'permit-free'}
-                          </span>
-                        </a>
-                      </li>
+                      <FeatureCard
+                        key={s.slug}
+                        title={s.name}
+                        meta={s.requiresPermit ? 'permit req.' : 'permit-free'}
+                        href={`/services/${s.slug}`}
+                      >
+                        {s.summary}
+                      </FeatureCard>
                     ))}
-                  </ul>
+                  </div>
                 </section>
               )
             })}
           </div>
 
-          <aside className="space-y-6">
+          <aside className="space-y-6 lg:sticky lg:top-24">
             <CredentialStrip />
-            <div className="border-l-2 border-verdigris bg-galv p-6">
+            <div className="rounded-card border-l-4 border-verdigris bg-galv p-6">
               <h2 className="font-mono text-spec uppercase text-steel">Straight pricing</h2>
               <p className="mt-2 text-sm text-ink/90">
                 You approve a number before we start. No mid-job revisions once the truck is in the
@@ -130,7 +134,9 @@ export default function ServicesHub() {
             </div>
           </aside>
         </div>
-      </div>
+      </Section>
+
+      <CTABand />
     </>
   )
 }

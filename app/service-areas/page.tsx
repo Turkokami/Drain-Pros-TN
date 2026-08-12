@@ -1,14 +1,15 @@
 /**
- * SERVICE-AREAS HUB
+ * SERVICE-AREAS HUB — redesigned.
  *
  * Lists every town by market tier and links to its page. The breadcrumb on each
- * location page points here, so this route must exist. Coverage language stays
- * honest: Chattanooga is listed as permit-free work only.
+ * location page points here, so this route must exist. Chattanooga is listed as
+ * permit-free work only.
  */
 
-import type { Metadata } from 'next'
 import { locationsByTier, type Location } from '@/config/locations'
-import { PrimaryCTA } from '@/components/CTA'
+import { PrimaryCTA, CTABand } from '@/components/CTA'
+import { Section, SectionHeading, Eyebrow } from '@/components/ui'
+import { buildMetadata } from '@/lib/seo'
 import {
   buildGraph,
   websiteNode,
@@ -29,11 +30,12 @@ const DESCRIPTION =
   'Every town we cover, from Charleston and Cleveland to Athens, the US-11 corridor, and greater ' +
   'Chattanooga. Service-area business — we come to you.'
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: 'Service Areas — Charleston, Cleveland, Athens & the TN Corridor',
   description: DESCRIPTION,
-  alternates: { canonical: '/service-areas' },
-}
+  path: '/service-areas',
+  keywords: ['plumber service area Bradley County', 'plumber McMinn County TN', 'plumber near Charleston TN'],
+})
 
 export default function ServiceAreasHub() {
   const path = '/service-areas'
@@ -52,27 +54,36 @@ export default function ServiceAreasHub() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />
 
-      <div className="mx-auto max-w-6xl px-5 py-12">
-        <p className="font-mono text-spec uppercase text-steel">Coverage · based in Charleston, TN</p>
-        <h1 className="mt-2 text-display-xl">Service areas</h1>
-        <p className="mt-6 max-w-prose border-l-2 border-copper pl-4 text-lg text-ink">{DESCRIPTION}</p>
+      {/* HERO */}
+      <section className="bg-pine bg-blueprint bg-grid text-paper">
+        <div className="container-x py-16 md:py-24">
+          <div className="max-w-4xl reveal">
+            <Eyebrow className="text-mist">Coverage · based in Charleston, TN</Eyebrow>
+            <h1 className="mt-4 text-display-xl">Every town along the corridor.</h1>
+            <p className="mt-6 max-w-prose text-lead text-paper/85 speakable">{DESCRIPTION}</p>
+            <div className="mt-8">
+              <PrimaryCTA label="Book a plumber" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <div className="mt-12 space-y-12">
+      <Section tone="paper">
+        <div className="space-y-14">
           {TIERS.map((tier) => {
             const locations = locationsByTier(tier.key)
             if (locations.length === 0) return null
             return (
               <section key={tier.key}>
-                <h2 className="text-display-lg">{tier.title}</h2>
-                <p className="mt-2 max-w-prose text-ink/80">{tier.note}</p>
-                <ul className="mt-5 grid gap-px overflow-hidden border border-ink/10 bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
+                <SectionHeading eyebrow={`${locations.length} towns`} title={tier.title} intro={tier.note} />
+                <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                   {locations.map((l: Location) => (
-                    <li key={l.slug} className="bg-paper">
-                      <a href={`/service-areas/${l.slug}`} className="group block h-full p-5 hover:bg-galv">
-                        <span className="font-display text-lg text-ink group-hover:text-copper">
+                    <li key={l.slug}>
+                      <a href={`/service-areas/${l.slug}`} className="card card-hover group block h-full p-5">
+                        <span className="font-display text-display-md text-ink group-hover:text-copper">
                           {l.name}
                         </span>
-                        <span className="mt-1 block font-mono text-spec uppercase text-steel">
+                        <span className="mt-2 block font-mono text-spec uppercase text-steel">
                           {l.county} County · {l.driveMinutes} min from Charleston
                         </span>
                       </a>
@@ -83,12 +94,9 @@ export default function ServiceAreasHub() {
             )
           })}
         </div>
+      </Section>
 
-        <div className="mt-14 flex flex-wrap items-center gap-4 border-t border-ink/10 pt-8">
-          <p className="font-display text-lg text-ink">Not sure if we reach you?</p>
-          <PrimaryCTA />
-        </div>
-      </div>
+      <CTABand heading="Not sure if we reach you?" sub="Call and we will tell you straight. If we cover your town, it has a page here." />
     </>
   )
 }

@@ -145,8 +145,260 @@ const CLEVELAND: LocationContent = {
   ],
 }
 
+const CHARLESTON: LocationContent = {
+  quickAnswer:
+    'Charleston is our home base, so we cover it faster than anyone — drain cleaning, emergency ' +
+    'repair, leak detection, water heater repair, and fixture work across the town and the ' +
+    'surrounding Bradley County area. We are the only plumbing operation actually based in ' +
+    'Charleston; everyone else drives in from Cleveland or Athens. Tennessee license #5045.',
+  intro: [
+    'Charleston sits right on the Bradley–McMinn county line, on the north bank of the Hiwassee ' +
+      'River along US-11, and it is where we are based. That is not a small thing for a plumbing ' +
+      'call. A search for a plumber actually located in Charleston comes up empty — every operator ' +
+      'serving the town is driving in from somewhere else, which means Charleston usually gets ' +
+      'whatever time is left after the closer jobs.',
+    'We are the exception, because this is home. It also means we know the town: the mix of city ' +
+      'water and private well, the septic properties outside the center, and the older housing along ' +
+      'the river that fails in familiar ways.',
+  ],
+  localSections: [
+    {
+      heading: 'The only plumber actually based in Charleston',
+      paragraphs: [
+        'Charleston is small enough that no competitor has ever anchored here, and that is exactly ' +
+          'the gap we fill. When a drain backs up or a pipe lets go in Charleston, being based in town ' +
+          'means we are not fighting a thirty-minute drive from Cleveland or Athens to get to you.',
+        'Everything permit-free — drains, emergencies, leaks, water heater repair, fixtures — we do ' +
+          'across Charleston today. Permitted jobs like water heater replacement we schedule as we ' +
+          'confirm Bradley County permitting.',
+      ],
+    },
+    {
+      heading: 'Well and septic country at the county seam',
+      paragraphs: [
+        'Charleston runs on a mix of city water and private well, with septic common once you get ' +
+          'outside the town center. On those properties we work the house side — the water lines, ' +
+          'fixtures, heaters, and treatment inside the home. The well itself, the pump, the pressure ' +
+          'tank, and the septic system are separately licensed in Tennessee, and we refer those to the ' +
+          'right contractor rather than pretend they are ours to touch.',
+        'Water treatment is often where well-water homes get the most value from us, because iron, ' +
+          'sulfur smell, and sediment are house-side problems we can legally and genuinely solve.',
+      ],
+    },
+    {
+      heading: 'The Hiwassee, freezes, and older river-adjacent homes',
+      paragraphs: [
+        'Being on the river shapes the plumbing. Older homes near the water carry older supply lines ' +
+          'and fixtures, and river-adjacent and seasonal structures see more freeze exposure on ' +
+          'unheated runs. A hard cold snap brings the burst-pipe and frozen-hose-bib calls, and ' +
+          'because emergency work needs no permit, we can respond to those anywhere in and around ' +
+          'Charleston without a jurisdiction question.',
+      ],
+    },
+  ],
+  commonIssues: [
+    'Slow, closest-plumber-is-30-minutes-away response from operators based in other towns',
+    'House-side plumbing on private well and septic properties around the town center',
+    'Iron, sulfur smell, and sediment on private well supply',
+    'Aging supply lines and fixtures in older homes near the river',
+    'Frozen and burst pipes on unheated runs during winter cold snaps',
+  ],
+  faqs: [
+    {
+      q: 'Are you really based in Charleston?',
+      a: 'Yes. Charleston is our home base, and we are the only plumbing operation actually anchored here. Every other operator serving the town drives in from Cleveland or Athens.',
+    },
+    {
+      q: 'How fast can you get to me in Charleston?',
+      a: 'Faster than anyone, because we are in town rather than driving in. Active leaks, no-water calls, and backups go to the front of the line.',
+    },
+    {
+      q: 'Do you work on well and septic properties around Charleston?',
+      a: 'Yes, the house side — water lines, fixtures, heaters, and treatment inside the home. The well and septic systems themselves are separately licensed and we refer those out.',
+    },
+    {
+      q: 'Can you treat my well water?',
+      a: 'Yes. Iron, sulfur smell, and sediment are treated after the water reaches the house, which is house-side work we can legally do. It is often where well-water homes get the most value from us.',
+    },
+    {
+      q: 'Are you licensed?',
+      a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov. It is on every page of this site.',
+    },
+    {
+      q: 'What will it cost?',
+      a: 'One price, approved before we start, and it holds. No mid-job revisions.',
+    },
+  ],
+}
+
+const CALHOUN: LocationContent = {
+  quickAnswer:
+    'Calhoun sits directly across the Hiwassee River from our Charleston base on US-11, about four ' +
+    'minutes away, so we cover it as home ground. Drain cleaning, emergency repair, leak detection, ' +
+    'water heater repair, and fixture work across the town and the surrounding McMinn County area. ' +
+    'Tennessee license #5045.',
+  intro: [
+    'Calhoun and Charleston are twin towns on opposite banks of the Hiwassee, joined by US-11. From ' +
+      'our base that is about a four-minute drive, which makes Calhoun one of the fastest towns for ' +
+      'us to reach and one that is otherwise served only by plumbers driving up from Athens or over ' +
+      'from Cleveland.',
+    'It is a small incorporated town with a high share of older housing, and well and septic ' +
+      'properties are common once you leave the center. That combination — older homes and rural ' +
+      'water — is most of what we see here.',
+  ],
+  localSections: [
+    {
+      heading: 'Charleston’s twin across the river',
+      paragraphs: [
+        'Because Calhoun is right across the Hiwassee from where we are based, we treat it exactly like ' +
+          'home ground rather than a drive. The permit-free work — drains, emergencies, leaks, water ' +
+          'heater repair, and fixtures — we do across Calhoun today. Permitted jobs like water heater ' +
+          'replacement we schedule as we confirm McMinn County permitting.',
+      ],
+    },
+    {
+      heading: 'Older housing stock and what fails in it',
+      paragraphs: [
+        'Calhoun’s higher share of older homes means the classic aging-house problems: supply lines ' +
+          'that have corroded from the inside and drop pressure, original shutoff valves that no longer ' +
+          'close, and water heaters living past their years. None of that is exotic, and most of it is ' +
+          'permit-free repair work we can handle on the spot.',
+        'The thing worth doing before you need it is the small stuff — a seized shutoff or a tired ' +
+          'supply line — because those are cheap on a planned visit and expensive in the middle of a ' +
+          'leak.',
+      ],
+    },
+    {
+      heading: 'Well and septic on the edges',
+      paragraphs: [
+        'Outside the town center, Calhoun runs heavily on private well and septic. We work the house ' +
+          'side of those properties — the interior plumbing, fixtures, heaters, and water treatment — ' +
+          'and refer the well and septic systems themselves to the right licensed contractor. On well ' +
+          'water, treating iron, sulfur, and sediment is usually where we add the most value.',
+      ],
+    },
+  ],
+  commonIssues: [
+    'Corroding supply lines and seized shutoffs in older homes',
+    'Water heaters past their service life',
+    'House-side plumbing on private well and septic properties',
+    'Iron, sulfur smell, and sediment on well supply',
+    'Freeze exposure on unheated runs in winter',
+  ],
+  faqs: [
+    {
+      q: 'How fast can you reach Calhoun?',
+      a: 'About four minutes from our base across the river in Charleston, so it is one of the quickest towns for us to get to.',
+    },
+    {
+      q: 'Which jobs can you do in Calhoun right now?',
+      a: 'All the permit-free work: drain cleaning, emergency and leak repair, water heater repair, and fixture work. Permitted jobs are scheduled as we confirm McMinn County permitting.',
+    },
+    {
+      q: 'Do you handle well and septic properties?',
+      a: 'The house side, yes. The well and septic systems themselves are separately licensed and we refer those out.',
+    },
+    {
+      q: 'Are you licensed?',
+      a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.',
+    },
+    {
+      q: 'What will it cost?',
+      a: 'One price, approved before we start, and it holds.',
+    },
+  ],
+}
+
+const ATHENS: LocationContent = {
+  quickAnswer:
+    'We cover Athens and McMinn County for drain cleaning, emergency repair, leak detection, water ' +
+    'heater repair, and fixture work — about 18 minutes north of our Charleston base on US-11. ' +
+    'Weekend and after-hours coverage is thin among the established operators here, which is a gap ' +
+    'we aim to fill. Tennessee license #5045.',
+  intro: [
+    'Athens is the county seat of McMinn County and, by our read of this market, one of the best ' +
+      'openings in the whole footprint. The competitor field here is thin: the best-reviewed ' +
+      'plumbing option in town is primarily an electrical contractor, and weekend coverage across ' +
+      'McMinn County is close to nonexistent among the established operators.',
+    'That means when something goes wrong on a Saturday in Athens, a lot of people simply cannot get ' +
+      'a plumber. We are 18 minutes away on US-11, and the permit-free work — drains, emergencies, ' +
+      'leaks, fixtures, water heater repair — is exactly the kind of thing those weekend calls need.',
+  ],
+  localSections: [
+    {
+      heading: 'The weekend-coverage gap in McMinn County',
+      paragraphs: [
+        'The single clearest opportunity in Athens is timing. Established operators here keep limited ' +
+          'hours, and weekend plumbing coverage in this part of McMinn County is effectively absent. A ' +
+          'backed-up drain or a burst pipe does not wait for Monday.',
+        'Emergency and drain work needs no permit, so it is precisely what we can bring to Athens ' +
+          'without a jurisdiction question, and it is where being willing to answer makes the ' +
+          'difference. Permitted jobs like water heater replacement we schedule as we confirm City of ' +
+          'Athens and McMinn County permitting.',
+      ],
+    },
+    {
+      heading: 'Athens Utilities Board and the older core',
+      paragraphs: [
+        'Athens Utilities Board serves the water in town. The older core of Athens carries the housing ' +
+          'and plumbing you would expect from a county seat with real age to it: aging supply lines, ' +
+          'original-era water heaters, and sewer laterals old enough to have found tree roots.',
+        'As with much of southeast Tennessee, the water tends toward hard, which shows up as scale in ' +
+          'water heaters and shortened tank life. When we see a household on its third early water ' +
+          'heater failure, treatment is usually worth a conversation.',
+      ],
+    },
+    {
+      heading: 'City sewer in town, well and septic on the county roads',
+      paragraphs: [
+        'Built-up Athens runs on city sewer, while the McMinn County properties outside town are ' +
+          'heavily well and septic. On those we work the house side — interior plumbing, fixtures, ' +
+          'heaters, and water treatment — and refer the well and septic systems themselves to the ' +
+          'right licensed contractor. When an Athens drain keeps backing up in the same spot, we can ' +
+          'camera the line and show you whether it is roots, a belly, or a failed section.',
+      ],
+    },
+  ],
+  commonIssues: [
+    'No weekend or after-hours plumbing coverage from established local operators',
+    'Root intrusion and bellies in older sewer laterals in the town core',
+    'Aging supply lines and original-era water heaters',
+    'Hard-water scale shortening water heater life',
+    'House-side plumbing on well and septic properties out in the county',
+  ],
+  faqs: [
+    {
+      q: 'Do you cover Athens on weekends?',
+      a: 'Weekend and after-hours coverage in McMinn County is thin among the established operators, and closing that gap is a big part of why we serve Athens. Call and we will give you a real answer on timing.',
+    },
+    {
+      q: 'How far is Athens from your base?',
+      a: 'About 18 minutes north of Charleston on US-11, so it is well inside our regular service area.',
+    },
+    {
+      q: 'Which jobs can you do in Athens right now?',
+      a: 'All the permit-free work: drain cleaning, emergency and leak repair, water heater repair, and fixtures. Permitted jobs are scheduled as we confirm Athens and McMinn County permitting.',
+    },
+    {
+      q: 'Is Athens water hard?',
+      a: 'Like much of southeast Tennessee, it tends toward hard, which shows up as scale in water heaters and on fixtures. It is a plumbing issue worth addressing if your heaters keep failing early.',
+    },
+    {
+      q: 'Are you licensed to work in Athens?',
+      a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.',
+    },
+    {
+      q: 'What will it cost?',
+      a: 'One price, approved before we start, and it holds. No mid-job surprises.',
+    },
+  ],
+}
+
 export const LOCATION_CONTENT: Record<string, LocationContent> = {
+  'charleston-tn': CHARLESTON,
+  'calhoun-tn': CALHOUN,
   'cleveland-tn': CLEVELAND,
+  'athens-tn': ATHENS,
 }
 
 /** Honest, registry-driven content for towns without a hand-written page yet. */
