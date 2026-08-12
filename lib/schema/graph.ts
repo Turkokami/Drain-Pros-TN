@@ -107,6 +107,35 @@ export function webPageNode(path: string, title: string, description: string) {
     isPartOf: { '@id': ID.website() },
     about: { '@id': ID.business() },
     breadcrumb: { '@id': ID.breadcrumb(path) },
+    inLanguage: 'en-US',
+    // Voice-search signal: read the H1 and the quick-answer block aloud.
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '.speakable'],
+    },
+  }
+}
+
+/**
+ * HowTo node — informational structured data for a procedure the business
+ * performs. Steps are plain text. Used on service pages where a real process is
+ * described, which reinforces AEO/voice answers for "how do you ..." queries.
+ */
+export function howToNode(
+  path: string,
+  name: string,
+  steps: Array<{ name: string; text: string }>
+) {
+  return {
+    '@type': 'HowTo',
+    '@id': `${origin()}${path}#howto`,
+    name,
+    step: steps.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+    })),
   }
 }
 

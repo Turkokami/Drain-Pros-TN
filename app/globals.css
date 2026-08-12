@@ -3,25 +3,66 @@
 @tailwind utilities;
 
 @layer base {
-  html { -webkit-text-size-adjust: 100%; }
-  body { @apply bg-paper text-ink font-body antialiased; }
-  h1, h2, h3 { @apply font-display; text-wrap: balance; }
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+    font-feature-settings: 'ss01', 'cv01';
+  }
+  h1, h2, h3, h4 { @apply font-display; text-wrap: balance; }
   p { text-wrap: pretty; }
+  ::selection { background: theme('colors.copper'); color: theme('colors.paper'); }
   :focus-visible { @apply outline-2 outline-offset-2 outline-copper; }
 }
 
 @layer components {
-  /* SIGNATURE: credential and scope data rendered as a spec sheet, not marketing.
-     Monospace, uppercase labels, hairline rules. This is the visual argument
-     that the license is a verifiable fact rather than a claim. */
+  /* Page gutter + max width, used by every section. */
+  .container-x { @apply mx-auto w-full max-w-[78rem] px-5 sm:px-8; }
+
+  /* Eyebrow / kicker label — mono, tracked, the spec-sheet voice. */
+  .eyebrow { @apply font-mono text-eyebrow uppercase text-steel; }
+
+  /* SIGNATURE: credential and scope data rendered as a spec sheet, not marketing. */
   .spec-row {
     @apply flex items-baseline justify-between gap-4 border-b border-ink/10 py-2
            font-mono text-spec uppercase;
   }
   .spec-label { @apply text-steel; }
   .spec-value { @apply text-ink font-medium tracking-normal normal-case; }
+
+  /* Long-form article body: comfortable measure, rhythm, and link styling. */
+  .prose-body { @apply max-w-prose text-[1.05rem] leading-relaxed text-ink/90; }
+  .prose-body p + p { @apply mt-4; }
+  .prose-body a { @apply text-copper underline decoration-copper/40 underline-offset-4 hover:decoration-copper; }
+  .prose-body strong { @apply font-semibold text-ink; }
+
+  /* Card surface with subtle lift on hover. */
+  .card {
+    @apply rounded-card border border-ink/10 bg-paper shadow-card transition-all duration-300;
+  }
+  .card-hover { @apply hover:-translate-y-0.5 hover:shadow-lift; }
+
+  /* Link with an animated copper underline that grows on hover. */
+  .link-underline {
+    @apply relative text-ink transition-colors hover:text-copper;
+  }
+}
+
+@layer utilities {
+  /* On-load reveal. Disabled under reduced-motion by the media query below. */
+  .reveal { @apply animate-fade-up; }
+  .reveal-2 { animation-delay: 0.08s; }
+  .reveal-3 { animation-delay: 0.16s; }
+  .reveal-4 { animation-delay: 0.24s; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

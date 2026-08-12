@@ -7,7 +7,7 @@
  * than render a placeholder number a visitor might dial.
  */
 
-import { phone, phoneHref } from '@/lib/site'
+import { phone, phoneHref, licenseNumber } from '@/lib/site'
 
 export function PrimaryCTA({ className = '', label }: { className?: string; label?: string }) {
   const p = phone()
@@ -46,5 +46,35 @@ export function EmergencyCTA({ className = '' }: { className?: string }) {
       <span aria-hidden>●</span>
       {p ? `Plumbing emergency? Call ${p}` : 'Plumbing emergency? Get help now'}
     </a>
+  )
+}
+
+/**
+ * Full-width conversion band. Dark panel with the spec-sheet blueprint motif,
+ * the two CTAs, and the license line — used to close pages.
+ */
+export function CTABand({
+  heading = 'Get a licensed plumber on the job.',
+  sub = 'Straight pricing you approve before we start. Serving Charleston, Cleveland, Athens, the US-11 corridor, and greater Chattanooga.',
+}: {
+  heading?: string
+  sub?: string
+}) {
+  return (
+    <section className="bg-pine bg-blueprint bg-grid text-paper">
+      <div className="container-x py-16 md:py-20">
+        <div className="max-w-3xl">
+          <h2 className="text-display-lg">{heading}</h2>
+          <p className="mt-4 text-lead text-paper/80">{sub}</p>
+        </div>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <PrimaryCTA label="Book a plumber" />
+          <EmergencyCTA />
+        </div>
+        <p className="mt-6 font-mono text-spec uppercase text-mist">
+          TN Limited Licensed Plumber · #{licenseNumber()} · verify at verify.tn.gov
+        </p>
+      </div>
+    </section>
   )
 }

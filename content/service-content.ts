@@ -19,6 +19,17 @@ export interface ServiceContent {
   lede: string
   whatWeDo: string[]
   faqs: Array<{ q: string; a: string }>
+  // --- Optional long-form fields (rich pages). Rendered when present. ---------
+  /** Extra opening paragraphs under the lede. */
+  intro?: string[]
+  /** "Signs you need this" — problem-intent capture for search and voice. */
+  signs?: string[]
+  /** Real procedure. Also emitted as HowTo schema for AEO/voice. */
+  process?: Array<{ name: string; text: string }>
+  /** Deep body sections: a heading and paragraphs. */
+  sections?: Array<{ heading: string; paragraphs: string[] }>
+  /** Internal links to related services/problems. */
+  related?: Array<{ label: string; href: string }>
 }
 
 const LICENSED_FAQ = {
@@ -46,6 +57,77 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       'A blocked drain is the call we get most, and it is the one line of work we can do in every ' +
       'town we serve. There is no permit involved, so a backed-up kitchen line in Chattanooga gets ' +
       'the same response as one in Charleston.',
+    intro: [
+      'A drain that will not drain does not care what time it is or which county you live in. It ' +
+        'is also the plumbing problem most people meet a plumber over for the first time, so we take ' +
+        'it seriously even when it looks small. A slow bathroom sink today is often the early warning ' +
+        'of a main line that will back up into the house next month.',
+      'We clear drains mechanically and we chase the cause, not just the symptom. If a line keeps ' +
+        'clogging in the same place, cabling it a second time is not a fix, and we will tell you that ' +
+        'to your face rather than book the same call again in the spring.',
+    ],
+    signs: [
+      'Water backing up in a sink, tub, shower, or floor drain',
+      'Two or more fixtures draining slowly at the same time',
+      'A gurgle from one drain when another fixture runs or the toilet flushes',
+      'A sewage or sulfur smell near a floor drain, cleanout, or out in the yard',
+      'A drain that clears with store chemicals for a week, then clogs right back up',
+      'Water pooling around a basement or crawlspace cleanout',
+    ],
+    sections: [
+      {
+        heading: 'Cabling, jetting, and knowing which one you actually need',
+        paragraphs: [
+          'Most household clogs come out with a cable — a motorized snake that breaks through the ' +
+            'blockage and pulls it back or pushes it clear. It is the right tool for a single fixture, ' +
+            'a hair or soap clog, or a line that is mostly open but slow.',
+          'A main line full of grease, scale, or years of buildup is a different problem, and that is ' +
+            'where hydro jetting earns its keep. A jetter scours the inside of the pipe with high-pressure ' +
+            'water instead of just punching a hole through the middle, so the line actually runs at full ' +
+            'diameter again. We match the method to the line rather than jetting everything or cabling ' +
+            'everything, because the wrong tool either underperforms or is money you did not need to spend.',
+          'What we will not do is pour chemicals down the line and call it fixed. Store drain chemicals ' +
+            'sit in the trap, generate heat, and damage older pipe and seals, and they rarely reach the ' +
+            'actual blockage. If a clog needed chemicals to move, it needed a cable or a camera.',
+        ],
+      },
+      {
+        heading: 'Why the same drain keeps clogging',
+        paragraphs: [
+          'A drain that clogs in the same spot on a schedule is telling you something. In the older ' +
+            'housing stock common along the US-11 corridor, that is often tree roots finding a joint in ' +
+            'a clay or cast iron sewer line, a belly where the pipe has settled and holds water, or a ' +
+            'section of pipe that has simply reached the end of its life.',
+          'Rather than guess, we can run a camera down the line and show you what is there. That turns ' +
+            'a recurring bill into a decision you can actually make: keep clearing it on a maintenance ' +
+            'schedule, or repair the one bad section and be done with it. Either way you are choosing ' +
+            'with the picture in front of you.',
+        ],
+      },
+      {
+        heading: 'Drain cleaning across the corridor, Chattanooga included',
+        paragraphs: [
+          'Because drain cleaning needs no permit, it is the service we run at full strength everywhere ' +
+            'we drive. Charleston, Calhoun, Cleveland, Athens, the corridor towns, the rural Polk and ' +
+            'Meigs county properties on septic, and inside Chattanooga city limits all get the same work. ' +
+            'It is the wedge that lets us serve the whole footprint honestly, even the towns where ' +
+            'permitted work has to go to a partner.',
+        ],
+      },
+    ],
+    process: [
+      { name: 'Find the right access', text: 'We locate the correct cleanout or fixture to work from, so we are clearing the line from the best angle instead of the easiest one.' },
+      { name: 'See or feel the blockage', text: 'We cable to the clog, and on a stubborn or repeat line we camera it first so we know what we are dealing with.' },
+      { name: 'Clear it mechanically', text: 'Cable for most clogs, hydro jetting for grease and heavy buildup. No chemicals.' },
+      { name: 'Confirm full flow', text: 'We run water and make sure the line drains at full speed, not just enough to look clear for an hour.' },
+      { name: 'Tell you the truth about the cause', text: 'If the line has a real problem, we show you and quote the repair. If it was a one-off clog, we say that too.' },
+    ],
+    related: [
+      { label: 'Sewer camera inspection', href: '/services/camera-inspection' },
+      { label: 'Recurring backups & emergencies', href: '/services/emergency-plumbing' },
+      { label: 'Sewer line repair & replacement', href: '/services/sewer-line-repair' },
+      { label: 'Leak detection', href: '/services/leak-detection' },
+    ],
     whatWeDo: [
       'Cabling and snaking for kitchen, bath, and laundry lines',
       'Main sewer line clearing when the whole house is backing up',
@@ -77,6 +159,22 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       {
         q: 'How fast can you come out for a drain that is backing up?',
         a: 'We prioritize active backups. Call and you will get a real window, not a vague "sometime today."',
+      },
+      {
+        q: 'Do you offer hydro jetting?',
+        a: 'Yes. For grease-packed kitchen lines and main lines with heavy buildup, jetting scours the pipe back to full diameter instead of just poking a hole through the clog. We use it where the line calls for it, not as an automatic upsell.',
+      },
+      {
+        q: 'Will running a cable damage my old pipes?',
+        a: 'Used correctly, no. On older or fragile lines we camera first and choose the head and method to match, precisely so we clear the clog without harming the pipe. If a line is too far gone to cable safely, that is itself useful information, and we will tell you.',
+      },
+      {
+        q: 'Can you clear the main line from an outside cleanout?',
+        a: 'Yes, and it is often the best access point for a whole-house backup. If your home has an accessible exterior cleanout, we can usually work from there and keep the mess outside.',
+      },
+      {
+        q: 'How much does drain cleaning cost?',
+        a: 'It depends on the line, the access, and whether it is a simple cable or a jetting job. What does not vary is that you get one price to approve before we start, and it holds. We would rather quote it honestly than lowball the visit and grow the bill once we are there.',
       },
       PRICING_FAQ,
       LICENSED_FAQ,

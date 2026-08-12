@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Archivo, Source_Sans_3, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
-import { SiteHeader, SiteFooter } from '@/components/SiteChrome'
+import { SiteHeader, SiteFooter, StickyCallBar } from '@/components/SiteChrome'
 import { businessName } from '@/lib/site'
 import { origin } from '@/lib/schema/graph'
 
@@ -35,10 +35,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <SiteHeader />
-        <main id="main" className="flex-1">
+        <main id="main" className="flex-1 pb-14 md:pb-0">
           {children}
         </main>
         <SiteFooter />
+        <StickyCallBar />
       </body>
     </html>
   )

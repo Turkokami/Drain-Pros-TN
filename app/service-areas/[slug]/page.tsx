@@ -1,14 +1,15 @@
 /**
- * REFERENCE IMPLEMENTATION — location page.
+ * LOCATION PAGE — one per town, guard-driven.
  *
- * This is the canonical pattern. Every other page type follows its shape:
- *   1. Resolve config. Never hardcode a business fact.
- *   2. Ask the scope guard what may be rendered. Never map over SERVICES directly.
- *   3. Build the @graph from the SAME data the page renders, so markup and copy
- *      can never disagree.
+ * The canonical pattern, now expanded:
+ *   1. Resolve the location from the registry.
+ *   2. Ask the scope guard which services may render here (ScopeStrip). Never map
+ *      over SERVICES directly.
+ *   3. Build the @graph from the same data the page renders.
  *
- * Note what this page does NOT do: it does not list services and then hide some
- * with CSS, and it does not write a service name into JSX. The guard decides.
+ * Content depth comes from content/location-content.ts (honest regional material)
+ * plus the registry's non-copyable localFacts. A thin location page is worse than
+ * none — the linter enforces a minimum of three localFacts.
  */
 
 import type { Metadata } from 'next'
@@ -16,7 +17,11 @@ import { notFound } from 'next/navigation'
 import { LOCATIONS, getLocation } from '@/config/locations'
 import { JURISDICTIONS } from '@/config/jurisdictions'
 import { sellableServices } from '@/lib/scope-guard'
+import { getLocationContent } from '@/content/location-content'
 import { ScopeStrip, CredentialStrip } from '@/components/ScopeStrip'
+import { PrimaryCTA, EmergencyCTA, CTABand } from '@/components/CTA'
+import { Section, SectionHeading, Eyebrow, QuickAnswer, Prose, FAQ } from '@/components/ui'
+import { buildMetadata } from '@/lib/seo'
 import {
   buildGraph,
   websiteNode,
@@ -38,115 +43,160 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const location = getLocation(slug)
-  if (!location) return {}
-  // Business name is appended by the root layout's title template; don't double it.
-  return {
+  const content = getLocationContent(slug)
+  if (!location || !content) return {}
+  return buildMetadata({
     title: `Plumber in ${location.name}, TN`,
-    description:
-      `Licensed plumbing in ${location.name}, ${location.county} County. ` +
-      `Tennessee license #5045. ${location.localFacts[0]}`,
-    alternates: { canonical: `/service-areas/${location.slug}` },
-  }
+    description: content.quickAnswer,
+    path: `/service-areas/${location.slug}`,
+    keywords: [
+      `plumber ${location.name} TN`,
+      `drain cleaning ${location.name}`,
+      `emergency plumber ${location.name}`,
+      `water heater ${location.name} TN`,
+      `${location.county} County plumber`,
+    ],
+  })
 }
 
 export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const location = getLocation(slug)
-  if (!location) notFound()
+  const content = getLocationContent(slug)
+  if (!location || !content) notFound()
 
   const jurisdiction = JURISDICTIONS[location.jurisdictionId]
   const services = sellableServices(location.slug)
   const path = `/service-areas/${location.slug}`
 
-  // AEO quick-answer. Must state the true coverage, including limits.
-  const quickAnswer =
-    jurisdiction?.permitAuthority === 'none'
-      ? `We cover ${location.name} for drain cleaning, emergency leak repair, and fixture work — ` +
-        `the jobs that need no permit. Permit-required work inside the city goes to a licensed partner.`
-      : `We cover ${location.name} and the surrounding ${location.county} County area, ` +
-        `${location.driveMinutes} minutes from our base in Charleston.`
-
-  const faqs = [
-    {
-      q: `Do you actually serve ${location.name}, or just list it?`,
-      a: `${location.name} is ${location.driveMinutes} minutes from our base in Charleston. ${location.localFacts[0]}`,
-    },
-    {
-      q: `Are you licensed to work in ${location.name}?`,
-      a: `Yes. Tennessee Limited Licensed Plumber #5045, issued by the Board for Licensing Contractors and verifiable through the state's public lookup.`,
-    },
-  ]
-
   const graph = buildGraph([
     websiteNode(),
     businessNode(),
     ownerNode(),
-    webPageNode(path, `Plumber in ${location.name}, TN`, quickAnswer),
+    webPageNode(path, `Plumber in ${location.name}, TN`, content.quickAnswer),
     breadcrumbNode(path, [
       { name: 'Home', url: '/' },
       { name: 'Service Areas', url: '/service-areas' },
       { name: location.name, url: path },
     ]),
-    faqNode(path, faqs),
+    faqNode(path, content.faqs),
   ])
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />
 
-      <article className="mx-auto max-w-4xl px-5 py-12">
-        <p className="font-mono text-spec uppercase text-steel">
-          {location.county} County · {location.driveMinutes} min from Charleston
-        </p>
-        <h1 className="mt-2 text-display-xl">Plumber in {location.name}, Tennessee</h1>
+      {/* HERO */}
+      <section className="bg-pine bg-blueprint bg-grid text-paper">
+        <div className="container-x py-16 md:py-24">
+          <div className="max-w-4xl reveal">
+            <Eyebrow className="text-mist">
+              {location.county} County · {location.driveMinutes} min from Charleston
+              {location.utility ? ` · ${location.utility}` : ''}
+            </Eyebrow>
+            <h1 className="mt-4 text-display-xl">Plumber in {location.name}, Tennessee</h1>
+            <p className="mt-6 max-w-prose text-lead text-paper/85">
+              Licensed plumbing in {location.name}, {location.county} County — {services.length}{' '}
+              services available here, backed by TN license #5045.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <PrimaryCTA />
+              <EmergencyCTA />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        {/* AEO quick answer — first substantive block on every page. */}
-        <p className="mt-6 max-w-prose border-l-2 border-copper pl-4 text-lg text-ink">
-          {quickAnswer}
-        </p>
-
-        <div className="mt-10 grid gap-8 md:grid-cols-[1.4fr_1fr]">
+      {/* QUICK ANSWER + INTRO + LOCAL FACTS */}
+      <Section tone="paper">
+        <div className="grid gap-10 lg:grid-cols-[1.55fr_1fr] lg:items-start">
           <div>
-            <h2 className="text-display-lg">What we see in {location.name}</h2>
+            <QuickAnswer>{content.quickAnswer}</QuickAnswer>
+            <Prose className="mt-8">
+              {content.intro.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </Prose>
+
+            <h2 className="mt-10 text-display-md">What we know about {location.name}</h2>
             <ul className="mt-4 space-y-3">
               {location.localFacts.map((f) => (
-                <li key={f} className="max-w-prose text-ink/90">
-                  {f}
+                <li key={f} className="flex max-w-prose gap-3 text-ink/90">
+                  <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 bg-copper" />
+                  <span>{f}</span>
                 </li>
               ))}
             </ul>
-            {location.utility && (
-              <p className="mt-6 font-mono text-spec uppercase text-steel">
-                Water utility · <span className="spec-value">{location.utility}</span>
-              </p>
-            )}
           </div>
 
-          <div className="space-y-6">
-            <ScopeStrip location={location} />
+          <aside className="space-y-6 lg:sticky lg:top-24">
             <CredentialStrip />
-          </div>
+          </aside>
         </div>
+      </Section>
 
-        <section className="mt-12">
-          <h2 className="text-display-lg">Common questions</h2>
-          <dl className="mt-4 space-y-6">
-            {faqs.map((f) => (
-              <div key={f.q}>
-                <dt className="font-display text-lg">{f.q}</dt>
-                <dd className="mt-1 max-w-prose text-ink/90">{f.a}</dd>
+      {/* LOCAL SECTIONS */}
+      {content.localSections.length > 0 && (
+        <Section tone="bone">
+          <div className="space-y-12">
+            {content.localSections.map((sec, i) => (
+              <div key={i} className="grid gap-4 lg:grid-cols-[1fr_2fr]">
+                <h2 className="text-display-md text-ink lg:sticky lg:top-24 lg:self-start">{sec.heading}</h2>
+                <Prose>
+                  {sec.paragraphs.map((p, j) => (
+                    <p key={j}>{p}</p>
+                  ))}
+                </Prose>
               </div>
             ))}
-          </dl>
-        </section>
+          </div>
+        </Section>
+      )}
 
-        <p className="mt-10 font-mono text-spec uppercase text-steel">
-          {services.length} services available in this jurisdiction
-        </p>
-      </article>
+      {/* COMMON ISSUES */}
+      {content.commonIssues.length > 0 && (
+        <Section tone="paper">
+          <SectionHeading
+            eyebrow="What tends to go wrong"
+            title={`Common plumbing problems in ${location.name}`}
+          />
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+            {content.commonIssues.map((issue, i) => (
+              <li key={i} className="flex gap-3 rounded-card border border-ink/10 bg-paper p-4 shadow-card">
+                <span aria-hidden className="mt-1 font-mono text-copper">›</span>
+                <span className="text-ink/90">{issue}</span>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
+
+      {/* SCOPE — guard-driven coverage + honesty block */}
+      <Section tone="galv">
+        <SectionHeading
+          eyebrow="Honest scope"
+          title={`Exactly what we cover in ${location.name}`}
+          intro={
+            jurisdiction?.permitAuthority === 'none'
+              ? `Permit-free work runs at full strength here. Permit-required work inside the city goes to a licensed partner, and we tell you which is which.`
+              : `Permit-free work runs at full strength here. Permitted work is scheduled as we confirm local permitting.`
+          }
+        />
+        <div className="mt-8">
+          <ScopeStrip location={location} />
+        </div>
+      </Section>
+
+      {/* FAQ */}
+      <Section tone="paper">
+        <SectionHeading eyebrow="Common questions" title={`Plumbing in ${location.name}: your questions`} />
+        <FAQ items={content.faqs} />
+      </Section>
+
+      <CTABand
+        heading={`Need a plumber in ${location.name}?`}
+        sub={`${location.driveMinutes} minutes from our base in Charleston. Straight pricing you approve before we start.`}
+      />
     </>
   )
 }
