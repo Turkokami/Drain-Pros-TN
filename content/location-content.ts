@@ -662,6 +662,588 @@ const CHATTANOOGA: LocationContent = {
   ],
 }
 
+const RICEVILLE: LocationContent = {
+  quickAnswer:
+    'We cover Riceville for drain cleaning, emergency repair, leak detection, water heater repair, ' +
+    'and fixture work — about 12 minutes from our Charleston base, right on US-11 between Charleston ' +
+    'and Athens. Riceville is predominantly well and septic country. Tennessee license #5045.',
+  intro: [
+    'Riceville is an unincorporated community sitting on US-11 between Charleston and Athens, which ' +
+      'puts it about 12 minutes from our base — closer to us than to almost any operator serving it. ' +
+      'Today it is served mainly by plumbers driving out from Athens or Cleveland, so it tends to get ' +
+      'whatever time is left over.',
+    'Most of Riceville runs on private well and septic. The permit-free work we do here today; ' +
+      'permitted jobs we schedule as we confirm McMinn County permitting.',
+  ],
+  localSections: [
+    {
+      heading: 'On the US-11 line, closer to us than to Athens',
+      paragraphs: [
+        'Being right on the highway between our base and Athens means Riceville is a quick run for us ' +
+          'rather than a drive-time afterthought. Drains, emergencies, leaks, water heater repair, and ' +
+          'fixtures are all permit-free, so we cover them across Riceville with no jurisdiction ' +
+          'question.',
+      ],
+    },
+    {
+      heading: 'Well and septic country',
+      paragraphs: [
+        'With most properties on private well and septic, the work here is mostly house-side: interior ' +
+          'plumbing, fixtures, heaters, and water treatment. The well and septic systems themselves are ' +
+          'separately licensed and we refer those out. On well water, treating iron, sulfur smell, and ' +
+          'sediment is usually where we add the most value.',
+      ],
+    },
+  ],
+  commonIssues: [
+    'Slow response from operators based in Athens or Cleveland',
+    'House-side plumbing on private well and septic properties',
+    'Iron, sulfur smell, and sediment on well supply',
+    'Aging supply lines and water heaters in older rural homes',
+    'Freeze exposure on unheated runs in winter',
+  ],
+  faqs: [
+    { q: 'How far is Riceville from your base?', a: 'About 12 minutes, right on US-11 between Charleston and Athens — a quick run for us rather than a drive.' },
+    { q: 'Which jobs can you do in Riceville now?', a: 'All the permit-free work — drains, emergencies, leaks, water heater repair, and fixtures. Permitted jobs are scheduled as we confirm McMinn County permitting.' },
+    { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The well and septic systems themselves are separately licensed and we refer those out.' },
+    { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
+  ],
+}
+
+const NIOTA: LocationContent = {
+  quickAnswer:
+    'We cover Niota for drain cleaning, emergency repair, leak detection, water heater repair, and ' +
+    'fixture work — about 25 minutes from our Charleston base. Niota has a notably old housing ' +
+    'stock, where galvanized supply-line failure is common. Tennessee license #5045.',
+  intro: [
+    'Niota is a small city north of Athens with a notably old housing stock, and old houses have ' +
+      'old plumbing. The tell here is galvanized supply line — steel pipe that corrodes from the ' +
+      'inside out over decades, which is why so many older Niota homes fight low water pressure and ' +
+      'rusty water.',
+    'The permit-free work we do across Niota today; permitted jobs we schedule as we confirm McMinn ' +
+      'County permitting.',
+  ],
+  localSections: [
+    {
+      heading: 'Old housing and galvanized supply lines',
+      paragraphs: [
+        'Galvanized steel pipe was standard in the era much of Niota was built, and it does not age ' +
+          'gracefully. It corrodes and scales on the inside, choking off flow, which shows up first as ' +
+          'dropping pressure and discolored water and eventually as leaks. We can confirm whether ' +
+          'galvanized is the culprit, and where a whole-house repipe is the real answer versus a ' +
+          'targeted repair, we will lay out both honestly rather than push the bigger job.',
+      ],
+    },
+    {
+      heading: 'Well and septic outside the core',
+      paragraphs: [
+        'Outside the older core, Niota properties often run on private well and septic. We work the ' +
+          'house side of those — interior plumbing, fixtures, heaters, and treatment — and refer the ' +
+          'well and septic systems themselves out.',
+      ],
+    },
+  ],
+  commonIssues: [
+    'Corroding galvanized supply lines causing low pressure and rusty water',
+    'Aging fixtures and original-era water heaters in the older core',
+    'House-side plumbing on well and septic properties',
+    'Root intrusion in older drain and sewer lines',
+    'Freeze exposure on older, unheated runs',
+  ],
+  faqs: [
+    { q: 'Why is my water pressure so low in an older Niota home?', a: 'Very often it is galvanized supply line corroding shut from the inside — a common issue in Niota’s older housing. We can confirm it and lay out whether a repair or a repipe is the honest answer.' },
+    { q: 'How far is Niota from your base?', a: 'About 25 minutes north of Charleston, past Athens.' },
+    { q: 'Which jobs can you do in Niota now?', a: 'All the permit-free work. Permitted jobs like water heater replacement are scheduled as we confirm McMinn County permitting.' },
+    { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
+  ],
+}
+
+const ETOWAH: LocationContent = {
+  quickAnswer:
+    'We cover Etowah for drain cleaning, emergency repair, leak detection, water heater repair, and ' +
+    'fixture work — about 30 minutes from our Charleston base. Etowah was built as a railroad town ' +
+    'in the early 1900s, so older cast iron and galvanized systems are common, and weekend coverage ' +
+    'here is thin. Tennessee license #5045.',
+  intro: [
+    'Etowah grew up as a railroad town in the early 1900s, and much of its core housing dates from ' +
+      'that era. That means older cast iron drain lines and galvanized supply lines, the kind of ' +
+      'plumbing that fails in familiar, age-related ways. Weekend plumbing coverage in this part of ' +
+      'McMinn County is effectively absent, which is its own kind of problem when something lets go ' +
+      'on a Saturday.',
+    'The permit-free work we do across Etowah today; permitted jobs we schedule as we confirm McMinn ' +
+      'County permitting.',
+  ],
+  localSections: [
+    {
+      heading: 'A railroad town’s aging plumbing',
+      paragraphs: [
+        'Cast iron sewer lines and galvanized supply lines were the standard when Etowah’s core was ' +
+          'built, and both have real, finite service lives. Cast iron scales and cracks; galvanized ' +
+          'corrodes shut. When an Etowah drain keeps backing up in the same spot, we can camera the ' +
+          'line and show you whether it is roots, a belly, or a failed section before anyone talks ' +
+          'about digging.',
+      ],
+    },
+    {
+      heading: 'The weekend-coverage gap',
+      paragraphs: [
+        'Weekend plumbing coverage in this stretch of McMinn County is close to nonexistent among ' +
+          'established operators. Emergency and drain work needs no permit, so it is exactly what we ' +
+          'can bring to Etowah when a pipe bursts or a line backs up and no one else is answering. ' +
+          'Call and we will give you a real window.',
+      ],
+    },
+  ],
+  commonIssues: [
+    'Cracked and root-bound cast iron sewer lines in the older core',
+    'Corroding galvanized supply lines causing low pressure',
+    'No weekend coverage from established local operators',
+    'Original-era water heaters at or past their lifespan',
+    'House-side plumbing on rural well and septic properties',
+  ],
+  faqs: [
+    { q: 'Do you cover Etowah on weekends?', a: 'Weekend coverage in this part of McMinn County is thin, and emergency and drain work needs no permit, so it is what we can bring to Etowah when something lets go. Call for a real timing answer.' },
+    { q: 'How far is Etowah from your base?', a: 'About 30 minutes from Charleston.' },
+    { q: 'My old drain keeps backing up. Can you tell me why?', a: 'Yes — we camera the line and show you whether it is roots, a belly, or a failed cast iron section, so you decide with the picture in front of you.' },
+    { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
+  ],
+}
+
+const ENGLEWOOD: LocationContent = {
+  quickAnswer:
+    'We cover Englewood for drain cleaning, emergency repair, leak detection, water heater repair, ' +
+    'and fixture work — about 35 minutes from our Charleston base. A former mill town at the eastern ' +
+    'edge of McMinn County, Englewood has a high share of early-1900s housing. Tennessee license ' +
+    '#5045.',
+  intro: [
+    'Englewood is a former mill town at the eastern edge of McMinn County, with a high share of ' +
+      'early-1900s housing and the aging plumbing that comes with it. Outside the town center, well ' +
+      'and septic are common.',
+    'The permit-free work we do across Englewood today; permitted jobs we schedule as we confirm ' +
+      'McMinn County permitting.',
+  ],
+  localSections: [
+    {
+      heading: 'Mill-town housing and what fails in it',
+      paragraphs: [
+        'Early-1900s homes bring aging supply lines, tired shutoff valves, older drain lines, and ' +
+          'water heaters that have outlived their warranties several times over. These are the classic ' +
+          'age-related failures, and most of them are permit-free repairs we can do on the spot. Where ' +
+          'a home’s galvanized or cast iron has genuinely reached the end, we will tell you plainly ' +
+          'rather than keep patching it.',
+      ],
+    },
+    {
+      heading: 'Well and septic on the edges',
+      paragraphs: [
+        'Outside the center, Englewood runs on private well and septic. We handle the house side — ' +
+          'interior plumbing, fixtures, heaters, and treatment — and refer the systems themselves out.',
+      ],
+    },
+  ],
+  commonIssues: [
+    'Aging supply lines and drain lines in early-1900s homes',
+    'Seized shutoff valves and worn supply lines',
+    'Original-era water heaters past their lifespan',
+    'House-side plumbing on well and septic properties',
+    'Freeze exposure on older, unheated runs',
+  ],
+  faqs: [
+    { q: 'How far is Englewood from your base?', a: 'About 35 minutes from Charleston, at the eastern edge of McMinn County.' },
+    { q: 'Which jobs can you do in Englewood now?', a: 'All the permit-free work — drains, emergencies, leaks, water heater repair, and fixtures. Permitted jobs are scheduled as we confirm McMinn County permitting.' },
+    { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
+    { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
+  ],
+}
+
+const BENTON: LocationContent = {
+  quickAnswer:
+    'We cover Benton and Polk County for drain cleaning, emergency repair, leak detection, water ' +
+    'heater repair, and fixture work — about 20 minutes from our Charleston base. Benton is a rural ' +
+    'county seat with heavy well and septic use and no plumbing operator anchored there. Tennessee ' +
+    'license #5045.',
+  intro: [
+    'Benton is the county seat of Polk County, east of Charleston toward the Ocoee, and it is a ' +
+      'rural service area where no plumbing operator is actually anchored. That leaves Benton and the ' +
+      'surrounding county depending on plumbers driving in from Cleveland — and we are closer, about ' +
+      '20 minutes out.',
+    'The permit-free work we do across Benton today; permitted jobs we schedule as we confirm Polk ' +
+      'County permitting.',
+  ],
+  localSections: [
+    {
+      heading: 'No plumber anchored in Polk County',
+      paragraphs: [
+        'Polk County does not have a resident plumbing operation, so coverage here has always been ' +
+          'someone else’s overflow. Being 20 minutes out in Charleston, we treat Benton as part of our ' +
+          'regular service area rather than a long drive. Drains, emergencies, leaks, water heater ' +
+          'repair, and fixtures are all permit-free, so we cover them here without a jurisdiction ' +
+          'question.',
+      ],
+    },
+    {
+      heading: 'Well and septic country toward the Ocoee',
+      paragraphs: [
+        'Benton and the surrounding area run heavily on private well and septic. We work the house ' +
+          'side — interior plumbing, fixtures, heaters, and water treatment — and refer the well and ' +
+          'septic systems themselves to the right licensed contractor. Iron, sulfur, and sediment ' +
+          'treatment on well supply is often where we add the most value out here.',
+      ],
+    },
+  ],
+  commonIssues: [
+    'No resident plumbing operator anywhere in Polk County',
+    'House-side plumbing on heavy well and septic use',
+    'Iron, sulfur smell, and sediment on well supply',
+    'Long service runs and rural crawlspace construction',
+    'Freeze exposure on unheated rural runs',
+  ],
+  faqs: [
+    { q: 'Is there a plumber based in Benton?', a: 'No plumbing operator is anchored in Polk County, so coverage has always come from elsewhere. We are about 20 minutes out and treat Benton as part of our regular service area.' },
+    { q: 'Which jobs can you do in Benton now?', a: 'All the permit-free work. Permitted jobs are scheduled as we confirm Polk County permitting.' },
+    { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
+    { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
+  ],
+}
+
+const OCOEE: LocationContent = {
+  quickAnswer:
+    'We cover Ocoee for drain cleaning, emergency repair, leak detection, water heater repair, and ' +
+    'fixture work — about 18 minutes from our Charleston base. Ocoee sits between Cleveland and the ' +
+    'Ocoee River recreation corridor, with a mix of year-round rural homes and seasonal ' +
+    'river-adjacent property. Tennessee license #5045.',
+  intro: [
+    'Ocoee sits between Cleveland and the Ocoee River recreation corridor, which gives it a mix of ' +
+      'year-round rural homes and seasonal, river-adjacent property. That seasonal side matters for ' +
+      'plumbing: unheated structures that sit empty through cold snaps are exactly where pipes ' +
+      'freeze and burst.',
+    'The permit-free work we do across Ocoee today; permitted jobs we schedule as we confirm Polk ' +
+      'County permitting.',
+  ],
+  localSections: [
+    {
+      heading: 'Seasonal river property and freeze exposure',
+      paragraphs: [
+        'Seasonal and river-adjacent structures around Ocoee often sit unheated for stretches, which ' +
+          'raises freeze risk on exposed and crawlspace runs. A burst pipe in a property no one is ' +
+          'living in can run for a long time before anyone notices. Emergency work needs no permit, so ' +
+          'we can respond to a freeze-up here fast, and it is worth having freeze-prone runs looked at ' +
+          'before the first hard freeze rather than after.',
+      ],
+    },
+    {
+      heading: 'Rural well and septic',
+      paragraphs: [
+        'Many Ocoee properties run on private well and septic. We work the house side and refer the ' +
+          'systems themselves out. On well water, treating iron, sulfur, and sediment is house-side ' +
+          'work we can genuinely help with.',
+      ],
+    },
+  ],
+  commonIssues: [
+    'Frozen and burst pipes in unheated seasonal structures',
+    'House-side plumbing on rural well and septic properties',
+    'Iron, sulfur smell, and sediment on well supply',
+    'Aging supply lines and water heaters in older rural homes',
+    'Long runs and crawlspace pipe exposed to freeze',
+  ],
+  faqs: [
+    { q: 'How far is Ocoee from your base?', a: 'About 18 minutes from Charleston, between Cleveland and the Ocoee River corridor.' },
+    { q: 'My seasonal place froze and burst. Can you help?', a: 'Yes. A burst pipe is an emergency, and emergency work needs no permit, so we can respond across Ocoee without a jurisdiction question.' },
+    { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
+    { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
+  ],
+}
+
+const OLD_FORT: LocationContent = {
+  quickAnswer:
+    'We cover Old Fort for drain cleaning, emergency repair, leak detection, water heater repair, ' +
+    'and fixture work — about 15 minutes from our Charleston base. Old Fort is a rural community in ' +
+    'northern Polk County, predominantly private well and septic, with long service runs common. ' +
+    'Tennessee license #5045.',
+  intro: [
+    'Old Fort is a rural community just south of Charleston in northern Polk County, about 15 ' +
+      'minutes from our base. It is predominantly private well and septic, and long service runs — ' +
+      'the distance of pipe from the road to the house — are common out here.',
+    'The permit-free work we do across Old Fort today; permitted jobs we schedule as we confirm Polk ' +
+      'County permitting.',
+  ],
+  localSections: [
+    {
+      heading: 'Long service runs from the road to the house',
+      paragraphs: [
+        'Rural Old Fort properties often have a long water-service run between the meter or well and ' +
+          'the house, and long runs mean more pipe exposed to freeze, more distance for a leak to hide, ' +
+          'and more that can go wrong underground. Leak detection is genuinely useful here, because ' +
+          'finding a break in a long buried run precisely is the difference between one dig and a ' +
+          'trench.',
+      ],
+    },
+    {
+      heading: 'Well and septic in northern Polk County',
+      paragraphs: [
+        'With most properties on private well and septic, our work here is house-side: interior ' +
+          'plumbing, fixtures, heaters, and treatment. The systems themselves are separately licensed ' +
+          'and referred out. Treating iron, sulfur, and sediment on well supply is often where the ' +
+          'value is.',
+      ],
+    },
+  ],
+  commonIssues: [
+    'Leaks and freeze in long service runs from the road to the house',
+    'House-side plumbing on private well and septic properties',
+    'Iron, sulfur smell, and sediment on well supply',
+    'Aging supply lines and water heaters in older rural homes',
+    'Crawlspace pipe exposed to winter freeze',
+  ],
+  faqs: [
+    { q: 'How far is Old Fort from your base?', a: 'About 15 minutes south of Charleston in northern Polk County — one of the closer towns for us.' },
+    { q: 'Can you find a leak in a long buried water line?', a: 'Yes. Leak detection lets us locate a break in a long run precisely, so the repair is one dig rather than a trench.' },
+    { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
+    { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
+  ],
+}
+
+const DELANO: LocationContent = {
+  quickAnswer:
+    'We cover Delano for drain cleaning, emergency repair, leak detection, water heater repair, and ' +
+    'fixture work — about 22 minutes from our Charleston base. Delano is a small community on the ' +
+    'Hiwassee River in northern Polk County, almost entirely well and septic. Tennessee license ' +
+    '#5045.',
+  intro: [
+    'Delano is a small community on the Hiwassee River in northern Polk County, almost entirely on ' +
+      'private well and septic, with river-adjacent properties that see seasonal occupancy. That ' +
+      'combination — rural water and part-time-occupied homes — shapes the plumbing here.',
+    'The permit-free work we do across Delano today; permitted jobs we schedule as we confirm Polk ' +
+      'County permitting.',
+  ],
+  localSections: [
+    {
+      heading: 'River-adjacent and seasonal property',
+      paragraphs: [
+        'Homes along the Hiwassee that are occupied seasonally are prime candidates for freeze damage, ' +
+          'because a pipe can burst and run for weeks in a house no one is in. Emergency work needs no ' +
+          'permit, so we can respond fast, and a pre-winter look at freeze-prone runs is cheap ' +
+          'insurance against a big loss.',
+      ],
+    },
+    {
+      heading: 'Almost entirely well and septic',
+      paragraphs: [
+        'Delano runs almost entirely on private well and septic. We work the house side — interior ' +
+          'plumbing, fixtures, heaters, and treatment — and refer the well and septic systems out. ' +
+          'Iron, sulfur, and sediment treatment is often where we help most on well supply.',
+      ],
+    },
+  ],
+  commonIssues: [
+    'Freeze and burst pipes in seasonally-occupied river homes',
+    'House-side plumbing on nearly universal well and septic',
+    'Iron, sulfur smell, and sediment on well supply',
+    'Aging fixtures and water heaters in older rural homes',
+    'Long, exposed service runs prone to freeze',
+  ],
+  faqs: [
+    { q: 'How far is Delano from your base?', a: 'About 22 minutes from Charleston, on the Hiwassee in northern Polk County.' },
+    { q: 'My river place froze while it was empty. Can you help?', a: 'Yes. A burst pipe is an emergency and needs no permit, so we can respond across Delano quickly.' },
+    { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
+    { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
+  ],
+}
+
+const GEORGETOWN: LocationContent = {
+  quickAnswer:
+    'We cover Georgetown for drain cleaning, emergency repair, leak detection, water heater repair, ' +
+    'and fixture work — about 20 minutes from our Charleston base. Georgetown sits at the ' +
+    'Hamilton–Meigs–Bradley county convergence and is closer to us than to any Chattanooga-based ' +
+    'operator. Tennessee license #5045.',
+  intro: [
+    'Georgetown sits where Hamilton, Meigs, and Bradley counties converge, a rural-residential area ' +
+      'that is genuinely closer to our Charleston base than to any Chattanooga-based operator. That ' +
+      'proximity is the whole story here: about 20 minutes for us versus a real drive for the ' +
+      'Chattanooga shops.',
+    'The permit-free work we do across Georgetown today; permitted jobs we schedule as we confirm ' +
+      'Hamilton County permitting.',
+  ],
+  localSections: [
+    {
+      heading: 'Closer to Charleston than to Chattanooga',
+      paragraphs: [
+        'Georgetown gets treated as drive-time overflow by Chattanooga-based plumbers, but from our ' +
+          'base it is a short run. Drains, emergencies, leaks, water heater repair, and fixtures are ' +
+          'all permit-free, so we cover them across Georgetown with no jurisdiction question and less ' +
+          'wait than a metro operator would bring.',
+      ],
+    },
+    {
+      heading: 'Rural well and septic at the county convergence',
+      paragraphs: [
+        'Georgetown is rural-residential with heavy well and septic use. We work the house side — ' +
+          'interior plumbing, fixtures, heaters, and treatment — and refer the systems themselves out. ' +
+          'On well supply, iron, sulfur, and sediment treatment is often where the value is.',
+      ],
+    },
+  ],
+  commonIssues: [
+    'Drive-time-overflow service from Chattanooga-based operators',
+    'House-side plumbing on heavy well and septic use',
+    'Iron, sulfur smell, and sediment on well supply',
+    'Aging supply lines and water heaters in older rural homes',
+    'Freeze exposure on unheated rural runs',
+  ],
+  faqs: [
+    { q: 'How far is Georgetown from your base?', a: 'About 20 minutes from Charleston — closer to us than to any Chattanooga-based operator.' },
+    { q: 'Which jobs can you do in Georgetown now?', a: 'All the permit-free work. Permitted jobs are scheduled as we confirm Hamilton County permitting.' },
+    { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
+    { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
+  ],
+}
+
+const BIRCHWOOD: LocationContent = {
+  quickAnswer:
+    'We cover Birchwood for drain cleaning, emergency repair, leak detection, water heater repair, ' +
+    'and fixture work — about 25 minutes from our Charleston base. Birchwood is a rural northern ' +
+    'Hamilton County community near the Chickamauga Lake headwaters, predominantly well and septic. ' +
+    'Tennessee license #5045.',
+  intro: [
+    'Birchwood is a rural community in northern Hamilton County near the headwaters of Chickamauga ' +
+      'Lake. Chattanooga-based operators treat it as drive-time overflow; from our base it is about ' +
+      '25 minutes, so we serve it as home ground rather than the far edge of a route.',
+    'The permit-free work we do across Birchwood today; permitted jobs we schedule as we confirm ' +
+      'Hamilton County permitting.',
+  ],
+  localSections: [
+    {
+      heading: 'Drive-time overflow for others, home ground for us',
+      paragraphs: [
+        'Because Birchwood is at the far northern edge of Hamilton County, metro plumbers get to it ' +
+          'last if at all. We are closer, and the permit-free work — drains, emergencies, leaks, water ' +
+          'heater repair, fixtures — we cover here with no jurisdiction question.',
+      ],
+    },
+    {
+      heading: 'Well and septic near the lake headwaters',
+      paragraphs: [
+        'Birchwood runs predominantly on private well and septic. We handle the house side and refer ' +
+          'the systems themselves out. Iron, sulfur, and sediment treatment on well supply is often ' +
+          'where we add the most value, and lake-adjacent seasonal structures see extra freeze ' +
+          'exposure in winter.',
+      ],
+    },
+  ],
+  commonIssues: [
+    'Last-to-be-served treatment from Chattanooga-based operators',
+    'House-side plumbing on predominant well and septic use',
+    'Iron, sulfur smell, and sediment on well supply',
+    'Freeze exposure on lake-adjacent seasonal structures',
+    'Aging supply lines and water heaters in older rural homes',
+  ],
+  faqs: [
+    { q: 'How far is Birchwood from your base?', a: 'About 25 minutes from Charleston, in northern Hamilton County near the Chickamauga Lake headwaters.' },
+    { q: 'Which jobs can you do in Birchwood now?', a: 'All the permit-free work. Permitted jobs are scheduled as we confirm Hamilton County permitting.' },
+    { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
+    { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
+  ],
+}
+
+const DECATUR: LocationContent = {
+  quickAnswer:
+    'We cover Decatur and Meigs County for drain cleaning, emergency repair, leak detection, water ' +
+    'heater repair, and fixture work — about 30 minutes from our Charleston base. Decatur is a rural ' +
+    'county seat with almost no resident plumbing coverage and heavy well and septic use. Tennessee ' +
+    'license #5045.',
+  intro: [
+    'Decatur is the county seat of Meigs County, north across the Hiwassee, and Meigs is a rural ' +
+      'county with almost no resident plumbing coverage. That leaves Decatur depending on plumbers ' +
+      'driving in from other counties — and we are about 30 minutes out, which for this area is close.',
+    'The permit-free work we do across Decatur today; permitted jobs we schedule as we confirm Meigs ' +
+      'County permitting.',
+  ],
+  localSections: [
+    {
+      heading: 'A county with almost no resident plumber',
+      paragraphs: [
+        'Meigs County does not have much in the way of resident plumbing coverage, so Decatur has long ' +
+          'relied on out-of-county help that treats it as the end of a route. We serve it as part of ' +
+          'our regular area. Drains, emergencies, leaks, water heater repair, and fixtures are all ' +
+          'permit-free, so we cover them here without a jurisdiction question.',
+      ],
+    },
+    {
+      heading: 'Heavy well and septic use',
+      paragraphs: [
+        'Decatur and the surrounding county run heavily on private well and septic. We work the house ' +
+          'side — interior plumbing, fixtures, heaters, and treatment — and refer the systems ' +
+          'themselves out. Iron, sulfur, and sediment treatment on well supply is often the most ' +
+          'useful thing we do out here.',
+      ],
+    },
+  ],
+  commonIssues: [
+    'Almost no resident plumbing coverage anywhere in Meigs County',
+    'House-side plumbing on heavy well and septic use',
+    'Iron, sulfur smell, and sediment on well supply',
+    'Aging supply lines and water heaters in older rural homes',
+    'Freeze exposure on unheated rural runs',
+  ],
+  faqs: [
+    { q: 'Is there a plumber based in Decatur?', a: 'Meigs County has very little resident plumbing coverage, so Decatur has relied on out-of-county help. We are about 30 minutes out and serve it as part of our regular area.' },
+    { q: 'Which jobs can you do in Decatur now?', a: 'All the permit-free work. Permitted jobs are scheduled as we confirm Meigs County permitting.' },
+    { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
+    { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
+  ],
+}
+
+const SODDY_DAISY: LocationContent = {
+  quickAnswer:
+    'We cover Soddy-Daisy for drain cleaning, emergency repair, leak detection, water heater repair, ' +
+    'and fixture work — about 40 minutes from our Charleston base. Soddy-Daisy administers its own ' +
+    'permitting separately from Chattanooga, and its housing spans a wide range of ages. Tennessee ' +
+    'license #5045.',
+  intro: [
+    'Soddy-Daisy is a former mining community north of Chattanooga with a wide range of housing ' +
+      'ages, from older homes to newer construction, and both lake-adjacent and ridge properties. ' +
+      'Importantly for plumbing, it administers its own building permitting separately from the City ' +
+      'of Chattanooga.',
+    'The permit-free work we do across Soddy-Daisy today; permitted jobs we schedule as we confirm ' +
+      'City of Soddy-Daisy permitting specifically.',
+  ],
+  localSections: [
+    {
+      heading: 'Soddy-Daisy runs its own permitting',
+      paragraphs: [
+        'Because Soddy-Daisy handles its own permits rather than deferring to Chattanooga, permitted ' +
+          'work here is verified against the city itself — and unlike inside Chattanooga city limits, ' +
+          'this is a jurisdiction where an LLP is not automatically excluded from pulling. That is ' +
+          'exactly the kind of town-by-town detail our scope guard is built to handle: permit-free ' +
+          'work runs now, and permitted jobs are scheduled as we confirm Soddy-Daisy specifically.',
+      ],
+    },
+    {
+      heading: 'Mixed housing ages, lake and ridge property',
+      paragraphs: [
+        'The wide span of housing ages means a wide span of plumbing: older homes with aging supply ' +
+          'lines and water heaters, newer ones with builder-grade fixtures, and lake and ridge ' +
+          'properties with their own freeze and access quirks. All of the permit-free repair work ' +
+          'across that range we can handle today.',
+      ],
+    },
+  ],
+  commonIssues: [
+    'Permitting verified against the city, not Chattanooga',
+    'Aging supply lines and water heaters in older homes',
+    'Builder-grade fixtures and shutoffs in newer construction',
+    'Freeze exposure on lake-adjacent and ridge properties',
+    'Hard-water scale on fixtures and water heaters',
+  ],
+  faqs: [
+    { q: 'Is Soddy-Daisy permitting the same as Chattanooga?', a: 'No. Soddy-Daisy administers its own permitting separately from the City of Chattanooga, so permitted work here is confirmed against the city itself. Permit-free work we do today either way.' },
+    { q: 'How far is Soddy-Daisy from your base?', a: 'About 40 minutes from Charleston, north of Chattanooga.' },
+    { q: 'Which jobs can you do in Soddy-Daisy now?', a: 'All the permit-free work. Permitted jobs are scheduled as we confirm City of Soddy-Daisy permitting.' },
+    { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
+  ],
+}
+
 export const LOCATION_CONTENT: Record<string, LocationContent> = {
   'charleston-tn': CHARLESTON,
   'calhoun-tn': CALHOUN,
@@ -672,6 +1254,18 @@ export const LOCATION_CONTENT: Record<string, LocationContent> = {
   'apison-tn': APISON,
   'harrison-tn': HARRISON,
   'chattanooga-tn': CHATTANOOGA,
+  'riceville-tn': RICEVILLE,
+  'niota-tn': NIOTA,
+  'etowah-tn': ETOWAH,
+  'englewood-tn': ENGLEWOOD,
+  'benton-tn': BENTON,
+  'ocoee-tn': OCOEE,
+  'old-fort-tn': OLD_FORT,
+  'delano-tn': DELANO,
+  'georgetown-tn': GEORGETOWN,
+  'birchwood-tn': BIRCHWOOD,
+  'decatur-tn': DECATUR,
+  'soddy-daisy-tn': SODDY_DAISY,
 }
 
 /** Honest, registry-driven content for towns without a hand-written page yet. */

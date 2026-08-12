@@ -922,6 +922,499 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       LICENSED_FAQ,
     ],
   },
+
+  'whole-house-water-filtration': {
+    quickAnswer:
+      'We install whole-house water filtration at the main line to handle sediment, iron, sulfur, ' +
+      'and taste before the water reaches any tap — on both city and private-well supply. It is ' +
+      'permitted work in most jurisdictions, so we schedule it across the corridor as we confirm ' +
+      'permitting; some places treat point-of-entry systems as permit-free, and we verify that per ' +
+      'town.',
+    lede:
+      'Filtration at the main line treats every tap in the house at once instead of one faucet at a ' +
+      'time. In an area with the hard water and well-water iron and sulfur common across southeast ' +
+      'Tennessee, that is often the difference between fighting the symptoms and fixing the cause.',
+    whatWeDo: [
+      'Whole-house sediment, iron, and sulfur filtration at the point of entry',
+      'Systems sized and specified to your actual water, not a generic setup',
+      'Filtration for both city water and private-well supply',
+      'Honest guidance on what filtration will and will not fix',
+    ],
+    intro: [
+      'People usually come to filtration through a symptom: staining on fixtures, a sulfur smell, ' +
+        'sediment in the aerators, or a water heater that keeps failing early from scale and iron. ' +
+        'Treating it at the main line solves it for the whole house rather than one sink at a time.',
+    ],
+    sections: [
+      {
+        heading: 'Match the system to the water, not the brochure',
+        paragraphs: [
+          'The right filtration depends on what is actually in your water, which is different on city ' +
+            'supply than on a private well, and different from one well to the next. We specify the ' +
+            'system to the problem — sediment, iron, sulfur, taste — instead of installing the same box ' +
+            'everywhere and hoping. That is the difference between filtration that works and an ' +
+            'expensive appliance that does not touch your actual issue.',
+        ],
+      },
+    ],
+    process: [
+      { name: 'Identify what is in the water', text: 'Sediment, iron, sulfur, or taste — the problem sets the system, not the other way around.' },
+      { name: 'Size it to the house', text: 'Specified to your flow and your water so it performs and does not choke pressure.' },
+      { name: 'Install at the point of entry', text: 'At the main line, so every tap is treated, permit pulled where required.' },
+      { name: 'Confirm the result', text: 'Verify the water improved on the thing you called about.' },
+    ],
+    related: [
+      { label: 'Water softener installation', href: '/services/water-softener-installation' },
+      { label: 'Well water treatment', href: '/services/well-water-treatment' },
+      { label: 'Water heater replacement', href: '/services/water-heater-replacement' },
+    ],
+    faqs: [
+      { q: 'What does whole-house filtration actually remove?', a: 'Depending on the system, sediment, iron, sulfur smell, and taste and odor issues. We specify it to what is actually in your water rather than promise it fixes everything.' },
+      { q: 'Does filtration need a permit?', a: 'In most jurisdictions it is treated as permitted work, and we schedule it as we confirm local permitting. Some places treat point-of-entry systems as permit-free, and we verify that per town.' },
+      { q: 'Will it help my water heater last longer?', a: 'Often, yes. Scale, iron, and sediment shorten water heater life, so treating them at the main line is part of why the next heater lasts longer than the last.' },
+      { q: 'City water or well water — does it matter?', a: 'Yes. City and well water carry different problems, so the system is specified differently. We handle both.' },
+      WARRANTY_FAQ,
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'water-softener-installation': {
+    quickAnswer:
+      'We install water softeners to take the hardness out of your water and protect your heaters, ' +
+      'fixtures, and appliances from scale. It is permitted work, so we schedule it across the ' +
+      'corridor as we confirm local permitting. Tennessee license #5045.',
+    lede:
+      'Hard water is not a health problem, but it is a plumbing and appliance problem, and across ' +
+      'southeast Tennessee it is common. A softener addresses the cause — the mineral hardness ' +
+      'itself — rather than replacing scaled-up heaters and fixtures over and over.',
+    whatWeDo: [
+      'Water softener installation sized to the household and the water',
+      'Protection for water heaters, fixtures, and appliances from scale',
+      'Pairing with filtration where the water needs both',
+      'Straight talk on whether a softener is what your water actually needs',
+    ],
+    intro: [
+      'The case for a softener is cumulative: scale shortens the life of water heaters, clouds glass ' +
+        'and fixtures, stiffens laundry, and coats the inside of pipes and appliances over years. If ' +
+        'you are on your third early water heater, hardness is often the quiet reason.',
+    ],
+    sections: [
+      {
+        heading: 'What a softener does, and what it does not',
+        paragraphs: [
+          'A softener removes the calcium and magnesium that make water hard, which is what protects ' +
+            'your heaters, fixtures, and appliances from scale. It is not a filter for iron, sulfur, ' +
+            'sediment, or taste — those are treatment or filtration problems. Some homes need both, and ' +
+            'we will tell you honestly which you need rather than sell a softener as a cure-all.',
+        ],
+      },
+    ],
+    process: [
+      { name: 'Confirm hardness is the issue', text: 'Softening solves hardness; if your real problem is iron or sulfur, we point you to treatment instead.' },
+      { name: 'Size to the household', text: 'Matched to your water and usage so it regenerates efficiently.' },
+      { name: 'Install to code', text: 'Plumbed in properly, permit pulled where required.' },
+      { name: 'Set it and verify', text: 'Dialed in to your water and confirmed working.' },
+    ],
+    related: [
+      { label: 'Whole-house filtration', href: '/services/whole-house-water-filtration' },
+      { label: 'Well water treatment', href: '/services/well-water-treatment' },
+      { label: 'Water heater replacement', href: '/services/water-heater-replacement' },
+    ],
+    faqs: [
+      { q: 'Do I need a softener or a filter?', a: 'A softener handles hardness — scale on heaters and fixtures. A filter handles iron, sulfur, sediment, and taste. Some homes need both, and we will tell you which yours needs.' },
+      { q: 'Does a softener need a permit?', a: 'It is permitted work, so we schedule it as we confirm local permitting.' },
+      { q: 'Will it stop my water heaters from failing early?', a: 'It helps, because scale from hard water is a major cause of early water heater failure. If hardness is your problem, softening addresses the cause.' },
+      { q: 'Is hard water bad for my health?', a: 'No. It is a plumbing and appliance problem, not a health one — but it is a real, cumulative cost.' },
+      WARRANTY_FAQ,
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'well-water-treatment': {
+    quickAnswer:
+      'We treat iron, sulfur smell, and sediment on private-well supply — after the water reaches ' +
+      'the house. We treat the water, not the well: the well, pump, and pressure tank are separately ' +
+      'licensed work we refer out. Treatment is permitted work, scheduled as we confirm local ' +
+      'permitting. Tennessee license #5045.',
+    lede:
+      'Well water is its own world. Iron stains, a rotten-egg sulfur smell, and sediment are the ' +
+      'usual complaints, and all of them are treatable — on the house side, after the water comes in ' +
+      'from the well. That distinction is not a technicality; it is the line our license draws.',
+    whatWeDo: [
+      'Iron and sulfur-smell treatment on private-well supply',
+      'Sediment filtration for well water',
+      'Treatment specified to your specific well water',
+      'A clear line: we treat the water, we do not service the well system',
+    ],
+    intro: [
+      'The most important thing to understand about how we help well-water homes is where we work. ' +
+        'We treat the water once it is in the house plumbing. The well itself, the pump, and the ' +
+        'pressure tank are separately licensed in Tennessee, and we refer those to a well contractor. ' +
+        'Everything on the house side of that line, we handle.',
+    ],
+    sections: [
+      {
+        heading: 'We treat the water, not the well',
+        paragraphs: [
+          'This is the honest boundary and it matters. Iron, sulfur, and sediment treatment happens ' +
+            'after the water reaches the house, which is house-side plumbing squarely inside our scope. ' +
+            'Drilling, pump replacement, and pressure-tank service are well-system work that is ' +
+            'separately licensed, and we will refer you to the right contractor rather than pretend ' +
+            'they are ours. Copy that blurs that line does you no favors; we keep it clear.',
+        ],
+      },
+      {
+        heading: 'Iron, sulfur, and sediment',
+        paragraphs: [
+          'Iron leaves the orange-brown staining on fixtures and laundry. Sulfur is the rotten-egg ' +
+            'smell, especially in hot water. Sediment clogs aerators and wears fixtures. Each has its ' +
+            'own treatment, and the right system depends on your specific well, which is why we specify ' +
+            'it to your water rather than install a generic setup.',
+        ],
+      },
+    ],
+    process: [
+      { name: 'Understand your well water', text: 'Iron, sulfur, and sediment each need a different answer, so we start with what is actually in it.' },
+      { name: 'Specify the treatment', text: 'Sized and matched to your water, on the house side of the system.' },
+      { name: 'Install to code', text: 'Plumbed in properly, permit pulled where required.' },
+      { name: 'Refer what is not ours', text: 'If the real issue is the well, pump, or pressure tank, we point you to the right contractor.' },
+    ],
+    related: [
+      { label: 'Whole-house filtration', href: '/services/whole-house-water-filtration' },
+      { label: 'Plumbing for well-water homes', href: '/services/well-property-plumbing' },
+      { label: 'Water softener installation', href: '/services/water-softener-installation' },
+    ],
+    faqs: [
+      { q: 'Do you service the well itself?', a: 'No. We treat the water after it reaches the house. The well, pump, and pressure tank are separately licensed in Tennessee, and we refer those to a well contractor.' },
+      { q: 'Can you get rid of the rotten-egg smell?', a: 'Yes — that sulfur smell is a common, treatable well-water issue, handled on the house side.' },
+      { q: 'Why is my water staining everything orange?', a: 'That is iron in the well water, and it is treatable at the house. We specify the system to your specific water.' },
+      { q: 'Does well water treatment need a permit?', a: 'It is permitted work, so we schedule it as we confirm local permitting.' },
+      WARRANTY_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'well-property-plumbing': {
+    quickAnswer:
+      'We handle the plumbing inside well-water homes — water lines, fixtures, heaters, and ' +
+      'treatment — the house side only. The well, pump, and pressure tank are separately licensed ' +
+      'and we refer them out. This is permit-free work, so we cover it across the whole service area ' +
+      'including Chattanooga. Tennessee license #5045.',
+    lede:
+      'A house on well water is still a house, and the plumbing inside it — the lines, fixtures, ' +
+      'heaters, and water treatment — is squarely our work. The well system itself is not, and ' +
+      'keeping that line clear is how we stay honest and inside the license.',
+    whatWeDo: [
+      'Water lines, fixtures, and water heaters in well-water homes',
+      'Iron, sulfur, and sediment treatment on the house side',
+      'Repairs and installs on the home plumbing, permit-free',
+      'Clear referral for the well, pump, and pressure tank',
+    ],
+    intro: [
+      'Well-water properties are common across the rural corridor we serve, and they often get told ' +
+        'that everything about their water is one specialized job. It is not. The house side — the ' +
+        'plumbing you live with — is ordinary plumbing we do everywhere, and it needs no permit.',
+    ],
+    sections: [
+      {
+        heading: 'House side only, and who we refer to',
+        paragraphs: [
+          'Everything from where the water enters the house onward is ours: supply lines, fixtures, ' +
+            'water heaters, and treatment for iron, sulfur, and sediment. The well itself, the pump, ' +
+            'and the pressure tank are separately licensed work, and we refer those to a well ' +
+            'contractor. If your problem turns out to be the pump or the tank, we will tell you plainly ' +
+            'and point you to the right person rather than take on work that is not ours.',
+        ],
+      },
+    ],
+    related: [
+      { label: 'Well water treatment', href: '/services/well-water-treatment' },
+      { label: 'Whole-house filtration', href: '/services/whole-house-water-filtration' },
+      { label: 'Water heater repair', href: '/services/water-heater-repair' },
+    ],
+    faqs: [
+      { q: 'Do you work on well-water homes?', a: 'Yes — the house side. Water lines, fixtures, heaters, and treatment inside the home are all ordinary plumbing we do everywhere, and it needs no permit.' },
+      { q: 'Do you fix the well pump or pressure tank?', a: 'No. The well, pump, and pressure tank are separately licensed in Tennessee, and we refer those to a well contractor.' },
+      { q: 'Do you cover well-water homes in Chattanooga?', a: 'The house-side work needs no permit, so yes, it is covered inside Chattanooga along with the rest of the area.' },
+      { q: 'Can you improve my well water?', a: 'Yes, on the house side — iron, sulfur, and sediment treatment after the water reaches the home.' },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'septic-property-plumbing': {
+    quickAnswer:
+      'We handle the plumbing inside septic homes — drain lines, fixtures, and septic-safe plumbing ' +
+      'inside the house. The tank, drain field, and pumping are separately licensed and we refer ' +
+      'them out. This is permit-free work, so we cover it across the whole service area including ' +
+      'Chattanooga. Tennessee license #5045.',
+    lede:
+      'On a septic property, the plumbing inside the house is ours; the septic system in the yard is ' +
+      'not. Drain lines, fixtures, and the habits that keep a septic system healthy are house-side ' +
+      'work, and none of it needs a permit.',
+    whatWeDo: [
+      'Drain lines and fixtures inside septic homes',
+      'Septic-safe plumbing repairs and installs',
+      'Clearing house-side drain clogs on septic properties',
+      'Clear referral for the tank, drain field, and pumping',
+    ],
+    intro: [
+      'Septic homes are common across the rural stretch of our service area, and the interior ' +
+        'plumbing works the same as on any home — with a few habits that keep the system downstream ' +
+        'healthy. All of that house-side work is permit-free and squarely ours.',
+    ],
+    sections: [
+      {
+        heading: 'House side only, and who we refer to',
+        paragraphs: [
+          'Everything inside the house — the drain lines, the fixtures, the clogs that back up into ' +
+            'the home — is ours to handle. The septic tank, the drain field, and pumping the tank are ' +
+            'separately licensed and we refer those to a septic contractor. When a backup turns out to ' +
+            'be the drain field rather than a house-side clog, we will say so and point you to the ' +
+            'right contractor instead of cabling a line that is not the problem.',
+        ],
+      },
+    ],
+    related: [
+      { label: 'Drain cleaning', href: '/services/drain-cleaning' },
+      { label: 'Sewer camera inspection', href: '/services/camera-inspection' },
+      { label: 'Fixture repair', href: '/services/fixture-repair' },
+    ],
+    faqs: [
+      { q: 'Do you work on septic homes?', a: 'Yes — the house side. Drain lines, fixtures, and septic-safe plumbing inside the home are ordinary plumbing we do everywhere, permit-free.' },
+      { q: 'Do you pump or repair the septic tank?', a: 'No. The tank, drain field, and pumping are separately licensed in Tennessee, and we refer those to a septic contractor.' },
+      { q: 'My drains are backing up on a septic property. Can you help?', a: 'Yes, when it is a house-side clog. If a camera shows the issue is actually the drain field, we tell you and refer it to a septic contractor rather than keep cabling.' },
+      { q: 'Do you cover septic homes in Chattanooga?', a: 'The house-side work needs no permit, so yes, it is covered inside Chattanooga along with the rest of the area.' },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  repiping: {
+    quickAnswer:
+      'We replace failing galvanized or polybutylene supply lines with modern pipe throughout the ' +
+      'house. A repipe is permitted work, and larger jobs can approach our $25,000 per-project ' +
+      'ceiling, so we disclose that up front. We do repipes in the corridor towns where we can pull ' +
+      'a permit. Tennessee license #5045.',
+    lede:
+      'A repipe is the honest answer when the pipe itself has failed rather than one section of it. ' +
+      'Galvanized steel and polybutylene both reach a point where patching a leak just moves the ' +
+      'next one down the line, and at that point replacing the supply lines is the fix that lasts.',
+    whatWeDo: [
+      'Whole-house replacement of failing galvanized or polybutylene supply lines',
+      'Modern copper or PEX repipes done to code',
+      'Honest assessment of whether you need a full repipe or a targeted repair',
+      'Up-front disclosure when a job approaches the per-project ceiling',
+    ],
+    signs: [
+      'Chronic low water pressure throughout the house',
+      'Rusty or discolored water, especially on the hot side',
+      'Repeated pinhole leaks in the same system',
+      'Known polybutylene (gray plastic) supply lines',
+      'Galvanized steel pipe that has corroded internally over decades',
+    ],
+    sections: [
+      {
+        heading: 'When a repipe is the honest answer',
+        paragraphs: [
+          'One leak is a repair. A pattern of leaks in the same aging system is the pipe telling you ' +
+            'it is done. Galvanized steel corrodes from the inside until pressure drops and pinholes ' +
+            'appear; polybutylene became known for failing at fittings and along the line. When we see ' +
+            'either failing systemically, we will tell you that a repipe is the real fix rather than ' +
+            'sell you a string of repairs that never gets ahead of it.',
+        ],
+      },
+      {
+        heading: 'The permit and the ceiling, stated plainly',
+        paragraphs: [
+          'A repipe is permitted work, so we do it in the corridor towns where we are cleared to pull ' +
+            'a permit; inside Chattanooga city limits it goes to a licensed partner. A larger repipe ' +
+            'can also approach the $25,000 per-project ceiling on a Limited Licensed Plumber. If a job ' +
+            'would run past that, we bring in a partner rather than split or understate it. You hear ' +
+            'that from us before the work starts, not after.',
+        ],
+      },
+    ],
+    related: [
+      { label: 'Leak detection', href: '/services/leak-detection' },
+      { label: 'Water service line replacement', href: '/services/water-service-line' },
+      { label: 'Fixture repair', href: '/services/fixture-repair' },
+    ],
+    faqs: [
+      { q: 'How do I know if I need a repipe or just a repair?', a: 'One leak is a repair. A pattern of leaks, chronic low pressure, or known polybutylene is usually the whole system talking. We assess it honestly rather than default to the bigger job.' },
+      { q: 'What is wrong with polybutylene pipe?', a: 'Polybutylene (gray plastic) supply line became known for failing at fittings and along its length. If your home has it, a repipe is often the durable answer.' },
+      { q: 'Does a repipe need a permit?', a: 'Yes. We do repipes in the corridor towns where we can pull a permit. Inside Chattanooga, permitted work goes to a licensed partner.' },
+      { q: 'What is the $25,000 ceiling?', a: 'A Limited Licensed Plumber carries a $25,000 per-project cap. If a repipe would exceed it, we bring in a partner rather than split the work — and we tell you up front.' },
+      WARRANTY_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'water-service-line': {
+    quickAnswer:
+      'We replace the water service line — the pipe that runs from the meter to your house — when ' +
+      'it fails. It is permitted work and larger jobs can approach our $25,000 per-project ceiling, ' +
+      'which we disclose up front. We do it in the corridor towns where we can pull a permit. ' +
+      'Tennessee license #5045.',
+    lede:
+      'The water service line is the single pipe carrying all of your water from the meter to the ' +
+      'house, and when it fails you see it in the yard, on the bill, and at every tap. Replacing it ' +
+      'is a permitted job, and on rural properties with long runs it can be a real one.',
+    whatWeDo: [
+      'Replacement of the line from the meter (or well) to the house',
+      'Locating the failure precisely before any dig',
+      'Modern service line installed to code',
+      'Up-front disclosure when a job approaches the per-project ceiling',
+    ],
+    signs: [
+      'A wet or unusually green strip of yard along the line’s path',
+      'A water bill that jumped with no change in usage',
+      'Dropping pressure throughout the whole house at once',
+      'Air or sputtering at the taps',
+      'A known old or undersized service line on an older property',
+    ],
+    sections: [
+      {
+        heading: 'Find the failure before you trench',
+        paragraphs: [
+          'On a long rural run, the difference between locating the break and guessing is the ' +
+            'difference between one targeted repair and trenching the whole yard. We locate the failure ' +
+            'first so the work is as contained as the situation allows, then replace the line to code.',
+        ],
+      },
+      {
+        heading: 'Permit and ceiling, stated plainly',
+        paragraphs: [
+          'A service line replacement is permitted work, done in the corridor towns where we can pull ' +
+            'a permit; inside Chattanooga it goes to a licensed partner. A long run can approach the ' +
+            '$25,000 per-project ceiling, and if a job would exceed it we bring in a partner rather ' +
+            'than understate it. You hear that before the work starts.',
+        ],
+      },
+    ],
+    related: [
+      { label: 'Leak detection', href: '/services/leak-detection' },
+      { label: 'Whole-house repiping', href: '/services/repiping' },
+      { label: 'Sewer line repair', href: '/services/sewer-line-repair' },
+    ],
+    faqs: [
+      { q: 'How do I know my service line is failing?', a: 'A wet or green strip along its path, a jump in the bill, or dropping pressure throughout the house are the usual signs. We locate the failure to confirm before any dig.' },
+      { q: 'Does it need a permit?', a: 'Yes. We do service line replacements in the corridor towns where we can pull a permit. Inside Chattanooga, permitted work goes to a licensed partner.' },
+      { q: 'Will you have to dig up my whole yard?', a: 'We locate the failure first precisely, so the dig is as contained as the run allows rather than trenching on a guess.' },
+      { q: 'What about the $25,000 ceiling?', a: 'A long rural run can approach it. If a job would exceed the per-project cap, we bring in a partner rather than split it — and we tell you up front.' },
+      WARRANTY_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'sewer-line-repair': {
+    quickAnswer:
+      'We repair and replace collapsed, root-bound, and broken sewer lines — and we camera the line ' +
+      'first so the fix matches the problem. It is permitted work and larger jobs can approach our ' +
+      '$25,000 per-project ceiling, which we disclose up front. We do it in the corridor towns where ' +
+      'we can pull a permit. Tennessee license #5045.',
+    lede:
+      'A failing sewer line is the plumbing problem people most want a second opinion on, and ' +
+      'rightly so, because it is often quoted blind. We camera it first, show you the actual ' +
+      'condition, and match the repair to what is really wrong instead of defaulting to a full ' +
+      'replacement.',
+    whatWeDo: [
+      'Repair and replacement of collapsed, root-bound, and broken sewer lines',
+      'Camera inspection first, so the fix matches the problem',
+      'Honest repair-versus-replace guidance with the footage to back it',
+      'Up-front disclosure when a job approaches the per-project ceiling',
+    ],
+    signs: [
+      'Repeated whole-house backups from the main line',
+      'A drain that keeps clogging in the same spot after cleaning',
+      'Sewage smell or wet, sunken spots in the yard over the line',
+      'Multiple fixtures backing up at once',
+      'Older clay or cast iron sewer line on an aging property',
+    ],
+    sections: [
+      {
+        heading: 'Camera first, dig once',
+        paragraphs: [
+          'The most expensive way to handle a sewer line is to dig on a guess. We put a camera down ' +
+            'first and show you whether it is roots, a belly, a crack, or a full collapse, because ' +
+            'those are different repairs. Sometimes the honest answer is a targeted repair rather than ' +
+            'replacing the whole run, and you should get to see the footage that decides it.',
+        ],
+      },
+      {
+        heading: 'Permit and ceiling, stated plainly',
+        paragraphs: [
+          'Sewer line work is permitted, done in the corridor towns where we can pull a permit; inside ' +
+            'Chattanooga it goes to a licensed partner. A full replacement can approach the $25,000 ' +
+            'per-project ceiling, and if a job would exceed it we bring in a partner rather than ' +
+            'understate the work. You hear that before anything starts.',
+        ],
+      },
+    ],
+    related: [
+      { label: 'Sewer camera inspection', href: '/services/camera-inspection' },
+      { label: 'Drain cleaning', href: '/services/drain-cleaning' },
+      { label: 'Water service line replacement', href: '/services/water-service-line' },
+    ],
+    faqs: [
+      { q: 'Do I really need a full sewer replacement?', a: 'Not always. We camera the line first and show you the footage. Roots or a single break can be a targeted repair; a collapsed run is a replacement. You decide with the picture in front of you.' },
+      { q: 'Does sewer work need a permit?', a: 'Yes. We do it in the corridor towns where we can pull a permit. Inside Chattanooga, permitted work goes to a licensed partner.' },
+      { q: 'My drain keeps backing up in the same spot. Is that the sewer line?', a: 'Often, yes — roots, a belly, or a failed section. A camera tells us which, so cleaning it again is not the default answer if it needs a repair.' },
+      { q: 'What about the $25,000 ceiling?', a: 'A full sewer replacement can approach it. If a job would exceed the per-project cap, we bring in a partner rather than split it — stated up front.' },
+      WARRANTY_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'gas-line-services': {
+    quickAnswer:
+      'We install and repair gas lines for appliances, water heaters, and heating — permitted work ' +
+      'done to code, in the corridor towns where we can pull a permit. Gas is not a place to cut ' +
+      'corners, and we do not. Inside Chattanooga city limits it goes to a licensed partner. ' +
+      'Tennessee license #5045.',
+    lede:
+      'Gas work is permitted for a reason: done wrong it is dangerous, and done right it is invisible ' +
+      'and lasts for decades. We run and repair gas lines for appliances, water heaters, and heat, ' +
+      'sized correctly and tested, with the permit that puts it on the record.',
+    whatWeDo: [
+      'Running new gas lines for appliances, water heaters, and heating',
+      'Repairing and extending existing gas lines',
+      'Gas sizing for the appliances the line actually has to feed',
+      'Permitted, inspected work — never off the books',
+    ],
+    intro: [
+      'Most gas calls come with another project attached: a new range, a tankless water heater that ' +
+        'needs more gas than the old tank, a heater, or a suspected leak. Whatever the reason, the ' +
+        'line has to be sized for the load and tested, and it has to be permitted.',
+    ],
+    sections: [
+      {
+        heading: 'Sized for the appliance, tested, and permitted',
+        paragraphs: [
+          'A gas line that is undersized starves the appliance; one that is done sloppily is a hazard. ' +
+            'We size the line for what it actually has to feed — which is exactly why a tankless water ' +
+            'heater often needs a larger line than the tank it replaced — and we test it before it goes ' +
+            'into service. The permit is not red tape here; it is the record that the work was ' +
+            'inspected and done safely.',
+        ],
+      },
+    ],
+    related: [
+      { label: 'Tankless water heater installation', href: '/services/tankless-water-heater-installation' },
+      { label: 'Water heater replacement', href: '/services/water-heater-replacement' },
+      { label: 'Emergency plumbing', href: '/services/emergency-plumbing' },
+    ],
+    faqs: [
+      { q: 'Do you run gas lines for a new range or heater?', a: 'Yes. We run and extend gas lines for appliances, water heaters, and heating, sized for the load and permitted.' },
+      { q: 'Does gas work need a permit?', a: 'Always, and for good reason. We do it in the corridor towns where we can pull a permit. Inside Chattanooga, permitted work goes to a licensed partner.' },
+      { q: 'Why does my tankless install need a bigger gas line?', a: 'A tankless unit fires much harder than a tank, so it needs more gas at once. Sizing the line for that load is part of why a proper tankless install costs more.' },
+      { q: 'I smell gas. What should I do?', a: 'Treat it as an emergency: leave, and call your gas utility from outside. Once it is safe, we can locate and repair the line.' },
+      WARRANTY_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
 }
 
 /**
