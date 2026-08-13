@@ -81,8 +81,8 @@ export default function AboutPage() {
 
       {/* HERO */}
       <section className="bg-pine bg-blueprint bg-grid text-paper">
-        <div className="container-x py-16 md:py-24">
-          <div className="max-w-4xl reveal">
+        <div className="container-x grid gap-10 py-14 md:grid-cols-[1.1fr_0.9fr] md:items-center md:py-20">
+          <div className="reveal">
             <Eyebrow className="text-mist">About · TN LLP #5045</Eyebrow>
             <h1 className="mt-4 text-display-xl">A licensed plumber you can check.</h1>
             <p className="mt-6 max-w-prose text-lead text-paper/85 speakable">
@@ -92,6 +92,14 @@ export default function AboutPage() {
             <div className="mt-8">
               <PrimaryCTA />
             </div>
+          </div>
+          <div className="reveal reveal-2 mx-auto w-full max-w-sm">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/mascot.jpg"
+              alt="Drain Pros TN mascot — two friendly plumbers holding wrenches"
+              className="w-full rounded-lg border-2 border-verdigris/50 shadow-lift"
+            />
           </div>
         </div>
       </section>
@@ -111,7 +119,15 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <aside className="lg:sticky lg:top-24">
+          <aside className="space-y-6 lg:sticky lg:top-24">
+            <div className="overflow-hidden rounded-lg border-2 border-verdigris/50 shadow-lift">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/hero-van.jpg"
+                alt="Drain Pros TN navy service van with gold branding"
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </div>
             <CredentialStrip />
           </aside>
         </div>

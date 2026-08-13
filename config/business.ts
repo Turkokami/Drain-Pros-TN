@@ -178,9 +178,10 @@ export const OPERATIONS = {
    * this must say so — the emergency positioning depends on it being true.
    */
   hours: {
-    status: 'pending',
-    blocks: ['GBP hours', 'schema openingHours', 'emergency positioning'],
-    askedOn: '2026-08-12',
+    status: 'confirmed',
+    value: { afterHours: true, weekends: true, note: '24/7 emergency service' },
+    source: 'Confirmed by client — "24/7 Emergency" on the van wrap, banner, and flyer',
+    confirmedOn: '2026-08-13',
   } as Fact<{ afterHours: boolean; weekends: boolean; note: string }>,
 
   serviceRadiusMiles: {

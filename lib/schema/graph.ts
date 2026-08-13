@@ -14,7 +14,7 @@
  *        Service · FAQPage
  */
 
-import { LICENSE, IDENTITY, SAB, fact, factOr } from '../../config/business'
+import { LICENSE, IDENTITY, OPERATIONS, SAB, fact, factOr } from '../../config/business'
 import { LOCATIONS } from '../../config/locations'
 import type { Service } from '../../config/services'
 
@@ -84,7 +84,22 @@ export function businessNode() {
     founder: { '@id': ID.owner() },
     employee: { '@id': ID.owner() },
     priceRange: '$$',
+    ...(hoursConfirmed()?.afterHours
+      ? {
+          openingHoursSpecification: {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+            opens: '00:00',
+            closes: '23:59',
+          },
+        }
+      : {}),
   }
+}
+
+/** Real availability, or null until confirmed. Drives openingHours schema. */
+function hoursConfirmed() {
+  return fact('OPERATIONS.hours', OPERATIONS.hours)
 }
 
 export function websiteNode() {

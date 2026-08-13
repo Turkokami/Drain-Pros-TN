@@ -15,20 +15,20 @@ export function SiteHeader() {
   const name = businessName()
   const p = phone()
   return (
-    <header className="sticky top-0 z-40 border-b border-ink/10 bg-paper/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-verdigris/30 bg-pine/95 backdrop-blur">
       <div className="container-x flex items-center justify-between gap-4 py-2.5">
         <a href="/" className="group flex flex-col leading-none">
-          <span className="font-display text-xl font-extrabold tracking-tight text-ink group-hover:text-verdigris">
+          <span className="font-display text-2xl font-extrabold uppercase tracking-tight text-verdigris group-hover:brightness-110">
             {name}
           </span>
-          <span className="mt-1 font-mono text-eyebrow uppercase text-steel">
+          <span className="mt-1 font-mono text-eyebrow uppercase text-mist">
             TN Limited Licensed Plumber · #{licenseNumber()}
           </span>
         </a>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 md:flex">
           {NAV.map((item) => (
-            <a key={item.href} href={item.href} className="font-body text-sm text-ink/80 hover:text-copper">
+            <a key={item.href} href={item.href} className="font-body text-sm font-medium text-paper/85 hover:text-verdigris">
               {item.label}
             </a>
           ))}

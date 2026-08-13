@@ -257,7 +257,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     faqs: [
       {
         q: 'Are you available after hours?',
-        a: 'Our after-hours schedule is being finalized, and we will not promise a 2 a.m. answer we cannot keep. Call the number on this site and you will get a real answer on timing from a person, not an automated queue.',
+        a: 'Yes — we run 24/7 emergency service. A burst pipe or an active leak at 2 a.m. is exactly the call we are set up to take. Call (423) 413-6876 and you get a real person, not an automated queue.',
       },
       {
         q: 'What should I do while I wait for you?',

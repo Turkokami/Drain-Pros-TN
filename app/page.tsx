@@ -68,7 +68,7 @@ const HOME_FAQS: Array<{ q: string; a: string }> = [
   },
   {
     q: 'Do you answer after hours?',
-    a: 'Our after-hours schedule is being finalized, and we will not promise a 2 a.m. answer we cannot keep. Call the number on this site and you get a real answer on timing from a person, not an automated queue.',
+    a: 'Yes. We run 24/7 emergency service — an active leak, a burst pipe, or no water does not wait for morning, and neither do we. Call (423) 413-6876 and you get a real person, not an automated queue.',
   },
   {
     q: 'How is your pricing set?',
@@ -132,13 +132,11 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-pine bg-blueprint bg-grid text-paper">
-        <div className="container-x py-20 md:py-28">
-          <div className="max-w-4xl reveal">
-            <Eyebrow className="text-mist">Charleston · Cleveland · Athens · the US-11 corridor</Eyebrow>
-            <h1 className="mt-4 text-display-2xl">
-              A licensed plumber your corridor actually has.
-            </h1>
+      <section className="bg-pine bg-blueprint bg-grid text-paper">
+        <div className="container-x grid gap-10 py-14 md:grid-cols-[1.05fr_0.95fr] md:items-center md:py-20">
+          <div className="reveal">
+            <Eyebrow className="text-mist">Charleston · Cleveland · Athens · greater Chattanooga</Eyebrow>
+            <h1 className="mt-4 text-display-2xl">A licensed plumber your corridor actually has.</h1>
             <p className="mt-4 font-display text-display-md font-bold text-verdigris">{TAGLINE}</p>
             <p className="mt-5 max-w-prose text-lead text-paper/85 speakable">{HERO_ANSWER}</p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -146,21 +144,32 @@ export default function HomePage() {
               <EmergencyCTA />
             </div>
             <p className="mt-6 font-mono text-spec uppercase text-mist">
-              TN Limited Licensed Plumber · #5045 · verify at verify.tn.gov
+              TN Limited Licensed Plumber · #5045 · 24/7 emergency service
             </p>
           </div>
 
-          <div className="mt-14 reveal reveal-2">
-            <StatStrip
-              dark
-              items={[
-                { value: '#5045', label: 'TN license, on every page' },
-                { value: '21 towns', label: 'corridor + Chattanooga' },
-                { value: '$25k', label: 'per-project ceiling, stated' },
-                { value: 'One price', label: 'approved before we start' },
-              ]}
-            />
+          <div className="reveal reveal-2">
+            <div className="overflow-hidden rounded-lg border-2 border-verdigris/50 shadow-lift">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/hero-van.jpg"
+                alt="Drain Pros TN navy service van with gold branding, parked at a job in the Charleston, Tennessee area"
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </div>
           </div>
+        </div>
+
+        <div className="container-x pb-14 md:pb-20">
+          <StatStrip
+            dark
+            items={[
+              { value: '#5045', label: 'TN license, on every page' },
+              { value: '21 towns', label: 'corridor + Chattanooga' },
+              { value: '24/7', label: 'emergency service' },
+              { value: 'One price', label: 'approved before we start' },
+            ]}
+          />
         </div>
       </section>
 

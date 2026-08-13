@@ -17,12 +17,12 @@ export function MobileNav({ phoneNumber }: { phoneNumber: string | null }) {
         aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className="flex h-10 w-10 items-center justify-center border border-ink/15 text-ink"
+        className="flex h-10 w-10 items-center justify-center border border-verdigris/40 text-paper"
       >
         <span className="relative block h-3.5 w-5">
-          <span className={`absolute left-0 h-0.5 w-5 bg-ink transition-all ${open ? 'top-1.5 rotate-45' : 'top-0'}`} />
-          <span className={`absolute left-0 top-1.5 h-0.5 w-5 bg-ink transition-all ${open ? 'opacity-0' : 'opacity-100'}`} />
-          <span className={`absolute left-0 h-0.5 w-5 bg-ink transition-all ${open ? 'top-1.5 -rotate-45' : 'top-3'}`} />
+          <span className={`absolute left-0 h-0.5 w-5 bg-paper transition-all ${open ? 'top-1.5 rotate-45' : 'top-0'}`} />
+          <span className={`absolute left-0 top-1.5 h-0.5 w-5 bg-paper transition-all ${open ? 'opacity-0' : 'opacity-100'}`} />
+          <span className={`absolute left-0 h-0.5 w-5 bg-paper transition-all ${open ? 'top-1.5 -rotate-45' : 'top-3'}`} />
         </span>
       </button>
 
