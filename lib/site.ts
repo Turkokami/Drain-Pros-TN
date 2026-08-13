@@ -47,3 +47,6 @@ export function hours(): { afterHours: boolean; weekends: boolean; note: string 
 
 export const CORRIDOR_LINE =
   'A Bradley–McMinn corridor plumbing company that also serves greater Chattanooga.'
+
+/** Brand tagline from the logo. */
+export const TAGLINE = 'Experience the reliable difference.'

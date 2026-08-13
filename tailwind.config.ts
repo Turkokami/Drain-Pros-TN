@@ -20,18 +20,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#14201C',        // near-black with a green cast — river depth
-        pine: '#0E1814',       // deepest panel — dark sections, hero underlay
-        verdigris: '#2E7268',  // patinated copper — primary
-        'verdigris-700': '#245C53',
-        copper: '#B4633A',     // raw copper — accent, links, rules
-        'copper-700': '#8F4C2A',
-        galv: '#E7EAE8',       // galvanized sheet — cool section backgrounds
-        bone: '#F1EEE7',       // warm off-white — alternating sections
-        paper: '#F8F9F8',      // page background
-        steel: '#5A6663',      // secondary text
-        mist: '#8A938F',       // tertiary / on-dark muted
-        signal: '#E8A317',     // EMERGENCY CTA ONLY. Never decorative.
+        // BRAND: Drain Pros TN — gold, black, and navy on cream. Matches the logo.
+        ink: '#16181C',            // near-black — body text and dark rules
+        pine: '#0F2334',           // deep navy — hero, footer, dark panels (logo navy)
+        verdigris: '#C4972B',      // brand gold — primary buttons, key borders, the license number
+        'verdigris-700': '#A67E1E', // darker gold — hover
+        copper: '#96721A',         // deep gold — links, rules, eyebrows (legible on cream)
+        'copper-700': '#7A5D14',
+        galv: '#E7E3D7',           // warm grey-cream — cool section backgrounds
+        bone: '#EFEADD',           // warm cream — alternating sections
+        paper: '#F8F6EF',          // cream page background (logo cream)
+        steel: '#5C5A50',          // warm secondary text
+        mist: '#9FB0BE',           // cool light — muted text on navy panels
+        // EMERGENCY CTA ONLY. Red rather than amber, so it stays distinct from the
+        // gold brand. Never decorative — this is the one hard design rule.
+        signal: '#C4342A',
       },
       fontFamily: {
         display: ['var(--font-archivo)', 'system-ui', 'sans-serif'],

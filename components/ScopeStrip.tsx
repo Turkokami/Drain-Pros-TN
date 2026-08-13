@@ -39,7 +39,7 @@ export function CredentialStrip() {
         <div className="spec-row">
           <dt className="spec-label">License no.</dt>
           {/* The number itself, at size. This is the argument. */}
-          <dd className="spec-value text-lg font-mono tracking-wider text-verdigris">{number}</dd>
+          <dd className="spec-value text-lg font-mono tracking-wider text-ink">{number}</dd>
         </div>
         <div className="spec-row">
           <dt className="spec-label">Classification</dt>

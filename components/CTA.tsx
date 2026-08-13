@@ -17,7 +17,7 @@ export function PrimaryCTA({ className = '', label }: { className?: string; labe
       href={href ?? '/contact'}
       className={
         'inline-flex items-center justify-center bg-verdigris px-6 py-3 font-display ' +
-        'text-base font-semibold text-paper transition-colors hover:bg-ink ' +
+        'text-base font-semibold text-ink transition-colors hover:bg-verdigris-700 ' +
         className
       }
     >
@@ -39,7 +39,7 @@ export function EmergencyCTA({ className = '' }: { className?: string }) {
       href={href ?? '/contact'}
       className={
         'inline-flex items-center justify-center gap-2 bg-signal px-6 py-3 font-display ' +
-        'text-base font-bold text-ink transition-colors hover:brightness-95 ' +
+        'text-base font-bold text-paper transition-colors hover:brightness-110 ' +
         className
       }
     >

@@ -42,7 +42,7 @@ export function MobileNav({ phoneNumber }: { phoneNumber: string | null }) {
             <a
               href={phoneNumber ? `tel:${phoneNumber.replace(/[^\d+]/g, '')}` : '/contact'}
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center bg-verdigris px-6 py-3 font-display font-semibold text-paper"
+              className="mt-4 inline-flex items-center justify-center bg-verdigris px-6 py-3 font-display font-semibold text-ink"
             >
               {phoneNumber ? `Call ${phoneNumber}` : 'Request a callback'}
             </a>

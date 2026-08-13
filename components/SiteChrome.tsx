@@ -7,7 +7,7 @@
  * resolve to honest placeholders, never fake numbers.
  */
 
-import { NAV, businessName, licenseNumber, phone } from '@/lib/site'
+import { NAV, businessName, licenseNumber, phone, TAGLINE } from '@/lib/site'
 import { SAB } from '@/config/business'
 import { MobileNav } from '@/components/MobileNav'
 
@@ -37,7 +37,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <a
             href={p ? `tel:${p.replace(/[^\d+]/g, '')}` : '/contact'}
-            className="hidden items-center gap-2 bg-signal px-4 py-2 font-display text-sm font-bold text-ink hover:brightness-95 sm:inline-flex"
+            className="hidden items-center gap-2 bg-signal px-4 py-2 font-display text-sm font-bold text-paper hover:brightness-110 sm:inline-flex"
           >
             <span aria-hidden>●</span> Emergency
           </a>
@@ -58,6 +58,7 @@ export function SiteFooter() {
       <div className="container-x grid gap-10 py-16 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
           <p className="font-display text-2xl font-extrabold">{name}</p>
+          <p className="mt-1 font-mono text-eyebrow uppercase text-verdigris">{TAGLINE}</p>
           <p className="mt-3 font-mono text-spec uppercase text-mist">
             {p ? <span className="text-paper">{p}</span> : 'Phone: pending'} · Charleston, TN {SAB.postalCode}
           </p>
@@ -105,13 +106,13 @@ export function StickyCallBar() {
     <div className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-2 border-t border-ink/10 bg-paper/95 backdrop-blur md:hidden">
       <a
         href={p ? `tel:${p.replace(/[^\d+]/g, '')}` : '/contact'}
-        className="flex items-center justify-center gap-2 py-3 font-display font-semibold text-verdigris"
+        className="flex items-center justify-center gap-2 py-3 font-display font-semibold text-ink"
       >
         {p ? 'Call now' : 'Request callback'}
       </a>
       <a
         href={p ? `tel:${p.replace(/[^\d+]/g, '')}` : '/contact'}
-        className="flex items-center justify-center gap-2 bg-signal py-3 font-display font-bold text-ink"
+        className="flex items-center justify-center gap-2 bg-signal py-3 font-display font-bold text-paper"
       >
         <span aria-hidden>●</span> Emergency
       </a>

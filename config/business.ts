@@ -145,9 +145,10 @@ export const IDENTITY = {
 
   /** Must be a dedicated business line with call tracking. NOT a personal cell. */
   phone: {
-    status: 'pending',
-    blocks: ['NAP', 'all CTAs', 'schema telephone', 'every citation'],
-    askedOn: '2026-08-12',
+    status: 'confirmed',
+    value: '(423) 413-6876',
+    source: 'Confirmed by client — business number on the Drain Pros TN logo/marketing',
+    confirmedOn: '2026-08-12',
   } as Fact<string>,
 
   email: {

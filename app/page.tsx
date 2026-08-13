@@ -11,6 +11,7 @@
 import { getService } from '@/config/services'
 import { locationsByTier, LOCATIONS } from '@/config/locations'
 import { CredentialStrip } from '@/components/ScopeStrip'
+import { WorkGallery } from '@/components/Gallery'
 import { PrimaryCTA, EmergencyCTA, CTABand } from '@/components/CTA'
 import {
   Section,
@@ -26,6 +27,7 @@ import {
   FAQ,
 } from '@/components/ui'
 import { buildMetadata } from '@/lib/seo'
+import { CORRIDOR_LINE, TAGLINE } from '@/lib/site'
 import {
   buildGraph,
   websiteNode,
@@ -137,7 +139,8 @@ export default function HomePage() {
             <h1 className="mt-4 text-display-2xl">
               A licensed plumber your corridor actually has.
             </h1>
-            <p className="mt-6 max-w-prose text-lead text-paper/85">{HERO_ANSWER}</p>
+            <p className="mt-4 font-display text-display-md font-bold text-verdigris">{TAGLINE}</p>
+            <p className="mt-5 max-w-prose text-lead text-paper/85 speakable">{HERO_ANSWER}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <PrimaryCTA label="Book a plumber" />
               <EmergencyCTA />
@@ -330,6 +333,8 @@ export default function HomePage() {
         <SectionHeading eyebrow="Straight answers" title="Questions we get asked first." />
         <FAQ items={HOME_FAQS} />
       </Section>
+
+      <WorkGallery limit={9} />
 
       <CTABand />
     </>
