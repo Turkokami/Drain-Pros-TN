@@ -110,22 +110,49 @@ export function FeatureCard({
   children: ReactNode
   href?: string
 }) {
-  const inner = (
-    <>
-      <div className="flex items-baseline justify-between gap-3">
-        <h3 className="font-display text-display-md text-ink group-hover:text-copper">{title}</h3>
-        {meta && <span className="shrink-0 font-mono text-spec uppercase text-steel">{meta}</span>}
-      </div>
-      <p className="mt-3 text-ink/80">{children}</p>
-      {href && <p className="mt-4 font-mono text-spec uppercase text-copper">Read more →</p>}
-    </>
+  const bar = (
+    <span
+      aria-hidden
+      className="block h-1.5 w-full bg-gradient-to-r from-verdigris to-verdigris-700 transition-all duration-300 group-hover:h-2"
+    />
   )
+  const inner = (
+    <div className="flex flex-1 flex-col p-6">
+      <div className="flex items-start justify-between gap-3">
+        <h3 className="font-display text-display-md leading-tight text-ink transition-colors group-hover:text-copper">
+          {title}
+        </h3>
+        {meta && (
+          <span className="shrink-0 rounded-full bg-galv px-2.5 py-1 font-mono text-[0.62rem] uppercase tracking-wide text-steel ring-1 ring-ink/10">
+            {meta}
+          </span>
+        )}
+      </div>
+      <p className="mt-3 flex-1 text-ink/80">{children}</p>
+      {href && (
+        <span className="mt-5 inline-flex items-center gap-2 font-mono text-spec uppercase text-copper">
+          Read more
+          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-verdigris/15 text-verdigris transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </span>
+        </span>
+      )}
+    </div>
+  )
+  const shell =
+    'group relative flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white ' +
+    'shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-verdigris/60 hover:shadow-lift'
+
   return href ? (
-    <a href={href} className="card card-hover group block h-full border-t-4 border-t-verdigris p-6">
+    <a href={href} className={shell}>
+      {bar}
       {inner}
     </a>
   ) : (
-    <div className="card group h-full border-t-4 border-t-verdigris p-6">{inner}</div>
+    <div className={shell}>
+      {bar}
+      {inner}
+    </div>
   )
 }
 
