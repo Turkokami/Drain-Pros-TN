@@ -19,7 +19,8 @@ import { LOCATIONS } from '@/config/locations'
 import { assertSellable } from '@/lib/scope-guard'
 import { getServiceContent } from '@/content/service-content'
 import { CredentialStrip } from '@/components/ScopeStrip'
-import { PrimaryCTA, EmergencyCTA, CTABand } from '@/components/CTA'
+import { PrimaryCTA, EmergencyCTA } from '@/components/CTA'
+import { GetService } from '@/components/GetService'
 import { Section, SectionHeading, Eyebrow, QuickAnswer, Prose, BulletList, Step, FAQ } from '@/components/ui'
 import { buildMetadata } from '@/lib/seo'
 import {
@@ -235,7 +236,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         )}
       </Section>
 
-      <CTABand heading={`Need ${service.name.toLowerCase()} handled right?`} />
+      <GetService service={service.name} />
     </>
   )
 }

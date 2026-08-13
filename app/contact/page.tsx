@@ -9,6 +9,7 @@
 import { IDENTITY, fact } from '@/config/business'
 import { CredentialStrip } from '@/components/ScopeStrip'
 import { EmergencyCTA } from '@/components/CTA'
+import { LeadForm } from '@/components/LeadForm'
 import { phone, hours } from '@/lib/site'
 import { Section, Eyebrow, BulletList } from '@/components/ui'
 import { buildMetadata } from '@/lib/seo'
@@ -67,6 +68,7 @@ export default function ContactPage() {
       <Section tone="paper">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-start">
           <div className="space-y-8">
+            <LeadForm phone={p} />
             <div className="rounded-card border-l-4 border-verdigris bg-galv p-6">
               <h2 className="font-mono text-spec uppercase text-steel">Phone</h2>
               {p ? (

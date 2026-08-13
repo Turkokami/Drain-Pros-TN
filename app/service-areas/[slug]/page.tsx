@@ -19,7 +19,8 @@ import { JURISDICTIONS } from '@/config/jurisdictions'
 import { sellableServices } from '@/lib/scope-guard'
 import { getLocationContent } from '@/content/location-content'
 import { ScopeStrip, CredentialStrip } from '@/components/ScopeStrip'
-import { PrimaryCTA, EmergencyCTA, CTABand } from '@/components/CTA'
+import { PrimaryCTA, EmergencyCTA } from '@/components/CTA'
+import { GetService } from '@/components/GetService'
 import { Section, SectionHeading, Eyebrow, QuickAnswer, Prose, FAQ } from '@/components/ui'
 import { buildMetadata } from '@/lib/seo'
 import {
@@ -193,10 +194,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         <FAQ items={content.faqs} />
       </Section>
 
-      <CTABand
-        heading={`Need a plumber in ${location.name}?`}
-        sub={`${location.driveMinutes} minutes from our base in Charleston. Straight pricing you approve before we start.`}
-      />
+      <GetService place={location.name} />
     </>
   )
 }
