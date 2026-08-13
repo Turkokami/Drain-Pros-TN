@@ -131,45 +131,41 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />
 
-      {/* HERO */}
-      <section className="bg-pine bg-blueprint bg-grid text-paper">
-        <div className="container-x grid gap-10 py-14 md:grid-cols-[1.05fr_0.95fr] md:items-center md:py-20">
-          <div className="reveal">
-            <Eyebrow className="text-mist">Charleston · Cleveland · Athens · greater Chattanooga</Eyebrow>
-            <h1 className="mt-4 text-display-2xl">A licensed plumber your corridor actually has.</h1>
-            <p className="mt-4 font-display text-display-md font-bold text-verdigris">{TAGLINE}</p>
-            <p className="mt-5 max-w-prose text-lead text-paper/85 speakable">{HERO_ANSWER}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <PrimaryCTA label="Book a plumber" />
-              <EmergencyCTA />
+      {/* HERO — brand banner + CTA bar */}
+      <section className="bg-pine text-paper">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/banner.jpg"
+          alt="Drain Pros TN — Plumbing & Drain Cleaning. Call 423-413-6876. Fast, reliable, professional. Residential, commercial, and 24/7 emergency service."
+          className="mx-auto block w-full max-w-[1100px]"
+        />
+        <div className="border-t-2 border-verdigris/40 bg-pine bg-blueprint bg-grid">
+          <div className="container-x py-12 md:py-16">
+            <div className="grid gap-8 md:grid-cols-[1.35fr_0.65fr] md:items-end">
+              <div className="reveal">
+                <Eyebrow className="text-mist">Charleston · Cleveland · Athens · greater Chattanooga</Eyebrow>
+                <h1 className="mt-3 text-display-xl">A licensed plumber your corridor actually has.</h1>
+                <p className="mt-3 font-display text-display-md font-bold text-verdigris">{TAGLINE}</p>
+                <p className="mt-4 max-w-prose text-lead text-paper/85 speakable">{HERO_ANSWER}</p>
+              </div>
+              <div className="flex flex-col gap-3 reveal reveal-2">
+                <PrimaryCTA label="Book a plumber" />
+                <EmergencyCTA />
+                <p className="font-mono text-spec uppercase text-mist">TN LLP #5045 · verify.tn.gov</p>
+              </div>
             </div>
-            <p className="mt-6 font-mono text-spec uppercase text-mist">
-              TN Limited Licensed Plumber · #5045 · 24/7 emergency service
-            </p>
-          </div>
-
-          <div className="reveal reveal-2">
-            <div className="overflow-hidden rounded-lg border-2 border-verdigris/50 shadow-lift">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/hero-van.jpg"
-                alt="Drain Pros TN navy service van with gold branding, parked at a job in the Charleston, Tennessee area"
-                className="aspect-[4/3] w-full object-cover"
+            <div className="mt-10">
+              <StatStrip
+                dark
+                items={[
+                  { value: '#5045', label: 'TN license, on every page' },
+                  { value: '21 towns', label: 'corridor + Chattanooga' },
+                  { value: '24/7', label: 'emergency service' },
+                  { value: 'One price', label: 'approved before we start' },
+                ]}
               />
             </div>
           </div>
-        </div>
-
-        <div className="container-x pb-14 md:pb-20">
-          <StatStrip
-            dark
-            items={[
-              { value: '#5045', label: 'TN license, on every page' },
-              { value: '21 towns', label: 'corridor + Chattanooga' },
-              { value: '24/7', label: 'emergency service' },
-              { value: 'One price', label: 'approved before we start' },
-            ]}
-          />
         </div>
       </section>
 
@@ -264,25 +260,26 @@ export default function HomePage() {
       </Section>
 
       {/* PROCESS */}
-      <Section tone="galv">
+      <Section tone="pine">
         <SectionHeading
+          dark
           eyebrow="How we work"
           title="No mystery, no mid-job surprises."
           intro="The same four steps whether it is a backed-up drain at dinner time or a planned water heater replacement."
         />
         <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <Step n={1} title="You call a person">
+          <Step dark n={1} title="You call a person">
             Not a call center. You describe what is happening and we tell you what it likely is and
             how fast we can be there.
           </Step>
-          <Step n={2} title="We diagnose it">
+          <Step dark n={2} title="We diagnose it">
             We find the actual cause — camera down the line, pressure test, a look at the unit —
             before anyone quotes a repair.
           </Step>
-          <Step n={3} title="You approve one price">
+          <Step dark n={3} title="You approve one price">
             You get a number to say yes or no to before work starts. It holds once the job begins.
           </Step>
-          <Step n={4} title="We fix it right">
+          <Step dark n={4} title="We fix it right">
             Done to code, permit pulled where one is required, and we tell you honestly if part of
             the job belongs to another trade.
           </Step>
@@ -319,8 +316,9 @@ export default function HomePage() {
       </Section>
 
       {/* COVERAGE */}
-      <Section tone="bone">
+      <Section tone="pine">
         <SectionHeading
+          dark
           eyebrow="Where we work"
           title="Priority runs from our own back yard outward."
           intro="The seam nobody else occupies comes first, then the revenue markets, then the growth corridor. Every town has its own page."
@@ -331,7 +329,7 @@ export default function HomePage() {
           <CoverageColumn label="Growth corridor" locations={growth} note="The fast-growing Hamilton County edge." />
         </div>
         <div className="mt-8">
-          <a href="/service-areas" className="font-mono text-spec uppercase text-copper underline underline-offset-4">
+          <a href="/service-areas" className="font-mono text-spec uppercase text-verdigris underline underline-offset-4">
             Every town we cover →
           </a>
         </div>
@@ -369,18 +367,18 @@ function CoverageColumn({
   note: string
 }) {
   return (
-    <div className="border-t-2 border-copper pt-4">
-      <h3 className="font-mono text-spec uppercase text-steel">{label}</h3>
+    <div className="border-t-2 border-verdigris pt-4">
+      <h3 className="font-mono text-spec uppercase text-mist">{label}</h3>
       <ul className="mt-3 space-y-1.5">
         {locations.map((l) => (
           <li key={l.slug}>
-            <a href={`/service-areas/${l.slug}`} className="font-display text-display-md text-ink hover:text-copper">
+            <a href={`/service-areas/${l.slug}`} className="font-display text-display-md text-paper hover:text-verdigris">
               {l.name}
             </a>
           </li>
         ))}
       </ul>
-      <p className="mt-3 text-sm text-steel">{note}</p>
+      <p className="mt-3 text-sm text-mist">{note}</p>
     </div>
   )
 }

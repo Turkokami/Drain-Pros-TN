@@ -121,21 +121,33 @@ export function FeatureCard({
     </>
   )
   return href ? (
-    <a href={href} className="card card-hover group block h-full p-6">
+    <a href={href} className="card card-hover group block h-full border-t-4 border-t-verdigris p-6">
       {inner}
     </a>
   ) : (
-    <div className="card group h-full p-6">{inner}</div>
+    <div className="card group h-full border-t-4 border-t-verdigris p-6">{inner}</div>
   )
 }
 
 /** Numbered process step. */
-export function Step({ n, title, children }: { n: number; title: ReactNode; children: ReactNode }) {
+export function Step({
+  n,
+  title,
+  children,
+  dark = false,
+}: {
+  n: number
+  title: ReactNode
+  children: ReactNode
+  dark?: boolean
+}) {
   return (
     <div className="relative border-t-2 border-verdigris pt-5">
-      <span className="font-mono text-spec uppercase text-steel">Step {String(n).padStart(2, '0')}</span>
-      <h3 className="mt-1 font-display text-display-md text-ink">{title}</h3>
-      <p className="mt-2 max-w-prose text-ink/80">{children}</p>
+      <span className={`font-mono text-spec uppercase ${dark ? 'text-verdigris' : 'text-steel'}`}>
+        Step {String(n).padStart(2, '0')}
+      </span>
+      <h3 className={`mt-1 font-display text-display-md ${dark ? 'text-paper' : 'text-ink'}`}>{title}</h3>
+      <p className={`mt-2 max-w-prose ${dark ? 'text-paper/80' : 'text-ink/80'}`}>{children}</p>
     </div>
   )
 }
