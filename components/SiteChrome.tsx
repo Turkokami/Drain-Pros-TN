@@ -37,7 +37,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <a
             href={p ? `tel:${p.replace(/[^\d+]/g, '')}` : '/contact'}
-            className="hidden items-center gap-2 bg-signal px-4 py-2 font-display text-sm font-bold text-paper hover:brightness-110 sm:inline-flex"
+            className="hidden items-center gap-2 rounded-md bg-gradient-to-b from-[#E04A3B] to-[#B0291D] px-4 py-2 font-display text-sm font-bold text-paper shadow-[0_6px_16px_-6px_rgba(201,58,44,0.7)] ring-1 ring-inset ring-white/20 transition-all hover:-translate-y-0.5 hover:brightness-110 sm:inline-flex"
           >
             <span aria-hidden>●</span> Emergency
           </a>
@@ -54,7 +54,7 @@ export function SiteFooter() {
   const year = 2026 // build env forbids Date.now(); bump at year turn.
 
   return (
-    <footer className="mt-24 bg-pine bg-blueprint bg-grid text-paper">
+    <footer className="mt-24 bg-night bg-blueprint bg-grid text-paper">
       <div className="container-x grid gap-10 py-16 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
           <p className="font-display text-2xl font-extrabold">{name}</p>
@@ -103,16 +103,16 @@ export function SiteFooter() {
 export function StickyCallBar() {
   const p = phone()
   return (
-    <div className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-2 border-t border-ink/10 bg-paper/95 backdrop-blur md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-2 border-t border-verdigris/40 shadow-[0_-8px_20px_-8px_rgba(0,0,0,0.4)] md:hidden">
       <a
         href={p ? `tel:${p.replace(/[^\d+]/g, '')}` : '/contact'}
-        className="flex items-center justify-center gap-2 py-3 font-display font-semibold text-ink"
+        className="flex items-center justify-center gap-2 bg-gradient-to-b from-[#E7BB3E] to-[#C08B12] py-3.5 font-display font-bold text-ink"
       >
         {p ? 'Call now' : 'Request callback'}
       </a>
       <a
         href={p ? `tel:${p.replace(/[^\d+]/g, '')}` : '/contact'}
-        className="flex items-center justify-center gap-2 bg-signal py-3 font-display font-bold text-paper"
+        className="flex items-center justify-center gap-2 bg-gradient-to-b from-[#E04A3B] to-[#B0291D] py-3.5 font-display font-bold text-paper"
       >
         <span aria-hidden>●</span> Emergency
       </a>

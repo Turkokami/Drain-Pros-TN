@@ -16,8 +16,11 @@ export function PrimaryCTA({ className = '', label }: { className?: string; labe
     <a
       href={href ?? '/contact'}
       className={
-        'inline-flex items-center justify-center bg-verdigris px-6 py-3 font-display ' +
-        'text-base font-semibold text-ink transition-colors hover:bg-verdigris-700 ' +
+        'inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-b ' +
+        'from-[#E7BB3E] to-[#C08B12] px-6 py-3 font-display text-base font-bold text-ink ' +
+        'shadow-[0_8px_20px_-6px_rgba(217,165,32,0.6)] ring-1 ring-inset ring-white/25 ' +
+        'transition-all duration-200 hover:-translate-y-0.5 hover:brightness-105 ' +
+        'hover:shadow-[0_12px_26px_-6px_rgba(217,165,32,0.78)] active:translate-y-0 active:brightness-95 ' +
         className
       }
     >
@@ -38,8 +41,11 @@ export function EmergencyCTA({ className = '' }: { className?: string }) {
     <a
       href={href ?? '/contact'}
       className={
-        'inline-flex items-center justify-center gap-2 bg-signal px-6 py-3 font-display ' +
-        'text-base font-bold text-paper transition-colors hover:brightness-110 ' +
+        'inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-b ' +
+        'from-[#E04A3B] to-[#B0291D] px-6 py-3 font-display text-base font-bold text-paper ' +
+        'shadow-[0_8px_20px_-6px_rgba(201,58,44,0.6)] ring-1 ring-inset ring-white/20 ' +
+        'transition-all duration-200 hover:-translate-y-0.5 hover:brightness-110 ' +
+        'hover:shadow-[0_12px_26px_-6px_rgba(201,58,44,0.78)] active:translate-y-0 ' +
         className
       }
     >
@@ -61,7 +67,7 @@ export function CTABand({
   sub?: string
 }) {
   return (
-    <section className="bg-pine bg-blueprint bg-grid text-paper">
+    <section className="border-t-2 border-verdigris/50 bg-night bg-blueprint bg-grid text-paper">
       <div className="container-x py-16 md:py-20">
         <div className="max-w-3xl">
           <h2 className="text-display-lg">{heading}</h2>

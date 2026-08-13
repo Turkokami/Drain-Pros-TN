@@ -23,17 +23,18 @@ export default {
         // BRAND: Drain Pros TN — bold gold + royal navy + black on cream. Matches
         // the logo and the van wrap. Change these hex values to retune the brand.
         ink: '#14181F',            // near-black — body text and dark rules
+        night: '#0C0E13',          // true black panel — black + gold (van-wrap / mascot feel)
         pine: '#15294F',           // royal navy — hero, header, footer, dark panels (logo navy)
         'pine-900': '#0E1D3A',     // deeper navy — gradients / overlays
         verdigris: '#D9A520',      // brand gold — primary buttons, wordmark, key borders
         'verdigris-700': '#B8860B', // darker gold — hover
-        copper: '#8C6C12',         // deep gold — links, rules, eyebrows (legible on cream)
+        copper: '#8C6C12',         // deep gold — links, rules, eyebrows (legible on white)
         'copper-700': '#6E5410',
-        galv: '#E9E4D8',           // warm grey-cream — cool section backgrounds
-        bone: '#F0EBDE',           // warm cream — alternating sections
-        paper: '#F8F6EF',          // cream page background (logo cream)
-        steel: '#5C5A50',          // warm secondary text
-        mist: '#A7B6C6',           // cool light — muted text on navy panels
+        galv: '#EDEEF0',           // cool light grey — cards, strips, section backgrounds
+        bone: '#F5F6F8',           // cool near-white — alternating sections
+        paper: '#FFFFFF',          // white page background
+        steel: '#565B61',          // cool secondary text
+        mist: '#A7B6C6',           // cool light — muted text on dark panels
         // EMERGENCY CTA ONLY. Red rather than amber, so it stays distinct from the
         // gold brand. Never decorative — this is the one hard design rule.
         signal: '#C93A2C',
