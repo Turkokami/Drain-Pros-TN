@@ -22,8 +22,17 @@ export function SiteHeader() {
           <span className="font-display text-2xl font-extrabold uppercase tracking-tight text-verdigris group-hover:brightness-110">
             {name}
           </span>
-          <span className="mt-1 font-mono text-eyebrow uppercase text-mist">
-            TN Limited Licensed Plumber · #{licenseNumber()}
+          {/* The full classification measures 307px, which overflows a 360px
+              phone and wraps the header to two lines everywhere below xl. The
+              short form still surfaces the NUMBER — the part that must never be
+              buried — and the full classification is on the CredentialStrip on
+              every page. Only one variant is in the layout at a time, so screen
+              readers announce it once. */}
+          <span className="mt-1 whitespace-nowrap font-mono text-eyebrow uppercase text-mist">
+            <span className="xl:hidden">TN LLP #{licenseNumber()}</span>
+            <span className="hidden xl:inline">
+              TN Limited Licensed Plumber · #{licenseNumber()}
+            </span>
           </span>
         </a>
 
