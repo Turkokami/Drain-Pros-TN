@@ -56,7 +56,7 @@ export function SiteHeader() {
               rel="noopener"
               className="hidden items-center gap-1.5 whitespace-nowrap rounded-md border border-verdigris/50 px-4 py-2 font-display text-sm font-bold text-verdigris transition-all hover:-translate-y-0.5 hover:bg-verdigris hover:text-ink lg:inline-flex"
             >
-              Book online <span aria-hidden>↗</span>
+              Request service <span aria-hidden>↗</span>
             </a>
           )}
           <a
@@ -107,7 +107,7 @@ export function SiteFooter() {
               rel="noopener"
               className="text-sm text-verdigris hover:brightness-110"
             >
-              Book online ↗
+              Request service ↗
             </a>
           )}
         </nav>
@@ -163,7 +163,7 @@ export function StickyCallBar() {
           rel="noopener"
           className="flex items-center justify-center gap-1.5 whitespace-nowrap border-x border-white/15 bg-pine py-3.5 font-display text-sm font-bold text-paper"
         >
-          Book <span aria-hidden>↗</span>
+          Request <span aria-hidden>↗</span>
         </a>
       )}
       <a

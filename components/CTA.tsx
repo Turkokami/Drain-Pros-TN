@@ -62,13 +62,13 @@ export function EmergencyCTA({ className = '' }: { className?: string }) {
  * EmergencyCTA, so this reads as an outline rather than a third filled button
  * competing with the two that matter more. Routes off-site to Housecall Pro.
  *
- * Renders nothing when the booking URL is pending — a dead "Book online" button
+ * Renders nothing when the booking URL is pending — a dead "Request service" button
  * is worse than no button, so this does not fall back to /contact the way the
  * phone CTAs do.
  */
 export function BookOnlineCTA({
   className = '',
-  label = 'Book online',
+  label = 'Request service',
   tone = 'dark',
 }: {
   className?: string

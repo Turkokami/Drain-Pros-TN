@@ -87,13 +87,14 @@ export default function ContactPage() {
 
             {booking && (
               <div className="rounded-card border-l-4 border-verdigris bg-galv p-6">
-                <h2 className="font-mono text-spec uppercase text-steel">Book online</h2>
+                <h2 className="font-mono text-spec uppercase text-steel">Request service online</h2>
                 <p className="mt-2 max-w-prose text-ink/90">
-                  Pick a time yourself instead of waiting on a callback. Enter your zip and the
-                  scheduler will confirm we cover you before you book.
+                  Send us the job and we will schedule it. Enter your zip and the form confirms we
+                  cover you first. It is a request rather than a live calendar, so you are not
+                  picking a slot — and if it is an emergency, call instead. That is faster.
                 </p>
                 <div className="mt-4">
-                  <BookOnlineCTA tone="light" label="Open the scheduler" />
+                  <BookOnlineCTA tone="light" label="Request service" />
                 </div>
               </div>
             )}

@@ -64,7 +64,7 @@ export function MobileNav({
                 onClick={() => setOpen(false)}
                 className="mt-3 inline-flex items-center justify-center gap-2 rounded-lg border-2 border-pine/30 px-6 py-3 font-display font-bold text-pine"
               >
-                Book online <span aria-hidden>↗</span>
+                Request service <span aria-hidden>↗</span>
               </a>
             )}
           </nav>

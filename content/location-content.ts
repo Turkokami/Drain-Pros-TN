@@ -1171,56 +1171,6 @@ const DECATUR: LocationContent = {
   ],
 }
 
-const SODDY_DAISY: LocationContent = {
-  quickAnswer:
-    'We cover Soddy-Daisy for drain cleaning, emergency repair, leak repair, water heater repair, ' +
-    'and fixture work — about 40 minutes from our Charleston base. Soddy-Daisy administers its own ' +
-    'permitting separately from Chattanooga, and its housing spans a wide range of ages. Tennessee ' +
-    'license #5045.',
-  intro: [
-    'Soddy-Daisy is a former mining community north of Chattanooga with a wide range of housing ' +
-      'ages, from older homes to newer construction, and both lake-adjacent and ridge properties. ' +
-      'Importantly for plumbing, it administers its own building permitting separately from the City ' +
-      'of Chattanooga.',
-    'The full service list runs across Soddy-Daisy, and because the city administers its own ' +
-      'permitting, a permitted job here is filed with Soddy-Daisy rather than the county. Our office ' +
-      'handles that end of it.',
-  ],
-  localSections: [
-    {
-      heading: 'Soddy-Daisy runs its own permitting',
-      paragraphs: [
-        'Because Soddy-Daisy handles its own permits rather than deferring to Chattanooga, a ' +
-          'permitted job here gets filed with the city itself. It is a separate desk from the county ' +
-          'and a separate one from Chattanooga, which is the sort of thing that costs an out-of-town ' +
-          'crew a week. Our office files it with the right one and books the inspection around it.',
-      ],
-    },
-    {
-      heading: 'Mixed housing ages, lake and ridge property',
-      paragraphs: [
-        'The wide span of housing ages means a wide span of plumbing: older homes with aging supply ' +
-          'lines and water heaters, newer ones with builder-grade fixtures, and lake and ridge ' +
-          'properties with their own freeze and access quirks. All of the repair work ' +
-          'across that range we can handle today.',
-      ],
-    },
-  ],
-  commonIssues: [
-    'Permitting verified against the city, not Chattanooga',
-    'Aging supply lines and water heaters in older homes',
-    'Builder-grade fixtures and shutoffs in newer construction',
-    'Freeze exposure on lake-adjacent and ridge properties',
-    'Hard-water scale on fixtures and water heaters',
-  ],
-  faqs: [
-    { q: 'Is Soddy-Daisy permitting the same as Chattanooga?', a: 'No. Soddy-Daisy administers its own permitting separately from the City of Chattanooga, so a permitted job here is filed with the city. Our office handles that; it makes no difference to what we cover.' },
-    { q: 'How far is Soddy-Daisy from your base?', a: 'About 40 minutes from Charleston, north of Chattanooga.' },
-    { q: 'Which jobs can you do in Soddy-Daisy now?', a: 'All of it — drains, emergencies, leaks, water heaters, fixtures, and the larger permitted jobs. Our office handles the permit as part of the work.' },
-    { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
-  ],
-}
-
 export const LOCATION_CONTENT: Record<string, LocationContent> = {
   'charleston-tn': CHARLESTON,
   'calhoun-tn': CALHOUN,
@@ -1242,7 +1192,6 @@ export const LOCATION_CONTENT: Record<string, LocationContent> = {
   'georgetown-tn': GEORGETOWN,
   'birchwood-tn': BIRCHWOOD,
   'decatur-tn': DECATUR,
-  'soddy-daisy-tn': SODDY_DAISY,
 }
 
 /** Honest, registry-driven content for towns without a hand-written page yet. */

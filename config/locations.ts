@@ -325,20 +325,6 @@ export const LOCATIONS: Location[] = [
       'Heavy private well and septic use.',
     ],
   },
-  {
-    slug: 'soddy-daisy-tn',
-    name: 'Soddy-Daisy',
-    county: 'Hamilton',
-    jurisdictionId: 'city-of-soddy-daisy',
-    tier: 'tail',
-    phase: 2,
-    driveMinutes: 40,
-    localFacts: [
-      'Administers its own permitting separately from the City of Chattanooga.',
-      'Former mining community with a wide range of housing ages.',
-      'Lake-adjacent and ridge properties both common.',
-    ],
-  },
 
   // --- CHATTANOOGA — city files its own permits ----------------------------
   {
