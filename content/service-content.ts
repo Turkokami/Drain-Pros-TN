@@ -43,9 +43,16 @@ const PRICING_FAQ = {
   a: 'Yes. You get a number to approve before we begin, not a bill that grows once the truck is in the driveway. Straight pricing is the whole point of how we work.',
 }
 
+/**
+ * Defined-term warranty, confirmed 2026-08-16. Both terms are stated together
+ * and the closet-auger exclusion is the client's own wording — do not soften it
+ * or compress the two terms into one number. Stating real limits is the point:
+ * a specific warranty a customer can hold you to beats an unqualified
+ * "lifetime" promise that means nothing when they try to use it.
+ */
 const WARRANTY_FAQ = {
   q: 'What kind of warranty do you offer?',
-  a: 'Manufacturer warranties cover the parts and equipment. Our written workmanship terms are being finalized, and we will state them plainly in writing rather than wave an unqualified "lifetime" promise that means nothing when you try to use it.',
+  a: 'A one-year workmanship warranty on plumbing from the date of completion, covering the specific work performed — it does not extend to unrelated or pre-existing conditions. Drain cleaning carries a 30-day warranty unless we state otherwise, excluding closet augers. Manufacturer warranties cover the parts and equipment separately. That is the whole of it, in writing.',
 }
 
 export const SERVICE_CONTENT: Record<string, ServiceContent> = {

@@ -301,6 +301,14 @@ export default function HomePage() {
               Where a job needs a permit and an inspection, our office pulls it and books it. You
               approve a price; you do not chase a codes department.
             </Diff>
+            <Diff title="A warranty with its edges showing">
+              Twelve months on workmanship, thirty days on drain cleaning, and we publish the
+              exclusions. A warranty you can hold us to beats an unqualified promise.
+            </Diff>
+            <Diff title="Woman-owned and family-run">
+              Owned by Kayla Krishan and run with Kevin, who holds the license. Two decades of
+              combined trade experience, and you deal with the owners.
+            </Diff>
             <Diff title="Anchored in the corridor">
               The only operation based in Charleston. We are closest to the towns everyone else
               treats as drive-time overflow.

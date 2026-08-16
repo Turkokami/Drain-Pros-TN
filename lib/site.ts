@@ -7,7 +7,7 @@
  * and after-hours language renders only when OPERATIONS.hours is confirmed.
  */
 
-import { IDENTITY, OPERATIONS, LICENSE, fact, factOr } from '@/config/business'
+import { IDENTITY, OPERATIONS, OWNERSHIP, LICENSE, fact, factOr } from '@/config/business'
 
 export const NAV: Array<{ href: string; label: string }> = [
   { href: '/services', label: 'Services' },
@@ -54,6 +54,58 @@ export function bookingUrl(): string | null {
 /** Real availability. Null until confirmed — gate all after-hours language on this. */
 export function hours(): { afterHours: boolean; weekends: boolean; note: string } | null {
   return fact('OPERATIONS.hours', OPERATIONS.hours)
+}
+
+/** Registered entity. "Drain Pros TN" is the DBA — see businessName(). */
+export function legalName(): string | null {
+  return fact('IDENTITY.legalName', IDENTITY.legalName)
+}
+
+export function entityType(): string | null {
+  return fact('IDENTITY.entityType', IDENTITY.entityType)
+}
+
+export function foundedYear(): number | null {
+  return fact('IDENTITY.foundedYear', IDENTITY.foundedYear)
+}
+
+/**
+ * COMBINED trade experience across both owners — not time in business. Copy
+ * must never turn this into "twenty years of Drain Pros TN", which founded in
+ * 2025. Say "combined" every time.
+ */
+export function combinedYearsInTrade(): number | null {
+  return fact('IDENTITY.combinedYearsInTrade', IDENTITY.combinedYearsInTrade)
+}
+
+export function insurance(): { carrier: string; generalLiabilityUsd: number; umbrella: boolean } | null {
+  return fact('OPERATIONS.insurance', OPERATIONS.insurance)
+}
+
+/** Defined-term warranty. Both terms publish together or neither does. */
+export function warranty():
+  | { workmanshipMonths: number; drainCleaningDays: number; terms: string }
+  | null {
+  return fact('OPERATIONS.warranty', OPERATIONS.warranty)
+}
+
+export function owner(): string | null {
+  return fact('OWNERSHIP.owner', OWNERSHIP.owner)
+}
+
+export function isWomanOwned(): boolean {
+  return fact('OWNERSHIP.womanOwned', OWNERSHIP.womanOwned) === true
+}
+
+export function operators(): Array<{ name: string; role: string; background: string }> {
+  return fact('OWNERSHIP.operators', OWNERSHIP.operators) ?? []
+}
+
+/** One-line warranty summary for trust blocks. Null until the terms are confirmed. */
+export function warrantyLine(): string | null {
+  const w = warranty()
+  if (!w) return null
+  return `${w.workmanshipMonths}-month workmanship warranty · ${w.drainCleaningDays}-day drain cleaning warranty`
 }
 
 export const CORRIDOR_LINE =

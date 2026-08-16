@@ -14,7 +14,7 @@
  *        Service · FAQPage
  */
 
-import { LICENSE, IDENTITY, OPERATIONS, SAB, fact, factOr } from '../../config/business'
+import { LICENSE, IDENTITY, OPERATIONS, OWNERSHIP, SAB, fact, factOr } from '../../config/business'
 import { LOCATIONS } from '../../config/locations'
 import type { Service } from '../../config/services'
 
@@ -81,8 +81,18 @@ export function businessNode() {
       name: l.name,
       containedInPlace: { '@type': 'AdministrativeArea', name: `${l.county} County, TN` },
     })),
-    founder: { '@id': ID.owner() },
+    // The founder is the OWNER (Kayla); the licensed professional is a separate
+    // Person node. Conflating them was the original error — see config/business.ts.
+    ...(fact('OWNERSHIP.owner', OWNERSHIP.owner)
+      ? { founder: { '@type': 'Person', name: fact('OWNERSHIP.owner', OWNERSHIP.owner) } }
+      : {}),
     employee: { '@id': ID.owner() },
+    ...(fact('IDENTITY.foundedYear', IDENTITY.foundedYear)
+      ? { foundingDate: String(fact('IDENTITY.foundedYear', IDENTITY.foundedYear)) }
+      : {}),
+    ...(fact('OPERATIONS.insurance', OPERATIONS.insurance)
+      ? { knowsAbout: 'Licensed and insured residential and light commercial plumbing' }
+      : {}),
     priceRange: '$$',
     ...(hoursConfirmed()?.afterHours
       ? {

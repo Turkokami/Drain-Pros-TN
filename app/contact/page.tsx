@@ -8,6 +8,7 @@
 
 import { IDENTITY, fact } from '@/config/business'
 import { CredentialStrip } from '@/components/ScopeStrip'
+import { AssuranceStrip } from '@/components/AssuranceStrip'
 import { EmergencyCTA, BookOnlineCTA } from '@/components/CTA'
 import { LeadForm } from '@/components/LeadForm'
 import { phone, hours, bookingUrl } from '@/lib/site'
@@ -135,8 +136,9 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <aside className="lg:sticky lg:top-24">
+          <aside className="space-y-6 lg:sticky lg:top-24">
             <CredentialStrip />
+            <AssuranceStrip />
           </aside>
         </div>
       </Section>
