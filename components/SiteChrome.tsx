@@ -7,13 +7,14 @@
  * resolve to honest placeholders, never fake numbers.
  */
 
-import { NAV, businessName, licenseNumber, phone, TAGLINE } from '@/lib/site'
+import { NAV, businessName, licenseNumber, phone, bookingUrl, TAGLINE } from '@/lib/site'
 import { SAB } from '@/config/business'
 import { MobileNav } from '@/components/MobileNav'
 
 export function SiteHeader() {
   const name = businessName()
   const p = phone()
+  const booking = bookingUrl()
   return (
     <header className="sticky top-0 z-40 border-b border-verdigris/30 bg-pine/95 backdrop-blur">
       <div className="container-x flex items-center justify-between gap-4 py-2.5">
@@ -28,20 +29,34 @@ export function SiteHeader() {
 
         <nav aria-label="Primary" className="hidden items-center gap-7 md:flex">
           {NAV.map((item) => (
-            <a key={item.href} href={item.href} className="font-body text-sm font-medium text-paper/85 hover:text-verdigris">
+            <a
+              key={item.href}
+              href={item.href}
+              className="whitespace-nowrap font-body text-sm font-medium text-paper/85 hover:text-verdigris"
+            >
               {item.label}
             </a>
           ))}
         </nav>
 
         <div className="flex items-center gap-2">
+          {booking && (
+            <a
+              href={booking}
+              target="_blank"
+              rel="noopener"
+              className="hidden items-center gap-1.5 whitespace-nowrap rounded-md border border-verdigris/50 px-4 py-2 font-display text-sm font-bold text-verdigris transition-all hover:-translate-y-0.5 hover:bg-verdigris hover:text-ink lg:inline-flex"
+            >
+              Book online <span aria-hidden>↗</span>
+            </a>
+          )}
           <a
             href={p ? `tel:${p.replace(/[^\d+]/g, '')}` : '/contact'}
             className="hidden items-center gap-2 rounded-md bg-gradient-to-b from-[#E04A3B] to-[#B0291D] px-4 py-2 font-display text-sm font-bold text-paper shadow-[0_6px_16px_-6px_rgba(201,58,44,0.7)] ring-1 ring-inset ring-white/20 transition-all hover:-translate-y-0.5 hover:brightness-110 sm:inline-flex"
           >
             <span aria-hidden>●</span> Emergency
           </a>
-          <MobileNav phoneNumber={p} />
+          <MobileNav phoneNumber={p} bookingHref={booking} />
         </div>
       </div>
     </header>
@@ -51,6 +66,7 @@ export function SiteHeader() {
 export function SiteFooter() {
   const name = businessName()
   const p = phone()
+  const booking = bookingUrl()
   const year = 2026 // build env forbids Date.now(); bump at year turn.
 
   return (
@@ -75,6 +91,16 @@ export function SiteFooter() {
               {item.label}
             </a>
           ))}
+          {booking && (
+            <a
+              href={booking}
+              target="_blank"
+              rel="noopener"
+              className="text-sm text-verdigris hover:brightness-110"
+            >
+              Book online ↗
+            </a>
+          )}
         </nav>
 
         <div className="flex flex-col gap-2.5">
@@ -99,20 +125,43 @@ export function SiteFooter() {
   )
 }
 
-/** Fixed mobile call bar for conversion. Hidden on desktop. */
+/**
+ * Fixed mobile call bar for conversion. Hidden on desktop. Splits three ways
+ * once booking is live, two ways while it is pending — the middle slot is the
+ * only one that disappears, so calling and emergency keep their positions.
+ */
 export function StickyCallBar() {
   const p = phone()
+  const booking = bookingUrl()
   return (
-    <div className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-2 border-t border-verdigris/40 shadow-[0_-8px_20px_-8px_rgba(0,0,0,0.4)] md:hidden">
+    <div
+      className={`fixed inset-x-0 bottom-0 z-30 grid border-t border-verdigris/40 shadow-[0_-8px_20px_-8px_rgba(0,0,0,0.4)] md:hidden ${
+        booking ? 'grid-cols-3' : 'grid-cols-2'
+      }`}
+    >
       <a
         href={p ? `tel:${p.replace(/[^\d+]/g, '')}` : '/contact'}
-        className="flex items-center justify-center gap-2 bg-gradient-to-b from-[#E7BB3E] to-[#C08B12] py-3.5 font-display font-bold text-ink"
+        className={`flex items-center justify-center gap-2 whitespace-nowrap bg-gradient-to-b from-[#E7BB3E] to-[#C08B12] py-3.5 font-display font-bold text-ink ${
+          booking ? 'text-sm' : ''
+        }`}
       >
         {p ? 'Call now' : 'Request callback'}
       </a>
+      {booking && (
+        <a
+          href={booking}
+          target="_blank"
+          rel="noopener"
+          className="flex items-center justify-center gap-1.5 whitespace-nowrap border-x border-white/15 bg-pine py-3.5 font-display text-sm font-bold text-paper"
+        >
+          Book <span aria-hidden>↗</span>
+        </a>
+      )}
       <a
         href={p ? `tel:${p.replace(/[^\d+]/g, '')}` : '/contact'}
-        className="flex items-center justify-center gap-2 bg-gradient-to-b from-[#E04A3B] to-[#B0291D] py-3.5 font-display font-bold text-paper"
+        className={`flex items-center justify-center gap-2 whitespace-nowrap bg-gradient-to-b from-[#E04A3B] to-[#B0291D] py-3.5 font-display font-bold text-paper ${
+          booking ? 'text-sm' : ''
+        }`}
       >
         <span aria-hidden>●</span> Emergency
       </a>

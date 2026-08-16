@@ -40,6 +40,15 @@ export function phoneHref(): string | null {
   return p ? `tel:${p.replace(/[^\d+]/g, '')}` : null
 }
 
+/**
+ * Housecall Pro booking URL, or null when pending. Booking UI is gated on this
+ * being non-null — an online-booking button that goes nowhere is worse than no
+ * button, so components render nothing rather than fall back to /contact.
+ */
+export function bookingUrl(): string | null {
+  return fact('IDENTITY.bookingUrl', IDENTITY.bookingUrl)
+}
+
 /** Real availability. Null until confirmed — gate all after-hours language on this. */
 export function hours(): { afterHours: boolean; weekends: boolean; note: string } | null {
   return fact('OPERATIONS.hours', OPERATIONS.hours)

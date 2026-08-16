@@ -104,7 +104,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="container-x py-16 md:py-24">
           <div className="max-w-4xl reveal">
             <Eyebrow className="text-mist">
-              {service.pillar.replace(/-/g, ' ')} · TN LLP #5045 · {service.requiresPermit ? 'permit required' : 'permit-free'}
+              {service.pillar.replace(/-/g, ' ')} · TN LLP #5045 · verify.tn.gov
             </Eyebrow>
             <h1 className="mt-4 text-display-xl">{service.name}</h1>
             <p className="mt-6 max-w-prose text-lead text-paper/85">{service.summary}</p>
@@ -137,9 +137,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className="rounded-card border-l-4 border-verdigris bg-galv p-6">
               <h2 className="font-mono text-spec uppercase text-steel">Where we cover this</h2>
               <p className="mt-2 text-sm text-ink/90">
+                {`All ${served.length} towns we serve, from Charleston and Cleveland through Athens and the US-11 corridor, plus greater Chattanooga.`}
                 {service.requiresPermit
-                  ? 'Permitted work. We do it across the Bradley–McMinn corridor in the towns where we are cleared to pull a permit, and we are verifying that town by town. Inside Chattanooga city limits it goes to a licensed partner.'
-                  : `Permit-free, so we cover the entire service area — all ${served.length} towns from Charleston and Cleveland to Athens, plus inside Chattanooga city limits.`}
+                  ? ' This job needs a permit, and our office pulls it and books the inspection as part of the work.'
+                  : ' No permit needed for this one, so we can usually get on it quickly.'}
               </p>
               <a
                 href="/service-areas"

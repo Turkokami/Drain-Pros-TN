@@ -36,28 +36,35 @@ address into permanent circulation. Linter check `[1]` scans every file.
 ```
 
 `assertSellable(serviceSlug, locationSlug?)` in `lib/scope-guard.ts` is the only
-correct way to decide whether a service may appear. It enforces three things:
+correct way to decide whether a service may appear. What it enforces now depends
+on `config/policy.ts`:
 
 | Constraint | Status | Effect |
 |---|---|---|
-| $25,000 per-project ceiling | Confirmed | `size-dependent` services render a ceiling disclosure |
-| No septic or well **system** work | Confirmed | Hard block. Content and referral only. |
-| Cannot pull permits in Chattanooga | Confirmed | Permit-required services withheld inside city limits |
+| No septic or well **system** work | Confirmed | Hard block, always. Not policy-controlled. |
+| $25,000 per-project ceiling | Confirmed, not published | Office qualifies job size at the estimate |
+| Permit authority per jurisdiction | Confirmed for Chattanooga only | **No longer gates publishing** |
 
-The third one is the subtle one. It is **geographic, not service-based**. He can
-work in Chattanooga — he just cannot take jobs that need a permit pulled there.
-Drain cleaning, emergency leak repair, fixture work, and diagnostics are all fine.
-Water heater replacement, tankless, repipes, gas, and sewer replacement are not.
+**Changed 2026-08-16 by client direction.** The site used to withhold
+permit-required services wherever permit authority was not confirmed. It no
+longer does. The office qualifies permitting and job size at intake; the site's
+job is to present the complete service list and route the lead. All 18 services
+publish in all 21 towns.
 
-### 3. Unverified jurisdictions fail safe
+The septic/well block is *not* part of that change and stays hard. It is a
+licensure question, not a permitting one — no office process makes it sellable.
+The house-side work on those properties is in scope and already a pillar.
 
-Every jurisdiction except Chattanooga is currently `unverified`. Those pages render
-**permit-free services only** until someone calls the permit office and flips the
-flag in `config/jurisdictions.ts`.
+### 3. Permit data is still real, it just does not gate the site
 
-This is intentional. Under-selling costs a lead. Advertising work he cannot permit
-in that town risks the license. When a jurisdiction is verified, change one field
-and every page, schema node, and service list updates automatically.
+`config/jurisdictions.ts` is unchanged and still accurate: Chattanooga is
+confirmed `none`, everything else is `unverified`. The office needs that. It
+simply no longer decides what publishes.
+
+To restore the original fail-safe behavior, flip
+`PUBLISHING.gateServicesByPermitAuthority` back to `true` in `config/policy.ts`.
+The guard, the linter check `[7]`, the location pages, and the ScopeStrip
+withheld block all follow from that one field.
 
 ### 4. Defined-term warranties only
 
@@ -96,10 +103,12 @@ date. Nothing else changes.
 | Insurance carrier and coverage | Trust blocks, commercial page |
 | Warranty terms | All warranty language sitewide |
 | Facebook review count | Reviews baseline |
-| **Permit authority per jurisdiction** | **Which services publish on which location page** |
+| Permit authority per jurisdiction | Office scheduling only — no longer a publishing gate |
 
-The last one is the gate on the whole build. Thirteen jurisdictions need a phone
-call each. `npm run lint:scope` prints the list with contacts.
+The last one used to be the gate on the whole build. It is not any more, but the
+thirteen calls are still worth making, because the office needs to know which
+desk each town files with and how long each takes. `npm run lint:scope` still
+prints the list with contacts every run.
 
 ---
 
@@ -194,7 +203,10 @@ npm run build             # runs strict lint, then next build
 npm run typecheck
 ```
 
-Current state: **21 locations × 18 services = 189 combinations withheld by the
-guard**, because only Chattanooga's permit authority is confirmed and it is
-confirmed negative. That number should drop sharply as jurisdictions get verified.
-If it does not move, the permit calls have not been made.
+Current state: **0 combinations withheld**. All 21 locations × 18 services
+publish, because the permit gate is off (see `config/policy.ts`). The 13
+unverified jurisdictions are still reported by `lint:scope` every run, but as an
+**office to-do rather than a publishing gate** — they no longer block a build.
+
+The only guard still withholding anything is the septic/well/commercial-new-
+construction block, and those never appear in `SERVICES` to begin with.

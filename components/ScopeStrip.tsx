@@ -6,16 +6,16 @@
  * the August 2026 analysis, none surface a license number publicly. Showing it
  * as spec-sheet data rather than a marketing badge is the whole point.
  *
- * ScopeStrip renders, per location, exactly what he can and cannot do there.
- * It is the honest form of the permit constraint. A visitor in Chattanooga sees
- * that drain and emergency work is covered and that permitted work is referred
- * out — which builds more trust than a service list that quietly omits things.
+ * ScopeStrip renders, per location, the full service list for that town plus
+ * the credential line. Permitting is settled per job by the office, so the
+ * strip no longer renders a withheld list — see config/policy.ts. The withheld
+ * block is still wired up and returns automatically if the gate is flipped on.
  */
 
 import { LICENSE, fact } from '@/config/business'
 import { JURISDICTIONS } from '@/config/jurisdictions'
 import { sellableServices, withheldServices } from '@/lib/scope-guard'
-import { OUT_OF_SCOPE } from '@/config/services'
+import { PUBLISHING } from '@/config/policy'
 import type { Location } from '@/config/locations'
 
 export function CredentialStrip() {
@@ -71,7 +71,7 @@ export function ScopeStrip({ location }: { location: Location }) {
   const withheld = withheldServices(location.slug).filter(
     (w) => w.decision.publicExplanation.length > 0
   )
-  const confirmedExclusion = jurisdiction?.permitAuthority === 'none'
+  const showWithheld = PUBLISHING.publishWithheldBlock && jurisdiction?.permitAuthority === 'none'
 
   return (
     <section aria-labelledby="scope-heading" className="border-l-2 border-verdigris bg-galv p-6">
@@ -89,7 +89,7 @@ export function ScopeStrip({ location }: { location: Location }) {
         ))}
       </ul>
 
-      {confirmedExclusion && withheld.length > 0 && (
+      {showWithheld && withheld.length > 0 && (
         <div className="mt-6 border-t border-ink/10 pt-4">
           <h3 className="font-mono text-spec uppercase text-steel">Referred to a partner here</h3>
           <p className="mt-2 max-w-prose font-body text-sm text-steel">
@@ -107,14 +107,10 @@ export function ScopeStrip({ location }: { location: Location }) {
       )}
 
       <div className="mt-6 border-t border-ink/10 pt-4">
-        <h3 className="font-mono text-spec uppercase text-steel">Not our trade</h3>
-        <ul className="mt-2 space-y-1">
-          {OUT_OF_SCOPE.map((o) => (
-            <li key={o.slug} className="font-body text-sm text-steel">
-              {o.name} — referred to a {o.referTo}.
-            </li>
-          ))}
-        </ul>
+        <p className="max-w-prose font-body text-sm text-steel">
+          Every line above is work we take in {location.name}. Permits, inspections, and scheduling
+          are handled by our office as part of the job — you do not have to work out what needs one.
+        </p>
       </div>
     </section>
   )

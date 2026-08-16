@@ -8,9 +8,9 @@
 
 import { IDENTITY, fact } from '@/config/business'
 import { CredentialStrip } from '@/components/ScopeStrip'
-import { EmergencyCTA } from '@/components/CTA'
+import { EmergencyCTA, BookOnlineCTA } from '@/components/CTA'
 import { LeadForm } from '@/components/LeadForm'
-import { phone, hours } from '@/lib/site'
+import { phone, hours, bookingUrl } from '@/lib/site'
 import { Section, Eyebrow, BulletList } from '@/components/ui'
 import { buildMetadata } from '@/lib/seo'
 import {
@@ -38,6 +38,7 @@ export default function ContactPage() {
   const p = phone()
   const email = fact('IDENTITY.email', IDENTITY.email)
   const availability = hours()
+  const booking = bookingUrl()
 
   const graph = buildGraph([
     websiteNode(),
@@ -84,6 +85,19 @@ export default function ContactPage() {
               {availability?.note && <p className="mt-2 font-body text-sm text-steel">{availability.note}</p>}
             </div>
 
+            {booking && (
+              <div className="rounded-card border-l-4 border-verdigris bg-galv p-6">
+                <h2 className="font-mono text-spec uppercase text-steel">Book online</h2>
+                <p className="mt-2 max-w-prose text-ink/90">
+                  Pick a time yourself instead of waiting on a callback. Enter your zip and the
+                  scheduler will confirm we cover you before you book.
+                </p>
+                <div className="mt-4">
+                  <BookOnlineCTA tone="light" label="Open the scheduler" />
+                </div>
+              </div>
+            )}
+
             <div className="rounded-card border-l-4 border-verdigris bg-galv p-6">
               <h2 className="font-mono text-spec uppercase text-steel">Email</h2>
               {email ? (
@@ -110,9 +124,9 @@ export default function ContactPage() {
             <div>
               <h2 className="text-display-md">Plumbing emergency?</h2>
               <p className="mt-2 max-w-prose text-ink/90">
-                Active leak, no water, or a sewage backup goes to the front of the line. Emergency and
-                drain work needs no permit, so it is covered across the whole area including
-                Chattanooga.
+                Active leak, no water, or a sewage backup goes to the front of the line, across the
+                whole service area including Chattanooga. Call rather than use the form — it is the
+                fastest way to get someone moving.
               </p>
               <div className="mt-4">
                 <EmergencyCTA />

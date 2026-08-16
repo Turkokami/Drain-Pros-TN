@@ -56,9 +56,10 @@ export default function AboutPage() {
       ],
     },
     {
-      title: 'Honest about the edges',
+      title: 'We handle the permits',
       body: [
-        'A Tennessee Limited Licensed Plumber covers residential and light commercial plumbing up to a $25,000 per-project ceiling. It does not cover septic systems or well systems, and it does not permit work inside Chattanooga city limits. We say all of that out loud. When a job is outside our scope, we tell you and point you to the right licensed contractor rather than take it on anyway.',
+        'Some plumbing needs a permit and an inspection, and some does not. Working out which is our job, not yours. Where one is required, the office pulls it and books the inspection as part of the work, so the price you approved is the price you pay and nobody is left chasing a codes department.',
+        'The one line we draw is between the house and the systems outside it. Septic tanks, drain fields, well drilling, pumps, and pressure tanks are separately licensed trades in Tennessee. We do all the plumbing inside the house they serve, and when the system itself is the problem we point you to a contractor we trust rather than take it on anyway.',
       ],
     },
     {

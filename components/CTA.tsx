@@ -7,7 +7,7 @@
  * than render a placeholder number a visitor might dial.
  */
 
-import { phone, phoneHref, licenseNumber } from '@/lib/site'
+import { phone, phoneHref, licenseNumber, bookingUrl } from '@/lib/site'
 
 export function PrimaryCTA({ className = '', label }: { className?: string; label?: string }) {
   const p = phone()
@@ -56,8 +56,56 @@ export function EmergencyCTA({ className = '' }: { className?: string }) {
 }
 
 /**
+ * BOOK ONLINE — third conversion path, deliberately the quietest of the three.
+ *
+ * Calling still wins for this trade, and `signal` red stays reserved for
+ * EmergencyCTA, so this reads as an outline rather than a third filled button
+ * competing with the two that matter more. Routes off-site to Housecall Pro.
+ *
+ * Renders nothing when the booking URL is pending — a dead "Book online" button
+ * is worse than no button, so this does not fall back to /contact the way the
+ * phone CTAs do.
+ */
+export function BookOnlineCTA({
+  className = '',
+  label = 'Book online',
+  tone = 'dark',
+}: {
+  className?: string
+  label?: string
+  tone?: 'dark' | 'light'
+}) {
+  const href = bookingUrl()
+  if (!href) return null
+
+  const palette =
+    tone === 'dark'
+      ? 'border-verdigris/60 text-verdigris hover:bg-verdigris hover:text-ink'
+      : 'border-pine/30 text-pine hover:bg-pine hover:text-paper'
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener"
+      className={
+        'inline-flex items-center justify-center gap-2 rounded-lg border-2 bg-transparent ' +
+        'px-6 py-3 font-display text-base font-bold transition-all duration-200 ' +
+        'hover:-translate-y-0.5 active:translate-y-0 ' +
+        palette +
+        ' ' +
+        className
+      }
+    >
+      {label}
+      <span aria-hidden>↗</span>
+    </a>
+  )
+}
+
+/**
  * Full-width conversion band. Dark panel with the spec-sheet blueprint motif,
- * the two CTAs, and the license line — used to close pages.
+ * the CTAs, and the license line — used to close pages.
  */
 export function CTABand({
   heading = 'Get a licensed plumber on the job.',
@@ -76,6 +124,7 @@ export function CTABand({
         <div className="mt-8 flex flex-wrap gap-3">
           <PrimaryCTA label="Book a plumber" />
           <EmergencyCTA />
+          <BookOnlineCTA />
         </div>
         <p className="mt-6 font-mono text-spec uppercase text-mist">
           TN Limited Licensed Plumber · #{licenseNumber()} · verify at verify.tn.gov

@@ -94,7 +94,31 @@ export function businessNode() {
           },
         }
       : {}),
+    // Online booking, emitted only when the URL is confirmed. Declaring a
+    // ReserveAction we cannot honor would be worse than omitting it.
+    ...(bookingConfirmed()
+      ? {
+          potentialAction: {
+            '@type': 'ReserveAction',
+            name: 'Book a plumbing appointment online',
+            target: {
+              '@type': 'EntryPoint',
+              urlTemplate: bookingConfirmed(),
+              actionPlatform: [
+                'http://schema.org/DesktopWebPlatform',
+                'http://schema.org/MobileWebPlatform',
+              ],
+            },
+            result: { '@type': 'Reservation', name: 'Plumbing appointment' },
+          },
+        }
+      : {}),
   }
+}
+
+/** Housecall Pro booking URL, or null until confirmed. Drives ReserveAction. */
+function bookingConfirmed() {
+  return fact('IDENTITY.bookingUrl', IDENTITY.bookingUrl)
 }
 
 /** Real availability, or null until confirmed. Drives openingHours schema. */

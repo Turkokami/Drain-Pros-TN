@@ -2,8 +2,8 @@
  * SERVICE-AREAS HUB — redesigned.
  *
  * Lists every town by market tier and links to its page. The breadcrumb on each
- * location page points here, so this route must exist. Chattanooga is listed as
- * permit-free work only.
+ * location page points here, so this route must exist. The full service list
+ * runs in every tier, Chattanooga included.
  */
 
 import { locationsByTier, type Location } from '@/config/locations'
@@ -23,7 +23,7 @@ const TIERS: Array<{ key: Parameters<typeof locationsByTier>[0]; title: string; 
   { key: 'anchor', title: 'Anchor — home base', note: 'Charleston and Calhoun. Zero competition; we own the county seam.' },
   { key: 'primary', title: 'Primary revenue market', note: 'Cleveland and Athens, the thin middle tier of this market.' },
   { key: 'growth', title: 'Growth corridor', note: 'The fast-growing Hamilton County edge northeast of Chattanooga.' },
-  { key: 'tail', title: 'Corridor & rural towns', note: 'The uncontested US-11 stretch, plus Chattanooga for permit-free work only.' },
+  { key: 'tail', title: 'Corridor & rural towns', note: 'The uncontested US-11 stretch, plus greater Chattanooga.' },
 ]
 
 const DESCRIPTION =

@@ -5,8 +5,8 @@
  */
 
 import { LeadForm } from '@/components/LeadForm'
-import { PrimaryCTA, EmergencyCTA } from '@/components/CTA'
-import { phone } from '@/lib/site'
+import { PrimaryCTA, EmergencyCTA, BookOnlineCTA } from '@/components/CTA'
+import { phone, licenseNumber } from '@/lib/site'
 
 export function GetService({ service, place }: { service?: string; place?: string }) {
   const p = phone()
@@ -24,15 +24,17 @@ export function GetService({ service, place }: { service?: string; place?: strin
             <p className="eyebrow text-verdigris">Get service</p>
             <h2 className="mt-3 text-display-lg">{heading}.</h2>
             <p className="mt-4 max-w-prose text-lead text-paper/80">
-              Call for the fastest response, or send the form and we’ll reach out. Licensed, straight
-              pricing you approve before we start, and 24/7 emergency service.
+              Call for the fastest response, book a time online, or send the form and we’ll reach
+              out. Licensed, straight pricing you approve before we start, and 24/7 emergency
+              service.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <PrimaryCTA />
               <EmergencyCTA />
+              <BookOnlineCTA />
             </div>
             <p className="mt-6 font-mono text-spec uppercase text-mist">
-              TN Limited Licensed Plumber · #5045 · verify at verify.tn.gov
+              TN Limited Licensed Plumber · #{licenseNumber()} · verify at verify.tn.gov
             </p>
           </div>
 

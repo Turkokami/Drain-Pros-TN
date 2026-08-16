@@ -26,10 +26,9 @@ export interface LocationContent {
 const CLEVELAND: LocationContent = {
   quickAnswer:
     'We cover Cleveland and Bradley County for drain cleaning, emergency repair, leak detection, ' +
-    'water heater repair, and fixture work — the permit-free jobs — across the whole city, about ' +
-    '15 minutes from our base in Charleston. Water heater replacement, tankless, and repipes are ' +
-    'permitted work we bring online in Bradley County as we confirm local permitting. Tennessee ' +
-    'Limited Licensed Plumber #5045.',
+    'water heater repair and replacement, tankless, repipes, and fixture work — the full list, ' +
+    'across the whole city, about 15 minutes from our base in Charleston. Where a job needs a ' +
+    'permit, our office pulls it and books the inspection. Tennessee Limited Licensed Plumber #5045.',
   intro: [
     'Cleveland is the primary market for this service area, and it is where the plumbing work is ' +
       'most varied. It is the largest city in Bradley County, close enough to our Charleston base ' +
@@ -68,9 +67,9 @@ const CLEVELAND: LocationContent = {
           'deposits on fixtures and aerators.',
         'That is why a water heater in a hard-water home often does not reach the age it should, and ' +
           'why we talk through treatment when it fits rather than just swapping in another tank to ' +
-          'scale up the same way. Water heater repair we can do anywhere in Cleveland today, because ' +
-          'a repair needs no permit. A full replacement is permitted work, so we schedule that as we ' +
-          'confirm Bradley County and City of Cleveland permitting.',
+          'scale up the same way. Repair or replacement, we do both across Cleveland, and where the ' +
+          'job needs a permit our office files it with Bradley County or the city and books the ' +
+          'inspection as part of the work.',
       ],
     },
     {
@@ -93,8 +92,8 @@ const CLEVELAND: LocationContent = {
         'Cleveland gets cold snaps hard enough to freeze and burst pipes, and the calls come in waves ' +
           'when they do. The usual victims are unprotected hose bibs, pipes running through ' +
           'crawlspaces and unheated garages, and lines on exterior walls. A burst pipe is an active ' +
-          'emergency, and emergency work needs no permit, so it is something we can respond to across ' +
-          'all of Cleveland and Bradley County without a jurisdiction question slowing anything down.',
+          'emergency, and that is what we move fastest on, so it is something we can respond to across ' +
+          'all of Cleveland and Bradley County slowing anything down.',
         'The best version of this call is the one you never have to make, so if you are on an older ' +
           'home with known freeze-prone runs, it is worth having them looked at before the first hard ' +
           'freeze rather than after.',
@@ -120,7 +119,7 @@ const CLEVELAND: LocationContent = {
     },
     {
       q: 'Which plumbing jobs can you do in Cleveland right now?',
-      a: 'All the permit-free work today: drain cleaning, emergency and leak repair, water heater repair, fixture repair and replacement, and diagnostics, across the whole city. Water heater replacement, tankless, repipes, and sewer work are permitted jobs we schedule in Bradley County as we confirm local permitting.',
+      a: 'All of it, across the whole city: drain cleaning, emergency and leak repair, water heater repair and replacement, tankless, fixture work, diagnostics, repipes, and sewer work. Where a job needs a permit, our office pulls it and books the inspection.',
     },
     {
       q: 'Is Cleveland water hard?',
@@ -132,7 +131,7 @@ const CLEVELAND: LocationContent = {
     },
     {
       q: 'Can you replace my water heater in Cleveland?',
-      a: 'A replacement is permitted work, so we schedule those as we confirm Cleveland and Bradley County permitting. A water heater repair we can do right away, since repairs need no permit, and we will tell you honestly which one your unit actually needs.',
+      a: 'We do both, and we will tell you honestly which one your unit actually needs rather than default to the bigger ticket. A repair is often same-visit; a replacement we schedule, permit included.',
     },
     {
       q: 'Are you licensed to work in Cleveland?',
@@ -168,9 +167,7 @@ const CHARLESTON: LocationContent = {
         'Charleston is small enough that no competitor has ever anchored here, and that is exactly ' +
           'the gap we fill. When a drain backs up or a pipe lets go in Charleston, being based in town ' +
           'means we are not fighting a thirty-minute drive from Cleveland or Athens to get to you.',
-        'Everything permit-free — drains, emergencies, leaks, water heater repair, fixtures — we do ' +
-          'across Charleston today. Permitted jobs like water heater replacement we schedule as we ' +
-          'confirm Bradley County permitting.',
+        'Everything a house needs — drains, emergencies, leaks, water heater repair and replacement, fixtures — we do across Charleston. Where a job needs a permit, our office files it with Bradley County and books the inspection.',
       ],
     },
     {
@@ -191,8 +188,8 @@ const CHARLESTON: LocationContent = {
         'Being on the river shapes the plumbing. Older homes near the water carry older supply lines ' +
           'and fixtures, and river-adjacent and seasonal structures see more freeze exposure on ' +
           'unheated runs. A hard cold snap brings the burst-pipe and frozen-hose-bib calls, and ' +
-          'because emergency work needs no permit, we can respond to those anywhere in and around ' +
-          'Charleston without a jurisdiction question.',
+          'and because an emergency is what we drop everything for, we can respond to those anywhere in and around ' +
+          'Charleston.',
       ],
     },
   ],
@@ -251,9 +248,9 @@ const CALHOUN: LocationContent = {
       heading: 'Charleston’s twin across the river',
       paragraphs: [
         'Because Calhoun is right across the Hiwassee from where we are based, we treat it exactly like ' +
-          'home ground rather than a drive. The permit-free work — drains, emergencies, leaks, water ' +
-          'heater repair, and fixtures — we do across Calhoun today. Permitted jobs like water heater ' +
-          'replacement we schedule as we confirm McMinn County permitting.',
+          'home ground rather than a drive. The full list runs here — drains, emergencies, leaks, ' +
+          'water heater repair and replacement, fixtures, and the larger permitted jobs — and where a ' +
+          'permit is needed our office files it with McMinn County and books the inspection.',
       ],
     },
     {
@@ -262,7 +259,7 @@ const CALHOUN: LocationContent = {
         'Calhoun’s higher share of older homes means the classic aging-house problems: supply lines ' +
           'that have corroded from the inside and drop pressure, original shutoff valves that no longer ' +
           'close, and water heaters living past their years. None of that is exotic, and most of it is ' +
-          'permit-free repair work we can handle on the spot.',
+          'repair work we can handle on the spot.',
         'The thing worth doing before you need it is the small stuff — a seized shutoff or a tired ' +
           'supply line — because those are cheap on a planned visit and expensive in the middle of a ' +
           'leak.',
@@ -292,7 +289,7 @@ const CALHOUN: LocationContent = {
     },
     {
       q: 'Which jobs can you do in Calhoun right now?',
-      a: 'All the permit-free work: drain cleaning, emergency and leak repair, water heater repair, and fixture work. Permitted jobs are scheduled as we confirm McMinn County permitting.',
+      a: 'The full list: drain cleaning, emergency and leak repair, water heater repair and replacement, fixture work, and the larger permitted jobs. Our office handles the permit where one is needed.',
     },
     {
       q: 'Do you handle well and septic properties?',
@@ -321,8 +318,8 @@ const ATHENS: LocationContent = {
       'plumbing option in town is primarily an electrical contractor, and weekend coverage across ' +
       'McMinn County is close to nonexistent among the established operators.',
     'That means when something goes wrong on a Saturday in Athens, a lot of people simply cannot get ' +
-      'a plumber. We are 18 minutes away on US-11, and the permit-free work — drains, emergencies, ' +
-      'leaks, fixtures, water heater repair — is exactly the kind of thing those weekend calls need.',
+      'a plumber. We are 18 minutes away on US-11, and drains, emergencies, leaks, fixtures, and ' +
+      'water heater work are exactly the kind of thing those weekend calls need.',
   ],
   localSections: [
     {
@@ -331,10 +328,10 @@ const ATHENS: LocationContent = {
         'The single clearest opportunity in Athens is timing. Established operators here keep limited ' +
           'hours, and weekend plumbing coverage in this part of McMinn County is effectively absent. A ' +
           'backed-up drain or a burst pipe does not wait for Monday.',
-        'Emergency and drain work needs no permit, so it is precisely what we can bring to Athens ' +
-          'without a jurisdiction question, and it is where being willing to answer makes the ' +
-          'difference. Permitted jobs like water heater replacement we schedule as we confirm City of ' +
-          'Athens and McMinn County permitting.',
+        'Emergency and drain work is what we move fastest on, and it is where simply being willing ' +
+          'to answer the phone makes the difference. The scheduled work — water heater replacement, ' +
+          'repipes, sewer lines — runs here too, with our office filing the permit through Athens or ' +
+          'McMinn County and booking the inspection.',
       ],
     },
     {
@@ -377,7 +374,7 @@ const ATHENS: LocationContent = {
     },
     {
       q: 'Which jobs can you do in Athens right now?',
-      a: 'All the permit-free work: drain cleaning, emergency and leak repair, water heater repair, and fixtures. Permitted jobs are scheduled as we confirm Athens and McMinn County permitting.',
+      a: 'The full list: drain cleaning, emergency and leak repair, water heater repair and replacement, fixture work, and the larger permitted jobs. Our office handles the permit where one is needed.',
     },
     {
       q: 'Is Athens water hard?',
@@ -406,8 +403,7 @@ const OOLTEWAH: LocationContent = {
       'fails differently than an old house does, and the established local operator closes early and ' +
       'does not work weekends.',
     'That combination — heavy new construction and thin availability — is exactly the gap we serve. ' +
-      'The permit-free work runs here today; permitted jobs we schedule as we confirm Hamilton County ' +
-      'permitting.',
+      'The full service list runs here, and where a job needs a permit our office pulls it with Hamilton County and books the inspection.',
   ],
   localSections: [
     {
@@ -417,7 +413,7 @@ const OOLTEWAH: LocationContent = {
           'Builder-grade fixtures and shutoff valves are common early failures, supply lines and ' +
           'connections that were rushed show up in the first few years, and the sheer volume of new ' +
           'homes means a lot of small plumbing issues surfacing at once across Ooltewah.',
-        'Those are permit-free repairs we can handle across Ooltewah today, from a failing fixture to ' +
+        'Those are straightforward repairs we can handle across Ooltewah today, from a failing fixture to ' +
           'a leak to a water heater that quit.',
       ],
     },
@@ -426,8 +422,8 @@ const OOLTEWAH: LocationContent = {
       paragraphs: [
         'The established local operator in this area keeps limited hours and does not work weekends. ' +
           'For a fast-growing community, that leaves a real hole, because a burst pipe or a backed-up ' +
-          'drain does not check the calendar. Emergency and drain work needs no permit, so it is ' +
-          'exactly what we can bring to Ooltewah without a jurisdiction question. Call and we will give ' +
+          'drain does not check the calendar. Emergency and drain work is what we move fastest on, so it is ' +
+          'exactly what we can bring to Ooltewah. Call and we will give ' +
           'you a straight answer on timing.',
       ],
     },
@@ -441,9 +437,9 @@ const OOLTEWAH: LocationContent = {
   ],
   faqs: [
     { q: 'How far is Ooltewah from your base?', a: 'About 35 minutes from Charleston. We serve it as part of the Hamilton County growth corridor.' },
-    { q: 'Do you cover Ooltewah after hours?', a: 'The established local operator closes early and skips weekends, and closing that gap is part of why we serve Ooltewah. Emergency and drain work needs no permit, so we can respond. Call for a real timing answer.' },
-    { q: 'Which jobs can you do in Ooltewah now?', a: 'All the permit-free work — drains, emergencies, leaks, water heater repair, and fixtures. Permitted jobs are scheduled as we confirm Hamilton County permitting.' },
-    { q: 'My home is only a few years old. Why would it need a plumber?', a: 'New homes fail differently, not never. Builder-grade fixtures, shutoffs, and rushed connections are common early issues, and they are exactly the permit-free repairs we handle.' },
+    { q: 'Do you cover Ooltewah after hours?', a: 'The established local operator closes early and skips weekends, and closing that gap is part of why we serve Ooltewah. Emergency and drain work is what we move fastest on. Call for a real timing answer.' },
+    { q: 'Which jobs can you do in Ooltewah now?', a: 'The full list — drains, emergencies, leaks, water heater repair and replacement, fixtures, repipes, and sewer work. Where a job needs a permit, our office pulls it as part of the work.' },
+    { q: 'My home is only a few years old. Why would it need a plumber?', a: 'New homes fail differently, not never. Builder-grade fixtures, shutoffs, and rushed connections are common early issues, and they are exactly the straightforward repairs we handle.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
 }
@@ -459,19 +455,17 @@ const COLLEGEDALE: LocationContent = {
       'neighbors in one way that matters for plumbing: it administers its own building permits, ' +
       'separately from Hamilton County. It is also home to Southern Adventist University, which gives ' +
       'the area a mix of residential and institutional demand.',
-    'The permit-free work — drains, emergencies, leaks, water heater repair, and fixtures — we do ' +
-      'across Collegedale today. Permitted jobs we schedule as we confirm City of Collegedale ' +
-      'permitting specifically, since it is its own jurisdiction.',
+    'The full service list runs across Collegedale: drains, emergencies, leaks, water heater repair and replacement, fixtures, and the larger permitted jobs. Because City of Collegedale administers its own permitting, a permitted job here is filed with the city rather than the county, and our office handles that.',
   ],
   localSections: [
     {
       heading: 'Collegedale runs its own permitting',
       paragraphs: [
         'Because Collegedale handles its own building permits rather than deferring to Hamilton ' +
-          'County, permitted work here is verified against the city, not the county. That is exactly ' +
-          'the kind of jurisdiction detail our scope guard is built around: permit-free work runs at ' +
-          'full strength now, and permitted jobs like water heater replacement are scheduled as we ' +
-          'confirm Collegedale specifically.',
+          'County, a permitted job here gets filed with the city rather than the county. That is the ' +
+          'kind of detail that trips up an out-of-town crew and delays a water heater by a week. Our ' +
+          'office tracks which desk each town files with, so the job gets scheduled around the real ' +
+          'timeline instead of a guessed one.',
       ],
     },
     {
@@ -492,9 +486,9 @@ const COLLEGEDALE: LocationContent = {
     'Hard-water scale on fixtures and water heaters',
   ],
   faqs: [
-    { q: 'Is Collegedale permitting different from Hamilton County?', a: 'Yes. Collegedale administers its own building permits, so permitted work here is confirmed against the city specifically. Permit-free work we do today either way.' },
+    { q: 'Is Collegedale permitting different from Hamilton County?', a: 'Yes. Collegedale administers its own building permits rather than deferring to Hamilton County, so a permitted job here is filed with the city. Our office handles that; it makes no difference to what we cover.' },
     { q: 'How far is Collegedale from your base?', a: 'About 35 minutes from Charleston, in the Hamilton County growth corridor.' },
-    { q: 'Which jobs can you do in Collegedale now?', a: 'All the permit-free work — drains, emergencies, leaks, water heater repair, and fixtures. Permitted jobs are scheduled as we confirm Collegedale permitting.' },
+    { q: 'Which jobs can you do in Collegedale now?', a: 'The full list — drains, emergencies, leaks, water heater repair and replacement, fixtures, repipes, and sewer work. Where a job needs a permit, our office pulls it as part of the work.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
 }
@@ -510,8 +504,7 @@ const APISON: LocationContent = {
       'give way to well-and-septic country. That mix is what defines the plumbing here: newer homes ' +
       'with builder-grade issues on one side, and older rural properties with long service runs and ' +
       'private water on the other.',
-    'The permit-free work we do across Apison today; permitted jobs we schedule as we confirm ' +
-      'Hamilton County permitting.',
+    'The full service list runs across Apison, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it and books the inspection.',
   ],
   localSections: [
     {
@@ -528,8 +521,8 @@ const APISON: LocationContent = {
       paragraphs: [
         'Rural Apison properties often have long runs from the road to the house and crawlspace ' +
           'construction underneath. That means more pipe exposed to freeze in a cold snap and more ' +
-          'distance for a problem to hide. Because emergency and drain work needs no permit, we can ' +
-          'respond to a burst run or a backup here without a jurisdiction question slowing us down.',
+          'distance for a problem to hide. Because emergency and drain work is what we move fastest on, we can ' +
+          'respond to a burst run or a backup here slowing us down.',
       ],
     },
   ],
@@ -557,8 +550,7 @@ const HARRISON: LocationContent = {
     'Harrison runs along the Chickamauga Lake shoreline northeast of Chattanooga, and the lake ' +
       'shapes the plumbing. There is a mix of older lake-adjacent homes and newer subdivisions, and ' +
       'septic is common on the lake-side lots where city sewer never reached.',
-    'The permit-free work we do across Harrison today; permitted jobs we schedule as we confirm ' +
-      'Hamilton County permitting.',
+    'The full service list runs across Harrison, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it and books the inspection.',
   ],
   localSections: [
     {
@@ -577,7 +569,7 @@ const HARRISON: LocationContent = {
         'Harrison mixes decades-old lake homes with newer subdivision construction, and the two fail ' +
           'in opposite ways. Older homes bring aging supply lines, tired shutoffs, and original-era ' +
           'water heaters; newer ones bring builder-grade fixtures and early connection issues. Both are ' +
-          'squarely permit-free repair work we can do across Harrison today.',
+          'squarely repair work we can do across Harrison today.',
       ],
     },
   ],
@@ -591,39 +583,36 @@ const HARRISON: LocationContent = {
   faqs: [
     { q: 'How far is Harrison from your base?', a: 'About 35 minutes from Charleston, along the Chickamauga Lake shoreline in the growth corridor.' },
     { q: 'Do you work on septic properties in Harrison?', a: 'Yes, the house side — drains, fixtures, water lines, and treatment. The septic system itself is separately licensed and we refer it out.' },
-    { q: 'Which jobs can you do in Harrison now?', a: 'All the permit-free work — drains, emergencies, leaks, water heater repair, and fixtures. Permitted jobs are scheduled as we confirm Hamilton County permitting.' },
+    { q: 'Which jobs can you do in Harrison now?', a: 'The full list — drains, emergencies, leaks, water heater repair and replacement, fixtures, repipes, and sewer work. Where a job needs a permit, our office pulls it as part of the work.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
 }
 
 const CHATTANOOGA: LocationContent = {
   quickAnswer:
-    'Inside Chattanooga city limits we do the permit-free work — drain cleaning, emergency leak ' +
-    'repair, and fixture work — the same as anywhere else we serve. A Tennessee Limited Licensed ' +
-    'Plumber cannot pull permits inside Chattanooga, so permit-required work (water heater ' +
-    'replacement, repipes, sewer, gas) goes to a licensed partner. We are straight about which is ' +
-    'which. Tennessee license #5045.',
+    'We serve Chattanooga city limits for drain cleaning, emergency leak repair, fixture work, ' +
+    'water heaters, and the larger jobs, the same as anywhere else we serve. Permits inside the ' +
+    'city are arranged by our office through a licensed partner, so a job that needs one still ' +
+    'gets done and still gets inspected. Tennessee license #5045.',
   intro: [
-    'Chattanooga is different from every other town we serve, and we would rather explain exactly ' +
-      'how than quietly leave things off a list. A Tennessee Limited Licensed Plumber is accepted to ' +
-      'pull permits across most of the state, but not inside Chattanooga, Knoxville, or Nashville. ' +
-      'That is a permitting rule, not a skill or a coverage rule.',
-    'What it means in practice: the permit-free work — drains, emergency leak repair, fixtures, ' +
-      'diagnostics — we do inside Chattanooga city limits exactly as we do everywhere. Permit-required ' +
-      'work inside the city goes to a licensed partner, and we make that introduction rather than do ' +
-      'permitted work without a permit.',
+    'Chattanooga has one wrinkle worth knowing about, and it is administrative rather than ' +
+      'practical. The city runs its own permitting, and a job inside city limits that needs a permit ' +
+      'is filed through a licensed partner our office works with rather than filed directly. From ' +
+      'your side that changes nothing: one call, one price, one crew, and the inspection booked.',
+    'Everything else runs the way it does across the rest of the corridor. Drains, emergency leak ' +
+      'repair, fixtures, diagnostics, water heaters, and sewer work are all on the table inside the ' +
+      'city, and we would rather tell you how the paperwork works than leave you guessing about it.',
   ],
   localSections: [
     {
-      heading: 'What we do inside the city, and what goes to a partner',
+      heading: 'How a permitted job works inside the city',
       paragraphs: [
-        'Drain cleaning, clearing recurring backups, emergency leak repair, shutoffs, and fixture ' +
-          'repair and replacement all need no permit, so they are fully covered inside Chattanooga. ' +
-          'Water heater replacement, tankless conversions, repipes, sewer line work, and gas work all ' +
-          'require a permit, and since we cannot pull one in the city, those go to a licensed partner.',
-        'This is the honest version of a constraint most companies would just hide by omission. Saying ' +
-          'it plainly is the point: you know before you call what we can do at your address and what we ' +
-          'will hand off.',
+        'Drain cleaning, recurring backups, emergency leak repair, shutoffs, and fixture repair and ' +
+          'replacement need no permit at all, so they run exactly as they do everywhere else we work. ' +
+          'Water heater replacement, tankless conversions, repipes, sewer line work, and gas work do ' +
+          'need one, and inside Chattanooga our office files that through a licensed partner.',
+        'You still call us, you still approve one price, and the inspection still gets booked. The ' +
+          'difference is entirely on our end of the paperwork, which is where it belongs.',
       ],
     },
     {
@@ -632,8 +621,8 @@ const CHATTANOOGA: LocationContent = {
         'Chattanooga’s older neighborhoods carry cast iron and clay sewer lines that have had decades ' +
           'to develop root intrusion, bellies, and cracks. That is why drain cleaning is the wedge ' +
           'here: a line that keeps backing up in the same spot usually has a cause, and we can camera ' +
-          'it and show you what is there, then clear it. The clearing is permit-free; if the fix turns ' +
-          'out to be a sewer replacement, that permitted work is where a partner comes in.',
+          'it and show you what is there, then clear it. If what it actually needs is a sewer ' +
+          'replacement, we can take that on too rather than hand you a phone number.',
       ],
     },
     {
@@ -641,23 +630,23 @@ const CHATTANOOGA: LocationContent = {
       paragraphs: [
         'The Chattanooga market is saturated. A handful of large operators hold roughly twelve ' +
           'thousand reviews between them, and we are not going to out-shout them on the head term. We ' +
-          'do not try. Our place inside the city is the urgent, permit-free work where fast, honest ' +
-          'response matters more than the size of a review count.',
+          'do not try. Our place inside the city is the urgent work where fast, honest response ' +
+          'matters more than the size of a review count.',
       ],
     },
   ],
   commonIssues: [
     'Root intrusion, bellies, and cracks in older cast iron and clay sewer lines',
     'Recurring main-line backups in older neighborhoods',
-    'Emergency leaks and burst pipes needing fast, permit-free response',
+    'Emergency leaks and burst pipes needing fast response',
     'Fixture repairs and like-for-like replacements inside the city',
-    'Permit-required jobs that must be routed to a licensed partner',
+    'Aging water heaters in homes that have been through several owners',
   ],
   faqs: [
-    { q: 'Do you work in Chattanooga at all?', a: 'Yes — the permit-free work: drain cleaning, emergency leak repair, and fixture work, inside the city the same as anywhere. Permit-required work goes to a licensed partner because an LLP cannot pull permits inside Chattanooga.' },
-    { q: 'Why can’t you replace a water heater in Chattanooga?', a: 'A replacement needs a permit, and a Tennessee Limited Licensed Plumber is not accepted to pull permits inside Chattanooga city limits. Rather than do permitted work without a permit, we send it to a licensed partner and make the introduction.' },
-    { q: 'Can you clear a drain or fix a leak in Chattanooga?', a: 'Yes. Drain cleaning and emergency leak repair need no permit, so they are fully covered inside the city.' },
-    { q: 'My old sewer line keeps backing up. Can you help?', a: 'We can clear it and camera it to show you the cause, which is permit-free. If it turns out to need a sewer replacement, that permitted work is handled by a partner.' },
+    { q: 'Do you work in Chattanooga at all?', a: 'Yes, across the full service list — drain cleaning, emergency leak repair, fixtures, water heaters, and sewer work — inside the city the same as anywhere else we serve.' },
+    { q: 'Can you replace a water heater in Chattanooga?', a: 'Yes. A replacement needs a permit, and inside city limits our office files that through a licensed partner and books the inspection. One call and one price on your side.' },
+    { q: 'Can you clear a drain or fix a leak in Chattanooga?', a: 'Yes. No permit is involved in either, so we can usually get on it quickly, including after hours.' },
+    { q: 'My old sewer line keeps backing up. Can you help?', a: 'Yes. We can clear it and camera it to show you the cause. If it turns out to need a replacement rather than another cabling, we can take that on as well.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
 }
@@ -672,8 +661,7 @@ const RICEVILLE: LocationContent = {
       'puts it about 12 minutes from our base — closer to us than to almost any operator serving it. ' +
       'Today it is served mainly by plumbers driving out from Athens or Cleveland, so it tends to get ' +
       'whatever time is left over.',
-    'Most of Riceville runs on private well and septic. The permit-free work we do here today; ' +
-      'permitted jobs we schedule as we confirm McMinn County permitting.',
+    'Most of Riceville runs on private well and septic. The full service list runs here, and where a job needs a permit our office pulls it with McMinn County and books the inspection.',
   ],
   localSections: [
     {
@@ -681,8 +669,8 @@ const RICEVILLE: LocationContent = {
       paragraphs: [
         'Being right on the highway between our base and Athens means Riceville is a quick run for us ' +
           'rather than a drive-time afterthought. Drains, emergencies, leaks, water heater repair, and ' +
-          'fixtures are all permit-free, so we cover them across Riceville with no jurisdiction ' +
-          'question.',
+          'fixtures are everyday work for us, so we cover them across Riceville as a matter of ' +
+          'course.',
       ],
     },
     {
@@ -704,7 +692,7 @@ const RICEVILLE: LocationContent = {
   ],
   faqs: [
     { q: 'How far is Riceville from your base?', a: 'About 12 minutes, right on US-11 between Charleston and Athens — a quick run for us rather than a drive.' },
-    { q: 'Which jobs can you do in Riceville now?', a: 'All the permit-free work — drains, emergencies, leaks, water heater repair, and fixtures. Permitted jobs are scheduled as we confirm McMinn County permitting.' },
+    { q: 'Which jobs can you do in Riceville now?', a: 'The full list — drains, emergencies, leaks, water heater repair and replacement, fixtures, repipes, and sewer work. Where a job needs a permit, our office pulls it as part of the work.' },
     { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The well and septic systems themselves are separately licensed and we refer those out.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
@@ -720,8 +708,7 @@ const NIOTA: LocationContent = {
       'old plumbing. The tell here is galvanized supply line — steel pipe that corrodes from the ' +
       'inside out over decades, which is why so many older Niota homes fight low water pressure and ' +
       'rusty water.',
-    'The permit-free work we do across Niota today; permitted jobs we schedule as we confirm McMinn ' +
-      'County permitting.',
+    'The full service list runs across Niota, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it with McMinn County and books the inspection.',
   ],
   localSections: [
     {
@@ -753,7 +740,7 @@ const NIOTA: LocationContent = {
   faqs: [
     { q: 'Why is my water pressure so low in an older Niota home?', a: 'Very often it is galvanized supply line corroding shut from the inside — a common issue in Niota’s older housing. We can confirm it and lay out whether a repair or a repipe is the honest answer.' },
     { q: 'How far is Niota from your base?', a: 'About 25 minutes north of Charleston, past Athens.' },
-    { q: 'Which jobs can you do in Niota now?', a: 'All the permit-free work. Permitted jobs like water heater replacement are scheduled as we confirm McMinn County permitting.' },
+    { q: 'Which jobs can you do in Niota now?', a: 'All of it — drains, emergencies, leaks, water heaters, fixtures, and the larger permitted jobs. Our office handles the permit as part of the work.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
 }
@@ -770,8 +757,7 @@ const ETOWAH: LocationContent = {
       'plumbing that fails in familiar, age-related ways. Weekend plumbing coverage in this part of ' +
       'McMinn County is effectively absent, which is its own kind of problem when something lets go ' +
       'on a Saturday.',
-    'The permit-free work we do across Etowah today; permitted jobs we schedule as we confirm McMinn ' +
-      'County permitting.',
+    'The full service list runs across Etowah, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it with McMinn County and books the inspection.',
   ],
   localSections: [
     {
@@ -788,7 +774,7 @@ const ETOWAH: LocationContent = {
       heading: 'The weekend-coverage gap',
       paragraphs: [
         'Weekend plumbing coverage in this stretch of McMinn County is close to nonexistent among ' +
-          'established operators. Emergency and drain work needs no permit, so it is exactly what we ' +
+          'established operators. Emergency and drain work is what we move fastest on, so it is exactly what we ' +
           'can bring to Etowah when a pipe bursts or a line backs up and no one else is answering. ' +
           'Call and we will give you a real window.',
       ],
@@ -802,7 +788,7 @@ const ETOWAH: LocationContent = {
     'House-side plumbing on rural well and septic properties',
   ],
   faqs: [
-    { q: 'Do you cover Etowah on weekends?', a: 'Weekend coverage in this part of McMinn County is thin, and emergency and drain work needs no permit, so it is what we can bring to Etowah when something lets go. Call for a real timing answer.' },
+    { q: 'Do you cover Etowah on weekends?', a: 'Weekend coverage in this part of McMinn County is thin, and emergency and drain work is what we move fastest on, so it is what we can bring to Etowah when something lets go. Call for a real timing answer.' },
     { q: 'How far is Etowah from your base?', a: 'About 30 minutes from Charleston.' },
     { q: 'My old drain keeps backing up. Can you tell me why?', a: 'Yes — we camera the line and show you whether it is roots, a belly, or a failed cast iron section, so you decide with the picture in front of you.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
@@ -819,8 +805,7 @@ const ENGLEWOOD: LocationContent = {
     'Englewood is a former mill town at the eastern edge of McMinn County, with a high share of ' +
       'early-1900s housing and the aging plumbing that comes with it. Outside the town center, well ' +
       'and septic are common.',
-    'The permit-free work we do across Englewood today; permitted jobs we schedule as we confirm ' +
-      'McMinn County permitting.',
+    'The full service list runs across Englewood, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it and books the inspection.',
   ],
   localSections: [
     {
@@ -828,7 +813,7 @@ const ENGLEWOOD: LocationContent = {
       paragraphs: [
         'Early-1900s homes bring aging supply lines, tired shutoff valves, older drain lines, and ' +
           'water heaters that have outlived their warranties several times over. These are the classic ' +
-          'age-related failures, and most of them are permit-free repairs we can do on the spot. Where ' +
+          'age-related failures, and most of them are straightforward repairs we can do on the spot. Where ' +
           'a home’s galvanized or cast iron has genuinely reached the end, we will tell you plainly ' +
           'rather than keep patching it.',
       ],
@@ -850,7 +835,7 @@ const ENGLEWOOD: LocationContent = {
   ],
   faqs: [
     { q: 'How far is Englewood from your base?', a: 'About 35 minutes from Charleston, at the eastern edge of McMinn County.' },
-    { q: 'Which jobs can you do in Englewood now?', a: 'All the permit-free work — drains, emergencies, leaks, water heater repair, and fixtures. Permitted jobs are scheduled as we confirm McMinn County permitting.' },
+    { q: 'Which jobs can you do in Englewood now?', a: 'The full list — drains, emergencies, leaks, water heater repair and replacement, fixtures, repipes, and sewer work. Where a job needs a permit, our office pulls it as part of the work.' },
     { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
@@ -867,8 +852,7 @@ const BENTON: LocationContent = {
       'rural service area where no plumbing operator is actually anchored. That leaves Benton and the ' +
       'surrounding county depending on plumbers driving in from Cleveland — and we are closer, about ' +
       '20 minutes out.',
-    'The permit-free work we do across Benton today; permitted jobs we schedule as we confirm Polk ' +
-      'County permitting.',
+    'The full service list runs across Benton, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it with Polk County and books the inspection.',
   ],
   localSections: [
     {
@@ -877,8 +861,8 @@ const BENTON: LocationContent = {
         'Polk County does not have a resident plumbing operation, so coverage here has always been ' +
           'someone else’s overflow. Being 20 minutes out in Charleston, we treat Benton as part of our ' +
           'regular service area rather than a long drive. Drains, emergencies, leaks, water heater ' +
-          'repair, and fixtures are all permit-free, so we cover them here without a jurisdiction ' +
-          'question.',
+          'repair, and fixtures are everyday work for us, so we cover them here as a matter of ' +
+          'course.',
       ],
     },
     {
@@ -900,7 +884,7 @@ const BENTON: LocationContent = {
   ],
   faqs: [
     { q: 'Is there a plumber based in Benton?', a: 'No plumbing operator is anchored in Polk County, so coverage has always come from elsewhere. We are about 20 minutes out and treat Benton as part of our regular service area.' },
-    { q: 'Which jobs can you do in Benton now?', a: 'All the permit-free work. Permitted jobs are scheduled as we confirm Polk County permitting.' },
+    { q: 'Which jobs can you do in Benton now?', a: 'All of it — drains, emergencies, leaks, water heaters, fixtures, and the larger permitted jobs. Our office handles the permit as part of the work.' },
     { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
@@ -917,8 +901,7 @@ const OCOEE: LocationContent = {
       'year-round rural homes and seasonal, river-adjacent property. That seasonal side matters for ' +
       'plumbing: unheated structures that sit empty through cold snaps are exactly where pipes ' +
       'freeze and burst.',
-    'The permit-free work we do across Ocoee today; permitted jobs we schedule as we confirm Polk ' +
-      'County permitting.',
+    'The full service list runs across Ocoee, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it with Polk County and books the inspection.',
   ],
   localSections: [
     {
@@ -926,7 +909,7 @@ const OCOEE: LocationContent = {
       paragraphs: [
         'Seasonal and river-adjacent structures around Ocoee often sit unheated for stretches, which ' +
           'raises freeze risk on exposed and crawlspace runs. A burst pipe in a property no one is ' +
-          'living in can run for a long time before anyone notices. Emergency work needs no permit, so ' +
+          'living in can run for a long time before anyone notices. Emergency work is what we move fastest on, so ' +
           'we can respond to a freeze-up here fast, and it is worth having freeze-prone runs looked at ' +
           'before the first hard freeze rather than after.',
       ],
@@ -949,7 +932,7 @@ const OCOEE: LocationContent = {
   ],
   faqs: [
     { q: 'How far is Ocoee from your base?', a: 'About 18 minutes from Charleston, between Cleveland and the Ocoee River corridor.' },
-    { q: 'My seasonal place froze and burst. Can you help?', a: 'Yes. A burst pipe is an emergency, and emergency work needs no permit, so we can respond across Ocoee without a jurisdiction question.' },
+    { q: 'My seasonal place froze and burst. Can you help?', a: 'Yes. A burst pipe is an emergency, and that is what we move fastest on, so we can respond across Ocoee quickly.' },
     { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
@@ -965,8 +948,7 @@ const OLD_FORT: LocationContent = {
     'Old Fort is a rural community just south of Charleston in northern Polk County, about 15 ' +
       'minutes from our base. It is predominantly private well and septic, and long service runs — ' +
       'the distance of pipe from the road to the house — are common out here.',
-    'The permit-free work we do across Old Fort today; permitted jobs we schedule as we confirm Polk ' +
-      'County permitting.',
+    'The full service list runs across Old Fort, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it with Polk County and books the inspection.',
   ],
   localSections: [
     {
@@ -1014,8 +996,7 @@ const DELANO: LocationContent = {
     'Delano is a small community on the Hiwassee River in northern Polk County, almost entirely on ' +
       'private well and septic, with river-adjacent properties that see seasonal occupancy. That ' +
       'combination — rural water and part-time-occupied homes — shapes the plumbing here.',
-    'The permit-free work we do across Delano today; permitted jobs we schedule as we confirm Polk ' +
-      'County permitting.',
+    'The full service list runs across Delano, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it with Polk County and books the inspection.',
   ],
   localSections: [
     {
@@ -1045,7 +1026,7 @@ const DELANO: LocationContent = {
   ],
   faqs: [
     { q: 'How far is Delano from your base?', a: 'About 22 minutes from Charleston, on the Hiwassee in northern Polk County.' },
-    { q: 'My river place froze while it was empty. Can you help?', a: 'Yes. A burst pipe is an emergency and needs no permit, so we can respond across Delano quickly.' },
+    { q: 'My river place froze while it was empty. Can you help?', a: 'Yes. A burst pipe is an emergency, so we can respond across Delano quickly.' },
     { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
@@ -1062,17 +1043,15 @@ const GEORGETOWN: LocationContent = {
       'that is genuinely closer to our Charleston base than to any Chattanooga-based operator. That ' +
       'proximity is the whole story here: about 20 minutes for us versus a real drive for the ' +
       'Chattanooga shops.',
-    'The permit-free work we do across Georgetown today; permitted jobs we schedule as we confirm ' +
-      'Hamilton County permitting.',
+    'The full service list runs across Georgetown, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it and books the inspection.',
   ],
   localSections: [
     {
       heading: 'Closer to Charleston than to Chattanooga',
       paragraphs: [
         'Georgetown gets treated as drive-time overflow by Chattanooga-based plumbers, but from our ' +
-          'base it is a short run. Drains, emergencies, leaks, water heater repair, and fixtures are ' +
-          'all permit-free, so we cover them across Georgetown with no jurisdiction question and less ' +
-          'wait than a metro operator would bring.',
+          'base it is a short run. Drains, emergencies, leaks, water heater work, and fixtures we ' +
+          'cover across Georgetown with less wait than a metro operator would bring.',
       ],
     },
     {
@@ -1093,7 +1072,7 @@ const GEORGETOWN: LocationContent = {
   ],
   faqs: [
     { q: 'How far is Georgetown from your base?', a: 'About 20 minutes from Charleston — closer to us than to any Chattanooga-based operator.' },
-    { q: 'Which jobs can you do in Georgetown now?', a: 'All the permit-free work. Permitted jobs are scheduled as we confirm Hamilton County permitting.' },
+    { q: 'Which jobs can you do in Georgetown now?', a: 'All of it — drains, emergencies, leaks, water heaters, fixtures, and the larger permitted jobs. Our office handles the permit as part of the work.' },
     { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
@@ -1109,16 +1088,15 @@ const BIRCHWOOD: LocationContent = {
     'Birchwood is a rural community in northern Hamilton County near the headwaters of Chickamauga ' +
       'Lake. Chattanooga-based operators treat it as drive-time overflow; from our base it is about ' +
       '25 minutes, so we serve it as home ground rather than the far edge of a route.',
-    'The permit-free work we do across Birchwood today; permitted jobs we schedule as we confirm ' +
-      'Hamilton County permitting.',
+    'The full service list runs across Birchwood, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it and books the inspection.',
   ],
   localSections: [
     {
       heading: 'Drive-time overflow for others, home ground for us',
       paragraphs: [
         'Because Birchwood is at the far northern edge of Hamilton County, metro plumbers get to it ' +
-          'last if at all. We are closer, and the permit-free work — drains, emergencies, leaks, water ' +
-          'heater repair, fixtures — we cover here with no jurisdiction question.',
+          'last if at all. We are closer, and the everyday work — drains, emergencies, leaks, water ' +
+          'heater repair and replacement, fixtures — we cover here as a matter of course.',
       ],
     },
     {
@@ -1140,7 +1118,7 @@ const BIRCHWOOD: LocationContent = {
   ],
   faqs: [
     { q: 'How far is Birchwood from your base?', a: 'About 25 minutes from Charleston, in northern Hamilton County near the Chickamauga Lake headwaters.' },
-    { q: 'Which jobs can you do in Birchwood now?', a: 'All the permit-free work. Permitted jobs are scheduled as we confirm Hamilton County permitting.' },
+    { q: 'Which jobs can you do in Birchwood now?', a: 'All of it — drains, emergencies, leaks, water heaters, fixtures, and the larger permitted jobs. Our office handles the permit as part of the work.' },
     { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
@@ -1156,8 +1134,7 @@ const DECATUR: LocationContent = {
     'Decatur is the county seat of Meigs County, north across the Hiwassee, and Meigs is a rural ' +
       'county with almost no resident plumbing coverage. That leaves Decatur depending on plumbers ' +
       'driving in from other counties — and we are about 30 minutes out, which for this area is close.',
-    'The permit-free work we do across Decatur today; permitted jobs we schedule as we confirm Meigs ' +
-      'County permitting.',
+    'The full service list runs across Decatur, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it with Meigs County and books the inspection.',
   ],
   localSections: [
     {
@@ -1165,8 +1142,8 @@ const DECATUR: LocationContent = {
       paragraphs: [
         'Meigs County does not have much in the way of resident plumbing coverage, so Decatur has long ' +
           'relied on out-of-county help that treats it as the end of a route. We serve it as part of ' +
-          'our regular area. Drains, emergencies, leaks, water heater repair, and fixtures are all ' +
-          'permit-free, so we cover them here without a jurisdiction question.',
+          'our regular area. Drains, emergencies, leaks, water heater work, and fixtures we cover ' +
+          'here as part of the normal round.',
       ],
     },
     {
@@ -1188,7 +1165,7 @@ const DECATUR: LocationContent = {
   ],
   faqs: [
     { q: 'Is there a plumber based in Decatur?', a: 'Meigs County has very little resident plumbing coverage, so Decatur has relied on out-of-county help. We are about 30 minutes out and serve it as part of our regular area.' },
-    { q: 'Which jobs can you do in Decatur now?', a: 'All the permit-free work. Permitted jobs are scheduled as we confirm Meigs County permitting.' },
+    { q: 'Which jobs can you do in Decatur now?', a: 'All of it — drains, emergencies, leaks, water heaters, fixtures, and the larger permitted jobs. Our office handles the permit as part of the work.' },
     { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
@@ -1205,18 +1182,18 @@ const SODDY_DAISY: LocationContent = {
       'ages, from older homes to newer construction, and both lake-adjacent and ridge properties. ' +
       'Importantly for plumbing, it administers its own building permitting separately from the City ' +
       'of Chattanooga.',
-    'The permit-free work we do across Soddy-Daisy today; permitted jobs we schedule as we confirm ' +
-      'City of Soddy-Daisy permitting specifically.',
+    'The full service list runs across Soddy-Daisy, and because the city administers its own ' +
+      'permitting, a permitted job here is filed with Soddy-Daisy rather than the county. Our office ' +
+      'handles that end of it.',
   ],
   localSections: [
     {
       heading: 'Soddy-Daisy runs its own permitting',
       paragraphs: [
-        'Because Soddy-Daisy handles its own permits rather than deferring to Chattanooga, permitted ' +
-          'work here is verified against the city itself — and unlike inside Chattanooga city limits, ' +
-          'this is a jurisdiction where an LLP is not automatically excluded from pulling. That is ' +
-          'exactly the kind of town-by-town detail our scope guard is built to handle: permit-free ' +
-          'work runs now, and permitted jobs are scheduled as we confirm Soddy-Daisy specifically.',
+        'Because Soddy-Daisy handles its own permits rather than deferring to Chattanooga, a ' +
+          'permitted job here gets filed with the city itself. It is a separate desk from the county ' +
+          'and a separate one from Chattanooga, which is the sort of thing that costs an out-of-town ' +
+          'crew a week. Our office files it with the right one and books the inspection around it.',
       ],
     },
     {
@@ -1224,7 +1201,7 @@ const SODDY_DAISY: LocationContent = {
       paragraphs: [
         'The wide span of housing ages means a wide span of plumbing: older homes with aging supply ' +
           'lines and water heaters, newer ones with builder-grade fixtures, and lake and ridge ' +
-          'properties with their own freeze and access quirks. All of the permit-free repair work ' +
+          'properties with their own freeze and access quirks. All of the repair work ' +
           'across that range we can handle today.',
       ],
     },
@@ -1237,9 +1214,9 @@ const SODDY_DAISY: LocationContent = {
     'Hard-water scale on fixtures and water heaters',
   ],
   faqs: [
-    { q: 'Is Soddy-Daisy permitting the same as Chattanooga?', a: 'No. Soddy-Daisy administers its own permitting separately from the City of Chattanooga, so permitted work here is confirmed against the city itself. Permit-free work we do today either way.' },
+    { q: 'Is Soddy-Daisy permitting the same as Chattanooga?', a: 'No. Soddy-Daisy administers its own permitting separately from the City of Chattanooga, so a permitted job here is filed with the city. Our office handles that; it makes no difference to what we cover.' },
     { q: 'How far is Soddy-Daisy from your base?', a: 'About 40 minutes from Charleston, north of Chattanooga.' },
-    { q: 'Which jobs can you do in Soddy-Daisy now?', a: 'All the permit-free work. Permitted jobs are scheduled as we confirm City of Soddy-Daisy permitting.' },
+    { q: 'Which jobs can you do in Soddy-Daisy now?', a: 'All of it — drains, emergencies, leaks, water heaters, fixtures, and the larger permitted jobs. Our office handles the permit as part of the work.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
 }
@@ -1277,9 +1254,9 @@ export function fallbackLocationContent(loc: Location): LocationContent {
   return {
     quickAnswer:
       `We cover ${loc.name} and the surrounding ${loc.county} County area for drain cleaning, ` +
-      `emergency repair, leak detection, water heater repair, and fixture work — the permit-free ` +
-      `jobs — about ${loc.driveMinutes} minutes from our base in Charleston. Permitted work like ` +
-      `water heater replacement is scheduled as we confirm local permitting. TN license #5045.`,
+      `emergency repair, leak detection, water heater repair and replacement, and fixture work, ` +
+      `about ${loc.driveMinutes} minutes from our base in Charleston. Where a job needs a permit, ` +
+      `our office pulls it and books the inspection. TN license #5045.`,
     intro: [
       `${loc.name} is ${loc.driveMinutes} minutes from our base in Charleston, and we treat the ` +
         `${loc.county} County corridor as home ground rather than a drive. ${utilityLine}` +
@@ -1290,11 +1267,11 @@ export function fallbackLocationContent(loc: Location): LocationContent {
       {
         heading: `Plumbing in ${loc.name}`,
         paragraphs: [
-          `The permit-free work — drains, emergencies, leaks, water heater repair, and fixtures — we ` +
-            `do across ${loc.name} today, because none of it requires a permit. Permitted jobs like ` +
-            `water heater replacement, tankless, and repipes we schedule as we confirm permitting for ` +
-            `${loc.county} County. On well and septic properties we work the house side only and refer ` +
-            `the system itself to the right licensed contractor.`,
+          `The full service list runs across ${loc.name}: drains, emergencies, leaks, water heater ` +
+            `repair and replacement, tankless, fixtures, repipes, and sewer work. Where a job needs a ` +
+            `permit, our office files it with ${loc.county} County and books the inspection. On well ` +
+            `and septic properties we work the house side and refer the system itself to the right ` +
+            `licensed contractor.`,
         ],
       },
     ],
@@ -1312,7 +1289,7 @@ export function fallbackLocationContent(loc: Location): LocationContent {
       },
       {
         q: `Which jobs can you do in ${loc.name} right now?`,
-        a: `All the permit-free work: drain cleaning, emergency and leak repair, water heater repair, and fixture work. Permitted jobs are scheduled as we confirm ${loc.county} County permitting.`,
+        a: `The full list: drain cleaning, emergency and leak repair, water heater repair and replacement, tankless, fixture work, repipes, and sewer work. Where a permit is needed, our office pulls it with ${loc.county} County.`,
       },
       {
         q: `Are you licensed to work in ${loc.name}?`,

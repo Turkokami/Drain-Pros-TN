@@ -1,9 +1,9 @@
 /**
  * SERVICES HUB — redesigned.
  *
- * Groups the registry by pillar in market-priority order: core (the permit-free
- * revenue engine) first, then water heating, water quality, and well/septic
- * property work. Permit status shows as spec data, never hidden.
+ * Groups the registry by pillar in market-priority order: core (the revenue
+ * engine) first, then water heating, water quality, and well/septic property
+ * work. The full list publishes everywhere — see config/policy.ts.
  */
 
 import { servicesByPillar, type Pillar } from '@/config/services'
@@ -25,13 +25,13 @@ const PILLARS: Array<{ key: Pillar; title: string; blurb: string }> = [
     key: 'core',
     title: 'Core plumbing — drains, emergencies, repairs',
     blurb:
-      'Permit-free work that runs at full strength in every town we serve, Chattanooga included. This is the revenue engine and what most people call about first.',
+      'Drains, emergencies, and repairs in every town we serve, Chattanooga included. This is what most people call about first, and it is what we are fastest on.',
   },
   {
     key: 'water-heating',
     title: 'Water heaters & tankless',
     blurb:
-      'Repair everywhere, since repairs need no permit. Replacement and tankless are permitted work, handled in the corridor towns where we can pull a permit.',
+      'Repair, replacement, and tank-to-tankless conversions, sized to the house. We handle the permit and the inspection so you are not chasing paperwork.',
   },
   {
     key: 'water-quality',
@@ -85,7 +85,7 @@ export default function ServicesHub() {
         <div className="container-x py-16 md:py-24">
           <div className="max-w-4xl reveal">
             <Eyebrow className="text-mist">What we do · TN LLP #5045</Eyebrow>
-            <h1 className="mt-4 text-display-xl">Plumbing that stays inside the license, and says so.</h1>
+            <h1 className="mt-4 text-display-xl">Everything a house needs from a plumber.</h1>
             <p className="mt-6 max-w-prose text-lead text-paper/85 speakable">{DESCRIPTION}</p>
             <div className="mt-8">
               <PrimaryCTA label="Book a plumber" />
@@ -105,12 +105,7 @@ export default function ServicesHub() {
                   <SectionHeading eyebrow={`${services.length} services`} title={pillar.title} intro={pillar.blurb} />
                   <div className="mt-8 grid gap-5 sm:grid-cols-2">
                     {services.map((s) => (
-                      <FeatureCard
-                        key={s.slug}
-                        title={s.name}
-                        meta={s.requiresPermit ? 'permit req.' : 'permit-free'}
-                        href={`/services/${s.slug}`}
-                      >
+                      <FeatureCard key={s.slug} title={s.name} href={`/services/${s.slug}`}>
                         {s.summary}
                       </FeatureCard>
                     ))}

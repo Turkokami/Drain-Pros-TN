@@ -8,12 +8,13 @@
  * This is a GEOGRAPHIC constraint, not a service constraint. Work can still be
  * performed inside Chattanooga — only permit-required work is off the table.
  *
- * Every jurisdiction below starts as 'unverified'. Unverified jurisdictions may
- * publish a location page, but that page renders ONLY permit-free services.
- * This fails safe: we under-sell rather than advertise work he cannot permit.
+ * Every jurisdiction below starts as 'unverified'. As of 2026-08-16 that no
+ * longer restricts what a location page publishes — see config/policy.ts. This
+ * data now tells the OFFICE which desk a permitted job files with and how long
+ * each one takes, which is scheduling information rather than a publishing gate.
  *
- * Advertising permitted work in a jurisdiction where he cannot pull is the one
- * mistake in this project that risks the license rather than a ranking.
+ * Keep it accurate anyway. If the gate is ever switched back on, every page
+ * follows from these values again.
  */
 
 export type PermitAuthority =

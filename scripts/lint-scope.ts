@@ -26,6 +26,7 @@ import { SERVICES, OUT_OF_SCOPE_SLUGS } from '../config/services'
 import { LOCATIONS } from '../config/locations'
 import { JURISDICTIONS, pendingVerification } from '../config/jurisdictions'
 import { LICENSE, IDENTITY, OPERATIONS, type Fact } from '../config/business'
+import { PUBLISHING } from '../config/policy'
 import { assertSellable } from '../lib/scope-guard'
 
 const ROOT = join(__dirname, '..')
@@ -137,12 +138,20 @@ for (const loc of LOCATIONS) {
 }
 
 // --- 7. Permit-required services never render where he cannot pull ------------
+// Enforced only while the permit gate is on. It is currently off by client
+// direction — the office qualifies permitting at intake — so this check stands
+// down rather than being deleted. See config/policy.ts.
 let blockedCount = 0
 for (const loc of LOCATIONS) {
   for (const svc of SERVICES) {
     const decision = assertSellable(svc.slug, loc.slug)
     const j = JURISDICTIONS[loc.jurisdictionId]
-    if (svc.requiresPermit && j?.permitAuthority !== 'full' && decision.sellable) {
+    if (
+      PUBLISHING.gateServicesByPermitAuthority &&
+      svc.requiresPermit &&
+      j?.permitAuthority !== 'full' &&
+      decision.sellable
+    ) {
       fail(
         `[7] "${svc.slug}" is permit-required and rendered sellable in ${loc.name} ` +
           `where permit authority is "${j?.permitAuthority}".`
@@ -166,13 +175,26 @@ reportPending('IDENTITY', IDENTITY as never)
 reportPending('OPERATIONS', OPERATIONS as never)
 
 // --- 9. Unverified jurisdictions ------------------------------------------------
+// While the permit gate is on, this is a publishing gate and blocks a prod
+// build. With the gate off it is an OFFICE to-do, not a site problem: the pages
+// publish either way, and the office confirms permitting per job. Reported
+// every run so the list does not quietly disappear.
 const unverified = pendingVerification()
 if (unverified.length) {
-  const msg =
-    `[9] ${unverified.length} jurisdiction(s) have unverified permit authority and are ` +
-    `restricted to permit-free services:\n` +
-    unverified.map((j) => `      · ${j.name}${j.verificationContact ? ` — call ${j.verificationContact}` : ''}`).join('\n')
-  IS_PROD ? fail(msg) : warn(msg)
+  const gated = PUBLISHING.gateServicesByPermitAuthority
+  const msg = gated
+    ? `[9] ${unverified.length} jurisdiction(s) have unverified permit authority and are ` +
+      `restricted to permit-free services:\n` +
+      unverified
+        .map((j) => `      · ${j.name}${j.verificationContact ? ` — call ${j.verificationContact}` : ''}`)
+        .join('\n')
+    : `[9] ${unverified.length} jurisdiction(s) still have unverified permit authority. ` +
+      `The site publishes the full service list regardless (see config/policy.ts); ` +
+      `the office confirms permitting per job. Office to-do, not a publishing gate:\n` +
+      unverified
+        .map((j) => `      · ${j.name}${j.verificationContact ? ` — call ${j.verificationContact}` : ''}`)
+        .join('\n')
+  gated && IS_PROD ? fail(msg) : warn(msg)
 }
 
 // --- Report --------------------------------------------------------------------
@@ -183,6 +205,13 @@ console.log(`\n  Services registered      ${SERVICES.length}`)
 console.log(`  Locations registered     ${LOCATIONS.length}`)
 console.log(`  Jurisdictions            ${Object.keys(JURISDICTIONS).length}`)
 console.log(`  Service×location blocked ${blockedCount} combinations withheld by the guard`)
+console.log(
+  `  Permit gate              ${
+    PUBLISHING.gateServicesByPermitAuthority
+      ? 'ON — permit-required work withheld where unverified'
+      : 'OFF — full list publishes; office qualifies permitting at intake'
+  }`
+)
 console.log(`  Build target             ${IS_PROD ? 'production (strict)' : 'development'}`)
 
 if (warnings.length) {

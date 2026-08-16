@@ -1,8 +1,9 @@
 /**
  * LOCATION REGISTRY
  *
- * Every location binds to exactly one permit jurisdiction. That binding decides
- * which services its page is allowed to render — see lib/scope-guard.ts.
+ * Every location binds to exactly one permit jurisdiction. That binding tells
+ * the office which desk a permitted job files with. It no longer decides which
+ * services the page renders — see config/policy.ts and lib/scope-guard.ts.
  *
  * Location pages must carry material a competitor cannot copy: which utility
  * serves the town, the housing stock, whether it runs on septic or city sewer,
@@ -339,7 +340,7 @@ export const LOCATIONS: Location[] = [
     ],
   },
 
-  // --- CHATTANOOGA — permit-free work only --------------------------------
+  // --- CHATTANOOGA — city files its own permits ----------------------------
   {
     slug: 'chattanooga-tn',
     name: 'Chattanooga',
@@ -350,12 +351,12 @@ export const LOCATIONS: Location[] = [
     driveMinutes: 50,
     utility: 'Tennessee American Water',
     localFacts: [
-      'Drain cleaning, emergency leak repair, and fixture work need no permit — those are what we do inside the city.',
+      'The city runs its own permitting, so a permitted job here files with Chattanooga rather than Hamilton County.',
       'Older neighborhoods carry cast iron and clay sewer lines prone to root intrusion.',
       'Six large operators hold roughly 12,000 reviews between them here; we compete on response, not volume.',
     ],
     competitorNote:
-      'Saturated. Enter on permit-free, high-urgency work only. Never fight the head term.',
+      'Saturated. Enter on high-urgency drain and emergency work. Never fight the head term.',
   },
 ]
 

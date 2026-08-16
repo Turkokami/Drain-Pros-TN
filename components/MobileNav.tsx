@@ -5,9 +5,16 @@ import { NAV } from '@/lib/site'
 
 /**
  * Mobile menu toggle. The only client component in the chrome — everything else
- * is static. Phone is passed in as a prop so this bundle never pulls the registry.
+ * is static. Phone and booking URL are passed in as props so this bundle never
+ * pulls the registry.
  */
-export function MobileNav({ phoneNumber }: { phoneNumber: string | null }) {
+export function MobileNav({
+  phoneNumber,
+  bookingHref,
+}: {
+  phoneNumber: string | null
+  bookingHref?: string | null
+}) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -46,6 +53,17 @@ export function MobileNav({ phoneNumber }: { phoneNumber: string | null }) {
             >
               {phoneNumber ? `Call ${phoneNumber}` : 'Request a callback'}
             </a>
+            {bookingHref && (
+              <a
+                href={bookingHref}
+                target="_blank"
+                rel="noopener"
+                onClick={() => setOpen(false)}
+                className="mt-3 inline-flex items-center justify-center gap-2 rounded-lg border-2 border-pine/30 px-6 py-3 font-display font-bold text-pine"
+              >
+                Book online <span aria-hidden>↗</span>
+              </a>
+            )}
           </nav>
         </div>
       )}

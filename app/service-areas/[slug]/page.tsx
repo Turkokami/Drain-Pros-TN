@@ -172,16 +172,12 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         </Section>
       )}
 
-      {/* SCOPE — guard-driven coverage + honesty block */}
+      {/* SCOPE — guard-driven coverage list */}
       <Section tone="galv">
         <SectionHeading
-          eyebrow="Honest scope"
+          eyebrow="What we do here"
           title={`Exactly what we cover in ${location.name}`}
-          intro={
-            jurisdiction?.permitAuthority === 'none'
-              ? `Permit-free work runs at full strength here. Permit-required work inside the city goes to a licensed partner, and we tell you which is which.`
-              : `Permit-free work runs at full strength here. Permitted work is scheduled as we confirm local permitting.`
-          }
+          intro={`The full list, from a drain that will not clear to a water heater that needs replacing. Call or book and the office sorts out permits, scheduling, and what the job actually needs.`}
         />
         <div className="mt-8">
           <ScopeStrip location={location} />

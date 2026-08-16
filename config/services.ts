@@ -46,7 +46,7 @@ export interface Service {
 }
 
 export const SERVICES: Service[] = [
-  // --- CORE — permit-free, runs everywhere including Chattanooga ----------
+  // --- CORE — the revenue engine, runs everywhere including Chattanooga ---
   {
     slug: 'drain-cleaning',
     name: 'Drain Cleaning',
@@ -84,7 +84,7 @@ export const SERVICES: Service[] = [
     pillar: 'core',
     licenseScope: 'in',
     requiresPermit: false,
-    permitNote: 'Like-for-like fixture swaps are typically permit-free. Relocations are not.',
+    permitNote: 'Like-for-like fixture swaps usually need no permit. Relocations do; the office pulls it.',
     phase: 1,
     priority: 'primary',
   },
@@ -115,7 +115,7 @@ export const SERVICES: Service[] = [
     pillar: 'water-heating',
     licenseScope: 'in',
     requiresPermit: false,
-    permitNote: 'Repair is permit-free. Replacement is not.',
+    permitNote: 'A repair needs no permit. A replacement does; the office pulls it and books the inspection.',
     phase: 1,
     priority: 'primary',
   },
@@ -150,7 +150,7 @@ export const SERVICES: Service[] = [
     pillar: 'water-quality',
     licenseScope: 'in',
     requiresPermit: true,
-    permitNote: 'Verify per jurisdiction — some treat point-of-entry as permit-free.',
+    permitNote: 'Varies by town — some treat a point-of-entry system as exempt. The office checks per address.',
     phase: 3,
     priority: 'primary',
   },

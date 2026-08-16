@@ -156,6 +156,23 @@ export const IDENTITY = {
     blocks: ['contact page', 'schema'],
   } as Fact<string>,
 
+  /**
+   * Housecall Pro online booking. Third-party hosted, so it is NOT under the
+   * street-address rule enforced by lint check [1] — but it is still public and
+   * still carries the brand, so it was inspected before being wired in. As of
+   * 2026-08-16 the landing screen shows the logo, "Welcome to Drain Pros TN",
+   * and a zip-code service-area gate: no address, no phone, nothing that leaks
+   * the home location. Re-check if HCP account settings change, because we do
+   * not control what that page renders.
+   */
+  bookingUrl: {
+    status: 'confirmed',
+    value:
+      'https://book.housecallpro.com/book/Drain-Pros-TN/9b5b36f0b9c04d8d989aedbd6e16fb57?v2=true',
+    source: 'Provided by client; landing screen inspected for address leakage 2026-08-16',
+    confirmedOn: '2026-08-16',
+  } as Fact<string>,
+
   domain: {
     status: 'pending',
     blocks: ['canonical URLs', 'sitemap', 'all schema @id values'],

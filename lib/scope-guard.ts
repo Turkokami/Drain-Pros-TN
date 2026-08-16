@@ -9,15 +9,21 @@
  * line so a copywriter or an agent cannot accidentally cross it at 2 AM.
  *
  * Three rules, in order:
- *   1. OUT-OF-SCOPE services are never sellable anywhere. Hard stop.
- *   2. PERMIT-REQUIRED services are sellable only where permitAuthority is 'full'.
- *      Anything 'unverified' fails safe to not sellable.
- *   3. SIZE-DEPENDENT services are sellable but must carry ceiling disclosure.
+ *   1. OUT-OF-SCOPE services are never sellable anywhere. Hard stop, always.
+ *   2. PERMIT-REQUIRED services are gated by jurisdiction ONLY when
+ *      PUBLISHING.gateServicesByPermitAuthority is on. It is currently off by
+ *      client direction — the office qualifies permitting at intake. See
+ *      config/policy.ts for the reasoning and how to restore the gate.
+ *   3. SIZE-DEPENDENT services carry a ceiling disclosure only when
+ *      PUBLISHING.publishCeilingDisclosure is on. Currently off.
+ *
+ * Rule 1 is not policy-controlled. It is licensure, not permitting.
  */
 
 import { SERVICES, OUT_OF_SCOPE_SLUGS, type Service } from '../config/services'
 import { JURISDICTIONS, canPullPermit } from '../config/jurisdictions'
 import { getLocation, type Location } from '../config/locations'
+import { PUBLISHING } from '../config/policy'
 
 export class ScopeViolationError extends Error {
   constructor(message: string) {
@@ -58,13 +64,13 @@ export function assertSellable(serviceSlug: string, locationSlug?: string): Sell
     }
   }
 
-  // Service-level page with no location context: permit status is disclosed on
-  // the page rather than gating it, because the page covers the whole footprint.
+  const ceiling =
+    PUBLISHING.publishCeilingDisclosure && service.licenseScope === 'size-dependent'
+
+  // Service-level page with no location context: the page covers the whole
+  // footprint, so there is nothing to gate against.
   if (!locationSlug) {
-    return {
-      sellable: true,
-      requiresCeilingDisclosure: service.licenseScope === 'size-dependent',
-    }
+    return { sellable: true, requiresCeilingDisclosure: ceiling }
   }
 
   const location = getLocation(locationSlug)
@@ -74,7 +80,11 @@ export function assertSellable(serviceSlug: string, locationSlug?: string): Sell
     )
   }
 
-  if (service.requiresPermit && !canPullPermit(location.jurisdictionId)) {
+  if (
+    PUBLISHING.gateServicesByPermitAuthority &&
+    service.requiresPermit &&
+    !canPullPermit(location.jurisdictionId)
+  ) {
     const j = JURISDICTIONS[location.jurisdictionId]
     const unverified = j?.permitAuthority === 'unverified'
     return {
@@ -88,10 +98,7 @@ export function assertSellable(serviceSlug: string, locationSlug?: string): Sell
     }
   }
 
-  return {
-    sellable: true,
-    requiresCeilingDisclosure: service.licenseScope === 'size-dependent',
-  }
+  return { sellable: true, requiresCeilingDisclosure: ceiling }
 }
 
 /** The services a given location page is allowed to render. Use this, not SERVICES. */
@@ -117,6 +124,7 @@ export function scopeSummary(location: Location) {
     jurisdiction: j?.name ?? location.jurisdictionId,
     permitAuthority: j?.permitAuthority ?? 'unverified',
     sellableCount: sellable.length,
-    permitFreeOnly: j?.permitAuthority !== 'full',
+    /** Only meaningful while the permit gate is on. False when the office handles permitting. */
+    permitFreeOnly: PUBLISHING.gateServicesByPermitAuthority && j?.permitAuthority !== 'full',
   }
 }

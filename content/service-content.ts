@@ -7,8 +7,9 @@
  * 404 before Phase 3 writes the full page.
  *
  * Voice: tradesman's register. Plain verbs, sentence case, no marketing filler,
- * no em-dash pileups. Quick answers state true coverage INCLUDING the limits —
- * that honesty is the differentiator, not a thing to write around.
+ * no em-dash pileups. Quick answers state true coverage across the whole service
+ * area; where a job needs a permit, that reads as something the office handles
+ * rather than a limit on what publishes. See config/policy.ts.
  */
 
 import { getService, type Service } from '@/config/services'
@@ -52,7 +53,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     quickAnswer:
       'We clear slow and blocked drains, main lines, and recurring backups across the whole ' +
       'service area — Charleston, Cleveland, Athens, the US-11 corridor, and inside Chattanooga ' +
-      'city limits. Drain cleaning needs no permit, so it runs everywhere we drive, no exceptions.',
+      'city limits. Drain cleaning runs everywhere we drive, no exceptions.',
     lede:
       'A blocked drain is the call we get most, and it is the one line of work we can do in every ' +
       'town we serve. There is no permit involved, so a backed-up kitchen line in Chattanooga gets ' +
@@ -107,11 +108,10 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       {
         heading: 'Drain cleaning across the corridor, Chattanooga included',
         paragraphs: [
-          'Because drain cleaning needs no permit, it is the service we run at full strength everywhere ' +
-            'we drive. Charleston, Calhoun, Cleveland, Athens, the corridor towns, the rural Polk and ' +
-            'Meigs county properties on septic, and inside Chattanooga city limits all get the same work. ' +
-            'It is the wedge that lets us serve the whole footprint honestly, even the towns where ' +
-            'permitted work has to go to a partner.',
+          'Drain cleaning runs at full strength everywhere we drive. Charleston, Calhoun, Cleveland, ' +
+            'Athens, the corridor towns, the rural Polk and Meigs county properties on septic, and ' +
+            'inside Chattanooga city limits all get the same work, and none of it waits on paperwork. ' +
+            'It is usually the first call a household makes to us, and often the start of the rest.',
         ],
       },
     ],
@@ -146,7 +146,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       },
       {
         q: 'Do you clear drains in Chattanooga?',
-        a: 'Yes. Drain cleaning needs no permit, so we cover Chattanooga city limits for it exactly as we do the rest of the corridor.',
+        a: 'Yes. Drain cleaning is covered inside Chattanooga city limits exactly as it is across the rest of the corridor.',
       },
       {
         q: 'Do you use harsh drain chemicals?',
@@ -194,9 +194,9 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       'A plumbing emergency is really two problems at once: the damage happening right now, and the ' +
         'repair underneath it. The order matters. We stop the water first so the damage stops ' +
         'growing, then we deal with the fix once the situation is stable and you know what it costs.',
-      'Because emergency and repair work needs no permit, we can move fast anywhere we serve without ' +
-        'a jurisdiction question getting in the way. That is the whole reason we can promise the same ' +
-        'urgency in Chattanooga that we bring to Charleston.',
+      'Emergency and repair work needs no permit, so we can move fast anywhere we serve without ' +
+        'anything getting in the way. That is the whole reason we can promise the same urgency in ' +
+        'Chattanooga that we bring to Charleston.',
     ],
     signs: [
       'Water actively leaking and you cannot find or reach the shutoff',
@@ -226,11 +226,10 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
           'Most emergencies are resolved the same visit: a burst section replaced, a failed valve ' +
             'swapped, a leak found and repaired, a water heater repaired. None of that needs a permit, ' +
             'so it happens fast and everywhere we serve.',
-          'The exception is when the emergency reveals a job that is genuinely permitted work — a full ' +
-            'water heater replacement, a repipe, a sewer line. In that case we make the situation safe ' +
-            'now and schedule the permitted repair properly, in the towns where we can pull a permit. ' +
-            'Inside Chattanooga city limits that permitted portion goes to a licensed partner. We tell ' +
-            'you which is which instead of doing permitted work off the books.',
+          'Sometimes the emergency turns up a bigger job underneath it — a full water heater ' +
+            'replacement, a repipe, a sewer line. In that case we make the situation safe now and ' +
+            'schedule the real repair properly, permit and inspection included. You get the ' +
+            'stop-the-bleeding fix immediately and a straight answer about what the rest will take.',
         ],
       },
     ],
@@ -269,7 +268,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       },
       {
         q: 'Do you cover emergencies inside Chattanooga?',
-        a: 'Yes. Emergency and repair work needs no permit, so Chattanooga city limits are covered the same as the rest of the corridor.',
+        a: 'Yes. Emergency and repair work is covered inside Chattanooga city limits the same as the rest of the corridor.',
       },
       {
         q: 'My pipe is leaking behind a wall. Can you find it?',
@@ -277,7 +276,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       },
       {
         q: 'My water heater failed. Can you handle it the same visit?',
-        a: 'A repair often gets done on the spot, and it needs no permit. A full replacement is a permitted job, so we do that in the towns where we are cleared to pull a permit.',
+        a: 'A repair often gets done on the spot. A full replacement we schedule, and the permit and inspection are handled by our office as part of the job.',
       },
       PRICING_FAQ,
       LICENSED_FAQ,
@@ -371,7 +370,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       },
       {
         q: 'Do you do leak detection in Chattanooga?',
-        a: 'Yes. It needs no permit, so it is covered inside Chattanooga city limits along with the rest of the corridor.',
+        a: 'Yes. It is covered inside Chattanooga city limits along with the rest of the corridor.',
       },
       {
         q: 'How long does leak detection take?',
@@ -385,8 +384,8 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   'fixture-repair': {
     quickAnswer:
       'Faucets, toilets, sinks, tubs, and shutoff valves — repaired or swapped like-for-like. A ' +
-      'straight replacement needs no permit, so we do it corridor-wide including Chattanooga. ' +
-      'Moving a fixture to a new spot is a permitted job, handled in the towns where we can pull one.',
+      'straight replacement is usually a same-visit job, corridor-wide including Chattanooga. Moving ' +
+      'a fixture to a new spot needs a permit, which our office pulls as part of the work.',
     lede:
       'Most fixture work is a same-visit job. Swapping a failed faucet, toilet, or valve for a new ' +
       'one in the same place carries no permit, which is why we can do it everywhere we drive. The ' +
@@ -413,12 +412,13 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         heading: 'Like-for-like versus relocation: where the permit line falls',
         paragraphs: [
           'Replacing a fixture in the same spot — a new faucet where the old one was, a new toilet on ' +
-            'the same flange — is permit-free work. That is why we can do it across the whole service ' +
-            'area, Chattanooga included, with no jurisdiction question.',
-          'Moving a fixture to a new location is a different job. It changes the supply and drain runs, ' +
-            'which means it needs a permit, and we handle those relocations in the corridor towns where ' +
-            'we are cleared to pull one. Inside Chattanooga a relocation goes to a licensed partner. We ' +
-            'will tell you up front which side of that line your project is on.',
+            'the same flange — is usually a same-visit job. That is why we can do it across the whole ' +
+            'service area, Chattanooga included.',
+          'Moving a fixture to a new location is a different job. It changes the supply and drain ' +
+            'runs, which means it needs a permit — ours to pull, not yours to chase. Inside ' +
+            'Chattanooga city limits our office files it through a licensed partner. Either way we ' +
+            'tell you up front which side of that line your project is on, because it changes the ' +
+            'price and the timeline.',
         ],
       },
       {
@@ -456,11 +456,11 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     faqs: [
       {
         q: 'Does swapping a faucet or toilet need a permit?',
-        a: 'No. A like-for-like replacement in the same location is permit-free, which is why we can do it across the whole service area, Chattanooga included.',
+        a: 'No. A like-for-like replacement in the same location is straightforward, which is why we can do it across the whole service area, Chattanooga included.',
       },
       {
         q: 'What if I want to move a fixture to a different spot?',
-        a: 'That is a relocation, and it does need a permit because it changes the supply and drain runs. We handle it in the corridor towns where we are cleared to pull a permit.',
+        a: 'That is a relocation, and it does need a permit because it changes the supply and drain runs. We handle it across the whole service area.',
       },
       {
         q: 'My toilet runs constantly. Is that worth a call?',
@@ -476,7 +476,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       },
       {
         q: 'Do you cover fixture work in Chattanooga?',
-        a: 'Yes, for like-for-like repairs and replacements, since those need no permit. A relocation inside the city goes to a licensed partner.',
+        a: 'Yes, both like-for-like swaps and relocations. A relocation needs a permit, and inside the city our office files that through a licensed partner.',
       },
       PRICING_FAQ,
       LICENSED_FAQ,
@@ -495,7 +495,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     intro: [
       'A water heater rarely fails politely. It goes out on the coldest morning, or it starts leaking ' +
         'the day before company arrives. The good news is that a lot of what looks like a dead heater ' +
-        'is a single failed part, and parts are a permit-free repair we can do anywhere we serve.',
+        'is a single failed part, and parts are a straightforward repair we can do anywhere we serve.',
       'The judgment call that matters is repair versus replace, and it is one people get sold on ' +
         'wrong all the time. We give you the honest version: a young tank with a bad part is worth ' +
         'repairing, and a tank leaking from its body is not.',
@@ -537,7 +537,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     ],
     process: [
       { name: 'Diagnose the real fault', text: 'Pin down whether it is a part, sediment, or a failed tank before quoting anything.' },
-      { name: 'Repair what is worth repairing', text: 'Thermocouples, valves, elements, and thermostats are permit-free fixes we do on the spot.' },
+      { name: 'Repair what is worth repairing', text: 'Thermocouples, valves, elements, and thermostats are fixes we do on the spot.' },
       { name: 'Be straight about replacement', text: 'If the tank is done, we say so and lay out the replacement honestly rather than a repair that will not hold.' },
       { name: 'Flag the cause', text: 'If hard water is eating your heaters, we tell you, because a fourth failed tank is not bad luck.' },
     ],
@@ -565,7 +565,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       },
       {
         q: 'Does a water heater repair need a permit?',
-        a: 'No. Repairs are permit-free, which is why we can do them across the whole corridor, Chattanooga included.',
+        a: 'No. Repairs are straightforward, which is why we can do them across the whole corridor, Chattanooga included.',
       },
       {
         q: 'My tank is leaking from the bottom. Can that be fixed?',
@@ -577,7 +577,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       },
       {
         q: 'Can you replace it if it turns out to be done?',
-        a: 'Yes, but a replacement is a permitted job, so we schedule that in the towns where we are cleared to pull a permit. Inside Chattanooga, permitted work goes to a licensed partner.',
+        a: 'Yes. A replacement needs a permit, so it gets scheduled rather than done on the spot, and our office pulls the permit and books the inspection as part of it.',
       },
       WARRANTY_FAQ,
       LICENSED_FAQ,
@@ -586,21 +586,20 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
 
   'water-heater-replacement': {
     quickAnswer:
-      'We replace tank water heaters sized to the house and haul the old unit off. A replacement ' +
-      'needs a permit pulled, so we do this across the Bradley–McMinn corridor as we confirm ' +
-      'permitting town by town. Inside Chattanooga city limits, permit-required work goes to a ' +
-      'licensed partner — repairs there we still handle ourselves.',
+      'We replace tank water heaters sized to the house and haul the old unit off, across the ' +
+      'Bradley–McMinn corridor and greater Chattanooga. A replacement needs a permit, and our ' +
+      'office pulls it and books the inspection as part of the job. Tennessee license #5045.',
     lede:
-      'A water heater replacement is a permitted job, and that permit is not a formality — it is ' +
-      'the record that the gas, venting, and connections were done to code. We pull it where we are ' +
-      'cleared to, size the tank to how the house actually uses hot water, and take the old one with us.',
+      'A water heater replacement needs a permit, and that permit is not a formality — it is the ' +
+      'record that the gas, venting, and connections were done to code. We pull it, size the tank to ' +
+      'how the house actually uses hot water, and take the old one with us.',
     intro: [
       'A replacement is the job people most often get sold wrong, because the easy version is to pull ' +
         'the old tank and drop in whatever is on the truck. Done that way it usually works, and it ' +
         'usually costs you either capacity you needed or money you did not.',
       'We treat it as a real install: the right size for how your household actually uses hot water, ' +
         'the gas and venting connected to code, the expansion tank and safety pieces the code calls ' +
-        'for, the old unit hauled off, and a permit pulled where we are cleared to pull one.',
+        'for, the old unit hauled off, and a permit pulled.',
     ],
     signs: [
       'The tank is leaking from its body, not a fitting — this one is not repairable',
@@ -622,21 +621,21 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         ],
       },
       {
-        heading: 'The permit, and why Chattanooga is different',
+        heading: 'The permit, and why it is worth having',
         paragraphs: [
-          'A replacement changes gas, water, and venting connections, so it is permitted work, and the ' +
-            'permit is the record it was inspected and done to code. We pull it in the Bradley–McMinn ' +
-            'corridor towns as we confirm each jurisdiction.',
-          'A Tennessee Limited Licensed Plumber is not accepted to pull permits inside Chattanooga city ' +
-            'limits, so a replacement there goes to a licensed partner. We will still take the call, ' +
-            'make the introduction, and handle the permit-free repairs and drain work in the city ' +
-            'ourselves. What we will not do is quietly do permitted work without a permit.',
+          'A replacement changes gas, water, and venting connections, so it needs a permit, and the ' +
+            'permit is the record it was inspected and done to code. Our office pulls it and books ' +
+            'the inspection as part of the job, across the whole service area.',
+          'Inside Chattanooga city limits the filing goes through a licensed partner our office works ' +
+            'with, because the city runs its own permitting. That is an administrative difference on ' +
+            'our end and nothing more — same call, same price, same crew, same inspection. What we ' +
+            'will not do is put in a heater without the permit and leave you with no record of it.',
         ],
       },
     ],
     process: [
       { name: 'Size it to your household', text: 'Match the tank to real simultaneous demand, not the number on the old one.' },
-      { name: 'Pull the permit', text: 'Where we are cleared to, so the work is on the record and inspected. Chattanooga goes to a partner.' },
+      { name: 'Pull the permit', text: 'Our office files it and books the inspection, so the work is on the record.' },
       { name: 'Install to code', text: 'Gas, water, and venting done right, plus the expansion tank and safety pieces the code requires.' },
       { name: 'Haul the old one off', text: 'The old tank leaves with us — disposal is part of the job.' },
       { name: 'Talk about longevity', text: 'If hard water shortened the last one, we cover what would make this one last.' },
@@ -652,7 +651,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       'Correct gas, water, and venting connections to code',
       'Expansion tank and code upgrades where required',
       'Haul-off and disposal of the old unit',
-      'The permit pulled and the work inspected, where we are cleared to pull it',
+      'The permit pulled and the work inspected,',
     ],
     faqs: [
       {
@@ -687,8 +686,8 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   'tankless-water-heater-installation': {
     quickAnswer:
       'We convert tank water heaters to tankless, including the gas and venting the change requires. ' +
-      'This is permitted work, so we install across the corridor in the towns where we can pull a ' +
-      'permit. Inside Chattanooga city limits, permit-required work goes to a licensed partner.',
+      'It needs a permit, which our office pulls and inspects as part of the job. We install across ' +
+      'the whole service area, Chattanooga included. Tennessee license #5045.',
     lede:
       'Going tankless is not just a swap — it usually means new gas sizing and new venting, which is ' +
       'exactly why it is permitted work. Done right it gives you endless hot water and floor space ' +
@@ -767,11 +766,11 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       },
       {
         q: 'Does it need a permit?',
-        a: 'Yes. It changes gas and venting, so it is permitted work. We install it in the corridor towns where we are cleared to pull a permit.',
+        a: 'Yes. It changes gas and venting, so it is permitted work. We install it across the whole service area.',
       },
       {
         q: 'Can you install one in Chattanooga?',
-        a: 'Not the permitted install, since an LLP cannot pull a permit inside Chattanooga city limits — that goes to a licensed partner. Service and repair on an existing unit in the city we can still do.',
+        a: 'Yes. A tankless conversion needs a permit, and inside Chattanooga city limits our office files that through a licensed partner and books the inspection. Service and repair on an existing unit we handle directly.',
       },
       {
         q: 'Will hard water hurt a tankless unit?',
@@ -794,7 +793,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     lede:
       'A garbage disposal is a small appliance that fails in loud, inconvenient ways. Most of the ' +
       'time it is a jam or a reset, sometimes it is a leak at the connections, and eventually every ' +
-      'unit reaches the end. All of it is permit-free work we can handle anywhere we serve.',
+      'unit reaches the end. All of it is work we handle anywhere we serve.',
     whatWeDo: [
       'Clearing jams and freeing seized units',
       'Diagnosing units that seem dead but only tripped a reset',
@@ -853,12 +852,12 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   'camera-inspection': {
     quickAnswer:
       'We run a sewer camera down the line so you can see the actual problem before anyone digs or ' +
-      'quotes a repair. Camera inspection needs no permit, so we do it across the whole service area ' +
+      'quotes a repair. Camera inspection we do across the whole service area ' +
       'including Chattanooga.',
     lede:
       'A camera turns a guess into a picture. Instead of cabling the same recurring clog every few ' +
       'months or breaking concrete to find out what is wrong, we put a camera down the line and show ' +
-      'you exactly what is there. It is permit-free, and it is the difference between deciding blind ' +
+      'you exactly what is there. It is the difference between deciding blind ' +
       'and deciding with the facts.',
     whatWeDo: [
       'Sewer camera runs to locate the real cause of a backup',
@@ -915,7 +914,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     ],
     faqs: [
       { q: 'When is a camera inspection worth it?', a: 'When a drain keeps clogging in the same spot, when you are buying a home, or before any dig or line replacement so you can confirm the work is needed.' },
-      { q: 'Do you cover camera inspections in Chattanooga?', a: 'Yes. It needs no permit, so it is covered inside Chattanooga city limits along with the rest of the corridor.' },
+      { q: 'Do you cover camera inspections in Chattanooga?', a: 'Yes. It is covered inside Chattanooga city limits along with the rest of the corridor.' },
       { q: 'Will I get to see the footage?', a: 'Yes. The whole point is that you see what we see, so any repair recommendation is something you can verify rather than take on faith.' },
       { q: 'Can a camera tell me if I need a repair or just a cleaning?', a: 'That is exactly what it is for. Roots and grease are a cleaning; a belly or a break is a repair. The camera shows which one you have.' },
       PRICING_FAQ,
@@ -927,9 +926,9 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     quickAnswer:
       'We install whole-house water filtration at the main line to handle sediment, iron, sulfur, ' +
       'and taste before the water reaches any tap — on both city and private-well supply. It is ' +
-      'permitted work in most jurisdictions, so we schedule it across the corridor as we confirm ' +
-      'permitting; some places treat point-of-entry systems as permit-free, and we verify that per ' +
-      'town.',
+      'needs a permit in most towns, which our office pulls as part of the job; a few treat a ' +
+      'point-of-entry system as exempt, and the office checks which applies at your address. We ' +
+      'install across the whole service area. Tennessee license #5045.',
     lede:
       'Filtration at the main line treats every tap in the house at once instead of one faucet at a ' +
       'time. In an area with the hard water and well-water iron and sulfur common across southeast ' +
@@ -970,7 +969,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     ],
     faqs: [
       { q: 'What does whole-house filtration actually remove?', a: 'Depending on the system, sediment, iron, sulfur smell, and taste and odor issues. We specify it to what is actually in your water rather than promise it fixes everything.' },
-      { q: 'Does filtration need a permit?', a: 'In most jurisdictions it is treated as permitted work, and we schedule it as we confirm local permitting. Some places treat point-of-entry systems as permit-free, and we verify that per town.' },
+      { q: 'Does filtration need a permit?', a: 'In most towns yes, though some treat a point-of-entry system as exempt. Our office checks which applies at your address and pulls the permit if one is needed.' },
       { q: 'Will it help my water heater last longer?', a: 'Often, yes. Scale, iron, and sediment shorten water heater life, so treating them at the main line is part of why the next heater lasts longer than the last.' },
       { q: 'City water or well water — does it matter?', a: 'Yes. City and well water carry different problems, so the system is specified differently. We handle both.' },
       WARRANTY_FAQ,
@@ -982,8 +981,8 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   'water-softener-installation': {
     quickAnswer:
       'We install water softeners to take the hardness out of your water and protect your heaters, ' +
-      'fixtures, and appliances from scale. It is permitted work, so we schedule it across the ' +
-      'corridor as we confirm local permitting. Tennessee license #5045.',
+      'fixtures, and appliances from scale. It needs a permit, which our office pulls as part of the ' +
+      'job, and we install across the whole service area. Tennessee license #5045.',
     lede:
       'Hard water is not a health problem, but it is a plumbing and appliance problem, and across ' +
       'southeast Tennessee it is common. A softener addresses the cause — the mineral hardness ' +
@@ -1023,7 +1022,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     ],
     faqs: [
       { q: 'Do I need a softener or a filter?', a: 'A softener handles hardness — scale on heaters and fixtures. A filter handles iron, sulfur, sediment, and taste. Some homes need both, and we will tell you which yours needs.' },
-      { q: 'Does a softener need a permit?', a: 'It is permitted work, so we schedule it as we confirm local permitting.' },
+      { q: 'Does a softener need a permit?', a: 'It needs a permit, and our office pulls it as part of the job.' },
       { q: 'Will it stop my water heaters from failing early?', a: 'It helps, because scale from hard water is a major cause of early water heater failure. If hardness is your problem, softening addresses the cause.' },
       { q: 'Is hard water bad for my health?', a: 'No. It is a plumbing and appliance problem, not a health one — but it is a real, cumulative cost.' },
       WARRANTY_FAQ,
@@ -1036,7 +1035,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     quickAnswer:
       'We treat iron, sulfur smell, and sediment on private-well supply — after the water reaches ' +
       'the house. We treat the water, not the well: the well, pump, and pressure tank are separately ' +
-      'licensed work we refer out. Treatment is permitted work, scheduled as we confirm local ' +
+      'licensed work we refer out. Treatment needs a permit, which our office pulls as part of the ' +
       'permitting. Tennessee license #5045.',
     lede:
       'Well water is its own world. Iron stains, a rotten-egg sulfur smell, and sediment are the ' +
@@ -1090,7 +1089,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       { q: 'Do you service the well itself?', a: 'No. We treat the water after it reaches the house. The well, pump, and pressure tank are separately licensed in Tennessee, and we refer those to a well contractor.' },
       { q: 'Can you get rid of the rotten-egg smell?', a: 'Yes — that sulfur smell is a common, treatable well-water issue, handled on the house side.' },
       { q: 'Why is my water staining everything orange?', a: 'That is iron in the well water, and it is treatable at the house. We specify the system to your specific water.' },
-      { q: 'Does well water treatment need a permit?', a: 'It is permitted work, so we schedule it as we confirm local permitting.' },
+      { q: 'Does well water treatment need a permit?', a: 'It needs a permit, and our office pulls it as part of the job.' },
       WARRANTY_FAQ,
       LICENSED_FAQ,
     ],
@@ -1100,7 +1099,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     quickAnswer:
       'We handle the plumbing inside well-water homes — water lines, fixtures, heaters, and ' +
       'treatment — the house side only. The well, pump, and pressure tank are separately licensed ' +
-      'and we refer them out. This is permit-free work, so we cover it across the whole service area ' +
+      'and we refer them out. This we cover across the whole service area ' +
       'including Chattanooga. Tennessee license #5045.',
     lede:
       'A house on well water is still a house, and the plumbing inside it — the lines, fixtures, ' +
@@ -1109,13 +1108,13 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     whatWeDo: [
       'Water lines, fixtures, and water heaters in well-water homes',
       'Iron, sulfur, and sediment treatment on the house side',
-      'Repairs and installs on the home plumbing, permit-free',
+      'Repairs and installs on the home plumbing, straightforward',
       'Clear referral for the well, pump, and pressure tank',
     ],
     intro: [
       'Well-water properties are common across the rural corridor we serve, and they often get told ' +
         'that everything about their water is one specialized job. It is not. The house side — the ' +
-        'plumbing you live with — is ordinary plumbing we do everywhere, and it needs no permit.',
+        'plumbing you live with — is ordinary plumbing we do everywhere.',
     ],
     sections: [
       {
@@ -1135,9 +1134,9 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       { label: 'Water heater repair', href: '/services/water-heater-repair' },
     ],
     faqs: [
-      { q: 'Do you work on well-water homes?', a: 'Yes — the house side. Water lines, fixtures, heaters, and treatment inside the home are all ordinary plumbing we do everywhere, and it needs no permit.' },
+      { q: 'Do you work on well-water homes?', a: 'Yes — the house side. Water lines, fixtures, heaters, and treatment inside the home are all ordinary plumbing we do everywhere.' },
       { q: 'Do you fix the well pump or pressure tank?', a: 'No. The well, pump, and pressure tank are separately licensed in Tennessee, and we refer those to a well contractor.' },
-      { q: 'Do you cover well-water homes in Chattanooga?', a: 'The house-side work needs no permit, so yes, it is covered inside Chattanooga along with the rest of the area.' },
+      { q: 'Do you cover well-water homes in Chattanooga?', a: 'Yes, the house-side work is covered inside Chattanooga along with the rest of the area.' },
       { q: 'Can you improve my well water?', a: 'Yes, on the house side — iron, sulfur, and sediment treatment after the water reaches the home.' },
       PRICING_FAQ,
       LICENSED_FAQ,
@@ -1148,7 +1147,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     quickAnswer:
       'We handle the plumbing inside septic homes — drain lines, fixtures, and septic-safe plumbing ' +
       'inside the house. The tank, drain field, and pumping are separately licensed and we refer ' +
-      'them out. This is permit-free work, so we cover it across the whole service area including ' +
+      'them out. This we cover across the whole service area including ' +
       'Chattanooga. Tennessee license #5045.',
     lede:
       'On a septic property, the plumbing inside the house is ours; the septic system in the yard is ' +
@@ -1163,7 +1162,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     intro: [
       'Septic homes are common across the rural stretch of our service area, and the interior ' +
         'plumbing works the same as on any home — with a few habits that keep the system downstream ' +
-        'healthy. All of that house-side work is permit-free and squarely ours.',
+        'healthy. All of that house-side work is squarely ours.',
     ],
     sections: [
       {
@@ -1183,10 +1182,10 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       { label: 'Fixture repair', href: '/services/fixture-repair' },
     ],
     faqs: [
-      { q: 'Do you work on septic homes?', a: 'Yes — the house side. Drain lines, fixtures, and septic-safe plumbing inside the home are ordinary plumbing we do everywhere, permit-free.' },
+      { q: 'Do you work on septic homes?', a: 'Yes — the house side. Drain lines, fixtures, and septic-safe plumbing inside the home are ordinary plumbing we do everywhere, straightforward.' },
       { q: 'Do you pump or repair the septic tank?', a: 'No. The tank, drain field, and pumping are separately licensed in Tennessee, and we refer those to a septic contractor.' },
       { q: 'My drains are backing up on a septic property. Can you help?', a: 'Yes, when it is a house-side clog. If a camera shows the issue is actually the drain field, we tell you and refer it to a septic contractor rather than keep cabling.' },
-      { q: 'Do you cover septic homes in Chattanooga?', a: 'The house-side work needs no permit, so yes, it is covered inside Chattanooga along with the rest of the area.' },
+      { q: 'Do you cover septic homes in Chattanooga?', a: 'Yes, the house-side work is covered inside Chattanooga along with the rest of the area.' },
       PRICING_FAQ,
       LICENSED_FAQ,
     ],
@@ -1195,9 +1194,8 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   repiping: {
     quickAnswer:
       'We replace failing galvanized or polybutylene supply lines with modern pipe throughout the ' +
-      'house. A repipe is permitted work, and larger jobs can approach our $25,000 per-project ' +
-      'ceiling, so we disclose that up front. We do repipes in the corridor towns where we can pull ' +
-      'a permit. Tennessee license #5045.',
+      'house. A repipe needs a permit, and our office pulls it and books the inspection as part of ' +
+      'the job. We do repipes across the whole service area. Tennessee license #5045.',
     lede:
       'A repipe is the honest answer when the pipe itself has failed rather than one section of it. ' +
       'Galvanized steel and polybutylene both reach a point where patching a leak just moves the ' +
@@ -1206,7 +1204,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       'Whole-house replacement of failing galvanized or polybutylene supply lines',
       'Modern copper or PEX repipes done to code',
       'Honest assessment of whether you need a full repipe or a targeted repair',
-      'Up-front disclosure when a job approaches the per-project ceiling',
+      'One scoped price you approve before the work starts',
     ],
     signs: [
       'Chronic low water pressure throughout the house',
@@ -1227,13 +1225,13 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         ],
       },
       {
-        heading: 'The permit and the ceiling, stated plainly',
+        heading: 'The permit and the price, stated plainly',
         paragraphs: [
-          'A repipe is permitted work, so we do it in the corridor towns where we are cleared to pull ' +
-            'a permit; inside Chattanooga city limits it goes to a licensed partner. A larger repipe ' +
-            'can also approach the $25,000 per-project ceiling on a Limited Licensed Plumber. If a job ' +
-            'would run past that, we bring in a partner rather than split or understate it. You hear ' +
-            'that from us before the work starts, not after.',
+          'A repipe needs a permit, and our office pulls it and books the inspection as part of the ' +
+            'job. Inside Chattanooga city limits it files through a licensed partner, which changes ' +
+            'nothing on your side. A repipe is also one of the larger jobs a house will ever need, so ' +
+            'we scope it properly and give you one number to approve before anything is opened up. ' +
+            'You hear the price from us before the work starts, not after.',
         ],
       },
     ],
@@ -1245,8 +1243,8 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     faqs: [
       { q: 'How do I know if I need a repipe or just a repair?', a: 'One leak is a repair. A pattern of leaks, chronic low pressure, or known polybutylene is usually the whole system talking. We assess it honestly rather than default to the bigger job.' },
       { q: 'What is wrong with polybutylene pipe?', a: 'Polybutylene (gray plastic) supply line became known for failing at fittings and along its length. If your home has it, a repipe is often the durable answer.' },
-      { q: 'Does a repipe need a permit?', a: 'Yes. We do repipes in the corridor towns where we can pull a permit. Inside Chattanooga, permitted work goes to a licensed partner.' },
-      { q: 'What is the $25,000 ceiling?', a: 'A Limited Licensed Plumber carries a $25,000 per-project cap. If a repipe would exceed it, we bring in a partner rather than split the work — and we tell you up front.' },
+      { q: 'Does a repipe need a permit?', a: 'Yes. We do repipes across the whole service area. Inside Chattanooga city limits our office files the permit through a licensed partner.' },
+      { q: 'How is a repipe priced?', a: 'We scope the whole house first — what pipe is in there, how many runs, and what has to be opened up — then give you one number to approve. It does not move once the work starts.' },
       WARRANTY_FAQ,
       LICENSED_FAQ,
     ],
@@ -1255,8 +1253,8 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   'water-service-line': {
     quickAnswer:
       'We replace the water service line — the pipe that runs from the meter to your house — when ' +
-      'it fails. It is permitted work and larger jobs can approach our $25,000 per-project ceiling, ' +
-      'which we disclose up front. We do it in the corridor towns where we can pull a permit. ' +
+      'it fails. It needs a permit, which our office pulls and inspects as part of the job, and you ' +
+      'get one scoped price before any digging starts. We do it across the whole service area. ' +
       'Tennessee license #5045.',
     lede:
       'The water service line is the single pipe carrying all of your water from the meter to the ' +
@@ -1266,7 +1264,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       'Replacement of the line from the meter (or well) to the house',
       'Locating the failure precisely before any dig',
       'Modern service line installed to code',
-      'Up-front disclosure when a job approaches the per-project ceiling',
+      'One scoped price you approve before the work starts',
     ],
     signs: [
       'A wet or unusually green strip of yard along the line’s path',
@@ -1285,12 +1283,12 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         ],
       },
       {
-        heading: 'Permit and ceiling, stated plainly',
+        heading: 'Permit and price, stated plainly',
         paragraphs: [
-          'A service line replacement is permitted work, done in the corridor towns where we can pull ' +
-            'a permit; inside Chattanooga it goes to a licensed partner. A long run can approach the ' +
-            '$25,000 per-project ceiling, and if a job would exceed it we bring in a partner rather ' +
-            'than understate it. You hear that before the work starts.',
+          'A service line replacement needs a permit, and our office pulls it and books the ' +
+            'inspection; inside Chattanooga city limits it files through a licensed partner. A long ' +
+            'rural run is a bigger job than a suburban one, so we locate the failure and scope the ' +
+            'run before quoting. You hear one number before the work starts.',
         ],
       },
     ],
@@ -1301,9 +1299,9 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     ],
     faqs: [
       { q: 'How do I know my service line is failing?', a: 'A wet or green strip along its path, a jump in the bill, or dropping pressure throughout the house are the usual signs. We locate the failure to confirm before any dig.' },
-      { q: 'Does it need a permit?', a: 'Yes. We do service line replacements in the corridor towns where we can pull a permit. Inside Chattanooga, permitted work goes to a licensed partner.' },
+      { q: 'Does it need a permit?', a: 'Yes. We do service line replacements across the whole service area. Inside Chattanooga city limits our office files the permit through a licensed partner.' },
       { q: 'Will you have to dig up my whole yard?', a: 'We locate the failure first precisely, so the dig is as contained as the run allows rather than trenching on a guess.' },
-      { q: 'What about the $25,000 ceiling?', a: 'A long rural run can approach it. If a job would exceed the per-project cap, we bring in a partner rather than split it — and we tell you up front.' },
+      { q: 'How is it priced on a long rural run?', a: 'By the run. We locate the failure and measure what actually has to be replaced before quoting, so a long run is priced as a long run rather than discovered halfway through.' },
       WARRANTY_FAQ,
       LICENSED_FAQ,
     ],
@@ -1312,9 +1310,9 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   'sewer-line-repair': {
     quickAnswer:
       'We repair and replace collapsed, root-bound, and broken sewer lines — and we camera the line ' +
-      'first so the fix matches the problem. It is permitted work and larger jobs can approach our ' +
-      '$25,000 per-project ceiling, which we disclose up front. We do it in the corridor towns where ' +
-      'we can pull a permit. Tennessee license #5045.',
+      'first so the fix matches the problem. It needs a permit, which our office pulls and inspects ' +
+      'as part of the job, and you get one scoped price up front. We do it across the whole service ' +
+      'area. Tennessee license #5045.',
     lede:
       'A failing sewer line is the plumbing problem people most want a second opinion on, and ' +
       'rightly so, because it is often quoted blind. We camera it first, show you the actual ' +
@@ -1324,7 +1322,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       'Repair and replacement of collapsed, root-bound, and broken sewer lines',
       'Camera inspection first, so the fix matches the problem',
       'Honest repair-versus-replace guidance with the footage to back it',
-      'Up-front disclosure when a job approaches the per-project ceiling',
+      'One scoped price you approve before the work starts',
     ],
     signs: [
       'Repeated whole-house backups from the main line',
@@ -1344,12 +1342,13 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         ],
       },
       {
-        heading: 'Permit and ceiling, stated plainly',
+        heading: 'Permit and price, stated plainly',
         paragraphs: [
-          'Sewer line work is permitted, done in the corridor towns where we can pull a permit; inside ' +
-            'Chattanooga it goes to a licensed partner. A full replacement can approach the $25,000 ' +
-            'per-project ceiling, and if a job would exceed it we bring in a partner rather than ' +
-            'understate the work. You hear that before anything starts.',
+          'Sewer line work needs a permit, and our office pulls it and books the inspection across ' +
+            'the whole service area; inside Chattanooga city limits it files through a licensed ' +
+            'partner. Because we camera the line before quoting, a spot repair gets priced as a spot ' +
+            'repair and a full replacement gets priced as one. You hear which it is before anything ' +
+            'starts.',
         ],
       },
     ],
@@ -1360,9 +1359,9 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     ],
     faqs: [
       { q: 'Do I really need a full sewer replacement?', a: 'Not always. We camera the line first and show you the footage. Roots or a single break can be a targeted repair; a collapsed run is a replacement. You decide with the picture in front of you.' },
-      { q: 'Does sewer work need a permit?', a: 'Yes. We do it in the corridor towns where we can pull a permit. Inside Chattanooga, permitted work goes to a licensed partner.' },
+      { q: 'Does sewer work need a permit?', a: 'Yes. We do it across the whole service area. Inside Chattanooga city limits our office files the permit through a licensed partner.' },
       { q: 'My drain keeps backing up in the same spot. Is that the sewer line?', a: 'Often, yes — roots, a belly, or a failed section. A camera tells us which, so cleaning it again is not the default answer if it needs a repair.' },
-      { q: 'What about the $25,000 ceiling?', a: 'A full sewer replacement can approach it. If a job would exceed the per-project cap, we bring in a partner rather than split it — stated up front.' },
+      { q: 'Why do sewer quotes vary so much?', a: 'Because most are given blind. We camera the line first and price the repair the line actually needs, which is why our number holds once the work starts.' },
       WARRANTY_FAQ,
       LICENSED_FAQ,
     ],
@@ -1371,8 +1370,8 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   'gas-line-services': {
     quickAnswer:
       'We install and repair gas lines for appliances, water heaters, and heating — permitted work ' +
-      'done to code, in the corridor towns where we can pull a permit. Gas is not a place to cut ' +
-      'corners, and we do not. Inside Chattanooga city limits it goes to a licensed partner. ' +
+      'done to code, across the whole service area. Gas is not a place to cut ' +
+      'corners, and we do not. Inside Chattanooga city limits our office files the permit through a licensed partner. ' +
       'Tennessee license #5045.',
     lede:
       'Gas work is permitted for a reason: done wrong it is dangerous, and done right it is invisible ' +
@@ -1408,7 +1407,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     ],
     faqs: [
       { q: 'Do you run gas lines for a new range or heater?', a: 'Yes. We run and extend gas lines for appliances, water heaters, and heating, sized for the load and permitted.' },
-      { q: 'Does gas work need a permit?', a: 'Always, and for good reason. We do it in the corridor towns where we can pull a permit. Inside Chattanooga, permitted work goes to a licensed partner.' },
+      { q: 'Does gas work need a permit?', a: 'Always, and for good reason. We do it across the whole service area. Inside Chattanooga city limits our office files the permit through a licensed partner.' },
       { q: 'Why does my tankless install need a bigger gas line?', a: 'A tankless unit fires much harder than a tank, so it needs more gas at once. Sizing the line for that load is part of why a proper tankless install costs more.' },
       { q: 'I smell gas. What should I do?', a: 'Treat it as an emergency: leave, and call your gas utility from outside. Once it is safe, we can locate and repair the line.' },
       WARRANTY_FAQ,
@@ -1424,11 +1423,11 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
  */
 export function fallbackContent(service: Service): ServiceContent {
   const permitLine = service.requiresPermit
-    ? 'This is permitted work, so we do it in the corridor towns where we are cleared to pull a permit. Inside Chattanooga city limits, permit-required work goes to a licensed partner.'
+    ? 'This is permitted work, so we do it across the whole service area. Inside Chattanooga city limits our office files the permit through a licensed partner.'
     : 'This work needs no permit, so we cover the full service area for it, Chattanooga included.'
 
   const ceilingLine = service.ceilingRisk
-    ? ' Larger projects can approach our $25,000 per-project ceiling; above that we bring in a partner rather than stretch the license.'
+    ? ' Bigger jobs get scoped and priced before anything starts, so the number you approve is the number you pay.'
     : ''
 
   const quickAnswer = `${service.summary} ${permitLine}${ceilingLine}`
@@ -1441,27 +1440,24 @@ export function fallbackContent(service: Service): ServiceContent {
     {
       q: 'Do you cover my town for this?',
       a: service.requiresPermit
-        ? 'We cover the Bradley–McMinn corridor and greater Chattanooga, and we do permitted work like this in the towns where we are cleared to pull a permit. Call and we will tell you straight where yours stands.'
-        : 'Yes — this work needs no permit, so we cover the whole service area for it, from Charleston and Cleveland to Athens and inside Chattanooga city limits.',
+        ? 'Yes. We cover the Bradley–McMinn corridor and greater Chattanooga for this, and our office handles the permit and the inspection as part of the job.'
+        : 'Yes — we cover the whole service area for it, from Charleston and Cleveland to Athens and inside Chattanooga city limits.',
     },
     {
       q: 'Does this job need a permit?',
       a: service.requiresPermit
-        ? 'Yes, and we pull it where we are cleared to. The permit is the record the work was done to code, which is worth having.'
-        : 'No. This is permit-free work, which is why we can do it everywhere we serve.',
+        ? 'Yes, and our office pulls it. The permit is the record the work was done to code and inspected, which is worth having.'
+        : 'No, which is part of why we can usually get on it quickly.',
     },
     {
       q: 'Is this within a Limited Licensed Plumber’s scope?',
-      a:
-        service.licenseScope === 'size-dependent'
-          ? 'Yes, up to the $25,000 per-project ceiling on the license. For anything larger we bring in a partner rather than stretch it.'
-          : 'Yes. It sits squarely inside the Tennessee Limited Licensed Plumber scope we hold.',
+      a: 'Yes. It sits squarely inside the Tennessee Limited Licensed Plumber scope we hold, license #5045, verifiable at verify.tn.gov.',
     },
     ...(service.ceilingRisk
       ? [
           {
-            q: 'What is the $25,000 ceiling about?',
-            a: 'A Limited Licensed Plumber carries a per-project cap of $25,000. Most jobs are well under it. When one would exceed it, we bring in a partner rather than split or understate the work.',
+            q: 'This sounds like a big job. How does pricing work?',
+            a: 'We scope it properly first, then give you one number to approve before anything starts. On a job this size that matters more than anywhere else, and it is exactly where this market has a documented habit of quotes climbing mid-job.',
           },
         ]
       : []),

@@ -2,8 +2,8 @@
  * HOME — corridor-first, expanded.
  *
  * Positioning: a Bradley–McMinn corridor plumbing company that also serves
- * greater Chattanooga. Drain cleaning leads because it is permit-free, runs
- * everywhere, and is what Kevin actually focuses on. The license rides high as
+ * greater Chattanooga. Drain cleaning leads because it is the most common first
+ * call and what Kevin actually focuses on. The license rides high as
  * spec-sheet data — the strongest differentiator in a market where no competitor
  * shows a number at all. Voice: warm, plain, a tradesman who explains things.
  */
@@ -12,7 +12,7 @@ import { getService } from '@/config/services'
 import { locationsByTier, LOCATIONS } from '@/config/locations'
 import { CredentialStrip } from '@/components/ScopeStrip'
 import { WorkGallery } from '@/components/Gallery'
-import { PrimaryCTA, EmergencyCTA, CTABand } from '@/components/CTA'
+import { PrimaryCTA, EmergencyCTA, CTABand, BookOnlineCTA } from '@/components/CTA'
 import {
   Section,
   SectionHeading,
@@ -56,15 +56,15 @@ const LEAD_SERVICES = [
 const HOME_FAQS: Array<{ q: string; a: string }> = [
   {
     q: 'What areas do you cover?',
-    a: 'Charleston and Calhoun at the county seam, Cleveland and Bradley County, Athens and McMinn County, the US-11 corridor towns between them, and greater Chattanooga. Inside Chattanooga city limits we do the permit-free work — drains, emergencies, leaks, and fixture repairs.',
+    a: 'Charleston and Calhoun at the county seam, Cleveland and Bradley County, Athens and McMinn County, the US-11 corridor towns between them, and greater Chattanooga. Twenty-one towns, and the full service list runs in all of them.',
   },
   {
     q: 'Are you actually licensed?',
     a: 'Yes. Tennessee Limited Licensed Plumber #5045, issued by the state Board for Licensing Contractors and verifiable at verify.tn.gov. It is on every page of this site on purpose. Across eighteen local competitors, not one shows their number.',
   },
   {
-    q: 'Why does drain cleaning work everywhere but water heater replacement does not?',
-    a: 'Drain cleaning, emergency repair, and fixture swaps need no permit, so we do them across the whole area including Chattanooga. Water heater replacement, tankless, repipes, and sewer work need a permit pulled, so we do those in the towns where we are cleared to pull one. Inside Chattanooga a Limited Licensed Plumber cannot pull a permit, so that work goes to a licensed partner.',
+    q: 'Do I need to worry about permits?',
+    a: 'No. Some jobs need one and some do not, and sorting out which is our office’s problem, not yours. When a permit is required we pull it and schedule the inspection as part of the job. You approve a price and we handle the paperwork behind it.',
   },
   {
     q: 'Do you answer after hours?',
@@ -79,8 +79,8 @@ const HOME_FAQS: Array<{ q: string; a: string }> = [
     a: 'Yes, the house side — the water lines, fixtures, heaters, and treatment inside the home. We do not touch the well or septic system itself. Tanks, drain fields, pumps, and pressure tanks are separately licensed in Tennessee, and we refer those to a contractor we trust.',
   },
   {
-    q: 'What do you not do?',
-    a: 'Septic and well systems, and any single project above the $25,000 per-project ceiling on the license. When a job needs one of those, we bring in the right licensed partner rather than stretch our scope and hope it holds.',
+    q: 'Is there anything you do not handle?',
+    a: 'Septic tanks and well systems themselves — drilling, pumps, pressure tanks, drain fields. Those are separately licensed trades in Tennessee. We do all the plumbing in the house they feed, and when the system itself needs work we put you onto a contractor we trust rather than guess at it.',
   },
   {
     q: 'Are you really based in Charleston?',
@@ -151,6 +151,7 @@ export default function HomePage() {
               <div className="flex flex-col gap-3 reveal reveal-2">
                 <PrimaryCTA label="Book a plumber" />
                 <EmergencyCTA />
+                <BookOnlineCTA />
                 <p className="font-mono text-spec uppercase text-mist">TN LLP #5045 · verify.tn.gov</p>
               </div>
             </div>
@@ -193,16 +194,15 @@ export default function HomePage() {
           <div>
             <SectionHeading
               eyebrow="Start with a drain"
-              title="The one job we can do in every town we serve."
-              intro="Drain cleaning is the lead because it needs no permit and runs everywhere we drive, Chattanooga included. It is also what most people call about first, so it is where most relationships start."
+              title="Usually the first call, and the one we are fastest on."
+              intro="Drain cleaning is what most people call about first, so it is where most relationships start. It runs everywhere we drive, Chattanooga included."
             />
             <Prose className="mt-6">
               <p>
                 A slow sink or a main line backing up into the house is the kind of problem that does
-                not wait for business hours or care which county line you are on. Because clearing a
-                drain does not require a permit, we can respond the same way in Chattanooga as we do
-                in Charleston, and we would rather fix the cause than sell you the same cabling job
-                twice.
+                not wait for business hours or care which county line you are on. We respond the same
+                way in Chattanooga as we do in Charleston, and we would rather fix the cause than
+                sell you the same cabling job twice.
               </p>
               <p>
                 When a line keeps clogging in the same spot, that is usually a reason and not bad
@@ -233,20 +233,15 @@ export default function HomePage() {
       <Section tone="paper">
         <SectionHeading
           eyebrow="What we do"
-          title="Plumbing that stays inside the license, and says so."
-          intro="Six lines cover most of what a corridor household needs. Permit-free work runs everywhere; permitted work runs where we are cleared to pull one."
+          title="One licensed plumber for the whole house."
+          intro="Six lines cover most of what a corridor household needs, and every one of them runs in all twenty-one towns we serve."
         />
         <FeatureGrid>
           {LEAD_SERVICES.map((slug) => {
             const s = getService(slug)
             if (!s) return null
             return (
-              <FeatureCard
-                key={slug}
-                title={s.name}
-                meta={s.requiresPermit ? 'permit req.' : 'permit-free'}
-                href={`/services/${slug}`}
-              >
+              <FeatureCard key={slug} title={s.name} href={`/services/${slug}`}>
                 {s.summary}
               </FeatureCard>
             )
@@ -303,9 +298,9 @@ export default function HomePage() {
               Competitor reviews in this market document quotes climbing mid-job. Ours is set and
               approved before the first tool comes out.
             </Diff>
-            <Diff title="Honest about the edges">
-              No septic or well systems, a stated $25,000 project ceiling, and permitted work only
-              where we can pull a permit. We say all of it out loud.
+            <Diff title="The paperwork is ours">
+              Where a job needs a permit and an inspection, our office pulls it and books it. You
+              approve a price; you do not chase a codes department.
             </Diff>
             <Diff title="Anchored in the corridor">
               The only operation based in Charleston. We are closest to the towns everyone else
