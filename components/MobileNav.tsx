@@ -34,7 +34,10 @@ export function MobileNav({
       </button>
 
       {open && (
-        <div className="fixed inset-x-0 bottom-0 top-[57px] z-50 overflow-y-auto border-t border-ink/10 bg-paper">
+        /* Anchored to the header via top-full rather than a hardcoded offset —
+           the header grows a second line when the license text wraps on narrow
+           screens, and a fixed pixel top covered it. */
+        <div className="absolute inset-x-0 top-full z-50 max-h-[80dvh] overflow-y-auto border-t border-ink/10 bg-paper shadow-[0_12px_24px_-8px_rgba(0,0,0,0.35)]">
           <nav aria-label="Mobile" className="container-x flex flex-col divide-y divide-ink/10 py-2">
             {NAV.map((item) => (
               <a
