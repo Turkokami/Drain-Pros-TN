@@ -89,9 +89,29 @@ Current data is a starting point; replace with real specifics as jobs accumulate
 
 ~34 routes. **Where the market position is won.** Gate: Phase 2 indexing.
 
-**Drain cluster (~6)** — the only line at full strength in every market
-`main-line-clog` · `recurring-backups` · `root-intrusion` · `hydro-jetting` ·
-`kitchen-drain` · `commercial-drain-maintenance`
+### Route structure — decided 2026-08-16
+
+The manifest below listed bare slugs with no parent path. Phase 3 splits into
+two route groups by **search intent**, because they need different page shapes
+and different CTAs:
+
+| Group | Intent | Page shape | Lead CTA |
+|---|---|---|---|
+| `/problems/[slug]` | Symptom-led, often urgent | Quick answer → do-this-now → symptoms → causes → who fixes it | Emergency when `urgent`, else booking |
+| `/guides/[slug]` | Decision and comparison | Explainer with a recommendation | Booking / callback |
+
+Every problem binds to a service slug in `config/problems.ts`. That binding is
+the conversion path, and linter check `[7b]` fails the build if it points at a
+service that does not exist.
+
+**✅ Problem cluster — 17 routes, built.** Registry `config/problems.ts`,
+content `content/problem-content.ts`, route `app/problems/[slug]`, hub
+`app/problems`. Includes the three symptom-led items from the drain cluster
+below, which belong here rather than duplicated as guides.
+
+**Drain cluster — remaining (~3)**
+`hydro-jetting` · `kitchen-drain` · `commercial-drain-maintenance`
+(`main-line-clog`, `recurring-backups`, `root-intrusion` shipped as problems)
 
 **Water heating (~8)**
 `sizing-guide` · `tank-vs-tankless` · `gas-vs-electric` · `expansion-tanks` ·
