@@ -13,6 +13,7 @@ export const NAV: Array<{ href: string; label: string }> = [
   { href: '/services', label: 'Services' },
   { href: '/service-areas', label: 'Service areas' },
   { href: '/problems', label: 'Problems' },
+  { href: '/guides', label: 'Guides' },
   { href: '/about', label: 'About' },
   { href: '/reviews', label: 'Reviews' },
   { href: '/contact', label: 'Contact' },

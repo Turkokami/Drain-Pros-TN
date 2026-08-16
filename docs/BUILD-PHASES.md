@@ -117,7 +117,16 @@ below, which belong here rather than duplicated as guides.
 `sizing-guide` · `tank-vs-tankless` · `gas-vs-electric` · `expansion-tanks` ·
 `hard-water-damage-to-heaters` · `heater-lifespan` · `anode-rods` · `venting`
 
-**Water quality (~8)**
+**✅ Guide cluster — 14 routes, built.** Registry `config/guides.ts`, content
+`content/guide-content.ts`, route `app/guides/[slug]`, hub `app/guides`.
+Water heating (8) and water quality (6).
+
+**Dropped as cannibalisation — deliberate.** Four manifest guides duplicated
+service pages that already rank for the same terms, so they were not built:
+`whole-house-filtration`, `softener-service`, `plumbing-on-well-water`,
+`septic-safe-plumbing`. The guides link to those services instead.
+
+**Water quality (~8, 6 built)**
 `hard-water-bradley-county` · `whole-house-filtration` · `softener-service` ·
 `iron-and-sulfur` · `sediment` · `well-water-testing` · `scale-damage` · `taste-and-odor`
 

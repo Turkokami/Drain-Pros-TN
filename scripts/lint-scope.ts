@@ -28,6 +28,7 @@ import { JURISDICTIONS, pendingVerification } from '../config/jurisdictions'
 import { LICENSE, IDENTITY, OPERATIONS, type Fact } from '../config/business'
 import { PUBLISHING } from '../config/policy'
 import { PROBLEMS, unboundProblems } from '../config/problems'
+import { GUIDES, unboundGuides } from '../config/guides'
 import { assertSellable } from '../lib/scope-guard'
 
 const ROOT = join(__dirname, '..')
@@ -165,9 +166,11 @@ for (const loc of LOCATIONS) {
 // --- 7b. Every problem page binds to a real service -----------------------------
 // The "who fixes this" link is the whole conversion path on a problem page. A
 // typo in the binding would ship a symptom page that dead-ends.
-const unbound = unboundProblems()
-for (const p of unbound) {
+for (const p of unboundProblems()) {
   fail(`[7b] Problem "${p.slug}" binds to unknown service "${p.service}". Fix config/problems.ts.`)
+}
+for (const g of unboundGuides()) {
+  fail(`[7b] Guide "${g.slug}" binds to unknown service "${g.service}". Fix config/guides.ts.`)
 }
 
 // --- 8. Pending registry items -------------------------------------------------
@@ -214,6 +217,7 @@ console.log(`\n  Services registered      ${SERVICES.length}`)
 console.log(`  Locations registered     ${LOCATIONS.length}`)
 console.log(`  Jurisdictions            ${Object.keys(JURISDICTIONS).length}`)
 console.log(`  Problem pages            ${PROBLEMS.length}`)
+console.log(`  Guide pages              ${GUIDES.length}`)
 console.log(`  Service×location blocked ${blockedCount} combinations withheld by the guard`)
 console.log(
   `  Permit gate              ${
