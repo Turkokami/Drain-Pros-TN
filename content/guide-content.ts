@@ -84,7 +84,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       },
       {
         q: 'How long does a replacement take?',
-        a: 'Typically a few hours for a straight tank swap. It needs a permit, which our office pulls and books the inspection for as part of the job.',
+        a: 'Typically a few hours for a straight tank swap.',
       },
       PRICING_FAQ,
       LICENSED_FAQ,
@@ -143,7 +143,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       },
       {
         q: 'Can you convert my existing setup?',
-        a: 'Yes. It changes gas sizing and venting, which is the bulk of the work, and our office handles the permit and inspection as part of the job.',
+        a: 'Yes. It changes gas sizing and venting, which is the bulk of the work.',
       },
       PRICING_FAQ,
       LICENSED_FAQ,
@@ -166,7 +166,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       {
         heading: 'What each one needs to be safe',
         paragraphs: [
-          'Gas needs proper venting and combustion air, and that is not a formality — it is the part that matters most for safety. Venting is where we see the worst work from unpermitted installs.',
+          'Gas needs proper venting and combustion air, and that is not a formality — it is the part that matters most for safety. Venting is where we see the worst work from rushed installs.',
           'Electric needs adequate circuit capacity at the panel. On an older house that occasionally means panel work, which changes the numbers.',
         ],
       },
@@ -198,11 +198,11 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       },
       {
         q: 'Is a gas heater safe?',
-        a: 'Yes, when it is vented correctly and inspected. Venting is exactly the part that gets cut short on unpermitted work, which is one good argument for having the permit pulled.',
+        a: 'Yes, when it is vented correctly and inspected. Venting is exactly the part that gets cut short on rushed work, which is why we do not rush it.',
       },
       {
         q: 'Can you switch me from electric to gas?',
-        a: 'Yes, where gas is available. It means running the line and venting the unit, so we scope and price it properly first. Our office handles the permit and inspection.',
+        a: 'Yes, where gas is available. It means running the line and venting the unit, so we scope and price it properly first.',
       },
       PRICING_FAQ,
       LICENSED_FAQ,
@@ -350,7 +350,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
 
   'water-heater-venting': {
     quickAnswer:
-      'Venting is the part of a gas water heater install that matters most for safety, and it is the part most often cut short on unpermitted work. The unit has to move combustion gases out of the house completely and reliably. Getting that wrong is a carbon monoxide risk, not a code technicality.',
+      'Venting is the part of a gas water heater install that matters most for safety, and it is the part most often cut short on a rushed job. The unit has to move combustion gases out of the house completely and reliably. Getting that wrong is a carbon monoxide risk, not a code technicality.',
     lede:
       'Nobody shops for venting. It is the least interesting part of a water heater and the one most worth getting right, because the failure mode is not a leak or a cold shower.',
     sections: [
@@ -369,10 +369,10 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
         ],
       },
       {
-        heading: 'Why the permit is worth having',
+        heading: 'Why an inspected install is worth having',
         paragraphs: [
-          'The inspection on a water heater replacement is largely about gas and venting. That is the record that the combustion side was done correctly, and it is the thing you would want to be able to point at if you ever sell the house.',
-          'Our office pulls the permit and books the inspection as part of the job, so it is not something you have to think about.',
+          'An inspection on a water heater replacement is largely about gas and venting. That is the record that the combustion side was done correctly, and it is the thing you would want to be able to point at if you ever sell the house.',
+          'It is also the reason we do not rush this part. Venting is invisible once the job is finished, which is exactly why it is the part that gets cut short by whoever is in a hurry.',
         ],
       },
     ],
@@ -778,7 +778,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       },
       {
         q: 'Do you cover this everywhere?',
-        a: 'Yes. Drain work needs no permit, so it runs across the whole service area including inside Chattanooga city limits.',
+        a: 'Yes. It runs across the whole service area including inside Chattanooga city limits.',
       },
       PRICING_FAQ,
       LICENSED_FAQ,
@@ -807,6 +807,19 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
         ],
       },
       {
+        heading: 'Slab and exterior leak detection',
+        paragraphs: [
+          'This one is different from the two above — it is not a licensing boundary, it is a ' +
+            'decision. Pinpointing a leak under a concrete slab or out in the yard is a specialist ' +
+            'trade with equipment we do not carry, and doing it badly means breaking concrete in the ' +
+            'wrong place.',
+          'So we refer that locating work to American Leak Detection. We repair leaks we can reach, ' +
+            'and on a leak behind a wall we can attempt to locate it before opening anything up — ' +
+            'though on a serious one, more than one area may need to be opened to find it. But for a ' +
+            'slab or an exterior line, the right answer is the people who do it every day.',
+        ],
+      },
+      {
         heading: 'Why we put this in writing',
         paragraphs: [
           'Because the alternative is discovering it mid-job, which is worse for you and worse for us. A contractor who takes on work outside their license is telling you something about how they will handle the rest of it.',
@@ -824,6 +837,10 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       {
         q: 'Can you fix my well pump?',
         a: 'No. Pumps and pressure tanks are separately licensed in Tennessee. We handle the plumbing and the water treatment from the house side, and refer the well itself out.',
+      },
+      {
+        q: 'Can you find a leak under my slab?',
+        a: 'We refer slab and exterior leak detection to American Leak Detection. It is specialist locating work and they have the equipment for it. We can attempt to locate a leak behind a wall before opening anything, and we handle the repair once a leak is found and reachable.',
       },
       {
         q: 'Is there anything else you turn down?',
@@ -904,7 +921,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
         heading: 'Freeze exposure',
         paragraphs: [
           'Long runs are often shallower than they should be, particularly where they cross rock or were laid quickly. Shallow pipe freezes, and on a run that length there is a lot of it to go wrong.',
-          'When we replace a service line, depth and routing get done properly, and our office pulls the permit and books the inspection as part of the job.',
+          'When we replace a service line, depth and routing get done properly rather than quickly.',
         ],
       },
     ],
@@ -921,7 +938,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       },
       {
         q: 'Do you replace whole service lines?',
-        a: 'Yes, across the whole service area. Our office pulls the permit and books the inspection as part of the job.',
+        a: 'Yes, across the whole service area.',
       },
       PRICING_FAQ,
       LICENSED_FAQ,
@@ -963,7 +980,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       },
       {
         q: 'Can I use a standard water heater in mine?',
-        a: 'Often not. Many manufactured homes require a unit specifically listed for that use. Fitting a standard one where it is not permitted is a mistake we get called out to correct.',
+        a: 'Often not. Many manufactured homes require a unit specifically listed for that use. Fitting a standard one where the listing does not allow it is a mistake we get called out to correct.',
       },
       {
         q: 'My underbelly line froze. Can it be prevented?',

@@ -19,6 +19,7 @@ import { LOCATIONS } from '@/config/locations'
 import { assertSellable } from '@/lib/scope-guard'
 import { getServiceContent } from '@/content/service-content'
 import { CredentialStrip } from '@/components/ScopeStrip'
+import { PermitNote } from '@/components/PermitNote'
 import { PrimaryCTA, EmergencyCTA } from '@/components/CTA'
 import { GetService } from '@/components/GetService'
 import { Section, SectionHeading, Eyebrow, QuickAnswer, Prose, BulletList, Step, FAQ } from '@/components/ui'
@@ -136,11 +137,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <CredentialStrip />
             <div className="rounded-card border-l-4 border-verdigris bg-galv p-6">
               <h2 className="font-mono text-spec uppercase text-steel">Where we cover this</h2>
+              {/* No permit language here — it lives in the Permits subsection only. */}
               <p className="mt-2 text-sm text-ink/90">
                 {`All ${served.length} towns we serve, from Charleston and Cleveland through Athens and the US-11 corridor, plus greater Chattanooga.`}
-                {service.requiresPermit
-                  ? ' This job needs a permit, and our office pulls it and books the inspection as part of the work.'
-                  : ' No permit needed for this one, so we can usually get on it quickly.'}
               </p>
               <a
                 href="/service-areas"
@@ -199,6 +198,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
         </Section>
       )}
+
+      {/* PERMITS — one subsection, never inside the service copy. See components/PermitNote.tsx */}
+      <Section tone="paper" padded={false}>
+        <div className="my-14">
+          <PermitNote />
+        </div>
+      </Section>
 
       {/* CEILING DISCLOSURE */}
       {requiresCeiling && (

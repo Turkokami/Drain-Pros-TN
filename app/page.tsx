@@ -41,13 +41,13 @@ import {
 
 const HERO_ANSWER =
   'Licensed plumbing for Charleston, Cleveland, Athens, and the US-11 corridor, plus greater ' +
-  'Chattanooga. Drain cleaning, emergency repair, and water heaters, handled by the license ' +
-  'holder himself with a price you approve before the work starts.'
+  'Chattanooga. Drain cleaning, emergency repair, and water heaters, handled by qualified ' +
+  'plumbers you trust, with a price you approve before the work starts.'
 
 const LEAD_SERVICES = [
   'drain-cleaning',
   'emergency-plumbing',
-  'leak-detection',
+  'camera-inspection',
   'water-heater-repair',
   'water-heater-replacement',
   'fixture-repair',
@@ -208,8 +208,7 @@ export default function HomePage() {
                 When a line keeps clogging in the same spot, that is usually a reason and not bad
                 luck. We can put a camera down and show you whether it is roots, a low spot in the
                 pipe, or a section that has failed, so you are deciding with real information instead
-                of a guess. Once we are already under the house, the rest of the work — fixtures,
-                heaters, leaks — is right there too.
+                of a guess.
               </p>
             </Prose>
             <div className="mt-6 flex flex-wrap gap-3">

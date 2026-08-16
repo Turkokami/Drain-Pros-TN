@@ -129,14 +129,6 @@ export const PROBLEMS: Problem[] = [
     group: 'leak-pipe',
   },
   {
-    slug: 'slab-leak',
-    name: 'Slab Leak',
-    summary: 'A warm spot, a running meter, or damp floor over concrete.',
-    service: 'leak-detection',
-    urgent: true,
-    group: 'leak-pipe',
-  },
-  {
     slug: 'galvanized-pipe-failure',
     name: 'Failing Galvanized Pipe',
     summary: 'Old steel supply line corroding shut from the inside.',
@@ -150,7 +142,7 @@ export const PROBLEMS: Problem[] = [
     slug: 'low-water-pressure',
     name: 'Low Water Pressure',
     summary: 'Weak flow at one fixture or throughout the house.',
-    service: 'leak-detection',
+    service: 'fixture-repair',
     urgent: false,
     group: 'pressure-quality',
   },

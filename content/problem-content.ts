@@ -25,9 +25,9 @@ export interface ProblemContent {
   /**
    * What we do about it. Optional on purpose: pages where the fix is obvious
    * from the cause (a worn flapper, a dripping spigot) lean on the "Who fixes
-   * this" link instead. Pages where the approach is the whole value — locating
-   * a slab leak before breaking concrete, cameraing a root intrusion before
-   * quoting — carry this block, because that is where the trust is won.
+   * this" link instead. Pages where the approach is the whole value — cameraing
+   * a root intrusion before quoting rather than cabling it again — carry this
+   * block, because that is where the trust is won.
    */
   whatWeDo?: string[]
   /** Shown as a warning panel on urgent pages. Written to prevent damage. */
@@ -70,7 +70,7 @@ export const PROBLEM_CONTENT: Record<string, ProblemContent> = {
       'Replace elements, thermostats, thermocouples, and gas valves, usually the same visit',
       'Tell you honestly when a repair is worth it and when it is throwing money at a dying tank',
       'Flush sediment where that is what is choking the burner',
-      'Size and fit a replacement when the tank really is finished, permit and inspection included',
+      'Size and fit a replacement when the tank really is finished',
     ],
     faqs: [
       {
@@ -161,7 +161,7 @@ export const PROBLEM_CONTENT: Record<string, ProblemContent> = {
       },
       {
         q: 'How long does the repair take?',
-        a: 'Usually well under an hour once we are there, and it needs no permit.',
+        a: 'Usually well under an hour once we are there.',
       },
       PRICING_FAQ,
       LICENSED_FAQ,
@@ -385,7 +385,7 @@ export const PROBLEM_CONTENT: Record<string, ProblemContent> = {
       'Camera the line to find exactly where they are entering and how bad the pipe is there',
       'Show you the footage so the decision is yours and not a matter of trust',
       'Repair the failed joint or section where that is enough',
-      'Replace the run when the pipe is genuinely finished, permit and inspection handled by our office',
+      'Replace the run when the pipe is genuinely finished',
     ],
     faqs: [
       {
@@ -484,50 +484,6 @@ export const PROBLEM_CONTENT: Record<string, ProblemContent> = {
         q: 'It thawed and now it is leaking. What now?',
         a: 'That is a burst pipe. Shut off the main and call. The split was there before the thaw; the ice was holding it closed.',
       },
-      LICENSED_FAQ,
-    ],
-  },
-
-  'slab-leak': {
-    quickAnswer:
-      'Serious, but not usually a same-hour emergency unless pressure has dropped sharply. A supply line leaking under a concrete slab will keep going until it is located and repaired, so the priority is finding exactly where before anyone breaks concrete.',
-    lede:
-      'A slab leak is a leak in the supply line running underneath the concrete floor of the house. It is one of the few plumbing problems where the diagnosis matters more than the repair, because the difference between locating it precisely and guessing is the difference between one small opening and a torn-up floor.',
-    symptoms: [
-      'A warm spot on the floor, which usually means the hot line',
-      'The sound of running water with everything shut off',
-      'A water bill that has jumped with no change in use',
-      'Damp carpet, buckling flooring, or a musty smell with no visible source',
-      'Pressure that has dropped across the house',
-    ],
-    causes: [
-      'Copper supply line corroding where it contacts concrete or soil',
-      'Abrasion where a line crosses rebar or aggregate and has rubbed through',
-      'Ground movement stressing a joint under the slab',
-      'Poor original installation with too few sleeves or supports',
-      'High water pressure accelerating wear at weak points',
-    ],
-    whatWeDo: [
-      'Locate the leak precisely with pressure testing and acoustic equipment before touching the floor',
-      'Show you where it is and what the options actually are',
-      'Repair the failed section through the smallest opening the location allows',
-      'Reroute the line above slab where that is the better answer, which it sometimes is',
-      'Handle the permit and inspection where the repair needs one',
-    ],
-    faqs: [
-      {
-        q: 'Will you have to break up my floor?',
-        a: 'Sometimes, but only where the leak actually is, which is the entire reason for locating it properly first. Some slab leaks are better solved by rerouting the line above the slab and abandoning the section underneath.',
-      },
-      {
-        q: 'How did you find it without digging?',
-        a: 'Pressure isolation to confirm which line is leaking, then acoustic listening equipment to pin the location. That is a diagnostic step, and it is worth far more than it costs.',
-      },
-      {
-        q: 'Could it be something else?',
-        a: 'It could. A running toilet, an irrigation leak, or a failed water heater relief valve can all look like a slab leak on a water bill. We rule those out first rather than assuming the expensive answer.',
-      },
-      PRICING_FAQ,
       LICENSED_FAQ,
     ],
   },

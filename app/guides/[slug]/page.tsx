@@ -16,6 +16,7 @@ import { GUIDES, getGuide, guidesByCluster } from '@/config/guides'
 import { getGuideContent } from '@/content/guide-content'
 import { getService } from '@/config/services'
 import { CredentialStrip } from '@/components/ScopeStrip'
+import { PermitNote } from '@/components/PermitNote'
 import { PrimaryCTA, BookOnlineCTA } from '@/components/CTA'
 import { GetService } from '@/components/GetService'
 import { Section, SectionHeading, Eyebrow, QuickAnswer, Prose, FAQ } from '@/components/ui'
@@ -160,6 +161,11 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                 <p className="mt-2 max-w-prose text-lead text-ink/90">{content.verdict}</p>
               </div>
             )}
+
+            {/* Permits live here and nowhere else. See components/PermitNote.tsx */}
+            <div className="mt-10">
+              <PermitNote />
+            </div>
           </div>
 
           <aside className="space-y-6 lg:sticky lg:top-24">

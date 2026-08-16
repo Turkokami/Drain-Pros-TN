@@ -25,7 +25,7 @@ export interface LocationContent {
 
 const CLEVELAND: LocationContent = {
   quickAnswer:
-    'We cover Cleveland and Bradley County for drain cleaning, emergency repair, leak detection, ' +
+    'We cover Cleveland and Bradley County for drain cleaning, emergency repair, leak repair, ' +
     'water heater repair and replacement, tankless, repipes, and fixture work — the full list, ' +
     'across the whole city, about 15 minutes from our base in Charleston. Where a job needs a ' +
     'permit, our office pulls it and books the inspection. Tennessee Limited Licensed Plumber #5045.',
@@ -147,7 +147,7 @@ const CLEVELAND: LocationContent = {
 const CHARLESTON: LocationContent = {
   quickAnswer:
     'Charleston is our home base, so we cover it faster than anyone — drain cleaning, emergency ' +
-    'repair, leak detection, water heater repair, and fixture work across the town and the ' +
+    'repair, leak repair, water heater repair, and fixture work across the town and the ' +
     'surrounding Bradley County area. We are the only plumbing operation actually based in ' +
     'Charleston; everyone else drives in from Cleveland or Athens. Tennessee license #5045.',
   intro: [
@@ -231,7 +231,7 @@ const CHARLESTON: LocationContent = {
 const CALHOUN: LocationContent = {
   quickAnswer:
     'Calhoun sits directly across the Hiwassee River from our Charleston base on US-11, about four ' +
-    'minutes away, so we cover it as home ground. Drain cleaning, emergency repair, leak detection, ' +
+    'minutes away, so we cover it as home ground. Drain cleaning, emergency repair, leak repair, ' +
     'water heater repair, and fixture work across the town and the surrounding McMinn County area. ' +
     'Tennessee license #5045.',
   intro: [
@@ -308,7 +308,7 @@ const CALHOUN: LocationContent = {
 
 const ATHENS: LocationContent = {
   quickAnswer:
-    'We cover Athens and McMinn County for drain cleaning, emergency repair, leak detection, water ' +
+    'We cover Athens and McMinn County for drain cleaning, emergency repair, leak repair, water ' +
     'heater repair, and fixture work — about 18 minutes north of our Charleston base on US-11. ' +
     'Weekend and after-hours coverage is thin among the established operators here, which is a gap ' +
     'we aim to fill. Tennessee license #5045.',
@@ -393,7 +393,7 @@ const ATHENS: LocationContent = {
 
 const OOLTEWAH: LocationContent = {
   quickAnswer:
-    'We cover Ooltewah for drain cleaning, emergency repair, leak detection, water heater repair, ' +
+    'We cover Ooltewah for drain cleaning, emergency repair, leak repair, water heater repair, ' +
     'and fixture work — about 35 minutes from our Charleston base. Ooltewah is one of the ' +
     'fastest-growing parts of the Chattanooga metro, and after-hours availability is thin among the ' +
     'established local operators. Tennessee license #5045.',
@@ -446,7 +446,7 @@ const OOLTEWAH: LocationContent = {
 
 const COLLEGEDALE: LocationContent = {
   quickAnswer:
-    'We cover Collegedale for drain cleaning, emergency repair, leak detection, water heater repair, ' +
+    'We cover Collegedale for drain cleaning, emergency repair, leak repair, water heater repair, ' +
     'and fixture work — about 35 minutes from our Charleston base. Collegedale runs its own building ' +
     'permitting separately from Hamilton County, and it carries a mix of residential and ' +
     'institutional demand. Tennessee license #5045.',
@@ -495,7 +495,7 @@ const COLLEGEDALE: LocationContent = {
 
 const APISON: LocationContent = {
   quickAnswer:
-    'We cover Apison for drain cleaning, emergency repair, leak detection, water heater repair, and ' +
+    'We cover Apison for drain cleaning, emergency repair, leak repair, water heater repair, and ' +
     'fixture work — about 40 minutes from our Charleston base. Apison is the rural-residential edge ' +
     'of the Hamilton County growth corridor, with a high share of private well and septic ' +
     'properties. Tennessee license #5045.',
@@ -542,7 +542,7 @@ const APISON: LocationContent = {
 
 const HARRISON: LocationContent = {
   quickAnswer:
-    'We cover Harrison for drain cleaning, emergency repair, leak detection, water heater repair, ' +
+    'We cover Harrison for drain cleaning, emergency repair, leak repair, water heater repair, ' +
     'and fixture work — about 35 minutes from our Charleston base. Harrison sits along the ' +
     'Chickamauga Lake shoreline northeast of Chattanooga, with a mix of older lake-adjacent homes ' +
     'and newer subdivisions. Tennessee license #5045.',
@@ -653,7 +653,7 @@ const CHATTANOOGA: LocationContent = {
 
 const RICEVILLE: LocationContent = {
   quickAnswer:
-    'We cover Riceville for drain cleaning, emergency repair, leak detection, water heater repair, ' +
+    'We cover Riceville for drain cleaning, emergency repair, leak repair, water heater repair, ' +
     'and fixture work — about 12 minutes from our Charleston base, right on US-11 between Charleston ' +
     'and Athens. Riceville is predominantly well and septic country. Tennessee license #5045.',
   intro: [
@@ -700,7 +700,7 @@ const RICEVILLE: LocationContent = {
 
 const NIOTA: LocationContent = {
   quickAnswer:
-    'We cover Niota for drain cleaning, emergency repair, leak detection, water heater repair, and ' +
+    'We cover Niota for drain cleaning, emergency repair, leak repair, water heater repair, and ' +
     'fixture work — about 25 minutes from our Charleston base. Niota has a notably old housing ' +
     'stock, where galvanized supply-line failure is common. Tennessee license #5045.',
   intro: [
@@ -747,7 +747,7 @@ const NIOTA: LocationContent = {
 
 const ETOWAH: LocationContent = {
   quickAnswer:
-    'We cover Etowah for drain cleaning, emergency repair, leak detection, water heater repair, and ' +
+    'We cover Etowah for drain cleaning, emergency repair, leak repair, water heater repair, and ' +
     'fixture work — about 30 minutes from our Charleston base. Etowah was built as a railroad town ' +
     'in the early 1900s, so older cast iron and galvanized systems are common, and weekend coverage ' +
     'here is thin. Tennessee license #5045.',
@@ -797,7 +797,7 @@ const ETOWAH: LocationContent = {
 
 const ENGLEWOOD: LocationContent = {
   quickAnswer:
-    'We cover Englewood for drain cleaning, emergency repair, leak detection, water heater repair, ' +
+    'We cover Englewood for drain cleaning, emergency repair, leak repair, water heater repair, ' +
     'and fixture work — about 35 minutes from our Charleston base. A former mill town at the eastern ' +
     'edge of McMinn County, Englewood has a high share of early-1900s housing. Tennessee license ' +
     '#5045.',
@@ -843,7 +843,7 @@ const ENGLEWOOD: LocationContent = {
 
 const BENTON: LocationContent = {
   quickAnswer:
-    'We cover Benton and Polk County for drain cleaning, emergency repair, leak detection, water ' +
+    'We cover Benton and Polk County for drain cleaning, emergency repair, leak repair, water ' +
     'heater repair, and fixture work — about 20 minutes from our Charleston base. Benton is a rural ' +
     'county seat with heavy well and septic use and no plumbing operator anchored there. Tennessee ' +
     'license #5045.',
@@ -892,7 +892,7 @@ const BENTON: LocationContent = {
 
 const OCOEE: LocationContent = {
   quickAnswer:
-    'We cover Ocoee for drain cleaning, emergency repair, leak detection, water heater repair, and ' +
+    'We cover Ocoee for drain cleaning, emergency repair, leak repair, water heater repair, and ' +
     'fixture work — about 18 minutes from our Charleston base. Ocoee sits between Cleveland and the ' +
     'Ocoee River recreation corridor, with a mix of year-round rural homes and seasonal ' +
     'river-adjacent property. Tennessee license #5045.',
@@ -940,7 +940,7 @@ const OCOEE: LocationContent = {
 
 const OLD_FORT: LocationContent = {
   quickAnswer:
-    'We cover Old Fort for drain cleaning, emergency repair, leak detection, water heater repair, ' +
+    'We cover Old Fort for drain cleaning, emergency repair, leak repair, water heater repair, ' +
     'and fixture work — about 15 minutes from our Charleston base. Old Fort is a rural community in ' +
     'northern Polk County, predominantly private well and septic, with long service runs common. ' +
     'Tennessee license #5045.',
@@ -988,7 +988,7 @@ const OLD_FORT: LocationContent = {
 
 const DELANO: LocationContent = {
   quickAnswer:
-    'We cover Delano for drain cleaning, emergency repair, leak detection, water heater repair, and ' +
+    'We cover Delano for drain cleaning, emergency repair, leak repair, water heater repair, and ' +
     'fixture work — about 22 minutes from our Charleston base. Delano is a small community on the ' +
     'Hiwassee River in northern Polk County, almost entirely well and septic. Tennessee license ' +
     '#5045.',
@@ -1034,7 +1034,7 @@ const DELANO: LocationContent = {
 
 const GEORGETOWN: LocationContent = {
   quickAnswer:
-    'We cover Georgetown for drain cleaning, emergency repair, leak detection, water heater repair, ' +
+    'We cover Georgetown for drain cleaning, emergency repair, leak repair, water heater repair, ' +
     'and fixture work — about 20 minutes from our Charleston base. Georgetown sits at the ' +
     'Hamilton–Meigs–Bradley county convergence and is closer to us than to any Chattanooga-based ' +
     'operator. Tennessee license #5045.',
@@ -1080,7 +1080,7 @@ const GEORGETOWN: LocationContent = {
 
 const BIRCHWOOD: LocationContent = {
   quickAnswer:
-    'We cover Birchwood for drain cleaning, emergency repair, leak detection, water heater repair, ' +
+    'We cover Birchwood for drain cleaning, emergency repair, leak repair, water heater repair, ' +
     'and fixture work — about 25 minutes from our Charleston base. Birchwood is a rural northern ' +
     'Hamilton County community near the Chickamauga Lake headwaters, predominantly well and septic. ' +
     'Tennessee license #5045.',
@@ -1126,7 +1126,7 @@ const BIRCHWOOD: LocationContent = {
 
 const DECATUR: LocationContent = {
   quickAnswer:
-    'We cover Decatur and Meigs County for drain cleaning, emergency repair, leak detection, water ' +
+    'We cover Decatur and Meigs County for drain cleaning, emergency repair, leak repair, water ' +
     'heater repair, and fixture work — about 30 minutes from our Charleston base. Decatur is a rural ' +
     'county seat with almost no resident plumbing coverage and heavy well and septic use. Tennessee ' +
     'license #5045.',
@@ -1173,7 +1173,7 @@ const DECATUR: LocationContent = {
 
 const SODDY_DAISY: LocationContent = {
   quickAnswer:
-    'We cover Soddy-Daisy for drain cleaning, emergency repair, leak detection, water heater repair, ' +
+    'We cover Soddy-Daisy for drain cleaning, emergency repair, leak repair, water heater repair, ' +
     'and fixture work — about 40 minutes from our Charleston base. Soddy-Daisy administers its own ' +
     'permitting separately from Chattanooga, and its housing spans a wide range of ages. Tennessee ' +
     'license #5045.',
@@ -1254,7 +1254,7 @@ export function fallbackLocationContent(loc: Location): LocationContent {
   return {
     quickAnswer:
       `We cover ${loc.name} and the surrounding ${loc.county} County area for drain cleaning, ` +
-      `emergency repair, leak detection, water heater repair and replacement, and fixture work, ` +
+      `emergency repair, leak repair, water heater repair and replacement, and fixture work, ` +
       `about ${loc.driveMinutes} minutes from our base in Charleston. Where a job needs a permit, ` +
       `our office pulls it and books the inspection. TN license #5045.`,
     intro: [

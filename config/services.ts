@@ -68,16 +68,6 @@ export const SERVICES: Service[] = [
     priority: 'lead',
   },
   {
-    slug: 'leak-detection',
-    name: 'Leak Detection',
-    summary: 'Locating hidden leaks in walls, slabs, and supply lines.',
-    pillar: 'core',
-    licenseScope: 'in',
-    requiresPermit: false,
-    phase: 1,
-    priority: 'primary',
-  },
-  {
     slug: 'fixture-repair',
     name: 'Fixture Repair & Replacement',
     summary: 'Faucets, toilets, sinks, tubs, and shutoff valves.',
@@ -279,6 +269,28 @@ export const OUT_OF_SCOPE = [
 ] as const
 
 export const OUT_OF_SCOPE_SLUGS = new Set<string>(OUT_OF_SCOPE.map((s) => s.slug))
+
+/**
+ * NOT OUT OF SCOPE — DELIBERATELY NOT OFFERED.
+ *
+ * Distinct from OUT_OF_SCOPE above, which is a licensing boundary. This is work
+ * a plumbing license permits but that we choose not to take on, because someone
+ * else does it better and with equipment we do not carry. Naming the referral
+ * partner is the point: "we do not do that" is far more useful to a caller when
+ * it comes with "call these people instead."
+ *
+ * Confirmed by the license holder, 2026-08-16.
+ */
+export const REFERRED_OUT = [
+  {
+    name: 'Exterior and slab leak detection',
+    reason:
+      'Specialist locating work with equipment we do not carry. We repair leaks we can reach, ' +
+      'and we can attempt to locate one behind a wall, but pinpointing a leak under a slab or ' +
+      'out in the yard is its own trade.',
+    referTo: 'American Leak Detection',
+  },
+] as const
 
 export function getService(slug: string): Service | undefined {
   return SERVICES.find((s) => s.slug === slug)
