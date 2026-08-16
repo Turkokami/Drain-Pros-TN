@@ -28,7 +28,7 @@ export interface Guide {
   summary: string
   /** Service this guide feeds. Must exist in SERVICES. */
   service: string
-  cluster: 'water-heating' | 'water-quality'
+  cluster: 'water-heating' | 'water-quality' | 'rural-property' | 'drains'
   /** Guides that compare two options render a comparison table. */
   comparison?: boolean
 }
@@ -140,6 +140,49 @@ export const GUIDES: Guide[] = [
     service: 'whole-house-water-filtration',
     cluster: 'water-quality',
   },
+
+  // --- Drains -------------------------------------------------------------
+  {
+    slug: 'hydro-jetting-vs-cabling',
+    name: 'Hydro Jetting or Cabling?',
+    summary: 'When a cable is enough and when the line needs actually cleaning.',
+    service: 'drain-cleaning',
+    cluster: 'drains',
+    comparison: true,
+  },
+
+  // --- Rural property -----------------------------------------------------
+  // The well and septic PROPERTY pillar. House side only, always. The systems
+  // themselves are separately licensed and are referred out — see
+  // what-we-refer-out, which exists to say that plainly rather than bury it.
+  {
+    slug: 'what-we-refer-out',
+    name: 'What We Do Not Do, and Who We Send You To',
+    summary: 'The work that is outside a plumbing license, said plainly.',
+    service: 'septic-property-plumbing',
+    cluster: 'rural-property',
+  },
+  {
+    slug: 'rural-crawlspace-runs',
+    name: 'Crawlspace Plumbing on Rural Property',
+    summary: 'Why country houses freeze and leak differently, and what to check.',
+    service: 'well-property-plumbing',
+    cluster: 'rural-property',
+  },
+  {
+    slug: 'long-service-runs',
+    name: 'Long Water Line Runs on Acreage',
+    summary: 'Pressure loss, freeze exposure, and locating a leak in a 300-foot run.',
+    service: 'water-service-line',
+    cluster: 'rural-property',
+  },
+  {
+    slug: 'manufactured-homes',
+    name: 'Plumbing in Manufactured and Mobile Homes',
+    summary: 'What is genuinely different about them, and what that means for repairs.',
+    service: 'fixture-repair',
+    cluster: 'rural-property',
+  },
 ]
 
 export const GUIDE_CLUSTERS: Array<{ key: Guide['cluster']; title: string; blurb: string }> = [
@@ -154,6 +197,17 @@ export const GUIDE_CLUSTERS: Array<{ key: Guide['cluster']; title: string; blurb
     title: 'Water quality and treatment',
     blurb:
       'Hard water, iron, sulfur, and sediment — what is in the water across this corridor and what each fix actually addresses.',
+  },
+  {
+    key: 'drains',
+    title: 'Drains and sewer lines',
+    blurb: 'How a line actually gets cleared, and when clearing it is the wrong answer.',
+  },
+  {
+    key: 'rural-property',
+    title: 'Well, septic, and rural property',
+    blurb:
+      'The house side of country properties — crawlspace runs, long service lines, manufactured homes, and an honest account of what we refer out.',
   },
 ]
 

@@ -724,6 +724,255 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       LICENSED_FAQ,
     ],
   },
+
+  // ================================================================== DRAINS
+  'hydro-jetting-vs-cabling': {
+    quickAnswer:
+      'A cable punches a hole through a blockage. A jetter scours the pipe wall. For a one-off clog a cable is usually the right, cheaper answer. For grease, scale, or a line that keeps blocking in the same place, cabling is a temporary fix and jetting is the one that lasts.',
+    lede:
+      'These are different tools for different problems, and the honest version is that most calls only need the cheaper one. Selling a jetting job on a simple clog is a good way to overcharge someone, so it is worth understanding which is which.',
+    sections: [
+      {
+        heading: 'What a cable actually does',
+        paragraphs: [
+          'A drain cable, or snake, is a flexible steel line driven down the pipe with a cutting head on the end. It bores through whatever is blocking the line and restores flow.',
+          'For most blockages that is exactly what is needed and it is done in one visit. Where it falls short is when the problem is a coating on the pipe wall rather than a plug in the middle of it — the cable makes an opening, and the grease or scale around that opening is still there to catch the next thing that passes.',
+        ],
+      },
+      {
+        heading: 'What jetting does differently',
+        paragraphs: [
+          'A jetter pushes a high-pressure hose down the line with a nozzle that fires backward, scouring the pipe wall as it is pulled through. It removes the buildup rather than boring through it.',
+          'That matters most on grease from a kitchen line, on scale in an older pipe, and on lines with fine root hair. It effectively returns the pipe closer to its original diameter rather than leaving a channel through the middle of the obstruction.',
+        ],
+      },
+      {
+        heading: 'When neither is the answer',
+        paragraphs: [
+          'If the pipe has a belly, an offset joint, or a collapsed section, no amount of clearing fixes it. That is the case for cameraing the line before spending more on repeat clearing — you are otherwise paying to manage a structural problem indefinitely.',
+          'We would rather show you the footage and let you decide than sell you the same clearing twice a year.',
+        ],
+      },
+    ],
+    comparison: {
+      columns: ['Cabling', 'Hydro jetting'],
+      rows: [
+        { factor: 'What it does', a: 'Bores through the blockage', b: 'Scours the pipe wall clean' },
+        { factor: 'Cost', a: 'Lower', b: 'Higher' },
+        { factor: 'Best for', a: 'A one-off clog, solid obstructions', b: 'Grease, scale, fine roots, repeat blockages' },
+        { factor: 'How long it lasts', a: 'Until the surrounding buildup catches again', b: 'Longer, because the buildup is gone' },
+        { factor: 'On fragile old pipe', a: 'Generally gentler', b: 'Needs assessment first — we camera before jetting' },
+        { factor: 'Fixes a structural fault', a: 'No', b: 'No — that needs repair, not clearing' },
+      ],
+    },
+    verdict:
+      'First blockage in that line? Cable it. Third blockage in the same spot, or a kitchen line thick with grease? Jetting is the one that actually changes the outcome. And if a camera shows a belly or a break, neither one is the answer and we will say so.',
+    faqs: [
+      {
+        q: 'Will jetting damage my old pipes?',
+        a: 'It can on pipe that has already failed, which is why we assess the line before jetting rather than after. On sound pipe it is safe and it is the more thorough option.',
+      },
+      {
+        q: 'Why did my drain block again so quickly?',
+        a: 'Usually because the cable made an opening through buildup that is still lining the pipe. That is the classic case for jetting, or for a camera if it keeps happening in the same spot.',
+      },
+      {
+        q: 'Do you cover this everywhere?',
+        a: 'Yes. Drain work needs no permit, so it runs across the whole service area including inside Chattanooga city limits.',
+      },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  // ========================================================= RURAL PROPERTY
+  'what-we-refer-out': {
+    quickAnswer:
+      'Septic systems and well systems. Tanks, drain fields, pumping, well drilling, pumps, and pressure tanks are separately licensed trades in Tennessee and we do not touch them. We do all the plumbing in the house those systems serve, which is most of what people actually call about.',
+    lede:
+      'Most contractors handle scope by not mentioning it, and you find the boundary partway through a job. We would rather put it on a page. Knowing what someone does not do tells you more about them than a list of what they do.',
+    sections: [
+      {
+        heading: 'Septic — the tank is not ours, the house is',
+        paragraphs: [
+          'The septic tank, the drain field, and pumping the system are separately licensed work in Tennessee. We do not install them, repair them, or pump them, and we would not take that job if you offered it.',
+          'What we do is everything on the house side of the system: the drain lines, the fixtures, the vents, and septic-safe plumbing inside the home. When a house on septic has a backup, the first job is working out whether it is the house line or the system — and we will tell you plainly which one it is even when the answer means we are not the ones fixing it.',
+        ],
+      },
+      {
+        heading: 'Wells — the same line, in the same place',
+        paragraphs: [
+          'Well drilling, pump replacement, and pressure tank service are separately licensed. We do not do them.',
+          'We do the plumbing from the house side onward, including water treatment, which is how most well-water complaints actually get solved. Iron staining, sulfur smell, sediment, and hardness are all treated after the water reaches the house, and that is squarely our work.',
+        ],
+      },
+      {
+        heading: 'Why we put this in writing',
+        paragraphs: [
+          'Because the alternative is discovering it mid-job, which is worse for you and worse for us. A contractor who takes on work outside their license is telling you something about how they will handle the rest of it.',
+          'When a job is outside our scope we say so and point you to a contractor we would use ourselves. That referral costs you nothing and it is a better outcome than a plumber improvising on a septic field.',
+        ],
+      },
+    ],
+    verdict:
+      'If your problem is inside the house, it is ours. If it is the tank, the field, the well, or the pump, it is not, and we will tell you that on the phone rather than after we have arrived.',
+    faqs: [
+      {
+        q: 'My septic is backing up. Can you help at all?',
+        a: 'We can determine whether it is the house line or the system, which is genuinely useful because they look identical from inside the house. If it is the house line, we clear it. If it is the tank or field, we point you to a septic contractor.',
+      },
+      {
+        q: 'Can you fix my well pump?',
+        a: 'No. Pumps and pressure tanks are separately licensed in Tennessee. We handle the plumbing and the water treatment from the house side, and refer the well itself out.',
+      },
+      {
+        q: 'Is there anything else you turn down?',
+        a: 'Commercial new construction, which is a different scale of project. Beyond that, if a job is genuinely beyond what we should take on, we say so rather than learn on your house.',
+      },
+      LICENSED_FAQ,
+    ],
+  },
+
+  'rural-crawlspace-runs': {
+    quickAnswer:
+      'Country houses fail differently from town houses, and the crawlspace is usually why. Long unheated runs, open vents, and pipe hung in still air mean rural properties freeze sooner and hide leaks longer. Most of it is preventable with insulation and knowing where your shutoff is.',
+    lede:
+      'A lot of the properties we serve across Polk, Meigs, and outer McMinn County sit over open crawlspaces, on acreage, with plumbing running further and colder than the same house in town would.',
+    sections: [
+      {
+        heading: 'Why they freeze first',
+        paragraphs: [
+          'A crawlspace with open vents is effectively outdoors. Pipe hung under a floor in that space has no heat around it, and on a hard freeze the exposed runs go first — usually the longest run, or the one nearest a vent.',
+          'The other regular culprit is the outdoor spigot. A hose left connected over winter stops a frost-free spigot draining back, which puts water in the pipe inside the wall exactly where it will split.',
+        ],
+      },
+      {
+        heading: 'Why leaks hide longer',
+        paragraphs: [
+          'In a house on a slab, a leak shows up on the floor. Over a crawlspace it drips into dirt, and it can run for months before anyone notices anything except a water bill creeping up.',
+          'That is why an unexplained bill increase on a rural property is worth taking seriously, and why we start by isolating the supply and checking the meter rather than opening anything up.',
+        ],
+      },
+      {
+        heading: 'What actually helps',
+        paragraphs: [
+          'Insulating the exposed runs, closing crawlspace vents through winter, and disconnecting hose bibs in the fall covers most freeze failures. None of it is expensive relative to one burst pipe.',
+          'Knowing exactly where the main shutoff is matters more on a rural property than anywhere else, because the response time on a burst is longer and every minute of it is water into the crawlspace.',
+        ],
+      },
+    ],
+    verdict:
+      'Before winter: disconnect the hoses, close the crawlspace vents, and find your main shutoff. Those three cost nothing and prevent most of the calls we get in a cold snap.',
+    faqs: [
+      {
+        q: 'How do I know if I have a crawlspace leak?',
+        a: 'A water bill that has climbed without a change in use is the usual first sign. Shut everything off and watch the meter — if it is still moving, water is going somewhere.',
+      },
+      {
+        q: 'Is closing the crawlspace vents safe?',
+        a: 'For winter, generally yes, and it is common practice around here. Moisture management matters, so it is worth doing thoughtfully rather than sealing everything permanently.',
+      },
+      {
+        q: 'Do you cover the rural properties, or just the towns?',
+        a: 'We cover them. Being based in Charleston puts us closer to a lot of these properties than the Cleveland and Chattanooga operators who treat them as the end of a route.',
+      },
+      LICENSED_FAQ,
+    ],
+  },
+
+  'long-service-runs': {
+    quickAnswer:
+      'On acreage, the water line from the meter or well to the house can run hundreds of feet. That distance costs you pressure, adds freeze exposure, and makes a leak much harder to find — which is why locating it properly before digging matters far more here than on a town lot.',
+    lede:
+      'A long service run is the plumbing problem unique to rural property. The pipe is longer, it is buried across ground nobody has looked at in decades, and when it fails the failure could be anywhere along it.',
+    sections: [
+      {
+        heading: 'Pressure over distance',
+        paragraphs: [
+          'Every foot of pipe costs a little pressure, and so does every fitting and every foot of elevation gain. On a short town run that is negligible. On a three-hundred-foot run up a rise it is very much not.',
+          'Undersized pipe makes it worse. A line that was adequate for the original house often is not after a bathroom was added, and the symptom is pressure that collapses when a second fixture opens.',
+        ],
+      },
+      {
+        heading: 'Finding a leak in a long run',
+        paragraphs: [
+          'The wrong approach is trenching along the line hoping to find it. The right one is isolating the run, confirming the leak is in it rather than in the house, and then locating the failure point before any digging starts.',
+          'That diagnostic step is worth far more than it costs on a long run, because the difference between one targeted excavation and a trench across a field is enormous.',
+        ],
+      },
+      {
+        heading: 'Freeze exposure',
+        paragraphs: [
+          'Long runs are often shallower than they should be, particularly where they cross rock or were laid quickly. Shallow pipe freezes, and on a run that length there is a lot of it to go wrong.',
+          'When we replace a service line, depth and routing get done properly, and our office pulls the permit and books the inspection as part of the job.',
+        ],
+      },
+    ],
+    verdict:
+      'If pressure has fallen off gradually or the bill has climbed, get the run isolated and tested before anyone puts a shovel in the ground. On a long line, locating the problem is most of the value.',
+    faqs: [
+      {
+        q: 'My pressure is bad at the far end of the property. Is that fixable?',
+        a: 'Usually. It comes down to pipe size, run length, and elevation. Sometimes it is a partly closed valve or a failing regulator rather than the run at all, which is a much cheaper answer.',
+      },
+      {
+        q: 'How do you find a leak in a 300-foot line?',
+        a: 'By isolating sections and using pressure and acoustic methods to narrow it down before digging. Trenching on a guess is how people end up with a ruined yard and the leak still running.',
+      },
+      {
+        q: 'Do you replace whole service lines?',
+        a: 'Yes, across the whole service area. Our office pulls the permit and books the inspection as part of the job.',
+      },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'manufactured-homes': {
+    quickAnswer:
+      'Manufactured homes use different materials, different pipe sizes, and different fittings than site-built houses, and they are plumbed for transport as well as for use. That means some parts are not interchangeable with standard fixtures, and a plumber who does not work on them regularly will fit the wrong thing.',
+    lede:
+      'There are a lot of manufactured homes across this corridor, and they are frequently treated as an afterthought by contractors set up for site-built work. The plumbing is not worse — it is genuinely different, and the differences matter for repairs.',
+    sections: [
+      {
+        heading: 'What is actually different',
+        paragraphs: [
+          'Supply pipe is often a smaller diameter than in a site-built house, and drain runs are shallower with less fall because everything sits within a shallow floor cavity. That changes how a blockage behaves and how a fixture has to be plumbed.',
+          'Some fixtures and water heaters are specific to manufactured homes and are not interchangeable with standard units. Fitting a standard heater where a manufactured-home unit is required is a real and reasonably common mistake.',
+        ],
+      },
+      {
+        heading: 'Where the failures concentrate',
+        paragraphs: [
+          'Underbelly runs are exposed and freeze readily, especially where insulation has been damaged or animals have been in it. Shutoffs and connections work loose over time from settling.',
+          'And because there is less fall on drain lines, kitchen and laundry drains block sooner than the equivalent in a site-built house.',
+        ],
+      },
+      {
+        heading: 'How we approach them',
+        paragraphs: [
+          'With the right parts. That sounds obvious and it is exactly what goes wrong when a crew that rarely works on these turns up with standard fittings.',
+          'The work itself is ordinary plumbing and squarely within scope. We are not doing anything exotic — we are just not treating a manufactured home like a site-built one.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Do you work on mobile and manufactured homes?',
+        a: 'Yes, and regularly. There are a lot of them across this corridor and they get treated as an afterthought by plenty of contractors.',
+      },
+      {
+        q: 'Can I use a standard water heater in mine?',
+        a: 'Often not. Many manufactured homes require a unit specifically listed for that use. Fitting a standard one where it is not permitted is a mistake we get called out to correct.',
+      },
+      {
+        q: 'My underbelly line froze. Can it be prevented?',
+        a: 'Largely, yes — repairing damaged insulation and skirting, and making sure the underbelly is intact, addresses most of it. It is worth doing before winter rather than after.',
+      },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
 }
 
 export function getGuideContent(slug: string): GuideContent | null {

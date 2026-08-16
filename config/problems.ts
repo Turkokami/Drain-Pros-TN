@@ -95,6 +95,14 @@ export const PROBLEMS: Problem[] = [
     group: 'drain-sewer',
   },
   {
+    slug: 'kitchen-drain-clog',
+    name: 'Kitchen Drain Keeps Clogging',
+    summary: 'The one drain in the house that blocks from grease, not from debris.',
+    service: 'drain-cleaning',
+    urgent: false,
+    group: 'drain-sewer',
+  },
+  {
     slug: 'root-intrusion',
     name: 'Tree Roots in the Sewer Line',
     summary: 'Roots finding a joint or crack and filling the pipe.',

@@ -109,43 +109,34 @@ content `content/problem-content.ts`, route `app/problems/[slug]`, hub
 `app/problems`. Includes the three symptom-led items from the drain cluster
 below, which belong here rather than duplicated as guides.
 
-**Drain cluster — remaining (~3)**
-`hydro-jetting` · `kitchen-drain` · `commercial-drain-maintenance`
-(`main-line-clog`, `recurring-backups`, `root-intrusion` shipped as problems)
+**✅ Drain cluster — complete.** `main-line-clog`, `recurring-backups`,
+`root-intrusion`, `kitchen-drain-clog` shipped as problems; `hydro-jetting`
+shipped as the comparison guide `hydro-jetting-vs-cabling`.
+`commercial-drain-maintenance` moved to Phase 4, where the commercial and
+property-management work already sits.
 
-**Water heating (~8)**
-`sizing-guide` · `tank-vs-tankless` · `gas-vs-electric` · `expansion-tanks` ·
-`hard-water-damage-to-heaters` · `heater-lifespan` · `anode-rods` · `venting`
-
-**✅ Guide cluster — 14 routes, built.** Registry `config/guides.ts`, content
+**✅ Guide cluster — 19 routes, built.** Registry `config/guides.ts`, content
 `content/guide-content.ts`, route `app/guides/[slug]`, hub `app/guides`.
-Water heating (8) and water quality (6).
+Water heating (8), water quality (6), drains (1), rural property (4).
 
 **Dropped as cannibalisation — deliberate.** Four manifest guides duplicated
 service pages that already rank for the same terms, so they were not built:
 `whole-house-filtration`, `softener-service`, `plumbing-on-well-water`,
 `septic-safe-plumbing`. The guides link to those services instead.
 
-**Water quality (~8, 6 built)**
-`hard-water-bradley-county` · `whole-house-filtration` · `softener-service` ·
-`iron-and-sulfur` · `sediment` · `well-water-testing` · `scale-damage` · `taste-and-odor`
+**✅ Problem-intent micro pages — complete, 18 routes.**
 
-**Well & septic property (~6)** — house side only, never system work
-`plumbing-on-well-water` · `septic-safe-plumbing` · `what-we-refer-out` ·
-`rural-crawlspace-runs` · `long-service-runs` · `manufactured-homes`
-
-**Problem-intent micro pages (~14)**
-`no-hot-water` · `water-heater-leaking` · `sewage-smell` · `low-water-pressure` ·
-`running-toilet` · `frozen-pipes` · `burst-pipe` · `slab-leak` · `water-hammer` ·
-`galvanized-pipe-failure` · `brown-water` · `sewer-backup` · `dripping-hose-bib` ·
-`pilot-light-wont-stay-lit`
+**PHASE 3 COMPLETE.** 37 routes across `/problems` (18) and `/guides` (19).
+Site total: 89 static routes.
 
 ---
 
 ## Phase 4 — Authority & Conversion
 
-~18 routes. Gate: Phase 3 indexed.
+~19 routes. Gate: Phase 3 indexed.
 
+- `commercial-drain-maintenance` — moved here from Phase 3, belongs with the
+  commercial and property-management work
 - Permit guidance by county — Bradley, McMinn, Hamilton, Polk, Meigs
 - `what-is-a-limited-licensed-plumber` — explaining the credential class openly is
   a trust play competitors saying only "licensed" cannot match

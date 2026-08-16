@@ -322,6 +322,47 @@ export const PROBLEM_CONTENT: Record<string, ProblemContent> = {
     ],
   },
 
+  'kitchen-drain-clog': {
+    quickAnswer:
+      'Not an emergency, but it will keep happening until the pipe is actually cleaned rather than punched through. Kitchen drains block from grease coating the pipe wall, which is a different problem from the debris blockages other drains get.',
+    lede:
+      'The kitchen line is the one drain in the house that blocks for a specific, predictable reason. Grease goes down warm and liquid, then cools on the pipe wall and stays there. Every wash adds another layer, and the pipe closes up gradually from the outside in.',
+    symptoms: [
+      'The kitchen sink draining slower over weeks or months',
+      'Standing water that takes a long time to clear',
+      'Gurgling from the other side of a double sink',
+      'A drain that was cleared recently and has slowed again',
+      'A smell from the drain, from the same buildup',
+    ],
+    causes: [
+      'Grease and cooking fat coating the pipe wall, which is far and away the usual cause',
+      'Food debris caught on grease that is already there',
+      'A garbage disposal sending fine material into a line that is already narrowed',
+      'Soap and detergent residue building on top of the grease',
+      'A long or poorly graded run under the house, common in manufactured homes where there is less fall',
+    ],
+    faqs: [
+      {
+        q: 'Why does it keep coming back after it is cleared?',
+        a: 'Because a cable bores a hole through the grease and leaves the rest lining the pipe. It drains again, then closes back in. A kitchen line thick with grease is the clearest case there is for jetting rather than cabling.',
+      },
+      {
+        q: 'Do the store-bought drain chemicals work?',
+        a: 'On a light grease film sometimes. On a properly blocked line, generally not, and they make the pipe hazardous for whoever opens it next. We would rather you did not.',
+      },
+      {
+        q: 'Does running hot water help?',
+        a: 'It moves the grease further down the line rather than removing it, so it relocates the problem instead of solving it. The blockage just forms somewhere less convenient.',
+      },
+      {
+        q: 'Is my garbage disposal to blame?',
+        a: 'It contributes. A disposal grinds food fine enough to pass, but fine material sticks readily to a greasy pipe wall. It is not the root cause; the grease is.',
+      },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
   'root-intrusion': {
     quickAnswer:
       'Common and fixable. Roots do not break into a sound pipe — they find a joint or crack that is already leaking and grow toward the water. Clearing them helps; finding where they are getting in is what stops it coming back.',
