@@ -29,6 +29,7 @@ import { LICENSE, IDENTITY, OPERATIONS, type Fact } from '../config/business'
 import { PUBLISHING } from '../config/policy'
 import { PROBLEMS, unboundProblems } from '../config/problems'
 import { GUIDES, unboundGuides } from '../config/guides'
+import { COUNTIES, unboundCounties } from '../config/counties'
 import { assertSellable } from '../lib/scope-guard'
 
 const ROOT = join(__dirname, '..')
@@ -169,6 +170,9 @@ for (const loc of LOCATIONS) {
 for (const p of unboundProblems()) {
   fail(`[7b] Problem "${p.slug}" binds to unknown service "${p.service}". Fix config/problems.ts.`)
 }
+for (const c of unboundCounties()) {
+  fail(`[7b] County page "${c.slug}" has no bound jurisdiction or no served town. Fix config/counties.ts.`)
+}
 for (const g of unboundGuides()) {
   fail(`[7b] Guide "${g.slug}" binds to unknown service "${g.service}". Fix config/guides.ts.`)
 }
@@ -218,6 +222,7 @@ console.log(`  Locations registered     ${LOCATIONS.length}`)
 console.log(`  Jurisdictions            ${Object.keys(JURISDICTIONS).length}`)
 console.log(`  Problem pages            ${PROBLEMS.length}`)
 console.log(`  Guide pages              ${GUIDES.length}`)
+console.log(`  County permit pages      ${COUNTIES.length}`)
 console.log(`  Service×location blocked ${blockedCount} combinations withheld by the guard`)
 console.log(
   `  Permit gate              ${

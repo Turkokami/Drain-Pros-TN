@@ -28,7 +28,7 @@ export interface Guide {
   summary: string
   /** Service this guide feeds. Must exist in SERVICES. */
   service: string
-  cluster: 'water-heating' | 'water-quality' | 'rural-property' | 'drains'
+  cluster: 'water-heating' | 'water-quality' | 'rural-property' | 'drains' | 'working-with-us'
   /** Guides that compare two options render a comparison table. */
   comparison?: boolean
 }
@@ -151,6 +151,24 @@ export const GUIDES: Guide[] = [
     comparison: true,
   },
 
+  // --- Working with us ----------------------------------------------------
+  // Phase 4 authority content. Explaining the credential class openly is a
+  // trust play a competitor who only says "licensed" cannot match.
+  {
+    slug: 'what-is-a-limited-licensed-plumber',
+    name: 'What Is a Limited Licensed Plumber?',
+    summary: 'What the license class actually covers, and why we publish the number.',
+    service: 'drain-cleaning',
+    cluster: 'working-with-us',
+  },
+  {
+    slug: 'how-our-estimates-work',
+    name: 'How Our Estimates Work',
+    summary: 'Why the number you approve is the number you pay.',
+    service: 'drain-cleaning',
+    cluster: 'working-with-us',
+  },
+
   // --- Rural property -----------------------------------------------------
   // The well and septic PROPERTY pillar. House side only, always. The systems
   // themselves are separately licensed and are referred out — see
@@ -197,6 +215,12 @@ export const GUIDE_CLUSTERS: Array<{ key: Guide['cluster']; title: string; blurb
     title: 'Water quality and treatment',
     blurb:
       'Hard water, iron, sulfur, and sediment — what is in the water across this corridor and what each fix actually addresses.',
+  },
+  {
+    key: 'working-with-us',
+    title: 'Working with us',
+    blurb:
+      'The credential, the estimate, and what we refer out. The parts most companies leave vague.',
   },
   {
     key: 'drains',

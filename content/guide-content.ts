@@ -785,6 +785,106 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
     ],
   },
 
+  // ======================================================== WORKING WITH US
+  'what-is-a-limited-licensed-plumber': {
+    quickAnswer:
+      'It is a Tennessee licence class that covers residential and light commercial plumbing, issued by the state Board for Licensing Contractors. Ours is #5045 and you can check it yourself at verify.tn.gov. Most companies in this market say "licensed" and stop there — the number is the part that means anything.',
+    lede:
+      'Almost every plumbing advert in southeast Tennessee contains the word "licensed", and almost none of them contain a number. That is worth understanding, because the two are not the same claim.',
+    sections: [
+      {
+        heading: 'What the class actually is',
+        paragraphs: [
+          'Tennessee licences plumbing work through the Board for Licensing Contractors, part of the Department of Commerce and Insurance. A Limited Licensed Plumber is the credential for residential and light commercial plumbing — the drains, supply lines, fixtures, water heaters, and gas work in and around a house.',
+          'It is a real state licence with a real number, an issuing authority, and an expiry date. Ours is #5045 and it runs through May 2027. All of that is on every page of this site and it links straight to the state lookup.',
+        ],
+      },
+      {
+        heading: 'Why "licensed" on its own tells you nothing',
+        paragraphs: [
+          'Nobody checks. That is the honest reason the word gets used so freely — it costs nothing to type and almost no customer follows it up, so an unlicensed operator and a licensed one look identical in an advert.',
+          'Publishing the number changes that, because it makes the claim falsifiable. Anyone can put #5045 into verify.tn.gov and see whether it is current. Across the eighteen local competitors reviewed in August 2026, not one published theirs.',
+        ],
+      },
+      {
+        heading: 'What it does not cover',
+        paragraphs: [
+          'A plumbing licence is not a septic licence and it is not a well licence. Septic tanks, drain fields, well drilling, pumps, and pressure tanks are separately licensed trades in Tennessee, and we refer all of that out rather than stretch a credential to cover it.',
+          'Knowing where a licence stops is as useful as knowing what it covers. A contractor who takes on work outside theirs is telling you something about how they will handle the rest of the job.',
+        ],
+      },
+    ],
+    verdict:
+      'Ask any plumber for their licence number before they start, then look it up. It takes a minute, it costs nothing, and it is the single most useful piece of due diligence available to you. Ours is #5045.',
+    faqs: [
+      {
+        q: 'How do I check a Tennessee plumbing licence?',
+        a: 'Go to verify.tn.gov and search the number or the name. It will show you the class, the status, and the expiry. If a contractor will not give you a number, that is your answer.',
+      },
+      {
+        q: 'Is a Limited Licensed Plumber less qualified than other classes?',
+        a: 'It is a different scope, not a lesser one. It is the credential for residential and light commercial plumbing, which is the work most homeowners actually need. Larger commercial and industrial projects sit under different classifications.',
+      },
+      {
+        q: 'Does the licence cover septic or wells?',
+        a: 'No. Those are separately licensed in Tennessee. We do all the plumbing inside a house on well or septic, and refer the systems themselves to the right contractor.',
+      },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'how-our-estimates-work': {
+    quickAnswer:
+      'We diagnose before we quote, give you one number, and that number holds once the work starts. The reason we are specific about this is that quotes climbing mid-job is a documented pattern in this market — one competitor review describes a job going from roughly $1,200 to $1,995 after work began.',
+    lede:
+      'The complaint that comes up most in local plumbing reviews is not bad work. It is a price that moved. Someone approves a number, the job starts, and the figure at the end is not the figure at the beginning.',
+    sections: [
+      {
+        heading: 'Diagnose first, quote second',
+        paragraphs: [
+          'Most price surprises trace back to quoting before anyone knew what the job actually was. A sewer line quoted blind, a leak quoted before it was located, a water heater quoted without looking at the venting.',
+          'So we find the problem first. Camera down the line, locate the leak, test the components — then price the work the house actually needs. That step is why the number holds.',
+        ],
+      },
+      {
+        heading: 'One number, before anything starts',
+        paragraphs: [
+          'You get a figure to say yes or no to before the first tool comes out, including at nine at night on an emergency call. If you say no, that is a complete answer and nobody is annoyed about it.',
+          'On a bigger job — a repipe, a sewer replacement, a long service line — that matters more, not less, which is why we scope those properly rather than starting and discovering.',
+        ],
+      },
+      {
+        heading: 'When something genuinely changes',
+        paragraphs: [
+          'Occasionally opening something up reveals a condition nobody could have seen: a second failure behind the first, a section of pipe worse than the camera suggested. That is real and it happens in this trade.',
+          'When it does, the work stops and we talk to you before anything else is done. What we will not do is keep working and present a larger number at the end. The difference between a revised estimate you agreed to and a bill that grew is consent, and it is the entire point.',
+        ],
+      },
+    ],
+    verdict:
+      'Ask any plumber whether the quote holds once work begins, and ask what happens if they find something unexpected. The answer to the second question tells you more than the first. Ours: we stop and ask you.',
+    faqs: [
+      {
+        q: 'Do you charge for the estimate?',
+        a: 'We tell you up front how a diagnostic works when you call, so there is no surprise on the doorstep. The goal is a clear number you can accept or decline before any work happens.',
+      },
+      {
+        q: 'What if you find something worse once you start?',
+        a: 'We stop and talk to you before continuing. You get a revised number to approve or decline. That is different from a bill that quietly grew, and the difference is that you agreed to it.',
+      },
+      {
+        q: 'Do you quote over the phone?',
+        a: 'We will give you an honest sense of what something usually involves, but a real number comes after we have seen the job. A confident phone quote on a sewer line is how people end up with a price that moves.',
+      },
+      {
+        q: 'Is emergency work priced differently?',
+        a: 'You still approve a number before the repair starts. Making the situation safe comes first, then the price conversation, then the fix.',
+      },
+      LICENSED_FAQ,
+    ],
+  },
+
   // ========================================================= RURAL PROPERTY
   'what-we-refer-out': {
     quickAnswer:

@@ -9,15 +9,31 @@
 
 import { IDENTITY, OPERATIONS, OWNERSHIP, LICENSE, fact, factOr } from '@/config/business'
 
+/**
+ * Full navigation. Used by the mobile menu and the footer, where vertical space
+ * is free and every route should be reachable.
+ */
 export const NAV: Array<{ href: string; label: string }> = [
   { href: '/services', label: 'Services' },
   { href: '/service-areas', label: 'Service areas' },
   { href: '/problems', label: 'Problems' },
   { href: '/guides', label: 'Guides' },
+  { href: '/permits', label: 'Permits' },
   { href: '/about', label: 'About' },
   { href: '/reviews', label: 'Reviews' },
   { href: '/contact', label: 'Contact' },
 ]
+
+/**
+ * Header navigation — deliberately shorter than NAV.
+ *
+ * Eight items overflowed the header row and made the page body scroll
+ * sideways, which is the one layout rule this project does not bend. Reviews
+ * is the item that comes out: it is reachable from the footer, the mobile menu,
+ * and the CTAs, and it is the least likely thing a visitor navigates to from
+ * the top bar. Everything else stays.
+ */
+export const HEADER_NAV = NAV.filter((item) => item.href !== '/reviews')
 
 /** Confirmed to "Drain Pros TN". Fallback kept only so dev never renders blank. */
 export function businessName(): string {

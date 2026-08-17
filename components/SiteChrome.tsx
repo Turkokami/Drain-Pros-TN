@@ -7,7 +7,7 @@
  * resolve to honest placeholders, never fake numbers.
  */
 
-import { NAV, businessName, licenseNumber, phone, bookingUrl, TAGLINE } from '@/lib/site'
+import { NAV, HEADER_NAV, businessName, licenseNumber, phone, bookingUrl, TAGLINE } from '@/lib/site'
 import { SAB } from '@/config/business'
 import { MobileNav } from '@/components/MobileNav'
 
@@ -36,8 +36,8 @@ export function SiteHeader() {
           </span>
         </a>
 
-        <nav aria-label="Primary" className="hidden items-center gap-7 md:flex">
-          {NAV.map((item) => (
+        <nav aria-label="Primary" className="hidden items-center gap-5 lg:flex xl:gap-7">
+          {HEADER_NAV.map((item) => (
             <a
               key={item.href}
               href={item.href}
@@ -54,7 +54,7 @@ export function SiteHeader() {
               href={booking}
               target="_blank"
               rel="noopener"
-              className="hidden items-center gap-1.5 whitespace-nowrap rounded-md border border-verdigris/50 px-4 py-2 font-display text-sm font-bold text-verdigris transition-all hover:-translate-y-0.5 hover:bg-verdigris hover:text-ink lg:inline-flex"
+              className="hidden items-center gap-1.5 whitespace-nowrap rounded-md border border-verdigris/50 px-4 py-2 font-display text-sm font-bold text-verdigris transition-all hover:-translate-y-0.5 hover:bg-verdigris hover:text-ink xl:inline-flex"
             >
               Request service <span aria-hidden>↗</span>
             </a>
