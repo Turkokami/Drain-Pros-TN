@@ -352,7 +352,7 @@ export default function HomePage() {
         <FAQ items={HOME_FAQS} />
       </Section>
 
-      <WorkGallery limit={9} />
+      <WorkGallery limit={12} />
 
       <CTABand />
     </>

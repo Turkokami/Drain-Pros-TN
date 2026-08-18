@@ -47,15 +47,15 @@ export const GALLERY_CAPTIONS: Record<string, { alt: string; caption?: string }>
     alt: 'Corroded cast iron pipe in a crawlspace, photographed before repair',
     caption: 'Before: corroded line found on inspection',
   },
+  // Client note 2026-08-18: this is the new valve body (source file pipe2.jpg).
+  // Named for what it is rather than described generically.
   'pipe-repair-03.jpg': {
-    alt: 'Pipe repair on a residential line',
-    caption: 'Pipe repair',
-  },
-  // Client note 2026-08-18: "would be a new valve body" - named correctly rather
-  // than described generically.
-  'copper-repipe.jpg': {
-    alt: 'New valve body installed in a wall recess with copper supply lines',
+    alt: 'New valve body installed on a residential water line',
     caption: 'New valve body installed',
+  },
+  'copper-repipe.jpg': {
+    alt: 'Copper and PVC pipe work in a wall',
+    caption: 'Copper and PVC pipe work',
   },
   'toilet-work-01.jpg': {
     alt: 'Toilet repair and reset',

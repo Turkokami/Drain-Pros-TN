@@ -54,11 +54,10 @@ const SERVICE_PHOTOS: Record<string, string> = {
   'sewer-line-repair': 'sewer-camera-02.jpg',
   'water-heater-repair': 'water-heater-01.jpg',
   'water-heater-replacement': 'water-heater-02.jpg',
-  'fixture-repair': 'toilet-work-01.jpg',
+  'fixture-repair': 'pipe-repair-03.jpg',
   'repiping': 'copper-repipe.jpg',
   'water-service-line': 'water-service-pumpout.jpg',
   'gas-line-services': 'pipe-repair-02.jpg',
-  'well-property-plumbing': 'pipe-repair-03.jpg',
   'septic-property-plumbing': 'drain-cleaning-03.jpg',
 }
 
