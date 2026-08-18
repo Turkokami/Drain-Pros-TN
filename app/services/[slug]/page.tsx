@@ -19,6 +19,7 @@ import { LOCATIONS } from '@/config/locations'
 import { assertSellable } from '@/lib/scope-guard'
 import { getServiceContent } from '@/content/service-content'
 import { photoForService } from '@/lib/gallery'
+import { BeforeAfterPair } from '@/components/BeforeAfter'
 import { CredentialStrip } from '@/components/ScopeStrip'
 import { PermitNote } from '@/components/PermitNote'
 import { PrimaryCTA, EmergencyCTA } from '@/components/CTA'
@@ -169,6 +170,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </a>
             </div>
           </aside>
+        </div>
+      </Section>
+
+      {/* BEFORE / AFTER — real proof, where a pair exists for this service. */}
+      <Section tone="paper" padded={false}>
+        <div className="my-4">
+          <BeforeAfterPair slug={slug} />
         </div>
       </Section>
 

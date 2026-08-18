@@ -48,7 +48,7 @@ const PILLARS: Array<{ key: Pillar; title: string; blurb: string }> = [
 ]
 
 const DESCRIPTION =
-  'Drain cleaning, emergency repair, leak detection, water heaters, tankless, and water quality ' +
+  'Woman-owned and family-run. Drain cleaning, emergency repair, water heaters, tankless, and water quality ' +
   'across Charleston, Cleveland, Athens, the US-11 corridor, and greater Chattanooga. TN license #5045.'
 
 export const metadata = buildMetadata({

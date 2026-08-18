@@ -52,8 +52,6 @@ const SERVICE_PHOTOS: Record<string, string> = {
   'emergency-plumbing': 'pipe-repair-01.jpg',
   'camera-inspection': 'sewer-camera-01.jpg',
   'sewer-line-repair': 'sewer-camera-02.jpg',
-  'water-heater-repair': 'water-heater-01.jpg',
-  'water-heater-replacement': 'water-heater-02.jpg',
   'fixture-repair': 'pipe-repair-03.jpg',
   'repiping': 'copper-repipe.jpg',
   'water-service-line': 'water-service-pumpout.jpg',
@@ -94,4 +92,56 @@ export function photoForService(slug: string): GalleryPhoto | null {
 /** Photo for a problem page, or null when we have no honest match. */
 export function photoForProblem(slug: string): GalleryPhoto | null {
   return lookup(PROBLEM_PHOTOS[slug])
+}
+
+/**
+ * BEFORE / AFTER PAIRS
+ *
+ * Three of the job photos are two ends of the same job, confirmed by the client
+ * on 2026-08-18. They were previously mapped to separate pages, which quietly
+ * misrepresented one job as two - the old heater illustrated "water heater
+ * repair" while its replacement illustrated "water heater replacement".
+ *
+ * Paired they are the strongest evidence on the site. A before and after of the
+ * same fixture is the one format a competitor cannot fake with stock imagery.
+ */
+export interface BeforeAfter {
+  label: string
+  before: GalleryPhoto
+  after: GalleryPhoto
+}
+
+const PAIRS: Record<string, { label: string; before: string; after: string }> = {
+  'water-heater-replacement': {
+    label: 'Water heater replacement',
+    before: 'water-heater-01.jpg',
+    after: 'water-heater-02.jpg',
+  },
+  'fixture-repair': {
+    label: 'Toilet pulled, repaired, and reset',
+    before: 'toilet-work-01.jpg',
+    after: 'toilet-work-02.jpg',
+  },
+  'dripping-hose-bib': {
+    label: 'Outdoor spigot repair',
+    before: 'hose-bib-before.jpg',
+    after: 'hose-bib-after.jpg',
+  },
+}
+
+/** The before/after pair for a service or problem slug, when one exists. */
+export function beforeAfterFor(slug: string): BeforeAfter | null {
+  const p = PAIRS[slug]
+  if (!p) return null
+  const before = lookup(p.before)
+  const after = lookup(p.after)
+  if (!before || !after) return null
+  return { label: p.label, before, after }
+}
+
+/** Every pair, for the homepage proof block. */
+export function allBeforeAfter(): BeforeAfter[] {
+  return Object.keys(PAIRS)
+    .map(beforeAfterFor)
+    .filter((p): p is BeforeAfter => p !== null)
 }

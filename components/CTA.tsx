@@ -109,7 +109,7 @@ export function BookOnlineCTA({
  */
 export function CTABand({
   heading = 'Get a licensed plumber on the job.',
-  sub = 'Straight pricing you approve before we start. Serving Charleston, Cleveland, Athens, the US-11 corridor, and greater Chattanooga.',
+  sub = 'Woman-owned, family-run, and licensed. Straight pricing you approve before we start, across Charleston, Cleveland, Athens, the US-11 corridor, and greater Chattanooga.',
 }: {
   heading?: string
   sub?: string

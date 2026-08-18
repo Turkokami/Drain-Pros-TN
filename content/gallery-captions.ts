@@ -28,13 +28,17 @@ export const GALLERY_CAPTIONS: Record<string, { alt: string; caption?: string }>
     alt: 'Sewer camera inspection rig on the job',
     caption: 'Sewer camera on site',
   },
+  // BEFORE/AFTER PAIR (source waterheater1.jpg / waterheater2.jpg). Same job,
+  // both ends - confirmed by client 2026-08-18. Render them together via
+  // beforeAfterPairs() in lib/gallery.ts; separated they read as two unrelated
+  // jobs, which is what they were doing before this was flagged.
   'water-heater-01.jpg': {
-    alt: 'Water heater work in a Tennessee home',
-    caption: 'Water heater service',
+    alt: 'The old water heater in place before replacement',
+    caption: 'Before',
   },
   'water-heater-02.jpg': {
-    alt: 'Water heater in a crawlspace',
-    caption: 'Water heater in a crawlspace',
+    alt: 'The replacement water heater installed and connected',
+    caption: 'After',
   },
   'pipe-repair-01.jpg': {
     alt: 'Underground drain line repair with new PVC and a wye fitting',
@@ -57,21 +61,24 @@ export const GALLERY_CAPTIONS: Record<string, { alt: string; caption?: string }>
     alt: 'Copper and PVC pipe work in a wall',
     caption: 'Copper and PVC pipe work',
   },
+  // BEFORE/AFTER PAIR (source toilet1.jpg / toilet2.jpg). Same job, both ends -
+  // confirmed by client 2026-08-18.
   'toilet-work-01.jpg': {
-    alt: 'Toilet repair and reset',
-    caption: 'Toilet repair and reset',
+    alt: 'Toilet pulled and the flange exposed, before the repair',
+    caption: 'Before',
   },
   'toilet-work-02.jpg': {
-    alt: 'Toilet rebuild',
-    caption: 'Toilet rebuild',
+    alt: 'The same toilet reset and finished after the repair',
+    caption: 'After',
   },
+  // BEFORE/AFTER PAIR (source Broken spigot.jpg / repaired spigot.jpg).
   'hose-bib-before.jpg': {
-    alt: 'A broken outdoor spigot (hose bib) before repair',
-    caption: 'Broken outdoor spigot — before',
+    alt: 'A broken outdoor spigot before repair',
+    caption: 'Before',
   },
   'hose-bib-after.jpg': {
-    alt: 'A repaired outdoor spigot (hose bib)',
-    caption: 'The same hose bib — repaired',
+    alt: 'The same outdoor spigot after repair',
+    caption: 'After',
   },
   'water-service-pumpout.jpg': {
     alt: 'Pumping out a water meter box to work on the service line',

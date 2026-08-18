@@ -25,7 +25,7 @@ import {
 
 const DESCRIPTION =
   'Reach Drain Pros TN for plumbing across Charleston, Cleveland, Athens, the US-11 corridor, and ' +
-  'greater Chattanooga. Service-area business — we come to you.'
+  'greater Chattanooga. Woman-owned and family-run, service-area only — we come to you.'
 
 export const metadata = buildMetadata({
   title: 'Contact — Licensed Plumber, Charleston TN',

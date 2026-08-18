@@ -24,9 +24,9 @@ export function GetService({ service, place }: { service?: string; place?: strin
             <p className="eyebrow text-verdigris">Get service</p>
             <h2 className="mt-3 text-display-lg">{heading}.</h2>
             <p className="mt-4 max-w-prose text-lead text-paper/80">
-              Call for the fastest response, book a time online, or send the form and we’ll reach
-              out. Licensed, straight pricing you approve before we start, and 24/7 emergency
-              service.
+              Call for the fastest response, request service online, or send the form and we’ll
+              reach out. Woman-owned and family-run, licensed, with straight pricing you approve
+              before we start and 24/7 emergency service.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <PrimaryCTA />

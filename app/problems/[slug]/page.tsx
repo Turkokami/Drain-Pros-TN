@@ -20,6 +20,7 @@ import { notFound } from 'next/navigation'
 import { PROBLEMS, getProblem, problemsByGroup } from '@/config/problems'
 import { getProblemContent } from '@/content/problem-content'
 import { photoForProblem } from '@/lib/gallery'
+import { BeforeAfterPair } from '@/components/BeforeAfter'
 import { getService } from '@/config/services'
 import { getServiceContent } from '@/content/service-content'
 import { CredentialStrip } from '@/components/ScopeStrip'
@@ -191,6 +192,12 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
               </div>
             )}
           </aside>
+        </div>
+      </Section>
+
+      <Section tone="paper" padded={false}>
+        <div className="my-4">
+          <BeforeAfterPair slug={problem.slug} />
         </div>
       </Section>
 

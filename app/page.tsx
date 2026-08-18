@@ -40,9 +40,9 @@ import {
 } from '@/lib/schema/graph'
 
 const HERO_ANSWER =
-  'Licensed plumbing for Charleston, Cleveland, Athens, and the US-11 corridor, plus greater ' +
-  'Chattanooga. Drain cleaning, emergency repair, and water heaters, handled by qualified ' +
-  'plumbers you trust, with a price you approve before the work starts.'
+  'Woman-owned, family-run licensed plumbing for Charleston, Cleveland, Athens, and the US-11 ' +
+  'corridor, plus greater Chattanooga. Drain cleaning, emergency repair, and water heaters, ' +
+  'handled by qualified plumbers you trust, with a price you approve before the work starts.'
 
 const LEAD_SERVICES = [
   'drain-cleaning',
@@ -97,10 +97,12 @@ const HOME_FAQS: Array<{ q: string; a: string }> = [
 ]
 
 export const metadata = buildMetadata({
-  title: 'Licensed Plumber in Charleston, Cleveland & Athens, TN',
+  title: 'Woman-Owned Licensed Plumber in Charleston, Cleveland & Athens, TN',
   description: HERO_ANSWER,
   path: '/',
   keywords: [
+    'woman owned plumber Tennessee',
+    'woman owned plumbing company Cleveland TN',
     'plumber Charleston TN',
     'plumber Cleveland TN',
     'plumber Athens TN',
@@ -152,7 +154,7 @@ export default function HomePage() {
           <div className="container-x py-12 md:py-16">
             <div className="grid gap-8 md:grid-cols-[1.35fr_0.65fr] md:items-end">
               <div className="reveal">
-                <Eyebrow className="text-mist">Charleston · Cleveland · Athens · greater Chattanooga</Eyebrow>
+                <Eyebrow className="text-mist">Woman-owned · Charleston · Cleveland · Athens · greater Chattanooga</Eyebrow>
                 <h1 className="mt-3 text-display-xl">A licensed plumber your corridor actually has.</h1>
                 <p className="mt-3 font-display text-display-md font-bold text-verdigris">{TAGLINE}</p>
                 <p className="mt-4 max-w-prose text-lead text-paper/85 speakable">{HERO_ANSWER}</p>

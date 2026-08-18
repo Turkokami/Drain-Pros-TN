@@ -28,7 +28,7 @@ const TIERS: Array<{ key: Parameters<typeof locationsByTier>[0]; title: string; 
 
 const DESCRIPTION =
   'Every town we cover, from Charleston and Cleveland to Athens, the US-11 corridor, and greater ' +
-  'Chattanooga. Service-area business — we come to you.'
+  'Chattanooga. Woman-owned, family-run, service-area business — we come to you.'
 
 export const metadata = buildMetadata({
   title: 'Service Areas — Charleston, Cleveland, Athens & the TN Corridor',
