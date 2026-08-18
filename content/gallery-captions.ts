@@ -40,9 +40,13 @@ export const GALLERY_CAPTIONS: Record<string, { alt: string; caption?: string }>
     alt: 'The replacement water heater installed and connected',
     caption: 'After',
   },
+  // Client correction 2026-08-18, confirmed against the photograph: this is the
+  // water METER in its pit with copper service line running out into the
+  // trench, joined with a compression coupling. It is a water service repair on
+  // the house side of the meter, not a drain line.
   'pipe-repair-01.jpg': {
-    alt: 'Underground drain line repair with new PVC and a wye fitting',
-    caption: 'Underground drain line repair',
+    alt: 'Copper water service line repaired in a trench just past the water meter',
+    caption: 'Water service line repair after the meter',
   },
   // Client note 2026-08-18: this is the BEFORE shot, not the finished work.
   // Labelling it plainly so it reads as a diagnosis rather than our handiwork.
@@ -85,6 +89,8 @@ export const GALLERY_CAPTIONS: Record<string, { alt: string; caption?: string }>
     alt: 'The same outdoor spigot after repair',
     caption: 'After',
   },
+  // Pumping the flooded meter pit dry so the service line can be worked on -
+  // part of the same kind of job as pipe-repair-01.
   'water-service-pumpout.jpg': {
     alt: 'Pumping out a water meter box to work on the service line',
     caption: 'Pumping out a meter box to work the service line',

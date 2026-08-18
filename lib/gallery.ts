@@ -56,12 +56,11 @@ export function galleryPhotos(): GalleryPhoto[] {
  */
 const SERVICE_PHOTOS: Record<string, string> = {
   'drain-cleaning': 'drain-cleaning-01.jpg',
-  'emergency-plumbing': 'pipe-repair-01.jpg',
   'camera-inspection': 'sewer-camera-01.jpg',
   'sewer-line-repair': 'pipe-repair-03.jpg',
   'fixture-repair': 'copper-repipe.jpg',
   'repiping': 'copper-repipe.jpg',
-  'water-service-line': 'water-service-pumpout.jpg',
+  'water-service-line': 'pipe-repair-01.jpg',
   'gas-line-services': 'pipe-repair-02.jpg',
   'septic-property-plumbing': 'drain-cleaning-03.jpg',
 }
@@ -172,6 +171,7 @@ const SERVICE_PHOTO_SETS: Record<string, string[]> = {
     'drain-cleaning-03.jpg',
     'pipe-repair-03.jpg',
   ],
+  'water-service-line': ['pipe-repair-01.jpg', 'water-service-pumpout.jpg'],
   'drain-cleaning': [
     'drain-cleaning-01.jpg',
     'drain-cleaning-02.jpg',
