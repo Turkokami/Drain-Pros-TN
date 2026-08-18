@@ -40,17 +40,22 @@ export const GALLERY_CAPTIONS: Record<string, { alt: string; caption?: string }>
     alt: 'Underground drain line repair with new PVC and a wye fitting',
     caption: 'Underground drain line repair',
   },
+  // Client note 2026-08-18: this is the BEFORE shot, not the finished work.
+  // Labelling it plainly so it reads as a diagnosis rather than our handiwork.
+  // An "after" photo exists and was emailed; swap or pair it in when we have it.
   'pipe-repair-02.jpg': {
-    alt: 'Repairing a broken pipe',
-    caption: 'Pipe repair',
+    alt: 'Corroded cast iron pipe in a crawlspace, photographed before repair',
+    caption: 'Before: corroded line found on inspection',
   },
   'pipe-repair-03.jpg': {
     alt: 'Pipe repair on a residential line',
     caption: 'Pipe repair',
   },
+  // Client note 2026-08-18: "would be a new valve body" - named correctly rather
+  // than described generically.
   'copper-repipe.jpg': {
-    alt: 'Copper and PVC pipe work in a wall',
-    caption: 'Copper and PVC pipe work',
+    alt: 'New valve body installed in a wall recess with copper supply lines',
+    caption: 'New valve body installed',
   },
   'toilet-work-01.jpg': {
     alt: 'Toilet repair and reset',

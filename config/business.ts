@@ -186,15 +186,20 @@ export const IDENTITY = {
   } as Fact<string>,
 
   /**
-   * STILL THE BLOCKER. The client has NOT registered a domain. Their stated
-   * preference is drainprostn.com. Until it is bought and pointed here, every
-   * schema @id and canonical URL renders against a placeholder origin.
-   * Register it, then set this to confirmed — nothing else needs to change.
+   * LIVE as of 2026-08-18. Registered at GoDaddy, DNS pointed at Vercel.
+   *
+   * The www form is canonical: the apex 308-redirects to www, so every
+   * canonical URL and schema @id must use www or they point at a redirect.
+   * Verified by request — https://drainprostn.com resolves to
+   * https://www.drainprostn.com with a 200 and a valid certificate.
+   *
+   * No trailing slash. origin() concatenates paths directly onto this.
    */
   domain: {
-    status: 'pending',
-    blocks: ['canonical URLs', 'sitemap', 'all schema @id values'],
-    askedOn: '2026-08-16',
+    status: 'confirmed',
+    value: 'https://www.drainprostn.com',
+    source: 'Client registered the domain and completed DNS; resolution verified 2026-08-18',
+    confirmedOn: '2026-08-18',
   } as Fact<string>,
 
   /**

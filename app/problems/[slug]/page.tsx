@@ -19,6 +19,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { PROBLEMS, getProblem, problemsByGroup } from '@/config/problems'
 import { getProblemContent } from '@/content/problem-content'
+import { photoForProblem } from '@/lib/gallery'
 import { getService } from '@/config/services'
 import { getServiceContent } from '@/content/service-content'
 import { CredentialStrip } from '@/components/ScopeStrip'
@@ -72,6 +73,7 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
   const serviceContent = service ? getServiceContent(service.slug) : null
   const path = `/problems/${problem.slug}`
   const siblings = problemsByGroup(problem.group).filter((p) => p.slug !== problem.slug)
+  const photo = photoForProblem(problem.slug)
 
   const graph = buildGraph([
     websiteNode(),
@@ -157,6 +159,22 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
           </div>
 
           <aside className="space-y-6 lg:sticky lg:top-24">
+            {photo && (
+              <figure className="overflow-hidden rounded-lg border-2 border-verdigris/50 shadow-lift">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  loading="lazy"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+                {photo.caption && (
+                  <figcaption className="bg-galv px-4 py-2 font-mono text-spec uppercase text-steel">
+                    {photo.caption}
+                  </figcaption>
+                )}
+              </figure>
+            )}
             <CredentialStrip />
             {service && (
               <div className="rounded-card border-l-4 border-verdigris bg-galv p-6">

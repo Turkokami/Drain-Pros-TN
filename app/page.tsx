@@ -131,14 +131,23 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />
 
-      {/* HERO — brand banner + CTA bar */}
+      {/* HERO — brand logo + CTA bar.
+           The wide banner JPG was swapped for the vector logo at client request.
+           SVG rather than the PNG: 39KB against 700KB, and it stays sharp at any
+           size, which matters most on the largest thing on the page. */}
       <section className="bg-pine text-paper">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/banner.jpg"
-          alt="Drain Pros TN — Plumbing & Drain Cleaning. Call 423-413-6876. Fast, reliable, professional. Residential, commercial, and 24/7 emergency service."
-          className="mx-auto block w-full max-w-[1100px]"
-        />
+        <div className="bg-pine bg-blueprint bg-grid">
+          <div className="container-x flex justify-center py-10 md:py-14">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo.svg"
+              alt="Drain Pros TN — Plumbing & Drain Cleaning. Call 423-413-6876."
+              width={853}
+              height={445}
+              className="h-auto w-full max-w-[30rem] md:max-w-[38rem]"
+            />
+          </div>
+        </div>
         <div className="border-t-2 border-verdigris/40 bg-pine bg-blueprint bg-grid">
           <div className="container-x py-12 md:py-16">
             <div className="grid gap-8 md:grid-cols-[1.35fr_0.65fr] md:items-end">

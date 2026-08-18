@@ -18,6 +18,7 @@ import { SERVICES, getService } from '@/config/services'
 import { LOCATIONS } from '@/config/locations'
 import { assertSellable } from '@/lib/scope-guard'
 import { getServiceContent } from '@/content/service-content'
+import { photoForService } from '@/lib/gallery'
 import { CredentialStrip } from '@/components/ScopeStrip'
 import { PermitNote } from '@/components/PermitNote'
 import { PrimaryCTA, EmergencyCTA } from '@/components/CTA'
@@ -75,6 +76,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const decision = assertSellable(slug)
   const requiresCeiling = decision.sellable && decision.requiresCeilingDisclosure
   const served = areaServedSlugs(slug)
+  const photo = photoForService(slug)
   const path = `/services/${service.slug}`
   const isCore = service.pillar === 'core'
 
@@ -134,6 +136,24 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
 
           <aside className="space-y-6 lg:sticky lg:top-24">
+            {/* A real job photo, mapped per service in lib/gallery.ts. Services
+                with no honest match render nothing rather than borrow one. */}
+            {photo && (
+              <figure className="overflow-hidden rounded-lg border-2 border-verdigris/50 shadow-lift">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  loading="lazy"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+                {photo.caption && (
+                  <figcaption className="bg-galv px-4 py-2 font-mono text-spec uppercase text-steel">
+                    {photo.caption}
+                  </figcaption>
+                )}
+              </figure>
+            )}
             <CredentialStrip />
             <div className="rounded-card border-l-4 border-verdigris bg-galv p-6">
               <h2 className="font-mono text-spec uppercase text-steel">Where we cover this</h2>
