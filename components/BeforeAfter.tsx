@@ -23,7 +23,9 @@ function Frame({ photo, tag }: { photo: Pair['before']; tag: string }) {
           src={photo.src}
           alt={photo.alt}
           loading="lazy"
-          className="aspect-[4/3] w-full object-cover"
+          /* Natural aspect, not a fixed crop. Both hose bib shots are portrait
+             and a 4:3 cover crop threw most of each photo away. */
+          className="block h-auto w-full"
         />
         <span className="absolute left-0 top-0 bg-pine/90 px-3 py-1 font-mono text-spec uppercase text-verdigris">
           {tag}

@@ -763,7 +763,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       },
     ],
     process: [
-      { name: 'Access the line', text: 'We enter through the right cleanout so the camera reaches the section that matters.' },
+      { name: 'Access the line', text: 'We enter through the right access point so the camera reaches the section that matters.' },
       { name: 'Run and record', text: 'The camera travels the line while we watch for roots, bellies, grease, and breaks.' },
       { name: 'Show you the footage', text: 'You see exactly what we see, so a repair recommendation is something you can verify.' },
       { name: 'Match the fix to the cause', text: 'Cleaning for a clog, repair for a break — decided from the picture, not a guess.' },

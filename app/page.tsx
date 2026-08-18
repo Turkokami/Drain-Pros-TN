@@ -154,7 +154,10 @@ export default function HomePage() {
           <div className="container-x py-12 md:py-16">
             <div className="grid gap-8 md:grid-cols-[1.35fr_0.65fr] md:items-end">
               <div className="reveal">
-                <Eyebrow className="text-mist">Woman-owned · Charleston · Cleveland · Athens · greater Chattanooga</Eyebrow>
+                <Eyebrow className="text-mist">
+                  <span className="text-rose">Woman-owned</span> · Charleston · Cleveland · Athens ·
+                  greater Chattanooga
+                </Eyebrow>
                 <h1 className="mt-3 text-display-xl">A licensed plumber your corridor actually has.</h1>
                 <p className="mt-3 font-display text-display-md font-bold text-verdigris">{TAGLINE}</p>
                 <p className="mt-4 max-w-prose text-lead text-paper/85 speakable">{HERO_ANSWER}</p>
@@ -316,7 +319,7 @@ export default function HomePage() {
               Twelve months on workmanship, thirty days on drain cleaning, and we publish the
               exclusions. A warranty you can hold us to beats an unqualified promise.
             </Diff>
-            <Diff title="Woman-owned and family-run">
+            <Diff title={<span className="text-rose-700">Woman-owned and family-run</span>}>
               Owned by Kayla Krishan and run with Kevin, who holds the license. Two decades of
               combined trade experience, and you deal with the owners.
             </Diff>
@@ -361,7 +364,7 @@ export default function HomePage() {
   )
 }
 
-function Diff({ title, children }: { title: string; children: React.ReactNode }) {
+function Diff({ title, children }: { title: React.ReactNode; children: React.ReactNode }) {
   return (
     <div className="border-t-2 border-verdigris pt-4">
       <h3 className="font-display text-display-md text-ink">{title}</h3>

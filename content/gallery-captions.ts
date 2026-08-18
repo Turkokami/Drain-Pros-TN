@@ -51,15 +51,20 @@ export const GALLERY_CAPTIONS: Record<string, { alt: string; caption?: string }>
     alt: 'Corroded cast iron pipe in a crawlspace, photographed before repair',
     caption: 'Before: corroded line found on inspection',
   },
-  // Client note 2026-08-18: this is the new valve body (source file pipe2.jpg).
-  // Named for what it is rather than described generically.
+  // Source pipe2.jpg. Inspected the photograph directly: new PVC drain main
+  // tied into the existing cast iron with a coupling. Not a valve body - that
+  // is copper-repipe.jpg. Client asked for it captioned as a partial cast iron
+  // replacement and moved off the fixtures page, which is correct: this is
+  // drain work, not fixture work.
   'pipe-repair-03.jpg': {
-    alt: 'New valve body installed on a residential water line',
-    caption: 'New valve body installed',
+    alt: 'New PVC main drain line tied into existing cast iron in a crawlspace',
+    caption: 'Partial cast iron replacement',
   },
+  // The "copper and valve body" photo. Brass mixing valve with copper supply,
+  // tub spout drop and shower riser - named by the client 2026-08-18.
   'copper-repipe.jpg': {
-    alt: 'Copper and PVC pipe work in a wall',
-    caption: 'Copper and PVC pipe work',
+    alt: 'New tub and shower valve body with copper supply lines in an open wall',
+    caption: 'New tub/shower valve body',
   },
   // BEFORE/AFTER PAIR (source toilet1.jpg / toilet2.jpg). Same job, both ends -
   // confirmed by client 2026-08-18.

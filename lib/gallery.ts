@@ -25,7 +25,14 @@ export function galleryPhotos(): GalleryPhoto[] {
   } catch {
     return []
   }
-  return files.sort().map((file) => {
+  // Sort so a BEFORE always precedes its AFTER. A plain alphabetical sort put
+  // "hose-bib-after" ahead of "hose-bib-before", which showed the finished
+  // spigot first and the broken one second - the story backwards. Mapping the
+  // suffixes to -a/-b keeps pairs adjacent and in the right order.
+  const orderKey = (f: string) => f.replace('-before', '-a').replace('-after', '-b')
+  return files
+    .sort((x, y) => orderKey(x).localeCompare(orderKey(y)))
+    .map((file) => {
     const meta = GALLERY_CAPTIONS[file]
     return {
       src: `/photos/${encodeURIComponent(file)}`,
@@ -51,8 +58,8 @@ const SERVICE_PHOTOS: Record<string, string> = {
   'drain-cleaning': 'drain-cleaning-01.jpg',
   'emergency-plumbing': 'pipe-repair-01.jpg',
   'camera-inspection': 'sewer-camera-01.jpg',
-  'sewer-line-repair': 'sewer-camera-02.jpg',
-  'fixture-repair': 'pipe-repair-03.jpg',
+  'sewer-line-repair': 'pipe-repair-03.jpg',
+  'fixture-repair': 'copper-repipe.jpg',
   'repiping': 'copper-repipe.jpg',
   'water-service-line': 'water-service-pumpout.jpg',
   'gas-line-services': 'pipe-repair-02.jpg',
@@ -144,4 +151,36 @@ export function allBeforeAfter(): BeforeAfter[] {
   return Object.keys(PAIRS)
     .map(beforeAfterFor)
     .filter((p): p is BeforeAfter => p !== null)
+}
+
+/**
+ * PHOTO SETS — for pages where one image undersells the work.
+ *
+ * Camera inspection is the clearest case: the whole pitch is "you see the
+ * footage before you decide", so showing the rig, the access, and the line
+ * itself carries the argument better than a single shot. Client asked for more
+ * pictures there specifically.
+ *
+ * Rendered as a plain responsive grid rather than a carousel. A slideshow hides
+ * most of its content behind a control nobody presses, and on a phone it fights
+ * the page scroll.
+ */
+const SERVICE_PHOTO_SETS: Record<string, string[]> = {
+  'camera-inspection': [
+    'sewer-camera-01.jpg',
+    'sewer-camera-02.jpg',
+    'drain-cleaning-03.jpg',
+    'pipe-repair-03.jpg',
+  ],
+  'drain-cleaning': [
+    'drain-cleaning-01.jpg',
+    'drain-cleaning-02.jpg',
+    'drain-cleaning-03.jpg',
+    'drain-cleaning-04.jpg',
+  ],
+}
+
+/** Extra photos for a service page, beyond the single sidebar image. */
+export function photoSetForService(slug: string): GalleryPhoto[] {
+  return (SERVICE_PHOTO_SETS[slug] ?? []).map(lookup).filter((p): p is GalleryPhoto => p !== null)
 }

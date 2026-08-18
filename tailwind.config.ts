@@ -35,6 +35,14 @@ export default {
         paper: '#FFFFFF',          // white page background
         steel: '#565B61',          // cool secondary text
         mist: '#A7B6C6',           // cool light — muted text on dark panels
+        // WOMAN-OWNED BRANDING ONLY. Client asked for the woman-owned wording in
+        // pink. Two tokens because one pink cannot carry both grounds: the light
+        // rose is for the navy panels (header, footer, hero) and the deep rose is
+        // for white and grey cards, where the light one would fail contrast.
+        // Like `signal`, keep it to its one job — a pink used decoratively stops
+        // meaning anything.
+        rose: '#F4A7C4',           // light pink — on navy/black panels
+        'rose-700': '#B03A6B',     // deep pink — on white/grey, passes contrast
         // EMERGENCY CTA ONLY. Red rather than amber, so it stays distinct from the
         // gold brand. Never decorative — this is the one hard design rule.
         signal: '#C93A2C',

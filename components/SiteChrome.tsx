@@ -29,9 +29,12 @@ export function SiteHeader() {
               every page. Only one variant is in the layout at a time, so screen
               readers announce it once. */}
           <span className="mt-1 whitespace-nowrap font-mono text-eyebrow uppercase text-mist">
-            <span className="xl:hidden">Woman-owned · TN LLP #{licenseNumber()}</span>
+            <span className="xl:hidden">
+              <span className="text-rose">Woman-owned</span> · TN LLP #{licenseNumber()}
+            </span>
             <span className="hidden xl:inline">
-              Woman-owned · TN Limited Licensed Plumber · #{licenseNumber()}
+              <span className="text-rose">Woman-owned</span> · TN Limited Licensed Plumber ·{' '}
+              #{licenseNumber()}
             </span>
           </span>
         </a>
@@ -88,8 +91,9 @@ export function SiteFooter() {
             {p ? <span className="text-paper">{p}</span> : 'Phone: pending'} · Charleston, TN {SAB.postalCode}
           </p>
           <p className="mt-4 max-w-prose text-sm text-paper/70">
-            Woman-owned and family-run. Licensed plumbing for Charleston, Cleveland, Athens, the
-            US-11 corridor, and greater Chattanooga. Service-area only — we come to you.
+            <span className="font-semibold text-rose">Woman-owned and family-run.</span> Licensed
+            plumbing for Charleston, Cleveland, Athens, the US-11 corridor, and greater
+            Chattanooga. Service-area only — we come to you.
           </p>
         </div>
 
@@ -127,8 +131,8 @@ export function SiteFooter() {
 
       <div className="border-t border-white/10">
         <p className="container-x py-4 font-mono text-spec uppercase text-mist">
-          © {year} {name}. Woman-owned · Tennessee Limited Licensed Plumber · Service-area
-          business, Charleston TN.
+          © {year} {name}. <span className="text-rose">Woman-owned</span> · Tennessee Limited
+          Licensed Plumber · Service-area business, Charleston TN.
         </p>
       </div>
     </footer>

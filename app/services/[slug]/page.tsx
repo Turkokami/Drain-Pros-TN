@@ -18,7 +18,7 @@ import { SERVICES, getService } from '@/config/services'
 import { LOCATIONS } from '@/config/locations'
 import { assertSellable } from '@/lib/scope-guard'
 import { getServiceContent } from '@/content/service-content'
-import { photoForService } from '@/lib/gallery'
+import { photoForService, photoSetForService } from '@/lib/gallery'
 import { BeforeAfterPair } from '@/components/BeforeAfter'
 import { CredentialStrip } from '@/components/ScopeStrip'
 import { PermitNote } from '@/components/PermitNote'
@@ -78,6 +78,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const requiresCeiling = decision.sellable && decision.requiresCeilingDisclosure
   const served = areaServedSlugs(slug)
   const photo = photoForService(slug)
+  const photoSet = photoSetForService(slug)
   const path = `/services/${service.slug}`
   const isCore = service.pillar === 'core'
 
@@ -172,6 +173,38 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </aside>
         </div>
       </Section>
+
+      {/* PHOTO SET — where one image undersells the work. */}
+      {photoSet.length > 0 && (
+        <Section tone="bone">
+          <SectionHeading
+            eyebrow="On the job"
+            title={`${service.name} in the field`}
+            intro="Our own photographs, not stock."
+          />
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {photoSet.map((ph) => (
+              <figure
+                key={ph.file}
+                className="overflow-hidden rounded-lg border-2 border-verdigris/40 bg-paper shadow-card"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={ph.src}
+                  alt={ph.alt}
+                  loading="lazy"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+                {ph.caption && (
+                  <figcaption className="px-3 py-2 font-mono text-spec uppercase text-steel">
+                    {ph.caption}
+                  </figcaption>
+                )}
+              </figure>
+            ))}
+          </div>
+        </Section>
+      )}
 
       {/* BEFORE / AFTER — real proof, where a pair exists for this service. */}
       <Section tone="paper" padded={false}>
