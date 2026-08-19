@@ -396,6 +396,35 @@ export const OPERATIONS = {
  * "visit us". Publishing it risks GBP suspension and puts a residential
  * address into permanent circulation.
  */
+/**
+ * GOOGLE BUSINESS PROFILE — verified configuration.
+ *
+ * Confirmed by the client on 2026-08-19: the listing is set up as a
+ * service-area business with the street address HIDDEN.
+ *
+ * This is not a cosmetic setting. Showing a residential address on a GBP is
+ * grounds for suspension, and it puts a home address into permanent
+ * circulation — the same rule the linter enforces across this repo in check
+ * [1]. If anyone ever edits the listing, re-check this before saving: Google
+ * periodically prompts to "add your address" and accepting that prompt is the
+ * usual way it gets undone.
+ */
+export const GOOGLE_BUSINESS_PROFILE = {
+  isServiceAreaBusiness: {
+    status: 'confirmed',
+    value: true,
+    source: 'Confirmed by client 2026-08-19 — "GBP is a SAB, address is hidden"',
+    confirmedOn: '2026-08-19',
+  } as Fact<boolean>,
+
+  addressHidden: {
+    status: 'confirmed',
+    value: true,
+    source: 'Confirmed by client 2026-08-19',
+    confirmedOn: '2026-08-19',
+  } as Fact<boolean>,
+} as const
+
 export const SAB = {
   isServiceAreaBusiness: true,
   publishStreetAddress: false,
