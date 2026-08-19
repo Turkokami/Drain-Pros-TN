@@ -93,6 +93,9 @@ export function businessNode() {
     ...(fact('OPERATIONS.insurance', OPERATIONS.insurance)
       ? { knowsAbout: 'Licensed and insured residential and light commercial plumbing' }
       : {}),
+    ...(fact('IDENTITY.profileUrl', IDENTITY.profileUrl)
+      ? { sameAs: [fact('IDENTITY.profileUrl', IDENTITY.profileUrl)] }
+      : {}),
     priceRange: '$$',
     ...(hoursConfirmed()?.afterHours
       ? {

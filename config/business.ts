@@ -186,6 +186,32 @@ export const IDENTITY = {
   } as Fact<string>,
 
   /**
+   * GOOGLE BUSINESS PROFILE.
+   *
+   * reviewUrl is the WRITE-a-review form - it opens the star box directly, so
+   * it belongs behind "leave a review" and nowhere else. Sending a prospective
+   * customer there asks them to review a company they have not hired yet.
+   *
+   * profileUrl is the READ link, built from the Place ID that the short g.page
+   * link resolves to (ChIJz4VzrTZDyywRa3Ex2JdY3g8). That is the one to use for
+   * "see our reviews", and it is also the canonical URL for schema sameAs,
+   * which ties this site to the Google listing as the same entity.
+   */
+  reviewUrl: {
+    status: 'confirmed',
+    value: 'https://g.page/r/CWtxMdiXWN4PEBM/review',
+    source: 'Provided by client 2026-08-19; resolves 200 to the Google write-review form',
+    confirmedOn: '2026-08-19',
+  } as Fact<string>,
+
+  profileUrl: {
+    status: 'confirmed',
+    value: 'https://www.google.com/maps/place/?q=place_id:ChIJz4VzrTZDyywRa3Ex2JdY3g8',
+    source: 'Derived from the Place ID in the client review link; verified 200',
+    confirmedOn: '2026-08-19',
+  } as Fact<string>,
+
+  /**
    * LIVE as of 2026-08-18. Registered at GoDaddy, DNS pointed at Vercel.
    *
    * The www form is canonical: the apex 308-redirects to www, so every

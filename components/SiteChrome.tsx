@@ -7,7 +7,16 @@
  * resolve to honest placeholders, never fake numbers.
  */
 
-import { NAV, HEADER_NAV, businessName, licenseNumber, phone, bookingUrl, TAGLINE } from '@/lib/site'
+import {
+  NAV,
+  HEADER_NAV,
+  businessName,
+  licenseNumber,
+  phone,
+  bookingUrl,
+  googleProfileUrl,
+  TAGLINE,
+} from '@/lib/site'
 import { SAB } from '@/config/business'
 import { MobileNav } from '@/components/MobileNav'
 
@@ -79,6 +88,7 @@ export function SiteFooter() {
   const name = businessName()
   const p = phone()
   const booking = bookingUrl()
+  const profile = googleProfileUrl()
   const year = 2026 // build env forbids Date.now(); bump at year turn.
 
   return (
@@ -126,6 +136,16 @@ export function SiteFooter() {
           >
             Verify with the State of Tennessee →
           </a>
+          {profile && (
+            <a
+              href={profile}
+              target="_blank"
+              rel="noopener"
+              className="font-mono text-spec uppercase text-copper underline underline-offset-4"
+            >
+              Read our Google reviews →
+            </a>
+          )}
         </div>
       </div>
 

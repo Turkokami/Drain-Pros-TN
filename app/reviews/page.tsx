@@ -8,6 +8,7 @@
  */
 
 import { PrimaryCTA, CTABand } from '@/components/CTA'
+import { reviewUrl, googleProfileUrl } from '@/lib/site'
 import { Section, Eyebrow, Prose } from '@/components/ui'
 import { buildMetadata } from '@/lib/seo'
 import {
@@ -31,6 +32,8 @@ export const metadata = buildMetadata({
 })
 
 export default function ReviewsPage() {
+  const review = reviewUrl()
+  const profile = googleProfileUrl()
   const path = '/reviews'
   const graph = buildGraph([
     websiteNode(),
@@ -79,16 +82,48 @@ export default function ReviewsPage() {
             </p>
           </Prose>
 
-          <div className="mt-10 rounded-card border-l-4 border-verdigris bg-galv p-6">
-            <h2 className="font-mono text-spec uppercase text-steel">Worked with us?</h2>
-            <p className="mt-2 max-w-prose text-sm text-ink/90">
-              If we have done a job for you, a short honest review is the most useful thing you can do
-              for a small operation. Get in touch and we will point you to the right place to leave
-              one.
-            </p>
-            <div className="mt-4">
-              <PrimaryCTA />
+          {profile && (
+            <div className="mt-10 rounded-card border-l-4 border-verdigris bg-galv p-6">
+              <h2 className="font-mono text-spec uppercase text-steel">Read our Google reviews</h2>
+              <p className="mt-2 max-w-prose text-sm text-ink/90">
+                Everything customers have written about us is on the Google listing. We do not
+                collect reviews anywhere else, so that is the whole picture rather than a selected
+                slice of it.
+              </p>
+              <a
+                href={profile}
+                target="_blank"
+                rel="noopener"
+                className="mt-4 inline-flex items-center gap-2 rounded-lg border-2 border-pine/30 px-6 py-3 font-display font-bold text-pine transition-all hover:-translate-y-0.5 hover:bg-pine hover:text-paper"
+              >
+                See reviews on Google <span aria-hidden>↗</span>
+              </a>
             </div>
+          )}
+
+          {/* The WRITE form. Only for people we have already worked for - it opens
+              the star box directly, so it must never be aimed at a prospect. */}
+          {review && (
+            <div className="mt-6 rounded-card border-l-4 border-rose-700 bg-galv p-6">
+              <h2 className="font-mono text-spec uppercase text-steel">Worked with us?</h2>
+              <p className="mt-2 max-w-prose text-sm text-ink/90">
+                A short honest review is the most useful thing you can do for a small,
+                woman-owned operation. This link opens the review box straight away — it takes about
+                a minute.
+              </p>
+              <a
+                href={review}
+                target="_blank"
+                rel="noopener"
+                className="mt-4 inline-flex items-center gap-2 rounded-lg bg-gradient-to-b from-[#E7BB3E] to-[#C08B12] px-6 py-3 font-display font-bold text-ink shadow-[0_8px_20px_-6px_rgba(217,165,32,0.6)] ring-1 ring-inset ring-white/25 transition-all hover:-translate-y-0.5"
+              >
+                Leave a Google review <span aria-hidden>↗</span>
+              </a>
+            </div>
+          )}
+
+          <div className="mt-6">
+            <PrimaryCTA />
           </div>
         </div>
       </Section>

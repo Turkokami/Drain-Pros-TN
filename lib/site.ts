@@ -72,6 +72,16 @@ export function hours(): { afterHours: boolean; weekends: boolean; note: string 
   return fact('OPERATIONS.hours', OPERATIONS.hours)
 }
 
+/** Google write-a-review form. For customers who have ALREADY been served. */
+export function reviewUrl(): string | null {
+  return fact('IDENTITY.reviewUrl', IDENTITY.reviewUrl)
+}
+
+/** Google listing, for reading reviews. Also the schema sameAs target. */
+export function googleProfileUrl(): string | null {
+  return fact('IDENTITY.profileUrl', IDENTITY.profileUrl)
+}
+
 /** Registered entity. "Drain Pros TN" is the DBA — see businessName(). */
 export function legalName(): string | null {
   return fact('IDENTITY.legalName', IDENTITY.legalName)
