@@ -403,7 +403,7 @@ const OOLTEWAH: LocationContent = {
       'fails differently than an old house does, and the established local operator closes early and ' +
       'does not work weekends.',
     'That combination — heavy new construction and thin availability — is exactly the gap we serve. ' +
-      'The full service list runs here, and where a job needs a permit our office pulls it with Hamilton County and books the inspection.',
+      'Permit-free work runs here in full — drains, emergencies, leaks, fixtures, camera work, disposals, and water heater repair. Hamilton County does not accept a permit application from a Limited Licensed Plumber, so anything that needs one goes to a licensed partner who does the work and meets the inspector. We tell you which side your job falls on when you call.',
   ],
   localSections: [
     {
@@ -438,7 +438,7 @@ const OOLTEWAH: LocationContent = {
   faqs: [
     { q: 'How far is Ooltewah from your base?', a: 'About 35 minutes from Charleston. We serve it as part of the Hamilton County growth corridor.' },
     { q: 'Do you cover Ooltewah after hours?', a: 'The established local operator closes early and skips weekends, and closing that gap is part of why we serve Ooltewah. Emergency and drain work is what we move fastest on. Call for a real timing answer.' },
-    { q: 'Which jobs can you do in Ooltewah now?', a: 'The full list — drains, emergencies, leaks, water heater repair and replacement, fixtures, repipes, and sewer work. Where a job needs a permit, our office pulls it as part of the work.' },
+    { q: 'Which jobs can you do in Ooltewah now?', a: 'The permit-free work: drain cleaning, emergency and leak repair, fixture repair and replacement, camera inspection, disposals, and water heater repair. Work that needs a permit — water heater replacement, tankless, repipes, sewer and service lines, gas — goes to a licensed partner, because the permit office here does not accept an application from our license class.' },
     { q: 'My home is only a few years old. Why would it need a plumber?', a: 'New homes fail differently, not never. Builder-grade fixtures, shutoffs, and rushed connections are common early issues, and they are exactly the straightforward repairs we handle.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
@@ -455,7 +455,7 @@ const COLLEGEDALE: LocationContent = {
       'neighbors in one way that matters for plumbing: it administers its own building permits, ' +
       'separately from Hamilton County. It is also home to Southern Adventist University, which gives ' +
       'the area a mix of residential and institutional demand.',
-    'The full service list runs across Collegedale: drains, emergencies, leaks, water heater repair and replacement, fixtures, and the larger permitted jobs. Because City of Collegedale administers its own permitting, a permitted job here is filed with the city rather than the county, and our office handles that.',
+    'Permit-free work runs here in full — drains, emergencies, leaks, fixtures, camera work, disposals, and water heater repair. The city does not accept a permit application from a Limited Licensed Plumber, so anything that needs one goes to a licensed partner who does the work and meets the inspector. We tell you which side your job falls on when you call.',
   ],
   localSections: [
     {
@@ -486,9 +486,9 @@ const COLLEGEDALE: LocationContent = {
     'Hard-water scale on fixtures and water heaters',
   ],
   faqs: [
-    { q: 'Is Collegedale permitting different from Hamilton County?', a: 'Yes. Collegedale administers its own building permits rather than deferring to Hamilton County, so a permitted job here is filed with the city. Our office handles that; it makes no difference to what we cover.' },
+    { q: 'Is Collegedale permitting different from Hamilton County?', a: 'The permit-free work: drain cleaning, emergency and leak repair, fixture repair and replacement, camera inspection, disposals, and water heater repair. Work that needs a permit — water heater replacement, tankless, repipes, sewer and service lines, gas — goes to a licensed partner, because the permit office here does not accept an application from our license class.' },
     { q: 'How far is Collegedale from your base?', a: 'About 35 minutes from Charleston, in the Hamilton County growth corridor.' },
-    { q: 'Which jobs can you do in Collegedale now?', a: 'The full list — drains, emergencies, leaks, water heater repair and replacement, fixtures, repipes, and sewer work. Where a job needs a permit, our office pulls it as part of the work.' },
+    { q: 'Which jobs can you do in Collegedale now?', a: 'The permit-free work: drain cleaning, emergency and leak repair, fixture repair and replacement, camera inspection, disposals, and water heater repair. Work that needs a permit — water heater replacement, tankless, repipes, sewer and service lines, gas — goes to a licensed partner, because the permit office here does not accept an application from our license class.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
 }
@@ -504,7 +504,7 @@ const APISON: LocationContent = {
       'give way to well-and-septic country. That mix is what defines the plumbing here: newer homes ' +
       'with builder-grade issues on one side, and older rural properties with long service runs and ' +
       'private water on the other.',
-    'The full service list runs across Apison, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it and books the inspection.',
+    'Permit-free work runs here in full — drains, emergencies, leaks, fixtures, camera work, disposals, and water heater repair. Hamilton County does not accept a permit application from a Limited Licensed Plumber, so anything that needs one goes to a licensed partner who does the work and meets the inspector. We tell you which side your job falls on when you call.',
   ],
   localSections: [
     {
@@ -550,7 +550,7 @@ const HARRISON: LocationContent = {
     'Harrison runs along the Chickamauga Lake shoreline northeast of Chattanooga, and the lake ' +
       'shapes the plumbing. There is a mix of older lake-adjacent homes and newer subdivisions, and ' +
       'septic is common on the lake-side lots where city sewer never reached.',
-    'The full service list runs across Harrison, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it and books the inspection.',
+    'Permit-free work runs here in full — drains, emergencies, leaks, fixtures, camera work, disposals, and water heater repair. Hamilton County does not accept a permit application from a Limited Licensed Plumber, so anything that needs one goes to a licensed partner who does the work and meets the inspector. We tell you which side your job falls on when you call.',
   ],
   localSections: [
     {
@@ -583,46 +583,72 @@ const HARRISON: LocationContent = {
   faqs: [
     { q: 'How far is Harrison from your base?', a: 'About 35 minutes from Charleston, along the Chickamauga Lake shoreline in the growth corridor.' },
     { q: 'Do you work on septic properties in Harrison?', a: 'Yes, the house side — drains, fixtures, water lines, and treatment. The septic system itself is separately licensed and we refer it out.' },
-    { q: 'Which jobs can you do in Harrison now?', a: 'The full list — drains, emergencies, leaks, water heater repair and replacement, fixtures, repipes, and sewer work. Where a job needs a permit, our office pulls it as part of the work.' },
+    { q: 'Which jobs can you do in Harrison now?', a: 'The permit-free work: drain cleaning, emergency and leak repair, fixture repair and replacement, camera inspection, disposals, and water heater repair. Work that needs a permit — water heater replacement, tankless, repipes, sewer and service lines, gas — goes to a licensed partner, because the permit office here does not accept an application from our license class.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
 }
 
 const CHATTANOOGA: LocationContent = {
+  // REWRITTEN 2026-08-25. The previous copy said permits inside the city were
+  // "arranged by our office through a licensed partner" and that "one call, one
+  // price, one crew" still applied. That described a filing arrangement. The
+  // license holder confirmed it is a REFERRAL: the partner pulls the permit,
+  // performs the work, and meets the inspector. Say that plainly.
   quickAnswer:
-    'We serve Chattanooga city limits for drain cleaning, emergency leak repair, fixture work, ' +
-    'water heaters, and the larger jobs, the same as anywhere else we serve. Permits inside the ' +
-    'city are arranged by our office through a licensed partner, so a job that needs one still ' +
-    'gets done and still gets inspected. Tennessee license #5045.',
+    'Inside Chattanooga city limits we handle drain cleaning, emergency leak repair, fixture ' +
+    'work, and diagnostics — the work that needs no permit. The city does not accept a permit ' +
+    'application from a Limited Licensed Plumber, so jobs that need one go to a licensed partner ' +
+    'who does the work and meets the inspector. We tell you which one yours is on the phone, ' +
+    'before anyone schedules anything. Tennessee license #5045.',
   intro: [
-    'Chattanooga has one wrinkle worth knowing about, and it is administrative rather than ' +
-      'practical. The city runs its own permitting, and a job inside city limits that needs a permit ' +
-      'is filed through a licensed partner our office works with rather than filed directly. From ' +
-      'your side that changes nothing: one call, one price, one crew, and the inspection booked.',
-    'Everything else runs the way it does across the rest of the corridor. Drains, emergency leak ' +
-      'repair, fixtures, diagnostics, water heaters, and sewer work are all on the table inside the ' +
-      'city, and we would rather tell you how the paperwork works than leave you guessing about it.',
+    'Chattanooga is the one place in our footprint where what we can take is genuinely limited, ' +
+      'and we would rather name that than let you find out on the day.',
+    'What it does not limit is the work most people call about. A drain that will not clear, a ' +
+      'line that keeps backing up in the same spot, an active leak at nine at night, a toilet or a ' +
+      'faucet that is done — none of that needs a permit, and all of it is ours.',
   ],
   localSections: [
     {
-      heading: 'How a permitted job works inside the city',
+      heading: 'What we take inside the city',
       paragraphs: [
-        'Drain cleaning, recurring backups, emergency leak repair, shutoffs, and fixture repair and ' +
-          'replacement need no permit at all, so they run exactly as they do everywhere else we work. ' +
-          'Water heater replacement, tankless conversions, repipes, sewer line work, and gas work do ' +
-          'need one, and inside Chattanooga our office files that through a licensed partner.',
-        'You still call us, you still approve one price, and the inspection still gets booked. The ' +
-          'difference is entirely on our end of the paperwork, which is where it belongs.',
+        'The city runs its own permitting and does not accept an application from a Limited ' +
+          'Licensed Plumber. That is a real limit and we would rather name it than let you find out ' +
+          'on the day.',
+        'What it does not limit is the everyday work. Drain cleaning, recurring backups, emergency ' +
+          'leak repair, shutoffs, fixture repair and replacement, camera inspection, disposals, and ' +
+          'water heater repair all run inside the city exactly as they do in Cleveland or Athens. ' +
+          'Chattanooga’s older neighborhoods carry cast iron and clay sewer lines with decades of ' +
+          'root intrusion behind them, which is precisely the work we do best.',
+      ],
+    },
+    {
+      heading: 'What goes to a partner',
+      paragraphs: [
+        'Water heater replacement, tankless conversions, repipes, water service lines, sewer line ' +
+          'replacement, and gas work all need a permit inside the city. Those go to a licensed ' +
+          'contractor we work with. They pull the permit, do the work, and meet the inspector.',
+        'You still get a straight answer from us about what the job actually needs, and an ' +
+          'introduction to someone we would use ourselves. What you will not get is a company taking ' +
+          'a job it cannot finish and sorting it out later.',
       ],
     },
     {
       heading: 'Older neighborhoods and their sewer lines',
       paragraphs: [
-        'Chattanooga’s older neighborhoods carry cast iron and clay sewer lines that have had decades ' +
-          'to develop root intrusion, bellies, and cracks. That is why drain cleaning is the wedge ' +
-          'here: a line that keeps backing up in the same spot usually has a cause, and we can camera ' +
-          'it and show you what is there, then clear it. If what it actually needs is a sewer ' +
-          'replacement, we can take that on too rather than hand you a phone number.',
+        'Chattanooga’s older neighborhoods carry cast iron and clay sewer lines that have had ' +
+          'decades to develop root intrusion, bellies, and cracks. That is why drain cleaning is the ' +
+          'wedge here: a line that keeps backing up in the same spot usually has a cause, and we can ' +
+          'camera it and show you what is there, then clear it. If the footage shows the line itself ' +
+          'has failed, a replacement inside the city is permitted work and goes to the partner — we ' +
+          'will tell you that when we show you the footage, not after.',
+      ],
+    },
+    {
+      heading: 'Not our trade anywhere',
+      paragraphs: [
+        'Septic systems and well systems are separately licensed in Tennessee and we do not touch ' +
+          'either one. Same answer in Chattanooga as everywhere else — we will point you at someone ' +
+          'who does.',
       ],
     },
     {
@@ -643,10 +669,11 @@ const CHATTANOOGA: LocationContent = {
     'Aging water heaters in homes that have been through several owners',
   ],
   faqs: [
-    { q: 'Do you work in Chattanooga at all?', a: 'Yes, across the full service list — drain cleaning, emergency leak repair, fixtures, water heaters, and sewer work — inside the city the same as anywhere else we serve.' },
-    { q: 'Can you replace a water heater in Chattanooga?', a: 'Yes. A replacement needs a permit, and inside city limits our office files that through a licensed partner and books the inspection. One call and one price on your side.' },
+    { q: 'Do you work in Chattanooga at all?', a: 'Yes — drain cleaning, emergency leak repair, fixture work, camera inspection, disposals, and water heater repair, inside the city exactly as everywhere else we serve. Work that needs a permit goes to a licensed partner, because the city does not accept an application from our license class.' },
+    { q: 'Can you replace a water heater in Chattanooga?', a: 'Not inside city limits — that needs a permit and the city does not accept one from a Limited Licensed Plumber. We will hand you to a licensed contractor who does the work and meets the inspector. Outside the city, in Charleston, Cleveland, Athens and the corridor, we handle water heaters ourselves.' },
+    { q: 'Why can you clear a drain here but not replace a water heater?', a: 'Drain cleaning needs no permit. Water heater replacement does, and Chattanooga does not accept a permit application from our license class. It is an administrative line, not a skill one — and it is the honest reason, so you are not guessing.' },
     { q: 'Can you clear a drain or fix a leak in Chattanooga?', a: 'Yes. No permit is involved in either, so we can usually get on it quickly, including after hours.' },
-    { q: 'My old sewer line keeps backing up. Can you help?', a: 'Yes. We can clear it and camera it to show you the cause. If it turns out to need a replacement rather than another cabling, we can take that on as well.' },
+    { q: 'My old sewer line keeps backing up. Can you help?', a: 'Yes. We can clear it and camera it to show you what is causing it. If the footage shows the line itself has failed, a replacement inside the city is permitted work and goes to the partner — we will say so when we show you the footage.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
 }
@@ -1043,7 +1070,7 @@ const GEORGETOWN: LocationContent = {
       'that is genuinely closer to our Charleston base than to any Chattanooga-based operator. That ' +
       'proximity is the whole story here: about 20 minutes for us versus a real drive for the ' +
       'Chattanooga shops.',
-    'The full service list runs across Georgetown, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it and books the inspection.',
+    'Permit-free work runs here in full — drains, emergencies, leaks, fixtures, camera work, disposals, and water heater repair. Hamilton County does not accept a permit application from a Limited Licensed Plumber, so anything that needs one goes to a licensed partner who does the work and meets the inspector. We tell you which side your job falls on when you call.',
   ],
   localSections: [
     {
@@ -1072,7 +1099,7 @@ const GEORGETOWN: LocationContent = {
   ],
   faqs: [
     { q: 'How far is Georgetown from your base?', a: 'About 20 minutes from Charleston — closer to us than to any Chattanooga-based operator.' },
-    { q: 'Which jobs can you do in Georgetown now?', a: 'All of it — drains, emergencies, leaks, water heaters, fixtures, and the larger permitted jobs. Our office handles the permit as part of the work.' },
+    { q: 'Which jobs can you do in Georgetown now?', a: 'The permit-free work: drain cleaning, emergency and leak repair, fixture repair and replacement, camera inspection, disposals, and water heater repair. Work that needs a permit — water heater replacement, tankless, repipes, sewer and service lines, gas — goes to a licensed partner, because the permit office here does not accept an application from our license class.' },
     { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],
@@ -1088,7 +1115,7 @@ const BIRCHWOOD: LocationContent = {
     'Birchwood is a rural community in northern Hamilton County near the headwaters of Chickamauga ' +
       'Lake. Chattanooga-based operators treat it as drive-time overflow; from our base it is about ' +
       '25 minutes, so we serve it as home ground rather than the far edge of a route.',
-    'The full service list runs across Birchwood, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it and books the inspection.',
+    'Permit-free work runs here in full — drains, emergencies, leaks, fixtures, camera work, disposals, and water heater repair. Hamilton County does not accept a permit application from a Limited Licensed Plumber, so anything that needs one goes to a licensed partner who does the work and meets the inspector. We tell you which side your job falls on when you call.',
   ],
   localSections: [
     {
@@ -1118,7 +1145,7 @@ const BIRCHWOOD: LocationContent = {
   ],
   faqs: [
     { q: 'How far is Birchwood from your base?', a: 'About 25 minutes from Charleston, in northern Hamilton County near the Chickamauga Lake headwaters.' },
-    { q: 'Which jobs can you do in Birchwood now?', a: 'All of it — drains, emergencies, leaks, water heaters, fixtures, and the larger permitted jobs. Our office handles the permit as part of the work.' },
+    { q: 'Which jobs can you do in Birchwood now?', a: 'The permit-free work: drain cleaning, emergency and leak repair, fixture repair and replacement, camera inspection, disposals, and water heater repair. Work that needs a permit — water heater replacement, tankless, repipes, sewer and service lines, gas — goes to a licensed partner, because the permit office here does not accept an application from our license class.' },
     { q: 'Do you handle well and septic properties?', a: 'The house side, yes. The systems themselves are separately licensed and referred out.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
   ],

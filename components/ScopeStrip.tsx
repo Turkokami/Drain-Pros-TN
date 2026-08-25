@@ -93,8 +93,9 @@ export function ScopeStrip({ location }: { location: Location }) {
         <div className="mt-6 border-t border-ink/10 pt-4">
           <h3 className="font-mono text-spec uppercase text-steel">Referred to a partner here</h3>
           <p className="mt-2 max-w-prose font-body text-sm text-steel">
-            Permit-required work inside {jurisdiction.name} is handled by a licensed partner. We
-            still take the call and make the introduction.
+            {jurisdiction.name} does not accept a permit application from a Limited Licensed
+            Plumber, so these go to a licensed partner who pulls the permit, does the work, and
+            meets the inspector. We still take the call and make the introduction.
           </p>
           <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
             {withheld.map((w) => (

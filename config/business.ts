@@ -409,6 +409,40 @@ export const OPERATIONS = {
  * periodically prompts to "add your address" and accepting that prompt is the
  * usual way it gets undone.
  */
+/**
+ * OPEN QUESTIONS — tracked, but not production-blocking.
+ *
+ * Deliberately separate from the pending facts in LICENSE / IDENTITY /
+ * OPERATIONS. Those gate a production build because each one is REFERENCED IN
+ * RENDERED COPY, so an unresolved value would put a placeholder in front of a
+ * customer. That is the entire reason the gate exists.
+ *
+ * The items here are not referenced anywhere on the site. Leaving them
+ * unresolved cannot produce a false claim; it only means we do not yet know
+ * something we should. Gating deploys on them would take a live site offline to
+ * enforce an internal to-do, which is the wrong trade.
+ *
+ * The linter reports these every run so they stay visible.
+ */
+export const OPEN_QUESTIONS = {
+  /**
+   * The contractor who takes permit-required work in jurisdictions that decline
+   * an application from #5045 — Hamilton County, Chattanooga, Collegedale, Red
+   * Bank, East Ridge.
+   *
+   * THIS IS A REFERRAL, NOT A FILING ARRANGEMENT. The partner pulls the permit,
+   * performs the work, and attends the inspection. Copy must never imply Drain
+   * Pros performs it. Do not name the partner on the site until the company
+   * name, license class, and whether a written agreement exists are all
+   * confirmed — naming a contractor publicly makes a representation about them.
+   */
+  permitPartner: {
+    status: 'pending',
+    blocks: ['naming the partner in Hamilton County referral copy'],
+    askedOn: '2026-08-25',
+  } as Fact<{ companyName: string; licenseClass: string; writtenAgreement: boolean }>,
+} as const
+
 export const GOOGLE_BUSINESS_PROFILE = {
   isServiceAreaBusiness: {
     status: 'confirmed',

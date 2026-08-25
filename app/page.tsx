@@ -312,8 +312,9 @@ export default function HomePage() {
               approved before the first tool comes out.
             </Diff>
             <Diff title="The paperwork is ours">
-              Where a job needs a permit and an inspection, our office pulls it and books it. You
-              approve a price; you do not chase a codes department.
+              Across the corridor we pull the permit and book the inspection ourselves. Inside
+              Hamilton County, where our license class is not accepted, we say so and refer the job
+              rather than take it and work it out later.
             </Diff>
             <Diff title="A warranty with its edges showing">
               Twelve months on workmanship, thirty days on drain cleaning, and we publish the

@@ -112,7 +112,7 @@ export default function AboutPage() {
     {
       title: 'We handle the permits',
       body: [
-        'Some plumbing needs a permit and an inspection, and some does not. Working out which is our job, not yours. Where one is required, the office pulls it and books the inspection as part of the work, so the price you approved is the price you pay and nobody is left chasing a codes department.',
+        'Some plumbing needs a permit and an inspection, and some does not. Working out which is our job, not yours. Across the Bradley–McMinn corridor we pull the permit and book the inspection ourselves. Inside Hamilton County and Chattanooga the permit office does not accept an application from our license class — so we say so, and those jobs go to a licensed partner who does the work. We would rather name the limit than take a job we cannot finish.',
         'The one line we draw is between the house and the systems outside it. Septic tanks, drain fields, well drilling, pumps, and pressure tanks are separately licensed trades in Tennessee. We do all the plumbing inside the house they serve, and when the system itself is the problem we point you to a contractor we trust rather than take it on anyway.',
       ],
     },

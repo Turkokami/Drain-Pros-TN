@@ -59,8 +59,11 @@ export function PermitNote() {
 
       <p className="mt-5 max-w-prose text-sm text-steel">
         This is general guidance rather than a ruling, and it can differ from one town to the next.
-        The Authority Having Jurisdiction makes the determination. Where a permit is required, our
-        office pulls it and books the inspection as part of the job.
+        The Authority Having Jurisdiction makes the determination. Across the Bradley–McMinn
+        corridor we pull the permit and book the inspection ourselves. Inside Hamilton County and
+        Chattanooga the permit office does not accept an application from our license class, so
+        permit-required jobs there are referred to a licensed partner who does the work and meets
+        the inspector.
       </p>
     </section>
   )

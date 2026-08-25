@@ -7,7 +7,25 @@
  * of a visitor.
  *
  * ---------------------------------------------------------------------------
- * CHANGED 2026-08-16, BY CLIENT DIRECTION.
+ * REVERSED 2026-08-25. The gate is back ON.
+ *
+ * The 2026-08-16 change below rested on the office "handling permitting" in
+ * jurisdictions that decline the licence. Checking with the license holder,
+ * that is not the arrangement: in Hamilton County the JOB IS REFERRED to a
+ * licensed partner, who performs the work and attends the inspection. Drain
+ * Pros does not do it.
+ *
+ * So the earlier reasoning does not hold. Advertising a service on a page for
+ * a town where someone else performs it is not under-selling avoided, it is a
+ * claim about who does the work that is not true. The gate goes back on, and
+ * the referral is described in plain copy rather than implied.
+ *
+ * This affects Hamilton County only. Bradley, Cleveland, Athens, McMinn, Polk
+ * and Meigs all confirmed they accept an application from #5045, so the
+ * corridor - the actual revenue market - is untouched.
+ * ---------------------------------------------------------------------------
+ *
+ * SUPERSEDED — CHANGED 2026-08-16, BY CLIENT DIRECTION.
  *
  * The site originally withheld permit-required services in any jurisdiction
  * whose permit authority was not confirmed, and disclosed the per-project
@@ -33,7 +51,7 @@ export const PUBLISHING = {
    * jurisdiction is not confirmed 'full'. When false, the full service list
    * publishes everywhere and permitting is handled at intake.
    */
-  gateServicesByPermitAuthority: false,
+  gateServicesByPermitAuthority: true,
 
   /**
    * When true, size-dependent services render a per-project ceiling disclosure.
@@ -46,7 +64,7 @@ export const PUBLISHING = {
    * listing what is withheld locally. Meaningless when gating is off, since
    * nothing is withheld.
    */
-  publishWithheldBlock: false,
+  publishWithheldBlock: true,
 } as const
 
 /**

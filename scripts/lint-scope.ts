@@ -25,7 +25,7 @@ import { join, extname } from 'node:path'
 import { SERVICES, OUT_OF_SCOPE_SLUGS } from '../config/services'
 import { LOCATIONS } from '../config/locations'
 import { JURISDICTIONS, pendingVerification } from '../config/jurisdictions'
-import { LICENSE, IDENTITY, OPERATIONS, type Fact } from '../config/business'
+import { LICENSE, IDENTITY, OPERATIONS, OPEN_QUESTIONS, type Fact } from '../config/business'
 import { PUBLISHING } from '../config/policy'
 import { PROBLEMS, unboundProblems } from '../config/problems'
 import { GUIDES, unboundGuides } from '../config/guides'
@@ -189,6 +189,15 @@ function reportPending(group: string, obj: Record<string, Fact<unknown>>) {
 reportPending('LICENSE', LICENSE as never)
 reportPending('IDENTITY', IDENTITY as never)
 reportPending('OPERATIONS', OPERATIONS as never)
+
+// Open questions are reported every run but never fail a build - see the note
+// on OPEN_QUESTIONS in config/business.ts. They are not referenced in rendered
+// copy, so an unresolved value cannot put a placeholder in front of a customer.
+for (const [key, f] of Object.entries(OPEN_QUESTIONS as Record<string, Fact<unknown>>)) {
+  if (f.status === 'pending') {
+    warn(`[8b] OPEN_QUESTIONS.${key} unresolved. Blocks: ${f.blocks.join(', ')}. Not a build gate.`)
+  }
+}
 
 // --- 9. Unverified jurisdictions ------------------------------------------------
 // While the permit gate is on, this is a publishing gate and blocks a prod

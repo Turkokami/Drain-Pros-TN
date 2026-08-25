@@ -59,9 +59,11 @@ export const COUNTIES: CountyPage[] = [
     county: 'Hamilton',
     name: 'Hamilton County',
     summary:
-      'This is the exception in our footprint. Hamilton County, Collegedale, Red Bank, East Ridge, ' +
-      'and the City of Chattanooga do NOT accept a permit application from a Limited Licensed ' +
-      'Plumber. Permitted work here is filed through a licensed partner by our office.',
+      'Hamilton County is the exception in our footprint. The county, Chattanooga, Collegedale, ' +
+      'Red Bank and East Ridge all decline a permit application from a Limited Licensed Plumber. ' +
+      'We still cover everything here that needs no permit — drains, emergencies, fixtures, ' +
+      'diagnostics. Anything that needs one goes to a licensed partner who does the work and ' +
+      'attends the inspection.',
     context:
       'Hamilton County is where the corridor meets metro Chattanooga, and it is the most ' +
       'fragmented permitting picture we deal with. Several towns inside the county administer ' +
@@ -108,12 +110,22 @@ export function getCounty(slug: string): CountyPage | undefined {
  * rows of "we do not permit here" on a page about places we do not go — which
  * reads as a limitation rather than what it is, which is a boundary.
  *
- * A county table should answer "who issues the permit for MY job", so it only
- * shows authorities with at least one town we cover.
+ * Shows an authority when it either governs a town we cover, OR was called and
+ * gave an answer about accepting #5045. Red Bank and East Ridge fall in the
+ * second group: no location page, but they were called and declined, and on a
+ * page about where the licence is and is not accepted that is worth stating.
+ *
+ * Still excluded are the areas outside the service radius entirely - Soddy-
+ * Daisy, Signal Mountain, Rhea. Listing those would be rows about places we do
+ * not go.
  */
 export function jurisdictionsInCounty(county: County): Jurisdiction[] {
   const served = new Set(LOCATIONS.map((l) => l.jurisdictionId))
-  return Object.values(JURISDICTIONS).filter((j) => j.county === county && served.has(j.id))
+  return Object.values(JURISDICTIONS).filter(
+    (j) =>
+      j.county === county &&
+      (served.has(j.id) || !(j.note ?? '').startsWith('Not applicable'))
+  )
 }
 
 /** Every authority in the county, served or not. Office reference, not page copy. */

@@ -88,13 +88,15 @@ export default async function CountyPermitPage({
     },
     {
       q: 'Do I have to pull the permit myself?',
-      a: 'No. Where a job needs one, our office files it and books the inspection as part of the work. You approve a price and we handle the paperwork behind it.',
+      a: allAccept
+        ? 'No. Where a job needs one, we pull it and book the inspection as part of the work. You approve a price and we handle the paperwork behind it.'
+        : 'No, but it will not be us pulling it here. This county does not accept an application from our license class, so a permit-required job is referred to a licensed partner who pulls the permit, does the work, and meets the inspector.',
     },
     {
       q: 'How long does a permit take here?',
       a: allAccept
         ? 'One to three days across this county, based on what the permitting offices told us directly in August 2026. We schedule around that rather than guessing.'
-        : 'It varies, and in this county permitted work is filed through a licensed partner our office works with. We give you a real date once the filing is in rather than a hopeful one.',
+        : 'For permit-free work, nothing waits on a permit at all. For work that needs one, the job goes to a licensed partner and their timeline applies — we will give you their real answer rather than a hopeful one.',
     },
     {
       q: 'Does every plumbing job need a permit?',
@@ -174,7 +176,7 @@ export default async function CountyPermitPage({
                                 : 'font-mono text-spec uppercase text-signal'
                             }
                           >
-                            {yes ? 'Yes' : 'No — filed via partner'}
+                            {yes ? 'Yes' : 'No — job referred to partner'}
                           </span>
                         </td>
                         <td className="py-3 text-sm text-ink/90">{yes ? '1–3 days' : 'Varies'}</td>
@@ -199,10 +201,36 @@ export default async function CountyPermitPage({
                   What that means for your job
                 </h3>
                 <p className="mt-2 max-w-prose text-ink/90">
-                  Nothing, on your side. We still cover the full service list here. Where a job needs
-                  a permit, our office files it through a licensed partner and books the inspection.
-                  One call, one price, one crew — the difference is entirely in whose name the
-                  paperwork goes in, which is our problem rather than yours.
+                  It depends on the job, and it is worth knowing before you call.
+                </p>
+                <p className="mt-3 max-w-prose text-ink/90">
+                  <strong>Needs no permit — ours.</strong> Drain cleaning, recurring backups,
+                  emergency leak repair, shutoffs, fixture repair and replacement, camera
+                  inspection, disposals, and water heater <em>repair</em>. This is most of what
+                  people call about, and it runs here exactly as it does in Cleveland or Athens.
+                </p>
+                <p className="mt-3 max-w-prose text-ink/90">
+                  <strong>Needs a permit — referred.</strong> Water heater replacement, tankless
+                  conversion, repiping, water service lines, sewer line replacement, and gas work.
+                  These go to a licensed contractor who pulls the permit, performs the work, and
+                  meets the inspector.
+                </p>
+                <p className="mt-3 max-w-prose text-ink/90">
+                  We tell you which side yours falls on when you call, not after we are in your
+                  crawlspace. And if it is the second one, you get a name we would use on our own
+                  house.
+                </p>
+              </div>
+            )}
+
+            {!allAccept && (
+              <div className="mt-8">
+                <h2 className="text-display-md">Why we say this out loud</h2>
+                <p className="mt-3 max-w-prose text-ink/90">
+                  Plenty of shops would take the call and figure it out later. We would rather tell
+                  you where our license stops. Tennessee license #5045 is a Limited Licensed Plumber
+                  credential — you can verify it with the state in about thirty seconds, and you can
+                  see exactly what it covers. That is the point.
                 </p>
               </div>
             )}
@@ -210,6 +238,11 @@ export default async function CountyPermitPage({
             {towns.length > 0 && (
               <>
                 <h2 className="mt-10 text-display-md">Towns we serve in {county.name}</h2>
+                {!allAccept && (
+                  <p className="mt-2 max-w-prose text-sm text-steel">
+                    Permit-free work throughout. Permitted work referred to a licensed partner.
+                  </p>
+                )}
                 <div className="mt-4 flex flex-wrap gap-3">
                   {towns.map((t) => (
                     <a
