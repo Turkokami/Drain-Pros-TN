@@ -31,7 +31,7 @@ export interface Problem {
    */
   urgent: boolean
   /** Grouping on the hub page. */
-  group: 'water-heater' | 'drain-sewer' | 'leak-pipe' | 'pressure-quality' | 'fixture'
+  group: 'water-heater' | 'drain-sewer' | 'sump-pump' | 'leak-pipe' | 'pressure-quality' | 'fixture'
 }
 
 export const PROBLEMS: Problem[] = [
@@ -109,6 +109,50 @@ export const PROBLEMS: Problem[] = [
     service: 'camera-inspection',
     urgent: false,
     group: 'drain-sewer',
+  },
+
+  // --- Sump pumps ---------------------------------------------------------
+  // Added 2026-08-25. Symptom side of the sump cluster. The electrical boundary
+  // is stated on every one of these: we do not wire the circuit.
+  {
+    slug: 'sump-pump-not-working',
+    name: 'Sump Pump Not Turning On',
+    summary: 'The pit is filling and the pump is doing nothing about it.',
+    service: 'sump-pump-repair',
+    urgent: true,
+    group: 'sump-pump',
+  },
+  {
+    slug: 'sump-pump-running-constantly',
+    name: 'Sump Pump Runs and Never Shuts Off',
+    summary: 'Running non-stop, or cycling every couple of minutes in dry weather.',
+    service: 'sump-pump-repair',
+    urgent: false,
+    group: 'sump-pump',
+  },
+  {
+    slug: 'sump-pump-noise',
+    name: 'Sump Pump Making a Noise',
+    summary: 'Grinding, rattling, or a bang from the pit every time it shuts off.',
+    service: 'sump-pump-repair',
+    urgent: false,
+    group: 'sump-pump',
+  },
+  {
+    slug: 'sump-discharge-line-blocked',
+    name: 'Sump Discharge Line Blocked or Frozen',
+    summary: 'The pump runs, the pit does not empty, and water comes back down the pipe.',
+    service: 'sump-pump-repair',
+    urgent: true,
+    group: 'sump-pump',
+  },
+  {
+    slug: 'water-in-crawlspace',
+    name: 'Standing Water in the Crawlspace',
+    summary: 'Water under the house after rain, on a property that may never have had a pump.',
+    service: 'sump-pump-replacement',
+    urgent: false,
+    group: 'sump-pump',
   },
 
   // --- Leaks and pipes ----------------------------------------------------
@@ -192,6 +236,12 @@ export const PROBLEM_GROUPS: Array<{ key: Problem['group']; title: string; blurb
     key: 'drain-sewer',
     title: 'Drains and sewer',
     blurb: 'Slow, blocked, backing up, or smelling. The most common reason people call us.',
+  },
+  {
+    key: 'sump-pump',
+    title: 'Sump pumps and groundwater',
+    blurb:
+      'A pump that quit, a pump that will not stop, or water under the house after every storm.',
   },
   {
     key: 'water-heater',

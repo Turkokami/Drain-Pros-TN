@@ -28,7 +28,7 @@ export interface Guide {
   summary: string
   /** Service this guide feeds. Must exist in SERVICES. */
   service: string
-  cluster: 'water-heating' | 'water-quality' | 'rural-property' | 'drains' | 'working-with-us'
+  cluster: 'water-heating' | 'water-quality' | 'rural-property' | 'drains' | 'sump-pump' | 'working-with-us'
   /** Guides that compare two options render a comparison table. */
   comparison?: boolean
 }
@@ -151,6 +151,47 @@ export const GUIDES: Guide[] = [
     comparison: true,
   },
 
+  // --- Sump pumps ---------------------------------------------------------
+  // Decision side of the sump cluster. The crawlspace guide is the local one:
+  // this corridor is crawlspace country, not basement country, and the national
+  // sump content all assumes a basement.
+  {
+    slug: 'sump-pump-sizing',
+    name: 'What Size Sump Pump Do I Need?',
+    summary: 'Sizing to how fast the pit actually fills, not to the horsepower on the old one.',
+    service: 'sump-pump-replacement',
+    cluster: 'sump-pump',
+  },
+  {
+    slug: 'pedestal-vs-submersible',
+    name: 'Pedestal or Submersible Sump Pump?',
+    summary: 'What each is good at, what each costs you later, and which pit suits which.',
+    service: 'sump-pump-replacement',
+    cluster: 'sump-pump',
+    comparison: true,
+  },
+  {
+    slug: 'sump-pump-battery-backup',
+    name: 'Do I Need a Battery Backup Sump Pump?',
+    summary: 'The storm that floods the house is often the storm that takes the power out.',
+    service: 'sump-pump-replacement',
+    cluster: 'sump-pump',
+  },
+  {
+    slug: 'sump-pump-lifespan',
+    name: 'How Long Should a Sump Pump Last?',
+    summary: 'What actually wears one out, and the cheap test that tells you where yours is.',
+    service: 'sump-pump-repair',
+    cluster: 'sump-pump',
+  },
+  {
+    slug: 'crawlspace-water-east-tennessee',
+    name: 'Water in a Crawlspace in East Tennessee',
+    summary: 'Why it happens on clay soil here, and the order to fix it in.',
+    service: 'sump-pump-replacement',
+    cluster: 'sump-pump',
+  },
+
   // --- Working with us ----------------------------------------------------
   // Phase 4 authority content. Explaining the credential class openly is a
   // trust play a competitor who only says "licensed" cannot match.
@@ -221,6 +262,12 @@ export const GUIDE_CLUSTERS: Array<{ key: Guide['cluster']; title: string; blurb
     title: 'Working with us',
     blurb:
       'The credential, the estimate, and what we refer out. The parts most companies leave vague.',
+  },
+  {
+    key: 'sump-pump',
+    title: 'Sump pumps and groundwater',
+    blurb:
+      'Sizing, backup power, and what to do about a crawlspace that takes water every spring. Crawlspace country, not basement country — most sump advice online assumes the wrong house.',
   },
   {
     key: 'drains',

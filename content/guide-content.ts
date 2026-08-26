@@ -920,6 +920,18 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
         ],
       },
       {
+        heading: 'Electrical work, including the sump pump circuit',
+        paragraphs: [
+          'A plumbing license is not an electrical license. We fit sump pumps, and a sump pump ' +
+            'belongs on its own properly protected circuit, but running that circuit, replacing a ' +
+            'receptacle, or chasing a breaker that keeps tripping is an electrician\'s work and we ' +
+            'do not do it.',
+          'What we will do is find out whether that is your problem before you pay anybody. A sump ' +
+            'pump that is dead at the outlet is not a pump fault, and being told that plainly beats ' +
+            'buying a pump you did not need.',
+        ],
+      },
+      {
         heading: 'Why we put this in writing',
         paragraphs: [
           'Because the alternative is discovering it mid-job, which is worse for you and worse for us. A contractor who takes on work outside their license is telling you something about how they will handle the rest of it.',
@@ -941,6 +953,10 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       {
         q: 'Can you find a leak under my slab?',
         a: 'We refer slab and exterior leak detection to American Leak Detection. It is specialist locating work and they have the equipment for it. We can attempt to locate a leak behind a wall before opening anything, and we handle the repair once a leak is found and reachable.',
+      },
+      {
+        q: 'Can you wire the circuit for a sump pump?',
+        a: 'No. We fit the pump, the check valve, and the discharge line. The dedicated circuit and the receptacle are an electrician\'s license. We will tell you when the fault is on that side so you are not paying two trades to work it out.',
       },
       {
         q: 'Is there anything else you turn down?',
@@ -1085,6 +1101,375 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       {
         q: 'My underbelly line froze. Can it be prevented?',
         a: 'Largely, yes — repairing damaged insulation and skirting, and making sure the underbelly is intact, addresses most of it. It is worth doing before winter rather than after.',
+      },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  // =============================================================== SUMP PUMPS
+  // HONESTY RULE applies hardest here. No invented rainfall figures, no water
+  // table depths we have not measured, no pricing. Where a number would help,
+  // the page says we measure it at the house — which is true and is better
+  // positioning than an average a customer could check and find wrong.
+  'sump-pump-sizing': {
+    quickAnswer:
+      'Size to how fast the pit refills with the pump switched off, plus the height the water has ' +
+      'to be lifted and the length of the run to the outlet. Not to the horsepower stamped on the ' +
+      'old pump. Oversizing is a real failure mode here, not a safe default.',
+    lede:
+      'The usual way people choose a replacement sump pump is to read the horsepower off the one ' +
+      'that died. That number tells you what somebody bought once. It does not tell you what the ' +
+      'house needs, and if the old pump was wrong, matching it repeats the mistake.',
+    sections: [
+      {
+        heading: 'The number that actually matters',
+        paragraphs: [
+          'It is the fill rate: how fast water comes back into the pit when the pump is off. That is ' +
+            'measurable in a few minutes at the house, and it is the only figure that describes your ' +
+            'ground rather than somebody else\'s.',
+          'Then two more: the vertical lift from the pit to the discharge, and the length of the ' +
+            'horizontal run after that. Both cost the pump capacity. A pump rated comfortably above ' +
+            'your fill rate on paper can still fall behind once it is lifting eight feet and pushing ' +
+            'forty across a crawlspace.',
+        ],
+      },
+      {
+        heading: 'Why bigger is not safer',
+        paragraphs: [
+          'A pump that empties the pit much faster than the pit fills will start, run for a few ' +
+            'seconds, stop, and start again. Every start is the hardest moment in a motor\'s life, ' +
+            'and short-cycling is one of the main things that kills sump pumps early.',
+          'So oversizing does not buy you insurance. It buys you a pump that wears out faster and is ' +
+            'more likely to be dead when the storm you bought it for finally arrives.',
+        ],
+      },
+      {
+        heading: 'Crawlspace pits are not basement pits',
+        paragraphs: [
+          'Almost all the sizing advice online assumes a full basement: a deep pit, a short lift, a ' +
+            'discharge through a nearby wall. Across this corridor the house is usually on a ' +
+            'crawlspace, the pit is shallower, and the run to somewhere the water can actually leave ' +
+            'is longer.',
+          'A shallower pit means less water stored between cycles, which pushes you toward a smaller ' +
+            'pump, not a bigger one, if you want to avoid short-cycling. That is the opposite of what ' +
+            'most of the internet will tell you.',
+        ],
+      },
+    ],
+    verdict:
+      'Do not size off the old label. Let us time the fill rate and measure the lift and the run, ' +
+      'then size to that. It usually lands on a smaller pump than people expect, and it lasts longer.',
+    faqs: [
+      {
+        q: 'Is a 1/2 HP pump better than a 1/3 HP?',
+        a: 'Not inherently. Better means matched to your fill rate, lift, and run. A 1/2 HP pump in a shallow crawlspace pit that fills slowly will short-cycle itself to death while a 1/3 HP one runs quietly for years.',
+      },
+      {
+        q: 'How do you measure the fill rate?',
+        a: 'Switch the pump off, mark the level, and time how long the pit takes to rise a known amount. It takes a few minutes and it is a real number about your house rather than a regional average.',
+      },
+      {
+        q: 'Does the discharge length really change the pump I need?',
+        a: 'Yes. Every foot of lift and every foot of horizontal run costs flow. Two identical pumps in two houses deliver different real-world capacity because of it, and crawlspace runs here are often long.',
+      },
+      {
+        q: 'Do you handle the electrical side of a sump pump?',
+        a: 'No. We fit the pump, the check valve, and the discharge line. The dedicated circuit and the receptacle are an electrician’s license, not a plumber’s. We will tell you when the fault or the requirement sits on that side so you are calling the right trade.',
+      },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'pedestal-vs-submersible': {
+    quickAnswer:
+      'Submersible for most houses here. It is quieter, it handles debris better, and it suits the ' +
+      'pits we actually find. Pedestal earns its place in a narrow or shallow pit, where the motor ' +
+      'staying up out of the water is worth the noise and the exposed shaft.',
+    lede:
+      'The two designs solve the same problem differently: one puts the motor in the water and one ' +
+      'keeps it above. Everything else about the choice follows from that single difference.',
+    sections: [
+      {
+        heading: 'What the difference actually does',
+        paragraphs: [
+          'A submersible sits in the pit with the motor sealed inside the housing, cooled by the ' +
+            'water around it. That makes it quiet, keeps it out of the way, and lets it pass small ' +
+            'debris without complaint. It also means a seal failure ends the pump.',
+          'A pedestal keeps the motor on a column above the pit with only the intake down in the ' +
+            'water. The motor is easy to reach, easy to see, and cheaper to replace, but it is ' +
+            'audible in a way a submersible is not, and the exposed shaft and float linkage give it ' +
+            'more to catch on in a narrow pit.',
+        ],
+      },
+      {
+        heading: 'Which one suits a crawlspace',
+        paragraphs: [
+          'Under a house, noise matters less than it does under a finished basement floor, which ' +
+            'takes away one of the pedestal\'s few disadvantages. But crawlspace pits here are often ' +
+            'shallow and tight, and a pedestal float has more room to hang up in a tight pit than a ' +
+            'tethered or vertical float on a submersible.',
+          'Access cuts the other way. A pedestal motor you can reach without lying in water is ' +
+            'genuinely easier to service, and in a crawlspace that is not nothing.',
+        ],
+      },
+    ],
+    comparison: {
+      columns: ['Submersible', 'Pedestal'],
+      rows: [
+        { factor: 'Noise', a: 'Quiet — the water muffles it', b: 'Audible, sometimes through the floor above' },
+        { factor: 'Debris handling', a: 'Passes small solids without much trouble', b: 'Fussier; intake sits low and clogs more easily' },
+        { factor: 'Service access', a: 'Pull the whole pump out of the pit to work on it', b: 'Motor is up out of the water and easy to reach' },
+        { factor: 'Suits a narrow pit', a: 'Yes, if the pit is deep enough to submerge it', b: 'Yes, and it is the usual answer in a shallow pit' },
+        { factor: 'Typical service life', a: 'Longer, when it is sized right and not short-cycling', b: 'Motor often outlasts the switch gear on it' },
+        { factor: 'Main failure mode', a: 'Seal failure lets water into the motor', b: 'Float linkage hangs up or wears' },
+      ],
+    },
+    verdict:
+      'If the pit is deep enough to take one, fit a submersible. If it is shallow, narrow, or ' +
+      'awkward to reach, a pedestal is the honest answer and we will say so rather than force the ' +
+      'more expensive pump into a pit that does not suit it.',
+    faqs: [
+      {
+        q: 'Is a submersible always the better pump?',
+        a: 'It is the better pump for most pits, which is not the same thing. In a shallow crawlspace pit that cannot properly submerge one, a pedestal is the right choice and the more expensive option would be the wrong call.',
+      },
+      {
+        q: 'Which lasts longer?',
+        a: 'Whichever one is sized right and not short-cycling. Sizing and the check valve have more to do with service life than the design does.',
+      },
+      {
+        q: 'Can I switch from one to the other?',
+        a: 'Usually, if the pit suits it. Going from pedestal to submersible needs enough depth; going the other way is generally straightforward.',
+      },
+      {
+        q: 'Do you handle the electrical side of a sump pump?',
+        a: 'No. We fit the pump, the check valve, and the discharge line. The dedicated circuit and the receptacle are an electrician’s license, not a plumber’s. We will tell you when the fault or the requirement sits on that side so you are calling the right trade.',
+      },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'sump-pump-battery-backup': {
+    quickAnswer:
+      'If your pit runs during storms, yes. The storm that puts water under the house is very ' +
+      'often the same storm that takes the power out, and a mains-only pump is offline at exactly ' +
+      'the moment it is needed. If the pit almost never runs, a backup is insurance you may not ' +
+      'need, and we will tell you that.',
+    lede:
+      'A backup pump is not a second pump for when the first one dies. It is a pump for when the ' +
+      'power dies, and those are different problems with different answers.',
+    sections: [
+      {
+        heading: 'The failure it actually covers',
+        paragraphs: [
+          'A battery backup sits alongside the primary pump with its own float, set slightly higher ' +
+            'in the pit. When the mains pump cannot run, the water rises past the primary float, ' +
+            'reaches the backup float, and the backup takes over on battery.',
+          'That covers a power cut, and it also covers a primary pump that has failed, since the ' +
+            'trigger is the water level rather than the state of the other pump. What it does not ' +
+            'cover is a blocked discharge line, because both pumps push through the same pipe.',
+        ],
+      },
+      {
+        heading: 'What a battery will and will not give you',
+        paragraphs: [
+          'Run time depends on the battery, how much water is coming in, and how long the outage ' +
+            'lasts. A backup is designed to get a house through an outage, not to run a wet ' +
+            'crawlspace indefinitely, and anyone promising a fixed number of hours does not know ' +
+            'your fill rate.',
+          'Batteries also need looking after. A backup system with a battery nobody has checked in ' +
+            'four years is a decoration. If you fit one, it goes on the same annual list as testing ' +
+            'the primary pump.',
+        ],
+      },
+      {
+        heading: 'When we would not sell you one',
+        paragraphs: [
+          'If the pit is dry most of the year and the pump only cycles a handful of times, the ' +
+            'money is usually better spent on sorting out why water is reaching the foundation at ' +
+            'all — gutters, downspouts, and grading — than on a second pump.',
+          'And if the discharge line freezes every winter, a backup pump does nothing for you. Both ' +
+            'pumps discharge through that same blocked pipe. Fix the line first.',
+        ],
+      },
+    ],
+    verdict:
+      'Worth it if your pump does real work in storms, and worth skipping if it does not. Ask us ' +
+      'what your pit is actually doing before you buy one.',
+    faqs: [
+      {
+        q: 'Does a backup pump cover a failed primary as well as a power cut?',
+        a: 'Yes. It triggers on water level, so it does not care why the primary is not running. The exception is a blocked discharge, where both pumps are pushing into the same closed pipe.',
+      },
+      {
+        q: 'How long will the battery last in an outage?',
+        a: 'It depends on the battery and on how fast your pit fills, which is why we measure the fill rate rather than quote a number. Anyone giving you a fixed hours figure without seeing the house is guessing.',
+      },
+      {
+        q: 'Is a water-powered backup an option instead?',
+        a: 'Sometimes, on city water with adequate pressure. It has no battery to maintain, which is a real advantage, but it uses potable water to move sump water and is not permitted everywhere. Worth a conversation about your specific address.',
+      },
+      {
+        q: 'Do you handle the electrical for a backup system?',
+        a: 'No. We fit the pump and the plumbing. The dedicated circuit and receptacle are an electrician\'s license.',
+      },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'sump-pump-lifespan': {
+    quickAnswer:
+      'Plan on roughly seven to ten years of real service, and understand that the number depends ' +
+      'far more on how often the pump starts than on how old it is. A pump short-cycling on a bad ' +
+      'check valve can be finished in a couple of years. Test yours twice a year and you will ' +
+      'never find out the hard way.',
+    lede:
+      'A sump pump is the only thing in a house that is expected to sit unused for months and then ' +
+      'work perfectly on the worst night of the year. That is a hard job, and it is why so many of ' +
+      'them are discovered dead at exactly the wrong moment.',
+    sections: [
+      {
+        heading: 'Starts, not years',
+        paragraphs: [
+          'The wear on a sump pump is concentrated in the moment it starts. A pump that runs a few ' +
+            'long cycles during heavy rain has an easy life. A pump that starts every ninety seconds ' +
+            'because the check valve is letting water back down is doing hundreds of times the work ' +
+            'for the same amount of water moved.',
+          'So the single most useful thing you can do for a pump\'s life is stop it short-cycling: a ' +
+            'check valve that seals, a float set at the right height, and a pump sized to the pit ' +
+            'rather than to the old label.',
+        ],
+      },
+      {
+        heading: 'The other things that shorten it',
+        paragraphs: [
+          'Silt is the quiet one. A pump sitting flat on the bottom of the pit draws sediment ' +
+            'straight through the impeller, and over a few years that wears it out from the inside. ' +
+            'Setting the pump up off the floor of the pit costs nothing and adds years.',
+          'Then debris in an uncovered pit, a discharge run that puts more load on the pump than it ' +
+            'was sized for, and simple neglect — a pit nobody has looked into since the house was ' +
+            'bought.',
+        ],
+      },
+      {
+        heading: 'The test that takes two minutes',
+        paragraphs: [
+          'Pour a bucket of water into the pit and watch. The pump should start, empty the pit, and ' +
+            'shut off cleanly without restarting on its own water. If it does not start, if it runs ' +
+            'on, or if you hear water falling back down the pipe after it stops, you have found a ' +
+            'problem in dry weather instead of during a storm.',
+          'Do it in spring and again before winter. It is the cheapest maintenance in the house and ' +
+            'almost nobody does it.',
+        ],
+      },
+    ],
+    verdict:
+      'Seven to ten years is the planning number, but test it twice a year and replace it on your ' +
+      'schedule rather than on the weather\'s. A planned replacement is a normal job. An emergency ' +
+      'one comes with a wet crawlspace attached.',
+    faqs: [
+      {
+        q: 'Mine is twelve years old and works fine. Replace it?',
+        a: 'Test it first. If it starts cleanly, empties the pit, and shuts off without restarting, it is doing its job. But at that age it is worth deciding when you replace it rather than letting a storm decide for you.',
+      },
+      {
+        q: 'How often should it be running?',
+        a: 'During and after rain, as much as it needs to. In a dry spell it should be quiet. A pump running in dry weather is telling you something is wrong, usually the check valve.',
+      },
+      {
+        q: 'Does a more expensive pump last longer?',
+        a: 'A better pump helps, but sizing and the check valve matter more. A premium pump short-cycling on a bad valve will still be dead before a modest one that is set up properly.',
+      },
+      {
+        q: 'Do you handle the electrical side of a sump pump?',
+        a: 'No. We fit the pump, the check valve, and the discharge line. The dedicated circuit and the receptacle are an electrician’s license, not a plumber’s. We will tell you when the fault or the requirement sits on that side so you are calling the right trade.',
+      },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'crawlspace-water-east-tennessee': {
+    quickAnswer:
+      'Work it in this order: rule out a plumbing leak, then deal with the water arriving from ' +
+      'outside — gutters, downspouts, grading — then decide whether the space needs a sump. A pump ' +
+      'fitted before the first two steps usually ends up moving roof water in a circle for years.',
+    lede:
+      'This corridor is crawlspace country, and the ground under a lot of it is clay that holds ' +
+      'water rather than letting it drain. Wet crawlspaces here are common enough that people ' +
+      'assume they are normal. They are not, and the damage they do is slow and expensive.',
+    sections: [
+      {
+        heading: 'Is it groundwater or a leak?',
+        paragraphs: [
+          'Timing tells you almost everything. Water that shows up after rain and dries out over a ' +
+            'few days is groundwater. Water that is there in a dry spell, or that stays wet ' +
+            'regardless of weather, is a plumbing leak until proven otherwise.',
+          'This matters because only one of the two is ours to fix, and because a leak under the ' +
+            'house looks exactly like groundwater from the access hatch. Working out which one you ' +
+            'have is the first thing we do, and it is the step people most often skip on the way to ' +
+            'buying a pump.',
+        ],
+      },
+      {
+        heading: 'The water you can see before the water you cannot',
+        paragraphs: [
+          'A downspout discharging beside the foundation delivers the entire roof to the ground next ' +
+            'to the house, several times a year. Grading that falls back toward the house does the ' +
+            'same thing more slowly. Both are cheap to correct and both are routinely the whole ' +
+            'cause of a wet crawlspace.',
+          'We look at that before recommending a pump, because a sump fitted under a house that is ' +
+            'being fed by its own gutters will run constantly, wear out early, and never fix ' +
+            'anything. That conversation costs us a pump sale and is still the right advice.',
+        ],
+      },
+      {
+        heading: 'When a sump is genuinely the answer',
+        paragraphs: [
+          'Once the leak is ruled out and the surface water is dealt with, some houses here still ' +
+            'take groundwater. Clay soil and a high water table will do that regardless of what the ' +
+            'gutters are doing, and on those properties a properly sized pump in a properly placed ' +
+            'pit is the fix.',
+          'That is a real job rather than a swap: a pit excavated at the low point, a liner set, a ' +
+            'discharge routed somewhere the water will actually leave, and a dedicated circuit run ' +
+            'by an electrician. We scope it at the house rather than over the phone.',
+        ],
+      },
+      {
+        heading: 'What is not ours',
+        paragraphs: [
+          'Grading, gutters, foundation drainage, and crawlspace encapsulation are not plumbing ' +
+            'work, and we do not pretend otherwise. Neither is the electrical circuit a sump needs.',
+          'We will tell you when one of those is what you actually need. Sending you to the right ' +
+            'trade with an honest description of the problem is worth more to you than a pump you ' +
+            'did not need, and it is how we would want to be treated.',
+        ],
+      },
+    ],
+    verdict:
+      'Leak first, gutters and grading second, pump third. Almost every wet crawlspace we get ' +
+      'called to has at least one of the first two in play, and fixing those is cheaper than ' +
+      'anything else on the list.',
+    faqs: [
+      {
+        q: 'Everyone around here has a wet crawlspace. Is it really a problem?',
+        a: 'Yes. It rusts duct work, ruins insulation, and puts moisture into everything above it. Common is not the same as harmless.',
+      },
+      {
+        q: 'Should I just have a sump pump put in?',
+        a: 'Not as a first move. If the water is a leak, a pump treats the symptom forever. If it is coming off the roof through a badly placed downspout, a pump moves the same rain twice. Find out which you have first.',
+      },
+      {
+        q: 'Do you do encapsulation?',
+        a: 'No. That is a different trade and we will say so. The leak and the pump are ours; the vapor barrier, the grading, and the foundation drainage are not.',
+      },
+      {
+        q: 'How do you tell a leak from groundwater?',
+        a: 'Timing, location, and whether it dries out. Water that ignores the weather is a leak. We check the supply and drain lines under the house rather than guessing from the surface.',
       },
       PRICING_FAQ,
       LICENSED_FAQ,

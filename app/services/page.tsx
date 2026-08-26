@@ -28,6 +28,12 @@ const PILLARS: Array<{ key: Pillar; title: string; blurb: string }> = [
       'Drains, emergencies, and repairs in every town we serve, Chattanooga included. This is what most people call about first, and it is what we are fastest on.',
   },
   {
+    key: 'sump-groundwater',
+    title: 'Sump pumps & groundwater',
+    blurb:
+      'Pumps that have quit, pumps that never shut off, and water standing under the house. We do the pump, the check valve, and the discharge; the circuit is an electrician\'s job and we say so up front.',
+  },
+  {
     key: 'water-heating',
     title: 'Water heaters & tankless',
     blurb:

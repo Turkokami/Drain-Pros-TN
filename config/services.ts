@@ -23,6 +23,7 @@ export type LicenseScope =
 
 export type Pillar =
   | 'core'
+  | 'sump-groundwater'
   | 'water-heating'
   | 'water-quality'
   | 'well-septic-property'
@@ -194,6 +195,43 @@ export const SERVICES: Service[] = [
     priority: 'primary',
   },
 
+  // --- SUMP PUMPS & GROUNDWATER -------------------------------------------
+  // Added 2026-08-25 off Search Console. "sump pump repair" and "sump pump
+  // installation" were the second and fourth largest unbranded impression
+  // drivers in the property's first week and there was no page to land on.
+  //
+  // SCOPE, confirmed by the license holder: the pump, the float, the check
+  // valve, and the discharge line are ours. The dedicated circuit and the
+  // receptacle are an electrician's license, not a plumber's, and are referred
+  // out — see REFERRED_OUT below. Content on these pages must never imply we
+  // wire the circuit.
+  {
+    slug: 'sump-pump-repair',
+    name: 'Sump Pump Repair',
+    summary: 'Pumps that will not start, run without stopping, or cycle on a stuck float.',
+    pillar: 'sump-groundwater',
+    licenseScope: 'in',
+    requiresPermit: false,
+    permitNote:
+      'The pump, float, check valve, and discharge line are ours. Wiring the circuit or the ' +
+      'receptacle is an electrician\'s work and is referred out.',
+    phase: 3,
+    priority: 'primary',
+  },
+  {
+    slug: 'sump-pump-replacement',
+    name: 'Sump Pump Replacement',
+    summary: 'Replacing a failed or undersized pump in an existing pit, sized to the water it actually moves.',
+    pillar: 'sump-groundwater',
+    licenseScope: 'in',
+    requiresPermit: false,
+    permitNote:
+      'A like-for-like pump swap in an existing pit needs no permit. Cutting in a new pit or ' +
+      'routing a new discharge can; the office checks per address.',
+    phase: 3,
+    priority: 'primary',
+  },
+
   // --- SIZE-DEPENDENT — ceiling disclosure required ------------------------
   {
     slug: 'repiping',
@@ -289,6 +327,15 @@ export const REFERRED_OUT = [
       'and we can attempt to locate one behind a wall, but pinpointing a leak under a slab or ' +
       'out in the yard is its own trade.',
     referTo: 'American Leak Detection',
+  },
+  {
+    name: 'Electrical work on a sump pump circuit',
+    reason:
+      'A sump pump belongs on a dedicated, properly protected circuit, and running or altering ' +
+      'one is an electrician\'s license, not a plumber\'s. We fit the pump, the check valve, and ' +
+      'the discharge, and we will tell you plainly when the receptacle is the actual fault ' +
+      'rather than the pump.',
+    referTo: 'licensed electrician',
   },
 ] as const
 

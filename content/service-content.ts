@@ -1252,6 +1252,237 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       LICENSED_FAQ,
     ],
   },
+
+  // ======================================================= SUMP & GROUNDWATER
+  // The electrical boundary is stated on both of these pages, in the quick
+  // answer and again in the FAQs. We fit the pump and the plumbing. We do not
+  // wire the circuit. Do not soften that to "we can take care of it."
+  'sump-pump-repair': {
+    quickAnswer:
+      'We repair sump pumps across the whole service area — Charleston, Cleveland, Athens, the ' +
+      'US-11 corridor, and inside Chattanooga city limits. We work on the pump, the float, the ' +
+      'check valve, and the discharge line. We do not wire the circuit: if the fault turns out to ' +
+      'be the receptacle or the breaker, that is an electrician\'s work and we will tell you so ' +
+      'rather than guess at it.',
+    lede:
+      'A sump pump only matters on the day it is needed, which is why most of them fail quietly ' +
+      'months before anybody finds out. By the time you notice, there is usually water where it ' +
+      'should not be.',
+    intro: [
+      'Most sump pump calls come in during a storm, and most of them turn out to be one of four ' +
+        'things: a float that has hung up on the side of the pit, a check valve that has stopped ' +
+        'holding, a discharge line that is blocked, or a motor that has finally worn out. Only the ' +
+        'last one is a new pump.',
+      'That distinction is worth money to you. A pump that will not start is not automatically a ' +
+        'pump that needs replacing, and we would rather test the thing than sell you a new one on ' +
+        'a bad afternoon.',
+    ],
+    signs: [
+      'The pit fills and the pump never starts',
+      'The pump runs but the water level does not drop',
+      'It runs constantly, or kicks on every couple of minutes in dry weather',
+      'A grinding or rattling noise from the pit',
+      'A hard bang in the discharge pipe every time it shuts off',
+      'Water standing in the crawlspace or basement after a storm that used to stay dry',
+    ],
+    sections: [
+      {
+        heading: 'What usually fails, in order',
+        paragraphs: [
+          'The float switch is the most common failure by a wide margin. It is the part that tells ' +
+            'the pump the water has come up, and in a narrow pit it can catch on the wall, on the ' +
+            'discharge pipe, or on its own cord. A pump with a hung float is a working pump that ' +
+            'never gets the message.',
+          'Next is the check valve, the one-way valve in the discharge line. When it stops sealing, ' +
+            'the water the pump just lifted runs straight back down into the pit, so the pump starts ' +
+            'again, lifts the same water, and wears itself out doing it. Short-cycling like that will ' +
+            'kill a good pump in a season.',
+          'After that comes the discharge line itself, then the impeller, and only then the motor. ' +
+            'We work down that list rather than starting at the expensive end.',
+        ],
+      },
+      {
+        heading: 'Where our work stops and an electrician\'s begins',
+        paragraphs: [
+          'A sump pump belongs on its own properly protected circuit. Running that circuit, ' +
+            'replacing a receptacle, or chasing a breaker that keeps tripping is an electrician\'s ' +
+            'license, not a plumber\'s, and we do not do it.',
+          'What we will do is find out whether that is your problem. It is a quick check, and it is ' +
+            'a common one: a pump that is dead at the outlet is not a pump fault at all. Being told ' +
+            'plainly that you need an electrician is a better outcome than a plumber selling you a ' +
+            'pump you did not need.',
+        ],
+      },
+      {
+        heading: 'Crawlspaces, not basements',
+        paragraphs: [
+          'Full basements are rare across this corridor. Most of what we work on sits in a ' +
+            'crawlspace, and that changes the job: the pit is shallower, access is tight, the ' +
+            'discharge run is often longer, and a pump that fails under a house goes unnoticed far ' +
+            'longer than one in a basement somebody walks past every day.',
+          'It also means most of the sump advice you find online was written about a different ' +
+            'house. Sizing, pit depth, and freeze exposure on the discharge all read differently ' +
+            'under a crawlspace on clay.',
+        ],
+      },
+    ],
+    process: [
+      { name: 'Test before we sell', text: 'We fill the pit and watch the pump do its actual job, rather than diagnosing it from the symptom you described on the phone.' },
+      { name: 'Work the cheap causes first', text: 'Float, check valve, and discharge line come before impeller and motor, because that is the order things actually fail in.' },
+      { name: 'Check whether it is even a plumbing fault', text: 'If the pump is dead at the outlet, we say so and you need an electrician, not us.' },
+      { name: 'Repair or replace, with the reason', text: 'We tell you which one you are looking at and why, including when the honest answer is that the pump has years left in it.' },
+      { name: 'Confirm it cycles clean', text: 'We run it through a full cycle and make sure it shuts off, holds, and does not restart on its own water.' },
+    ],
+    related: [
+      { label: 'Sump pump replacement', href: '/services/sump-pump-replacement' },
+      { label: 'Sump pump not turning on', href: '/problems/sump-pump-not-working' },
+      { label: 'How long should a sump pump last?', href: '/guides/sump-pump-lifespan' },
+    ],
+    whatWeDo: [
+      'Float switch diagnosis and replacement, the most common fault by far',
+      'Check valve replacement when the pit refills itself after every cycle',
+      'Clearing and re-routing blocked or frozen discharge lines',
+      'Impeller and motor faults, and a straight call on repair versus replacement',
+      'Testing whether the fault is the pump at all, or the circuit feeding it',
+    ],
+    faqs: [
+      {
+        q: 'My sump pump will not turn on. Is it dead?',
+        a: 'Usually not. A hung float switch is the most common cause by a distance, and a pump that gets no power at the outlet is an electrical fault rather than a pump fault. We test before recommending a replacement.',
+      },
+      {
+        q: 'Do you do the electrical side too?',
+        a: 'No. The circuit and the receptacle are an electrician\'s license, not a plumber\'s. We fit the pump, the check valve, and the discharge line, and we will tell you when the fault is on the electrical side so you are calling the right trade.',
+      },
+      {
+        q: 'Can you get out during a storm?',
+        a: 'A pit that is filling with the pump doing nothing is treated as urgent, because the damage is happening while you wait. Call rather than fill in the form for that one.',
+      },
+      {
+        q: 'My pump runs all the time. Is that bad?',
+        a: 'Yes, and it is usually fixable. Constant running in dry weather normally means a check valve that is letting the water back down, or a float set too low. Short-cycling wears a good pump out fast.',
+      },
+      {
+        q: 'Do you work on crawlspace pumps?',
+        a: 'Yes, and that is most of what we see here. Crawlspaces are the norm across this corridor rather than full basements.',
+      },
+      WARRANTY_FAQ,
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'sump-pump-replacement': {
+    quickAnswer:
+      'We replace failed and undersized sump pumps in existing pits across the whole service ' +
+      'area, sized to how fast the pit actually fills rather than to whatever was in there. A ' +
+      'like-for-like swap needs no permit. Cutting in a new pit or routing a new discharge can, ' +
+      'and the office checks that per address. The dedicated circuit is an electrician\'s work ' +
+      'and is referred out.',
+    lede:
+      'A sump pump is a wear part with a motor in it. It is not a fixture, and it does not last ' +
+      'the life of the house. Replacing one before it fails is much cheaper than replacing it ' +
+      'the morning after it did.',
+    intro: [
+      'Most replacements we do fall into two groups: a pump that has simply reached the end of a ' +
+        'normal working life, and a pump that was the wrong size for the pit from the day it went ' +
+        'in. The second group is larger than people expect, because the usual method of choosing a ' +
+        'replacement is reading the horsepower off the old one.',
+      'That number tells you what somebody bought once. It does not tell you what the house needs, ' +
+        'and if the old pump was short-cycling itself to death, matching it repeats the mistake.',
+    ],
+    signs: [
+      'The pump is past about seven to ten years of real service',
+      'It runs but cannot keep up during heavy rain',
+      'It short-cycles: on, off, on again within seconds',
+      'Rust or scale in the pit, or an impeller you can hear grinding',
+      'You have been repairing the same pump more than once a year',
+      'The house has taken water even though the pump was working',
+    ],
+    sections: [
+      {
+        heading: 'Sizing to the pit, not to the old pump',
+        paragraphs: [
+          'The right way to size a replacement is to measure how fast the pit refills with the pump ' +
+            'switched off, then match a pump to that rate plus the height it has to lift and the ' +
+            'length of the run. A long horizontal discharge across a crawlspace costs the pump real ' +
+            'capacity, and a pump chosen without accounting for it underperforms on exactly the day ' +
+            'it is needed.',
+          'Oversizing is a real failure mode too, not a safe default. A pump that empties the pit ' +
+            'faster than the pit fills will start and stop constantly, and short-cycling is what ' +
+            'kills sump pumps. Bigger is not automatically better here.',
+        ],
+      },
+      {
+        heading: 'What we replace while we are in there',
+        paragraphs: [
+          'A pump swap that reuses a tired check valve and a discharge line nobody has looked at is ' +
+            'half a job. We replace the check valve as a matter of course, look at the discharge run ' +
+            'for sags, blockages, and freeze exposure, and make sure the pit is clear of the debris ' +
+            'that got into the last impeller.',
+          'We also check that the pump is not sitting flat on the bottom of the pit picking up silt, ' +
+            'which is one of the quiet reasons a replacement fails early and the customer concludes ' +
+            'the brand was bad.',
+        ],
+      },
+      {
+        heading: 'A new pit is a different job, and we will say so',
+        paragraphs: [
+          'Replacing a pump in a pit that already exists is straightforward work. Putting a sump ' +
+            'system into a crawlspace that never had one is not the same job: it means excavating a ' +
+            'pit, setting a liner, routing a discharge to somewhere the water will actually leave, ' +
+            'and getting a dedicated circuit run to it by an electrician.',
+          'That is worth scoping properly rather than quoting off a phone call, and depending on the ' +
+            'address it may need a permit. Call the office and we will tell you honestly what the ' +
+            'job is, including the parts of it that are not ours.',
+        ],
+      },
+    ],
+    process: [
+      { name: 'Measure the fill rate', text: 'We time how fast the pit refills with the pump off. That number, not the old pump\'s label, decides the size.' },
+      { name: 'Account for the lift and the run', text: 'Vertical lift plus the length of the horizontal discharge, which in a crawlspace is often long enough to matter.' },
+      { name: 'Set the pump clear of the silt', text: 'Off the bottom of the pit, so the impeller is not eating the sediment that killed the last one.' },
+      { name: 'Replace the check valve', text: 'Every time. A new pump behind an old check valve inherits the short-cycling that wore the last one out.' },
+      { name: 'Test a full cycle and hand over the float setting', text: 'We run it, confirm it shuts off and holds, and show you what normal looks like so you can spot abnormal.' },
+    ],
+    related: [
+      { label: 'Sump pump repair', href: '/services/sump-pump-repair' },
+      { label: 'What size sump pump do I need?', href: '/guides/sump-pump-sizing' },
+      { label: 'Water in a crawlspace in East Tennessee', href: '/guides/crawlspace-water-east-tennessee' },
+    ],
+    whatWeDo: [
+      'Replacing failed, undersized, and worn-out pumps in existing pits',
+      'Sizing to the measured fill rate, the lift, and the length of the discharge run',
+      'Fitting a new check valve and inspecting the discharge line as part of the job',
+      'Submersible and pedestal replacements, with a straight recommendation on which suits the pit',
+      'Battery backup pumps fitted alongside the primary, where the property justifies one',
+    ],
+    faqs: [
+      {
+        q: 'Can I just get the same size pump as the old one?',
+        a: 'Often that is right, but confirm rather than assume. If the old pump was short-cycling or could not keep up in heavy rain, matching it repeats whatever was wrong. We measure how fast the pit fills and size to that.',
+      },
+      {
+        q: 'Do I need a permit to replace a sump pump?',
+        a: 'A like-for-like swap in an existing pit, no. Cutting in a new pit or running a new discharge route can need one depending on the town, and the office checks that per address before anything is scheduled.',
+      },
+      {
+        q: 'Do you install a sump system where there is not one already?',
+        a: 'That is a different and larger job than a pump swap, involving excavation, a liner, a discharge route, and a dedicated circuit run by an electrician. Call the office and we will scope it honestly, including the parts that are not ours to do.',
+      },
+      {
+        q: 'Do you run the electrical for it?',
+        a: 'No. The dedicated circuit and receptacle are an electrician\'s license. We fit the pump and the plumbing and are straight with you about where that line is.',
+      },
+      {
+        q: 'Is a battery backup worth it?',
+        a: 'It depends on whether your pit fills during storms, because the storm that floods the house is frequently the storm that takes the power out. If the pump only runs in wet weather, a backup is doing real work. We will tell you if we think yours does not need one.',
+      },
+      WARRANTY_FAQ,
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
 }
 
 /**

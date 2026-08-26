@@ -707,6 +707,259 @@ export const PROBLEM_CONTENT: Record<string, ProblemContent> = {
       LICENSED_FAQ,
     ],
   },
+
+  // =============================================================== SUMP PUMPS
+  // Crawlspace country. Most sump content online assumes a full basement, which
+  // is the wrong house for this corridor. The electrical boundary appears on
+  // every page in this group.
+  'sump-pump-not-working': {
+    quickAnswer:
+      'Treat it as urgent if the pit is filling. The most common cause is a float switch hung up ' +
+      'on the side of the pit or on its own cord, and the second is no power at the outlet, which ' +
+      'is an electrical fault rather than a pump fault. Neither one means the pump is finished.',
+    lede:
+      'A sump pump that will not start is usually a working pump that never got told to run. That ' +
+      'is worth knowing before anyone sells you a new one on the worst afternoon of the month.',
+    symptoms: [
+      'Water rising in the pit and the pump silent',
+      'The pump hums but does not move water',
+      'It ran during the last storm and will not start now',
+      'The breaker for it has tripped, or trips again when reset',
+      'Water appearing in the crawlspace or basement for the first time in years',
+    ],
+    causes: [
+      'A float switch caught on the pit wall, the discharge pipe, or its own power cord',
+      'No power at the outlet — a tripped breaker, a failed receptacle, or an unplugged pump',
+      'A jammed impeller, usually gravel or debris that got into the pit',
+      'A seized motor at the end of a normal working life',
+      'A discharge line so completely blocked the pump cannot move anything',
+    ],
+    rightNow: [
+      'If water is rising, move what you can off the floor and out of the crawlspace access',
+      'Check the pump is plugged in and the breaker has not tripped. That is genuinely the fault a fair share of the time',
+      'If the breaker trips again immediately, leave it off and call an electrician — that is not a plumbing fault',
+      'Do not reach into a pit with water in it while the pump is plugged in',
+      'A wet/dry vacuum buys you time on the water while you wait',
+    ],
+    whatWeDo: [
+      'Test the float first, because it is the most common cause by a wide margin',
+      'Check whether the pump is getting power at all before touching the pump itself',
+      'Clear a jammed impeller where that is what has stopped it',
+      'Replace the pump when it has genuinely failed, sized to the pit rather than to the old label',
+      'Tell you plainly when the fault is electrical and you need a different trade',
+    ],
+    faqs: [
+      {
+        q: 'Is a pump that will not start always a dead pump?',
+        a: 'No, and it usually is not. A hung float is the most common cause we find, and a pump with no power at the outlet is an electrical problem. We test rather than assume.',
+      },
+      {
+        q: 'The breaker keeps tripping. Can you fix that?',
+        a: 'No. A breaker that trips repeatedly is an electrician\'s work, not a plumber\'s. We will confirm that is what you are dealing with so you are not paying two trades to find out.',
+      },
+      {
+        q: 'Should I call or fill in the form?',
+        a: 'Call. If the pit is filling with the pump doing nothing, damage is accumulating while a form sits in an inbox.',
+      },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'sump-pump-running-constantly': {
+    quickAnswer:
+      'Not an emergency, but do not leave it. A pump running non-stop in dry weather is almost ' +
+      'always a check valve that has stopped holding, so the pump lifts the same water over and ' +
+      'over. Short-cycling like that wears out a good pump in a season.',
+    lede:
+      'A sump pump that never shuts off is not working harder for you. It is usually pumping the ' +
+      'same few gallons in a circle, and paying for it with its own service life.',
+    symptoms: [
+      'The pump runs continuously with no rain for days',
+      'It cycles on and off every minute or two',
+      'You hear water running back down the pipe just after it stops',
+      'The pit level barely drops while the pump is running',
+      'The motor is hot to the touch',
+    ],
+    causes: [
+      'A failed check valve letting the discharged water fall straight back into the pit',
+      'A float set too low, so the pump starts again before the pit has really emptied',
+      'A pit that is undersized for the water coming in, so it refills as fast as it empties',
+      'A pump oversized for the pit, emptying it faster than it fills and starting again immediately',
+      'Groundwater genuinely running high — a spring, a broken line, or a downspout discharging beside the foundation',
+    ],
+    whatWeDo: [
+      'Watch a full cycle and see where the water is actually coming from',
+      'Replace the check valve, which is the cause more often than anything else',
+      'Reset or replace the float so the pump is not restarting on its own water',
+      'Look outside for the surface water feeding the pit, because sometimes the fix is a downspout',
+      'Size a replacement properly when the current pump is simply wrong for the pit',
+    ],
+    faqs: [
+      {
+        q: 'How bad is short-cycling?',
+        a: 'Bad enough to matter. Every start is the hardest moment in a motor\'s life, and a pump doing that every ninety seconds ages years in a season. It is also usually a cheap fix.',
+      },
+      {
+        q: 'It only runs constantly when it rains. Same problem?',
+        a: 'Different problem. Continuous running during heavy rain can be normal, or it can mean the pump is undersized or that surface water is being routed into the pit. Worth looking at, but it is not the check valve story.',
+      },
+      {
+        q: 'Could a downspout really be doing this?',
+        a: 'Yes, and we see it. A downspout dumping beside the foundation puts roof water straight into the ground next to the house, and the pump ends up moving the same rain twice.',
+      },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'sump-pump-noise': {
+    quickAnswer:
+      'Not an emergency, but noise from a sump pump is specific and it is worth reading. A bang ' +
+      'when it shuts off is the check valve and is easily fixed. Grinding is debris or a failing ' +
+      'impeller. A rattle is usually the pump or the pipe touching the pit wall.',
+    lede:
+      'Sump pumps are not quiet, but they are consistent. When one starts making a new noise, the ' +
+      'noise tells you which part changed.',
+    symptoms: [
+      'A hard bang or thud in the pipe each time the pump shuts off',
+      'Grinding or a rough sound while it is running',
+      'A rattle or vibration through the floor above',
+      'A humming pump that is not moving water',
+      'Gurgling from the pit after the pump stops',
+    ],
+    causes: [
+      'Water hammer at the check valve when the column of water slams back against it',
+      'Gravel or debris caught in the impeller',
+      'A pump sitting directly on the pit floor, transmitting vibration into the liner',
+      'A discharge pipe unsupported or touching a joist, so the whole run resonates',
+      'A worn bearing or an impeller at the end of its life',
+    ],
+    faqs: [
+      {
+        q: 'The bang when it shuts off is loud. Is it damaging anything?',
+        a: 'It is worth fixing. That shock loads the check valve and the joints in the discharge line every cycle. A quiet check valve or an arrestor sorts it, and it is small work.',
+      },
+      {
+        q: 'Is grinding always a dead pump?',
+        a: 'No. It is often debris in the impeller, which comes out. If the impeller is actually worn, that usually means the pump is old enough to be worth replacing rather than repairing.',
+      },
+      {
+        q: 'Why is it louder in the crawlspace than it used to be?',
+        a: 'Usually something has shifted so the pump or the pipe is now in contact with the liner or a joist. The pump has not changed; what it is touching has.',
+      },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'sump-discharge-line-blocked': {
+    quickAnswer:
+      'Treat it as urgent. If the pump runs and the pit does not empty, the pump is working ' +
+      'against a closed pipe and the house has no protection at all. In winter this is usually ice ' +
+      'at the outlet; the rest of the year it is debris, a crushed line, or a discharge that has ' +
+      'silted up where it exits.',
+    lede:
+      'A blocked discharge is the failure people miss, because everything sounds right. The pump ' +
+      'is running. It just has nowhere to put the water.',
+    symptoms: [
+      'The pump runs and runs but the level in the pit does not drop',
+      'Water audibly falling back into the pit after every cycle',
+      'The pump trips its thermal cutout and stops until it cools',
+      'Ice visible at the discharge outlet in cold weather',
+      'The outlet end buried, crushed, or grown over outside',
+    ],
+    causes: [
+      'Ice forming at the outlet or in a long horizontal run during a hard freeze',
+      'Debris, silt, or gravel in the line, often from a pit that was never cleaned out',
+      'A crushed or collapsed section, common where the line runs shallow across a yard',
+      'A discharge outlet buried by soil, mulch, or growth over a season or two',
+      'A frozen or blocked check valve holding the line closed',
+    ],
+    rightNow: [
+      'Unplug the pump if it is cycling against a closed line and overheating',
+      'Clear what you can reach at the outlet end — snow, ice, soil, or growth',
+      'Do not pour hot water down a frozen discharge line while the pump is plugged in',
+      'Use a wet/dry vacuum on the pit to buy time if water is rising',
+      'Call rather than wait for a thaw if there is water coming into the house',
+    ],
+    whatWeDo: [
+      'Find where the line is actually blocked instead of guessing at the visible end',
+      'Clear the blockage and check the whole run for the sag or crush that caused it',
+      'Re-route or re-pitch a discharge that freezes every winter, because clearing it annually is not a fix',
+      'Fit or replace the check valve where it is the thing holding the line shut',
+      'Get the outlet discharging somewhere the water will actually leave, away from the foundation',
+    ],
+    faqs: [
+      {
+        q: 'Why does my discharge line freeze every winter?',
+        a: 'Usually a long shallow horizontal run, not enough fall, or an outlet that sits where water pools and then ices over. Clearing it every January is treating the symptom. Re-pitching or re-routing the run is the fix.',
+      },
+      {
+        q: 'The pump sounds fine. Can this still be the problem?',
+        a: 'Yes, and that is exactly why this one catches people out. A pump running against a closed pipe sounds like a pump doing its job right up until the water comes over the top of the pit.',
+      },
+      {
+        q: 'Where should the discharge actually go?',
+        a: 'Far enough from the foundation that the water does not come straight back to the pit, and somewhere with somewhere to go. A discharge that empties two feet from the wall is just recycling the same water.',
+      },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
+
+  'water-in-crawlspace': {
+    quickAnswer:
+      'Not usually an emergency, but standing water under a house is not something to live with. ' +
+      'Work it in order: find whether it is groundwater or a plumbing leak, deal with the surface ' +
+      'water outside, then decide whether the crawlspace needs a sump. A pump fitted before the ' +
+      'first two steps often just runs forever.',
+    lede:
+      'Crawlspaces are the norm here rather than full basements, and a wet one is common enough ' +
+      'across this corridor that people assume it is normal. It is not, and it does slow damage ' +
+      'to everything above it.',
+    symptoms: [
+      'Standing water or saturated ground under the house after rain',
+      'A musty smell coming up through the floor',
+      'Rusting duct work, damp insulation, or insulation falling out of the joists',
+      'Floors that feel cold or cupped above the wet area',
+      'An existing pit under the house that fills but has no pump, or a pump that has quit',
+    ],
+    causes: [
+      'Surface water — gutters, downspouts, and grading sending roof and yard water at the foundation',
+      'A high water table on clay soil, which holds water instead of letting it drain away',
+      'A plumbing leak under the house, which looks identical to groundwater until somebody checks',
+      'A failed or missing vapor barrier letting ground moisture straight into the space',
+      'A sump that exists but has a failed pump, a hung float, or a blocked discharge',
+    ],
+    whatWeDo: [
+      'Work out first whether it is groundwater or a leak in the house plumbing, because they look the same and only one of them is ours',
+      'Repair the leak when that is what it turns out to be',
+      'Look at where the surface water is coming from before recommending a pump',
+      'Replace or repair the sump pump when there is a pit already under the house',
+      'Say plainly when the answer is grading, gutters, or encapsulation rather than plumbing',
+    ],
+    faqs: [
+      {
+        q: 'Do I need a sump pump under my house?',
+        a: 'Maybe, but it is rarely the first step. If roof water is being delivered to the foundation by a downspout, a pump will run forever moving rain that never needed to be there. Fix the water you can see first, then decide.',
+      },
+      {
+        q: 'How do I know if it is a leak instead of groundwater?',
+        a: 'Timing is the tell. Water that appears after rain and dries out is groundwater. Water that is there regardless of weather, or that stays wet in a dry spell, points at a plumbing leak. We check rather than guess.',
+      },
+      {
+        q: 'Is this a plumbing job at all?',
+        a: 'Partly. The leak and the pump are ours. Grading, gutters, encapsulation, and foundation drainage are not, and we will tell you when that is what you actually need rather than selling you a pump.',
+      },
+      {
+        q: 'Why is this so common around here?',
+        a: 'Clay soil holds water rather than draining it, and crawlspace construction puts the lowest part of the house right in it. Add a downspout in the wrong place and you have most of the wet crawlspaces in this corridor.',
+      },
+      PRICING_FAQ,
+      LICENSED_FAQ,
+    ],
+  },
 }
 
 export function getProblemContent(slug: string): ProblemContent | null {
