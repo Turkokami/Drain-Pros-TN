@@ -15,7 +15,9 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { SERVICES, getService } from '@/config/services'
-import { LOCATIONS } from '@/config/locations'
+import { problemsForService } from '@/config/problems'
+import { guidesForService } from '@/config/guides'
+import { LOCATIONS, getLocation } from '@/config/locations'
 import { assertSellable } from '@/lib/scope-guard'
 import { getServiceContent } from '@/content/service-content'
 import { photoForService, photoSetForService } from '@/lib/gallery'
@@ -79,6 +81,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const served = areaServedSlugs(slug)
   const photo = photoForService(slug)
   const photoSet = photoSetForService(slug)
+  const relatedProblems = problemsForService(slug)
+  const relatedGuides = guidesForService(slug)
   const path = `/services/${service.slug}`
   const isCore = service.pillar === 'core'
 
@@ -256,6 +260,90 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 {step.text}
               </Step>
             ))}
+          </div>
+        </Section>
+      )}
+
+      {/* RECIPROCAL LINKS — service -> the problems and guides that feed it.
+          Added 2026-10-02 off the first GSC data. The link graph was one-way:
+          every problem page links up to its service, nothing linked back down.
+          /services/drain-cleaning had 34 inbound links; /problems/root-intrusion
+          had 6 and was not linked from drain-cleaning at all, despite being the
+          second-largest impression page on the site (671) stuck at position 79.
+          problemsForService and guidesForService already existed and were wired
+          to nothing. */}
+      {(relatedProblems.length > 0 || relatedGuides.length > 0) && (
+        <Section tone="bone">
+          <SectionHeading
+            eyebrow="Start here"
+            title={`Common ${service.name.toLowerCase()} problems, and the background`}
+            intro="What people usually call about, and the explainers worth reading first."
+          />
+          {relatedProblems.length > 0 && (
+            <div className="mt-8">
+              <h3 className="font-mono text-spec uppercase text-steel">Problems we fix</h3>
+              <div className="mt-3 flex flex-wrap gap-3">
+                {relatedProblems.map((p) => (
+                  <a
+                    key={p.slug}
+                    href={`/problems/${p.slug}`}
+                    className="inline-flex items-center border border-ink/20 bg-paper px-4 py-2 font-body text-sm text-ink hover:border-copper hover:text-copper"
+                  >
+                    {p.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+          {relatedGuides.length > 0 && (
+            <div className="mt-8">
+              <h3 className="font-mono text-spec uppercase text-steel">Worth reading first</h3>
+              <div className="mt-3 flex flex-wrap gap-3">
+                {relatedGuides.map((g) => (
+                  <a
+                    key={g.slug}
+                    href={`/guides/${g.slug}`}
+                    className="inline-flex items-center border border-ink/20 bg-paper px-4 py-2 font-body text-sm text-ink hover:border-copper hover:text-copper"
+                  >
+                    {g.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </Section>
+      )}
+
+      {/* TOWN LINKS — service -> the towns that may actually claim it.
+          Location pages had only THREE inbound links each (home, the county
+          permit page, the hub), which is why Athens has one impression and
+          Charleston has none after six weeks. Service pages linked to the hub
+          and never to a town.
+
+          Driven by `served`, which comes from the scope guard - so a
+          permit-required service never links to a Hamilton County town where it
+          is referred out. The link graph cannot contradict the guard. */}
+      {served.length > 0 && (
+        <Section tone="paper">
+          <SectionHeading
+            eyebrow="Where we do this"
+            title={`${service.name} across ${served.length} towns`}
+            intro="Every town below is one we cover for this work."
+          />
+          <div className="mt-6 flex flex-wrap gap-2">
+            {served.map((s) => {
+              const loc = getLocation(s)
+              if (!loc) return null
+              return (
+                <a
+                  key={s}
+                  href={`/service-areas/${s}`}
+                  className="inline-flex items-center border border-ink/15 px-3 py-1.5 font-body text-sm text-ink hover:border-copper hover:text-copper"
+                >
+                  {loc.name}
+                </a>
+              )
+            })}
           </div>
         </Section>
       )}

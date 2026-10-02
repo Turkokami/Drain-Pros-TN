@@ -46,8 +46,14 @@ export async function generateMetadata({
   const location = getLocation(slug)
   const content = getLocationContent(slug)
   if (!location || !content) return {}
+  // County in the title is deliberate disambiguation. GSC shows Charleston
+  // queries dominated by Charleston, SOUTH CAROLINA - "clogged drain charleston
+  // sc" is our single largest Charleston impression driver, and the home-base
+  // page has earned zero impressions in six weeks. "TN" alone is not a strong
+  // enough signal against a city 400 miles away with vastly more authority.
+  // The county name is unambiguous and is already in the registry.
   return buildMetadata({
-    title: `Plumber in ${location.name}, TN`,
+    title: `Plumber in ${location.name}, TN — ${location.county} County`,
     description: content.quickAnswer,
     path: `/service-areas/${location.slug}`,
     keywords: [

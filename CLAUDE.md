@@ -43,28 +43,37 @@ on `config/policy.ts`:
 |---|---|---|
 | No septic or well **system** work | Confirmed | Hard block, always. Not policy-controlled. |
 | $25,000 per-project ceiling | Confirmed, not published | Office qualifies job size at the estimate |
-| Permit authority per jurisdiction | Confirmed for Chattanooga only | **No longer gates publishing** |
+| Permit authority per jurisdiction | **All 14 verified** | **Gates publishing — the gate is ON** |
 
-**Changed 2026-08-16 by client direction.** The site used to withhold
-permit-required services wherever permit authority was not confirmed. It no
-longer does. The office qualifies permitting and job size at intake; the site's
-job is to present the complete service list and route the lead. All 18 services
-publish in all 21 towns.
+**Current, as of 2026-08-25.** The gate is ON. The 2026-08-16 direction to
+publish everything everywhere was reversed once the license holder confirmed the
+actual arrangement in Hamilton County: permit-required jobs there are
+**referred** to a licensed partner who performs the work and attends the
+inspection. Drain Pros does not do them. Advertising those services on a
+Hamilton town page is a claim about who does the work that is not true.
+
+**63 of 380 service x location combinations are withheld.** Chattanooga,
+Ooltewah, Collegedale, Apison, Harrison, Georgetown and Birchwood publish 8
+permit-free services. Corridor towns publish all 19.
 
 The septic/well block is *not* part of that change and stays hard. It is a
 licensure question, not a permitting one — no office process makes it sellable.
 The house-side work on those properties is in scope and already a pillar.
 
-### 3. Permit data is still real, it just does not gate the site
+### 3. The permit map is fully verified
 
-`config/jurisdictions.ts` is unchanged and still accurate: Chattanooga is
-confirmed `none`, everything else is `unverified`. The office needs that. It
-simply no longer decides what publishes.
+All thirteen authorities were called and answered on 2026-08-16. Nothing is
+`unverified` any more.
 
-To restore the original fail-safe behavior, flip
-`PUBLISHING.gateServicesByPermitAuthority` back to `true` in `config/policy.ts`.
-The guard, the linter check `[7]`, the location pages, and the ScopeStrip
-withheld block all follow from that one field.
+**Accept an application from #5045** (1-3 day turnaround): Bradley County, City
+of Cleveland, McMinn County, City of Athens, Polk County, Meigs County.
+
+**Decline it** — work referred to a licensed partner: City of Chattanooga,
+Hamilton County, Collegedale, Red Bank, East Ridge.
+
+The whole gate is one field: `PUBLISHING.gateServicesByPermitAuthority` in
+`config/policy.ts`. The guard, linter check `[7]`, the location pages and the
+ScopeStrip withheld block all follow from it.
 
 ### 4. Defined-term warranties only
 
@@ -91,24 +100,25 @@ production**. That is how a placeholder phone number is prevented from shipping.
 To resolve a pending item: change the status, add the value, record source and
 date. Nothing else changes.
 
-### Currently pending — blocks production build
+### Nothing is pending
 
-| Item | Blocks |
-|---|---|
-| Legal + display business name | Domain, GBP, all schema, every page |
-| Business phone (dedicated line, not a cell) | NAP, all CTAs, every citation |
-| Domain | Canonical URLs, sitemap, all schema `@id` values |
-| Years in trade, founding year | E-E-A-T depth on the about page |
-| Real after-hours availability | Emergency positioning, hours schema |
-| Insurance carrier and coverage | Trust blocks, commercial page |
-| Warranty terms | All warranty language sitewide |
-| Facebook review count | Reviews baseline |
-| Permit authority per jurisdiction | Office scheduling only — no longer a publishing gate |
+Every registry fact is confirmed as of 2026-08-18, which is why
+`lint:scope:prod` reports **PASS - safe to publish** and `vercel.json` runs the
+real build with no `STAGING` escape hatch. A deploy now genuinely refuses to
+ship an unverified claim.
 
-The last one used to be the gate on the whole build. It is not any more, but the
-thirteen calls are still worth making, because the office needs to know which
-desk each town files with and how long each takes. `npm run lint:scope` still
-prints the list with contacts every run.
+Confirmed and live: legal name (Alpha Services LLC), entity type, phone, email,
+domain (`https://www.drainprostn.com`, www is canonical), founding year (2025),
+combined trade experience (20 years, across BOTH owners - never write it as time
+in business), insurance (UFG, $1M + umbrella), warranty (12-month workmanship /
+30-day drain cleaning, excluding closet augers), ownership (**Kayla Krishan**
+owns it, Kevin holds the license, woman-owned), Google review and profile URLs,
+and the GBP as a service-area business with the address hidden.
+
+`OPEN_QUESTIONS` in `config/business.ts` tracks items that are NOT referenced in
+rendered copy - currently the referral partner's identity. Those are reported by
+the linter as `[8b]` and never gate a build, because an unresolved value there
+cannot put a placeholder in front of a customer.
 
 ---
 
@@ -203,10 +213,17 @@ npm run build             # runs strict lint, then next build
 npm run typecheck
 ```
 
-Current state: **0 combinations withheld**. All 21 locations × 18 services
-publish, because the permit gate is off (see `config/policy.ts`). The 13
-unverified jurisdictions are still reported by `lint:scope` every run, but as an
-**office to-do rather than a publishing gate** — they no longer block a build.
+Current state: **106 routes live.** 19 services, 20 locations, 22 problems, 26
+guides, 5 county permit pages. 63 service x location combinations withheld by
+the guard, all of them in Hamilton County.
 
-The only guard still withholding anything is the septic/well/commercial-new-
-construction block, and those never appear in `SERVICES` to begin with.
+Phase 3 is complete. Phase 4 is partly done - permit guidance by county and the
+credential/estimate guides are live; commercial, the reference library, and the
+utility pages are not.
+
+**Internal linking is load-bearing and easy to break.** Service pages link down
+to their problems, their guides, and every town the guard allows. That last one
+is driven by `served`, so the link graph can never contradict the guard. Before
+the first GSC data (2026-10-02) location pages had three inbound links each and
+Athens had one impression in six weeks; after wiring it they have twenty-two.
+If you add a route group, give it reciprocal links or it will not be found.
