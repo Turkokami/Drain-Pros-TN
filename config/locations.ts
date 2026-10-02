@@ -68,11 +68,15 @@ export const LOCATIONS: Location[] = [
     tier: 'anchor',
     phase: 2,
     driveMinutes: 4,
+    utility: 'Calhoun-Charleston Utility District',
     localFacts: [
-      'Directly across the Hiwassee River from Charleston on US-11.',
-      'Small incorporated town with a high share of older housing stock.',
-      'Well and septic properties common outside the town center.',
+      'Directly across the Hiwassee River from Charleston on US-11, four minutes from our base.',
+      'Served by the Calhoun-Charleston Utility District, which buys treated water from the Hiwassee Utility Commission rather than treating its own.',
+      'Older homes through the town center still turn up galvanized supply line and cast iron drain stack.',
+      'Well and septic properties are common outside the town center, where iron and sulfur in the supply are the usual complaint.',
     ],
+    competitorNote:
+      'No plumber is based in Calhoun. Every operator serving the town drives in from Athens or over from Cleveland, the same gap as Charleston.',
   },
 
   // --- PRIMARY -----------------------------------------------------------

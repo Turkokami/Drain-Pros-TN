@@ -123,7 +123,7 @@ const CLEVELAND: LocationContent = {
     },
     {
       q: 'Is Cleveland water hard?',
-      a: 'Like much of southeast Tennessee, Cleveland water tends to carry enough mineral hardness to affect plumbing over time — scale in water heaters and deposits on fixtures. It is a plumbing issue, not a health one, and it is worth addressing if your heaters keep failing early.',
+      a: 'Like much of southeast Tennessee, Cleveland water tends to carry enough mineral hardness to affect plumbing over time — scale in water heaters and deposits on fixtures. It is a plumbing issue, not a health one, and it is worth addressing if your water heaters keep failing early.',
     },
     {
       q: 'Do you work on septic and well properties around Cleveland?',
@@ -175,7 +175,7 @@ const CHARLESTON: LocationContent = {
       paragraphs: [
         'Charleston runs on a mix of city water and private well, with septic common once you get ' +
           'outside the town center. On those properties we work the house side — the water lines, ' +
-          'fixtures, heaters, and treatment inside the home. The well itself, the pump, the pressure ' +
+          'fixtures, water heaters, and treatment inside the home. The well itself, the pump, the pressure ' +
           'tank, and the septic system are separately licensed in Tennessee, and we refer those to the ' +
           'right contractor rather than pretend they are ours to touch.',
         'Water treatment is often where well-water homes get the most value from us, because iron, ' +
@@ -211,7 +211,7 @@ const CHARLESTON: LocationContent = {
     },
     {
       q: 'Do you work on well and septic properties around Charleston?',
-      a: 'Yes, the house side — water lines, fixtures, heaters, and treatment inside the home. The well and septic systems themselves are separately licensed and we refer those out.',
+      a: 'Yes, the house side — water lines, fixtures, water heaters, and treatment inside the home. The well and septic systems themselves are separately licensed and we refer those out.',
     },
     {
       q: 'Can you treat my well water?',
@@ -232,8 +232,8 @@ const CALHOUN: LocationContent = {
   quickAnswer:
     'Calhoun sits directly across the Hiwassee River from our Charleston base on US-11, about four ' +
     'minutes away, so we cover it as home ground. Drain cleaning, emergency repair, leak repair, ' +
-    'water heater repair, and fixture work across the town and the surrounding McMinn County area. ' +
-    'Tennessee license #5045.',
+    'water heater repair and replacement, repipes, fixture work, and water treatment across the ' +
+    'town and the surrounding McMinn County area. Tennessee license #5045.',
   intro: [
     'Calhoun and Charleston are twin towns on opposite banks of the Hiwassee, joined by US-11. From ' +
       'our base that is about a four-minute drive, which makes Calhoun one of the fastest towns for ' +
@@ -241,7 +241,8 @@ const CALHOUN: LocationContent = {
       'from Cleveland.',
     'It is a small incorporated town with a high share of older housing, and well and septic ' +
       'properties are common once you leave the center. That combination — older homes and rural ' +
-      'water — is most of what we see here.',
+      'water — is most of what we see here, and it points at the same short list of failures: ' +
+      'corroded supply line, tired drain stack, and water heaters that hard water finished early.',
   ],
   localSections: [
     {
@@ -249,35 +250,54 @@ const CALHOUN: LocationContent = {
       paragraphs: [
         'Because Calhoun is right across the Hiwassee from where we are based, we treat it exactly like ' +
           'home ground rather than a drive. The full list runs here — drains, emergencies, leaks, ' +
-          'water heater repair and replacement, fixtures, and the larger permitted jobs — and where a ' +
-          'permit is needed our office files it with McMinn County and books the inspection.',
+          'water heater repair and replacement, repipes, fixtures, water service lines, and the larger ' +
+          'permitted jobs — and where a permit is needed our office files it with McMinn County and ' +
+          'books the inspection.',
+      ],
+    },
+    {
+      heading: 'Where the water comes from',
+      paragraphs: [
+        'Calhoun is served by the Calhoun-Charleston Utility District, which is a distribution system ' +
+          'rather than a treatment plant — it buys finished water from the Hiwassee Utility Commission ' +
+          'on the Charleston side and moves it across the river. For a homeowner that mostly matters in ' +
+          'two ways: pressure depends on where you sit on the distribution main, and the water carries ' +
+          'the mineral content of a treated surface supply.',
+        'Like most of southeast Tennessee that water tends toward hard, and the cost of it shows up ' +
+          'slowly — scale on water heater elements, sediment in the bottom of a tank, spotting on ' +
+          'fixtures, and shorter life out of anything with a narrow passage. It is a plumbing issue, not ' +
+          'a health one. We test rather than quote an area average, because the number that matters is ' +
+          'what comes out of your tap, not the town’s.',
       ],
     },
     {
       heading: 'Older housing stock and what fails in it',
       paragraphs: [
-        'Calhoun’s higher share of older homes means the classic aging-house problems: supply lines ' +
-          'that have corroded from the inside and drop pressure, original shutoff valves that no longer ' +
-          'close, and water heaters living past their years. None of that is exotic, and most of it is ' +
-          'repair work we can handle on the spot.',
-        'The thing worth doing before you need it is the small stuff — a seized shutoff or a tired ' +
-          'supply line — because those are cheap on a planned visit and expensive in the middle of a ' +
-          'leak.',
+        'Calhoun’s higher share of older homes means the classic aging-house problems, and in this ' +
+          'housing era they are specific: galvanized supply line that has closed up from the inside and ' +
+          'dropped the pressure, cast iron drain stack that has gone rough and started catching, ' +
+          'original shutoff valves that no longer close, and water heaters living well past their years.',
+        'None of that is exotic, and most of it is repair work we can handle on the spot. The thing ' +
+          'worth doing before you need it is the small stuff — a seized shutoff or a tired supply ' +
+          'line — because those are cheap on a planned visit and expensive in the middle of a leak.',
       ],
     },
     {
       heading: 'Well and septic on the edges',
       paragraphs: [
         'Outside the town center, Calhoun runs heavily on private well and septic. We work the house ' +
-          'side of those properties — the interior plumbing, fixtures, heaters, and water treatment — ' +
-          'and refer the well and septic systems themselves to the right licensed contractor. On well ' +
-          'water, treating iron, sulfur, and sediment is usually where we add the most value.',
+          'side of those properties — the interior plumbing, fixtures, water heaters, and water ' +
+          'treatment — and refer the well and septic systems themselves to the right licensed ' +
+          'contractor. On well water, treating iron, sulfur smell, and sediment is usually where we add ' +
+          'the most value, and it is the work that protects the water heater and the fixtures downstream.',
       ],
     },
   ],
   commonIssues: [
+    'Galvanized supply line that has corroded closed and dropped house pressure',
+    'Cast iron drain stack going rough and catching in older homes',
     'Corroding supply lines and seized shutoffs in older homes',
-    'Water heaters past their service life',
+    'Water heaters past their service life, shortened further by hard-water scale',
     'House-side plumbing on private well and septic properties',
     'Iron, sulfur smell, and sediment on well supply',
     'Freeze exposure on unheated runs in winter',
@@ -289,11 +309,19 @@ const CALHOUN: LocationContent = {
     },
     {
       q: 'Which jobs can you do in Calhoun right now?',
-      a: 'The full list: drain cleaning, emergency and leak repair, water heater repair and replacement, fixture work, and the larger permitted jobs. Our office handles the permit where one is needed.',
+      a: 'The full list: drain cleaning, emergency and leak repair, water heater repair and replacement, repipes, fixture work, water service lines, water treatment, and the larger permitted jobs. Our office handles the permit where one is needed.',
+    },
+    {
+      q: 'Who supplies the water in Calhoun?',
+      a: 'The Calhoun-Charleston Utility District, which buys treated water from the Hiwassee Utility Commission across the river rather than treating its own. Outside the town center a lot of properties are on a private well instead.',
+    },
+    {
+      q: 'Is the water hard here?',
+      a: 'It tends toward hard, like most of southeast Tennessee. That is what puts scale on water heater elements and sediment in the tank. We test your water rather than quote a town average, because that is the only number worth acting on.',
     },
     {
       q: 'Do you handle well and septic properties?',
-      a: 'The house side, yes. The well and septic systems themselves are separately licensed and we refer those out.',
+      a: 'The house side, yes — interior plumbing, fixtures, water heaters, and treatment. The well and septic systems themselves are separately licensed and we refer those out.',
     },
     {
       q: 'Are you licensed?',
@@ -350,7 +378,7 @@ const ATHENS: LocationContent = {
       paragraphs: [
         'Built-up Athens runs on city sewer, while the McMinn County properties outside town are ' +
           'heavily well and septic. On those we work the house side — interior plumbing, fixtures, ' +
-          'heaters, and water treatment — and refer the well and septic systems themselves to the ' +
+          'water heaters, and water treatment — and refer the well and septic systems themselves to the ' +
           'right licensed contractor. When an Athens drain keeps backing up in the same spot, we can ' +
           'camera the line and show you whether it is roots, a belly, or a failed section.',
       ],
@@ -378,7 +406,7 @@ const ATHENS: LocationContent = {
     },
     {
       q: 'Is Athens water hard?',
-      a: 'Like much of southeast Tennessee, it tends toward hard, which shows up as scale in water heaters and on fixtures. It is a plumbing issue worth addressing if your heaters keep failing early.',
+      a: 'Like much of southeast Tennessee, it tends toward hard, which shows up as scale in water heaters and on fixtures. It is a plumbing issue worth addressing if your water heaters keep failing early.',
     },
     {
       q: 'Are you licensed to work in Athens?',
@@ -473,7 +501,7 @@ const COLLEGEDALE: LocationContent = {
       paragraphs: [
         'With the university and the surrounding neighborhoods, Collegedale mixes ordinary household ' +
           'plumbing with the steadier needs of an institutional community. For homeowners, that does ' +
-          'not change the work — drains clog, heaters fail, and fixtures wear out the same way they do ' +
+          'not change the work — drains clog, water heaters fail, and fixtures wear out the same way they do ' +
           'anywhere — but it does mean a town with real, consistent plumbing demand and a growth ' +
           'corridor around it.',
       ],
@@ -481,7 +509,7 @@ const COLLEGEDALE: LocationContent = {
   ],
   commonIssues: [
     'Permitting that is verified against the city, not Hamilton County',
-    'Standard household drain, heater, and fixture failures across the neighborhoods',
+    'Standard household drain, water heater, and fixture failures across the neighborhoods',
     'Growth-corridor new construction adjacent in Ooltewah and Apison',
     'Hard-water scale on fixtures and water heaters',
   ],
@@ -511,7 +539,7 @@ const APISON: LocationContent = {
       heading: 'Well and septic country on the growth edge',
       paragraphs: [
         'A high share of Apison properties run on private well and septic. On those we work the house ' +
-          'side — the interior plumbing, fixtures, heaters, and water treatment — and refer the well ' +
+          'side — the interior plumbing, fixtures, water heaters, and water treatment — and refer the well ' +
           'and septic systems themselves to the right licensed contractor. On well water, treating ' +
           'iron, sulfur smell, and sediment is usually where we add the most value.',
       ],
@@ -533,7 +561,7 @@ const APISON: LocationContent = {
     'Builder-grade fixtures and shutoffs in newer subdivision homes',
   ],
   faqs: [
-    { q: 'Do you work on well and septic properties in Apison?', a: 'Yes, the house side — interior plumbing, fixtures, heaters, and treatment. The well and septic systems themselves are separately licensed and we refer those out.' },
+    { q: 'Do you work on well and septic properties in Apison?', a: 'Yes, the house side — interior plumbing, fixtures, water heaters, and treatment. The well and septic systems themselves are separately licensed and we refer those out.' },
     { q: 'How far is Apison from your base?', a: 'About 40 minutes from Charleston, on the rural edge of the Hamilton County growth corridor.' },
     { q: 'Can you treat my well water?', a: 'Yes. Iron, sulfur smell, and sediment are treated after the water reaches the house, which is house-side work we can legally do.' },
     { q: 'Are you licensed?', a: 'Yes. Tennessee Limited Licensed Plumber #5045, verifiable at verify.tn.gov.' },
@@ -578,7 +606,7 @@ const HARRISON: LocationContent = {
     'Freeze exposure on seasonal and lake-side properties in winter',
     'Aging supply lines and water heaters in older lake homes',
     'Builder-grade fixtures and shutoffs in newer subdivisions',
-    'Hard-water scale on fixtures and heaters',
+    'Hard-water scale on fixtures and water heaters',
   ],
   faqs: [
     { q: 'How far is Harrison from your base?', a: 'About 35 minutes from Charleston, along the Chickamauga Lake shoreline in the growth corridor.' },
@@ -704,7 +732,7 @@ const RICEVILLE: LocationContent = {
       heading: 'Well and septic country',
       paragraphs: [
         'With most properties on private well and septic, the work here is mostly house-side: interior ' +
-          'plumbing, fixtures, heaters, and water treatment. The well and septic systems themselves are ' +
+          'plumbing, fixtures, water heaters, and water treatment. The well and septic systems themselves are ' +
           'separately licensed and we refer those out. On well water, treating iron, sulfur smell, and ' +
           'sediment is usually where we add the most value.',
       ],
@@ -752,7 +780,7 @@ const NIOTA: LocationContent = {
       heading: 'Well and septic outside the core',
       paragraphs: [
         'Outside the older core, Niota properties often run on private well and septic. We work the ' +
-          'house side of those — interior plumbing, fixtures, heaters, and treatment — and refer the ' +
+          'house side of those — interior plumbing, fixtures, water heaters, and treatment — and refer the ' +
           'well and septic systems themselves out.',
       ],
     },
@@ -849,7 +877,7 @@ const ENGLEWOOD: LocationContent = {
       heading: 'Well and septic on the edges',
       paragraphs: [
         'Outside the center, Englewood runs on private well and septic. We handle the house side — ' +
-          'interior plumbing, fixtures, heaters, and treatment — and refer the systems themselves out.',
+          'interior plumbing, fixtures, water heaters, and treatment — and refer the systems themselves out.',
       ],
     },
   ],
@@ -896,7 +924,7 @@ const BENTON: LocationContent = {
       heading: 'Well and septic country toward the Ocoee',
       paragraphs: [
         'Benton and the surrounding area run heavily on private well and septic. We work the house ' +
-          'side — interior plumbing, fixtures, heaters, and water treatment — and refer the well and ' +
+          'side — interior plumbing, fixtures, water heaters, and water treatment — and refer the well and ' +
           'septic systems themselves to the right licensed contractor. Iron, sulfur, and sediment ' +
           'treatment on well supply is often where we add the most value out here.',
       ],
@@ -992,7 +1020,7 @@ const OLD_FORT: LocationContent = {
       heading: 'Well and septic in northern Polk County',
       paragraphs: [
         'With most properties on private well and septic, our work here is house-side: interior ' +
-          'plumbing, fixtures, heaters, and treatment. The systems themselves are separately licensed ' +
+          'plumbing, fixtures, water heaters, and treatment. The systems themselves are separately licensed ' +
           'and referred out. Treating iron, sulfur, and sediment on well supply is often where the ' +
           'value is.',
       ],
@@ -1039,7 +1067,7 @@ const DELANO: LocationContent = {
       heading: 'Almost entirely well and septic',
       paragraphs: [
         'Delano runs almost entirely on private well and septic. We work the house side — interior ' +
-          'plumbing, fixtures, heaters, and treatment — and refer the well and septic systems out. ' +
+          'plumbing, fixtures, water heaters, and treatment — and refer the well and septic systems out. ' +
           'Iron, sulfur, and sediment treatment is often where we help most on well supply.',
       ],
     },
@@ -1085,7 +1113,7 @@ const GEORGETOWN: LocationContent = {
       heading: 'Rural well and septic at the county convergence',
       paragraphs: [
         'Georgetown is rural-residential with heavy well and septic use. We work the house side — ' +
-          'interior plumbing, fixtures, heaters, and treatment — and refer the systems themselves out. ' +
+          'interior plumbing, fixtures, water heaters, and treatment — and refer the systems themselves out. ' +
           'On well supply, iron, sulfur, and sediment treatment is often where the value is.',
       ],
     },
@@ -1177,7 +1205,7 @@ const DECATUR: LocationContent = {
       heading: 'Heavy well and septic use',
       paragraphs: [
         'Decatur and the surrounding county run heavily on private well and septic. We work the house ' +
-          'side — interior plumbing, fixtures, heaters, and treatment — and refer the systems ' +
+          'side — interior plumbing, fixtures, water heaters, and treatment — and refer the systems ' +
           'themselves out. Iron, sulfur, and sediment treatment on well supply is often the most ' +
           'useful thing we do out here.',
       ],
