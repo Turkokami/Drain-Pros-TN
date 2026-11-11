@@ -167,6 +167,8 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
                 <img
                   src={photo.src}
                   alt={photo.alt}
+                  width={photo.width}
+                  height={photo.height}
                   loading="lazy"
                   className="aspect-[4/3] w-full object-cover"
                 />

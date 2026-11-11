@@ -22,6 +22,8 @@ function Frame({ photo, tag }: { photo: Pair['before']; tag: string }) {
         <img
           src={photo.src}
           alt={photo.alt}
+          width={photo.width}
+          height={photo.height}
           loading="lazy"
           /* Natural aspect, not a fixed crop. Both hose bib shots are portrait
              and a 4:3 cover crop threw most of each photo away. */

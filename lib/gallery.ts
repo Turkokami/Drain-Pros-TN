@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { GALLERY_CAPTIONS } from '@/content/gallery-captions'
+import { imageSize } from '@/lib/image-size'
 
 const IMAGE_EXT = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif'])
 
@@ -9,6 +10,22 @@ export interface GalleryPhoto {
   file: string
   alt: string
   caption?: string
+  /**
+   * Intrinsic pixel size, read from the file header at build time. Present so
+   * every <img> can carry width and height and reserve its box before the
+   * image loads. Undefined when the header could not be parsed, in which case
+   * the attributes are omitted rather than guessed.
+   */
+  width?: number
+  height?: number
+}
+
+const PHOTOS_DIR = path.join(process.cwd(), 'public', 'photos')
+
+/** Intrinsic size for a file in public/photos, or {} when unreadable. */
+function sizeOf(file: string): { width?: number; height?: number } {
+  const s = imageSize(path.join(PHOTOS_DIR, file))
+  return s ? { width: s.width, height: s.height } : {}
 }
 
 /**
@@ -20,7 +37,7 @@ export interface GalleryPhoto {
 export function galleryPhotos(): GalleryPhoto[] {
   let files: string[] = []
   try {
-    const dir = path.join(process.cwd(), 'public', 'photos')
+    const dir = PHOTOS_DIR
     files = fs.readdirSync(dir).filter((f) => IMAGE_EXT.has(path.extname(f).toLowerCase()))
   } catch {
     return []
@@ -39,6 +56,7 @@ export function galleryPhotos(): GalleryPhoto[] {
       file,
       alt: meta?.alt ?? 'Drain Pros TN plumbing and drain work in the Charleston, TN corridor',
       caption: meta?.caption,
+      ...sizeOf(file),
     }
   })
 }
@@ -87,6 +105,7 @@ function lookup(file: string | undefined): GalleryPhoto | null {
     file,
     alt: meta?.alt ?? 'Drain Pros TN plumbing work in the Charleston, TN corridor',
     caption: meta?.caption,
+    ...sizeOf(file),
   }
 }
 

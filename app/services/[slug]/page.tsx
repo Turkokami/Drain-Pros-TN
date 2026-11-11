@@ -150,6 +150,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <img
                   src={photo.src}
                   alt={photo.alt}
+                  width={photo.width}
+                  height={photo.height}
                   loading="lazy"
                   className="aspect-[4/3] w-full object-cover"
                 />
@@ -196,6 +198,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <img
                   src={ph.src}
                   alt={ph.alt}
+                  width={ph.width}
+                  height={ph.height}
                   loading="lazy"
                   className="aspect-[4/3] w-full object-cover"
                 />

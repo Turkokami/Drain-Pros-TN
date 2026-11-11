@@ -157,6 +157,8 @@ export default function AboutPage() {
             <img
               src="/mascot.jpg"
               alt="Drain Pros TN mascot — two friendly plumbers holding wrenches"
+              width={1024}
+              height={1024}
               className="w-full rounded-lg border-2 border-verdigris/50 shadow-lift"
             />
           </div>
@@ -184,6 +186,8 @@ export default function AboutPage() {
               <img
                 src="/hero-van.jpg"
                 alt="Drain Pros TN navy service van with gold branding"
+                width={1536}
+                height={2048}
                 className="aspect-[4/3] w-full object-cover"
               />
             </div>

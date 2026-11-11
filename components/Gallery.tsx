@@ -31,6 +31,8 @@ export function WorkGallery({ limit }: { limit?: number }) {
             <img
               src={p.src}
               alt={p.alt}
+              width={p.width}
+              height={p.height}
               loading="lazy"
               className="aspect-[4/3] w-full object-cover"
             />
