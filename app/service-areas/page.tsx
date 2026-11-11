@@ -31,7 +31,7 @@ const DESCRIPTION =
   'Chattanooga. Woman-owned, family-run, service-area business — we come to you.'
 
 export const metadata = buildMetadata({
-  title: 'Service Areas — Charleston, Cleveland, Athens & the TN Corridor',
+  title: 'Plumber in Bradley, McMinn & Hamilton County, TN',
   description: DESCRIPTION,
   path: '/service-areas',
   keywords: ['plumber service area Bradley County', 'plumber McMinn County TN', 'plumber near Charleston TN'],

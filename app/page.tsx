@@ -39,6 +39,12 @@ import {
   faqNode,
 } from '@/lib/schema/graph'
 
+// Meta description only. Kept apart from HERO_ANSWER because the on-page
+// answer must state coverage limits in full, and a meta has 155 characters.
+const META_DESCRIPTION =
+  'Woman-owned, licensed plumber in Charleston, Tennessee. Drain cleaning, sewer camera ' +
+  'inspection, water heaters and sump pumps across Bradley County.'
+
 const HERO_ANSWER =
   'Woman-owned, family-run licensed plumbing for Charleston, TN and Bradley County, plus ' +
   'Cleveland, Athens and the rest of the US-11 corridor into greater Chattanooga. Drain ' +
@@ -103,8 +109,8 @@ export const metadata = buildMetadata({
   // "drain cleaning goodlettsville tn" (40 impr) both land here, and Cleveland
   // and Athens collide with far larger cities in OH and GA. One trailing "TN"
   // behind three city names does not bind to all three.
-  title: 'Woman-Owned Plumber in Charleston, TN & Bradley County',
-  description: HERO_ANSWER,
+  title: 'Plumber & Drain Cleaning in Cleveland & Charleston, TN',
+  description: META_DESCRIPTION,
   path: '/',
   keywords: [
     'woman owned plumber Tennessee',
@@ -161,11 +167,16 @@ export default function HomePage() {
             <div className="grid gap-8 md:grid-cols-[1.35fr_0.65fr] md:items-end">
               <div className="reveal">
                 <Eyebrow className="text-mist">
-                  <span className="text-rose">Woman-owned</span> · Charleston · Cleveland · Athens ·
-                  greater Chattanooga
+                  <span className="text-rose">Woman-owned</span> · Charleston, TN · Bradley &
+                  McMinn County · greater Chattanooga
                 </Eyebrow>
-                <h1 className="mt-3 text-display-xl">A licensed plumber your corridor actually has.</h1>
-                <p className="mt-3 font-display text-display-md font-bold text-verdigris">{TAGLINE}</p>
+                <h1 className="mt-3 text-display-xl">
+                  Woman-Owned Plumber &amp; Drain Cleaning in Charleston, TN &amp; Bradley County
+                </h1>
+                <p className="mt-3 font-display text-display-md font-bold text-verdigris">
+                  A licensed plumber your corridor actually has.
+                </p>
+                <p className="mt-2 font-mono text-spec uppercase text-mist">{TAGLINE}</p>
                 <p className="mt-4 max-w-prose text-lead text-paper/85 speakable">{HERO_ANSWER}</p>
               </div>
               <div className="flex flex-col gap-3 reveal reveal-2">

@@ -44,12 +44,20 @@ export interface Service {
   /** Phase in which this page is written. See docs/BUILD-PHASES.md */
   phase: 1 | 3 | 4
   priority: 'lead' | 'primary' | 'secondary'
+  /**
+   * Optional SERP title. The generated pattern named "the TN Corridor",
+   * which nobody searches. These carry the town wording people actually
+   * type. Every town named here is one the guard already clears for this
+   * service -- checked 2026-11-11, all nine combinations sellable.
+   */
+  seoTitle?: string
 }
 
 export const SERVICES: Service[] = [
   // --- CORE — the revenue engine, runs everywhere including Chattanooga ---
   {
     slug: 'drain-cleaning',
+    seoTitle: 'Drain Cleaning in Cleveland & Charleston, TN',
     name: 'Drain Cleaning',
     summary: 'Clearing slow and blocked drains, main lines, and recurring backups.',
     pillar: 'core',
@@ -60,6 +68,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: 'emergency-plumbing',
+    seoTitle: 'Emergency Plumber in Cleveland & Charleston, TN',
     name: 'Emergency Plumbing',
     summary: 'Burst pipes, active leaks, and shutoffs, including after hours.',
     pillar: 'core',
@@ -91,6 +100,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: 'camera-inspection',
+    seoTitle: 'Sewer Camera Inspection in Cleveland & Chattanooga, TN',
     name: 'Sewer Camera Inspection',
     summary: 'Seeing inside the line before anyone digs.',
     pillar: 'core',
@@ -101,6 +111,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: 'water-heater-repair',
+    seoTitle: 'Water Heater Repair in Cleveland & Charleston, TN',
     name: 'Water Heater Repair',
     summary: 'No hot water, pilot problems, leaking tanks, and element failures.',
     pillar: 'water-heating',
@@ -114,6 +125,7 @@ export const SERVICES: Service[] = [
   // --- WATER HEATING — permit required, corridor-targeted ------------------
   {
     slug: 'water-heater-replacement',
+    seoTitle: 'Water Heater Replacement in Cleveland, TN',
     name: 'Water Heater Replacement',
     summary: 'Tank replacement sized to the house, with the old unit hauled off.',
     pillar: 'water-heating',
@@ -207,6 +219,7 @@ export const SERVICES: Service[] = [
   // wire the circuit.
   {
     slug: 'sump-pump-repair',
+    seoTitle: 'Sump Pump Repair in Cleveland & Ooltewah, TN',
     name: 'Sump Pump Repair',
     summary: 'Pumps that will not start, run without stopping, or cycle on a stuck float.',
     pillar: 'sump-groundwater',
@@ -220,6 +233,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: 'sump-pump-replacement',
+    seoTitle: 'Sump Pump Replacement in Cleveland & Ooltewah, TN',
     name: 'Sump Pump Replacement',
     summary: 'Replacing a failed or undersized pump in an existing pit, sized to the water it actually moves.',
     pillar: 'sump-groundwater',
@@ -246,6 +260,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: 'water-service-line',
+    seoTitle: 'Water Line Repair & Replacement in Cleveland, TN',
     name: 'Water Service Line Replacement',
     summary: 'Replacing the line from the meter to the house.',
     pillar: 'core',

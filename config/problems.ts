@@ -52,6 +52,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'water-heater-leaking',
+    seoTitle: 'Water Heater Leaking or Dripping? What to Do Now',
     name: 'Water Heater Leaking',
     summary: 'Water pooling under or around the tank.',
     service: 'water-heater-repair',
@@ -70,6 +71,7 @@ export const PROBLEMS: Problem[] = [
   // --- Drain and sewer ----------------------------------------------------
   {
     slug: 'sewer-backup',
+    seoTitle: 'Sewer Backup in Your Home: What to Do First',
     name: 'Sewage Backing Up',
     summary: 'Waste coming up through a floor drain, tub, or toilet.',
     service: 'drain-cleaning',
@@ -78,6 +80,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'sewage-smell',
+    seoTitle: 'Sewer Smell or Rotten Egg Smell in the House? Causes',
     name: 'Sewage Smell in the House',
     summary: 'A sewer or rotten-egg smell that keeps coming back.',
     service: 'drain-cleaning',
@@ -86,6 +89,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'main-line-clog',
+    seoTitle: 'Main Sewer Line Clog: Signs & How It\'s Cleared',
     name: 'Main Line Clog',
     summary: 'More than one drain backing up at the same time.',
     service: 'drain-cleaning',
@@ -94,6 +98,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'recurring-backups',
+    seoTitle: 'Drain Keeps Backing Up? Causes & Fixes',
     name: 'A Drain That Keeps Backing Up',
     summary: 'Cleared before, and it came back in the same spot.',
     service: 'camera-inspection',
@@ -110,6 +115,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'root-intrusion',
+    seoTitle: 'Tree Roots in Sewer Line: Signs, Camera Check & Fixes',
     name: 'Tree Roots in the Sewer Line',
     summary: 'Roots finding a joint or crack and filling the pipe.',
     service: 'camera-inspection',
@@ -122,6 +128,7 @@ export const PROBLEMS: Problem[] = [
   // is stated on every one of these: we do not wire the circuit.
   {
     slug: 'sump-pump-not-working',
+    seoTitle: 'Sump Pump Not Working? What to Check First',
     name: 'Sump Pump Not Turning On',
     summary: 'The pit is filling and the pump is doing nothing about it.',
     service: 'sump-pump-repair',
@@ -138,6 +145,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'sump-pump-noise',
+    seoTitle: 'Noisy Sump Pump: What the Sounds Mean',
     name: 'Sump Pump Making a Noise',
     summary: 'Grinding, rattling, or a bang from the pit every time it shuts off.',
     service: 'sump-pump-repair',
@@ -146,6 +154,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'sump-discharge-line-blocked',
+    seoTitle: 'Sump Pump Discharge Line Blocked or Frozen',
     name: 'Sump Discharge Line Blocked or Frozen',
     summary: 'The pump runs, the pit does not empty, and water comes back down the pipe.',
     service: 'sump-pump-repair',
@@ -172,6 +181,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'frozen-pipes',
+    seoTitle: 'Frozen Pipes in Tennessee: Prevent & Thaw Safely',
     name: 'Frozen Pipes',
     summary: 'No water in a cold snap, or one fixture dead while others work.',
     service: 'emergency-plumbing',
@@ -190,6 +200,7 @@ export const PROBLEMS: Problem[] = [
   // --- Pressure and water quality -----------------------------------------
   {
     slug: 'low-water-pressure',
+    seoTitle: 'Low Water Pressure in the House? Common Causes',
     name: 'Low Water Pressure',
     summary: 'Weak flow at one fixture or throughout the house.',
     service: 'fixture-repair',
@@ -198,6 +209,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'brown-water',
+    seoTitle: 'Brown Water From the Tap? What It Means',
     name: 'Brown or Rusty Water',
     summary: 'Discoloured water from the tap, all the time or just at first.',
     service: 'whole-house-water-filtration',
@@ -206,6 +218,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'water-hammer',
+    seoTitle: 'Water Hammer: Why Pipes Bang & How to Stop It',
     name: 'Banging Pipes (Water Hammer)',
     summary: 'A bang or thud in the wall when a tap or appliance shuts off.',
     service: 'fixture-repair',
@@ -216,6 +229,7 @@ export const PROBLEMS: Problem[] = [
   // --- Fixtures -----------------------------------------------------------
   {
     slug: 'running-toilet',
+    seoTitle: 'Running Toilet: Why It Keeps Running & the Fix',
     name: 'Toilet That Keeps Running',
     summary: 'Water cycling in the tank long after the flush.',
     service: 'fixture-repair',
@@ -225,7 +239,7 @@ export const PROBLEMS: Problem[] = [
   {
     slug: 'dripping-hose-bib',
     name: 'Dripping Outdoor Faucet',
-    seoTitle: 'Outdoor Faucet Dripping? Repair in Charleston, TN & Bradley County',
+    seoTitle: 'Outdoor Faucet Dripping? Repair in Charleston, TN',
     summary: 'An outdoor spigot dripping or leaking at the wall.',
     service: 'fixture-repair',
     urgent: false,

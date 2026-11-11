@@ -68,6 +68,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'water-heater-lifespan',
+    seoTitle: 'How Long Does a Water Heater Last in Tennessee?',
     name: 'How Long Should a Water Heater Last?',
     summary: 'What the real numbers are here, and why hard water shortens them.',
     service: 'water-heater-repair',
@@ -75,6 +76,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'anode-rods',
+    seoTitle: 'What Is an Anode Rod? Signs Yours Is Bad',
     name: 'The Anode Rod, and Why Your Tank Rusted Out',
     summary: 'The sacrificial part almost nobody checks, and what happens when it is spent.',
     service: 'water-heater-repair',
@@ -90,6 +92,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'water-heater-venting',
+    seoTitle: 'Water Heater Venting: What Homeowners Should Know',
     name: 'Water Heater Venting, Explained',
     summary: 'Atmospheric, power vent, and direct vent — and why it is a safety issue.',
     service: 'water-heater-replacement',
@@ -164,6 +167,7 @@ export const GUIDES: Guide[] = [
   // sump content all assumes a basement.
   {
     slug: 'sump-pump-sizing',
+    seoTitle: 'What Size Sump Pump Do I Need?',
     name: 'What Size Sump Pump Do I Need?',
     summary: 'Sizing to how fast the pit actually fills, not to the horsepower on the old one.',
     service: 'sump-pump-replacement',
@@ -171,6 +175,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'pedestal-vs-submersible',
+    seoTitle: 'Pedestal vs. Submersible Sump Pump',
     name: 'Pedestal or Submersible Sump Pump?',
     summary: 'What each is good at, what each costs you later, and which pit suits which.',
     service: 'sump-pump-replacement',
@@ -186,6 +191,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'sump-pump-lifespan',
+    seoTitle: 'How Long Should a Sump Pump Last?',
     name: 'How Long Should a Sump Pump Last?',
     summary: 'What actually wears one out, and the cheap test that tells you where yours is.',
     service: 'sump-pump-repair',

@@ -58,7 +58,7 @@ export async function generateMetadata({
   const content = getServiceContent(slug)
   if (!service || !content) return {}
   return buildMetadata({
-    title: `${service.name} — Charleston & the TN Corridor`,
+    title: service.seoTitle ?? `${service.name} in Charleston, TN`,
     description: content.quickAnswer,
     path: `/services/${service.slug}`,
     keywords: [

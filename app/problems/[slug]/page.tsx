@@ -53,7 +53,7 @@ export async function generateMetadata({
   const content = getProblemContent(slug)
   if (!problem || !content) return {}
   return buildMetadata({
-    title: problem.seoTitle ?? `${problem.name} — What It Means and What to Do`,
+    title: problem.seoTitle ?? `${problem.name} — Causes & Fixes`,
     description: content.quickAnswer,
     path: `/problems/${problem.slug}`,
     keywords: [
