@@ -16,6 +16,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { LOCATIONS, getLocation } from '@/config/locations'
 import { JURISDICTIONS } from '@/config/jurisdictions'
+import { countyPageFor } from '@/config/counties'
 import { sellableServices } from '@/lib/scope-guard'
 import { getLocationContent } from '@/content/location-content'
 import { ScopeStrip, CredentialStrip } from '@/components/ScopeStrip'
@@ -73,6 +74,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
   if (!location || !content) notFound()
 
   const jurisdiction = JURISDICTIONS[location.jurisdictionId]
+  const countyPage = countyPageFor(location.county)
   const services = sellableServices(location.slug)
   const path = `/service-areas/${location.slug}`
 
@@ -188,6 +190,19 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         <div className="mt-8">
           <ScopeStrip location={location} />
         </div>
+
+        {countyPage && (
+          <p className="mt-8 max-w-prose text-ink/90">
+            Who issues the permit here, how long it takes, and what gets inspected:{' '}
+            <a
+              href={`/permits/${countyPage.slug}`}
+              className="text-copper underline underline-offset-4"
+            >
+              plumbing permits in {countyPage.name}
+            </a>
+            .
+          </p>
+        )}
       </Section>
 
       {/* FAQ */}

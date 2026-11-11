@@ -40,9 +40,10 @@ import {
 } from '@/lib/schema/graph'
 
 const HERO_ANSWER =
-  'Woman-owned, family-run licensed plumbing for Charleston, Cleveland, Athens, and the US-11 ' +
-  'corridor, plus greater Chattanooga. Drain cleaning, emergency repair, and water heaters, ' +
-  'handled by qualified plumbers you trust, with a price you approve before the work starts.'
+  'Woman-owned, family-run licensed plumbing for Charleston, TN and Bradley County, plus ' +
+  'Cleveland, Athens and the rest of the US-11 corridor into greater Chattanooga. Drain ' +
+  'cleaning, emergency repair, and water heaters, handled by qualified plumbers you trust, ' +
+  'with a price you approve before the work starts.'
 
 const LEAD_SERVICES = [
   'drain-cleaning',
@@ -56,7 +57,7 @@ const LEAD_SERVICES = [
 const HOME_FAQS: Array<{ q: string; a: string }> = [
   {
     q: 'What areas do you cover?',
-    a: 'Charleston and Calhoun at the county seam, Cleveland and Bradley County, Athens and McMinn County, the US-11 corridor towns between them, and greater Chattanooga. Twenty-one towns, and the full service list runs in all of them.',
+    a: 'Charleston and Calhoun at the county seam, Cleveland and Bradley County, Athens and McMinn County, the US-11 corridor towns between them, and greater Chattanooga. Twenty towns. The full list runs in the thirteen corridor towns where we pull our own permits. In the seven Hamilton County towns we do the permit-free work ourselves — drains, emergencies, repairs, water heater repair — and permit-required jobs there go to a licensed partner who does the work and meets the inspector.',
   },
   {
     q: 'Are you actually licensed?',
@@ -76,7 +77,7 @@ const HOME_FAQS: Array<{ q: string; a: string }> = [
   },
   {
     q: 'Do you work on well and septic properties?',
-    a: 'Yes, the house side — the water lines, fixtures, heaters, and treatment inside the home. We do not touch the well or septic system itself. Tanks, drain fields, pumps, and pressure tanks are separately licensed in Tennessee, and we refer those to a contractor we trust.',
+    a: 'Yes, the house side — the water lines, fixtures, water heaters, and treatment inside the home. We do not touch the well or septic system itself. Tanks, drain fields, pumps, and pressure tanks are separately licensed in Tennessee, and we refer those to a contractor we trust.',
   },
   {
     q: 'Is there anything you do not handle?',
@@ -97,7 +98,12 @@ const HOME_FAQS: Array<{ q: string; a: string }> = [
 ]
 
 export const metadata = buildMetadata({
-  title: 'Woman-Owned Licensed Plumber in Charleston, Cleveland & Athens, TN',
+  // Every city name carries its own state or county. GSC shows the bare-city
+  // form leaking badly: "clogged drain charleston sc" (42 impr) and
+  // "drain cleaning goodlettsville tn" (40 impr) both land here, and Cleveland
+  // and Athens collide with far larger cities in OH and GA. One trailing "TN"
+  // behind three city names does not bind to all three.
+  title: 'Woman-Owned Plumber in Charleston, TN & Bradley County',
   description: HERO_ANSWER,
   path: '/',
   keywords: [
@@ -174,7 +180,7 @@ export default function HomePage() {
                 dark
                 items={[
                   { value: '#5045', label: 'TN license, on every page' },
-                  { value: '21 towns', label: 'corridor + Chattanooga' },
+                  { value: '20 towns', label: 'corridor + Chattanooga' },
                   { value: '24/7', label: 'emergency service' },
                   { value: 'One price', label: 'approved before we start' },
                 ]}
@@ -247,7 +253,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="What we do"
           title="One licensed plumber for the whole house."
-          intro="Six lines cover most of what a corridor household needs, and every one of them runs in all twenty-one towns we serve."
+          intro="Six lines cover most of what a corridor household needs. Five of them run in all twenty towns. Water heater replacement needs a permit, so in the seven Hamilton County towns that one goes to a licensed partner."
         />
         <FeatureGrid>
           {LEAD_SERVICES.map((slug) => {
@@ -312,9 +318,16 @@ export default function HomePage() {
               approved before the first tool comes out.
             </Diff>
             <Diff title="The paperwork is ours">
-              Across the corridor we pull the permit and book the inspection ourselves. Inside
-              Hamilton County, where our license class is not accepted, we say so and refer the job
-              rather than take it and work it out later.
+              Across the corridor we pull the permit and book the inspection ourselves — including{' '}
+              <a href="/permits/bradley-county" className="text-copper underline underline-offset-4">
+                Bradley County
+              </a>
+              , our home county. Inside{' '}
+              <a href="/permits/hamilton-county" className="text-copper underline underline-offset-4">
+                Hamilton County
+              </a>
+              , where our license class is not accepted, we say so and refer the job rather than
+              take it and work it out later.
             </Diff>
             <Diff title="A warranty with its edges showing">
               Twelve months on workmanship, thirty days on drain cleaning, and we publish the

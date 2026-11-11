@@ -47,7 +47,7 @@ const DESCRIPTION =
   'pricing, honest scope.'
 
 export const metadata = buildMetadata({
-  title: 'About — Woman-Owned, Family-Run Plumbers in Charleston TN',
+  title: 'Licensed Plumber #5045 — Woman-Owned in Charleston, TN',
   description: DESCRIPTION,
   path: '/about',
   keywords: [

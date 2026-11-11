@@ -32,6 +32,12 @@ export interface Problem {
   urgent: boolean
   /** Grouping on the hub page. */
   group: 'water-heater' | 'drain-sewer' | 'sump-pump' | 'leak-pipe' | 'pressure-quality' | 'fixture'
+  /**
+   * Optional SERP title override. The generated title is right for most pages;
+   * a handful already rank top-10 with no clicks and need a title that states
+   * the symptom and the place instead of the taxonomy. Falls back to `name`.
+   */
+  seoTitle?: string
 }
 
 export const PROBLEMS: Problem[] = [
@@ -219,6 +225,7 @@ export const PROBLEMS: Problem[] = [
   {
     slug: 'dripping-hose-bib',
     name: 'Dripping Outdoor Faucet',
+    seoTitle: 'Outdoor Faucet Dripping? Repair in Charleston, TN & Bradley County',
     summary: 'An outdoor spigot dripping or leaking at the wall.',
     service: 'fixture-repair',
     urgent: false,

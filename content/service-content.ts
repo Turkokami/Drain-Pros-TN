@@ -387,7 +387,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       'genuinely done, we will tell you rather than sell you a repair that will not hold.',
     intro: [
       'A water heater rarely fails politely. It goes out on the coldest morning, or it starts leaking ' +
-        'the day before company arrives. The good news is that a lot of what looks like a dead heater ' +
+        'the day before company arrives. The good news is that a lot of what looks like a dead water heater ' +
         'is a single failed part, and parts are a straightforward repair we can do anywhere we serve.',
       'The judgment call that matters is repair versus replace, and it is one people get sold on ' +
         'wrong all the time. We give you the honest version: a young tank with a bad part is worth ' +
@@ -398,7 +398,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       'A pilot light that will not stay lit on a gas unit',
       'Popping, rumbling, or crackling from the tank (usually sediment)',
       'Rusty or discolored hot water',
-      'Water pooling around the base of the heater',
+      'Water pooling around the base of the water heater',
       'A recovery time that keeps getting longer between showers',
     ],
     sections: [
@@ -423,7 +423,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
             'than patch it to get through the week.',
           'Sediment plays into it too. In the hard water common across southeast Tennessee, minerals ' +
             'collect in the bottom of the tank, which is what causes the rumbling and shortens the ' +
-            'unit’s life. It is worth knowing whether treatment makes sense so the next heater ' +
+            'unit’s life. It is worth knowing whether treatment makes sense so the next water heater ' +
             'lasts longer than this one did.',
         ],
       },
@@ -432,7 +432,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       { name: 'Diagnose the real fault', text: 'Pin down whether it is a part, sediment, or a failed tank before quoting anything.' },
       { name: 'Repair what is worth repairing', text: 'Thermocouples, valves, elements, and thermostats are fixes we do on the spot.' },
       { name: 'Be straight about replacement', text: 'If the tank is done, we say so and lay out the replacement honestly rather than a repair that will not hold.' },
-      { name: 'Flag the cause', text: 'If hard water is eating your heaters, we tell you, because a fourth failed tank is not bad luck.' },
+      { name: 'Flag the cause', text: 'If hard water is eating your water heaters, we tell you, because a fourth failed tank is not bad luck.' },
     ],
     related: [
       { label: 'Water heater replacement', href: '/services/water-heater-replacement' },
@@ -574,7 +574,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       'Your tank is due for replacement anyway and you are weighing options',
       'High hot-water usage where on-demand heating pays off',
       'You are tired of paying to keep a tank hot when no one is using it',
-      'Hard water keeps shortening the life of your tank heaters',
+      'Hard water keeps shortening the life of your tank water heaters',
     ],
     sections: [
       {
@@ -829,7 +829,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     ],
     faqs: [
       { q: 'What does whole-house filtration actually remove?', a: 'Depending on the system, sediment, iron, sulfur smell, and taste and odor issues. We specify it to what is actually in your water rather than promise it fixes everything.' },
-      { q: 'Will it help my water heater last longer?', a: 'Often, yes. Scale, iron, and sediment shorten water heater life, so treating them at the main line is part of why the next heater lasts longer than the last.' },
+      { q: 'Will it help my water heater last longer?', a: 'Often, yes. Scale, iron, and sediment shorten water heater life, so treating them at the main line is part of why the next water heater lasts longer than the last.' },
       { q: 'City water or well water — does it matter?', a: 'Yes. City and well water carry different problems, so the system is specified differently. We handle both.' },
       WARRANTY_FAQ,
       PRICING_FAQ,
@@ -839,13 +839,13 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
 
   'water-softener-installation': {
     quickAnswer:
-      'We install water softeners to take the hardness out of your water and protect your heaters, ' +
+      'We install water softeners to take the hardness out of your water and protect your water heaters, ' +
       'fixtures, and appliances from scale. We install across the whole service area. Tennessee ' +
       'license #5045.',
     lede:
       'Hard water is not a health problem, but it is a plumbing and appliance problem, and across ' +
       'southeast Tennessee it is common. A softener addresses the cause — the mineral hardness ' +
-      'itself — rather than replacing scaled-up heaters and fixtures over and over.',
+      'itself — rather than replacing scaled-up water heaters and fixtures over and over.',
     whatWeDo: [
       'Water softener installation sized to the household and the water',
       'Protection for water heaters, fixtures, and appliances from scale',
@@ -862,7 +862,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         heading: 'What a softener does, and what it does not',
         paragraphs: [
           'A softener removes the calcium and magnesium that make water hard, which is what protects ' +
-            'your heaters, fixtures, and appliances from scale. It is not a filter for iron, sulfur, ' +
+            'your water heaters, fixtures, and appliances from scale. It is not a filter for iron, sulfur, ' +
             'sediment, or taste — those are treatment or filtration problems. Some homes need both, and ' +
             'we will tell you honestly which you need rather than sell a softener as a cure-all.',
         ],
@@ -880,7 +880,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       { label: 'Water heater replacement', href: '/services/water-heater-replacement' },
     ],
     faqs: [
-      { q: 'Do I need a softener or a filter?', a: 'A softener handles hardness — scale on heaters and fixtures. A filter handles iron, sulfur, sediment, and taste. Some homes need both, and we will tell you which yours needs.' },
+      { q: 'Do I need a softener or a filter?', a: 'A softener handles hardness — scale on water heaters and fixtures. A filter handles iron, sulfur, sediment, and taste. Some homes need both, and we will tell you which yours needs.' },
       { q: 'Will it stop my water heaters from failing early?', a: 'It helps, because scale from hard water is a major cause of early water heater failure. If hardness is your problem, softening addresses the cause.' },
       { q: 'Is hard water bad for my health?', a: 'No. It is a plumbing and appliance problem, not a health one — but it is a real, cumulative cost.' },
       WARRANTY_FAQ,
@@ -953,13 +953,13 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
 
   'well-property-plumbing': {
     quickAnswer:
-      'We handle the plumbing inside well-water homes — water lines, fixtures, heaters, and ' +
+      'We handle the plumbing inside well-water homes — water lines, fixtures, water heaters, and ' +
       'treatment — the house side only. The well, pump, and pressure tank are separately licensed ' +
       'and we refer them out. This we cover across the whole service area ' +
       'including Chattanooga. Tennessee license #5045.',
     lede:
       'A house on well water is still a house, and the plumbing inside it — the lines, fixtures, ' +
-      'heaters, and water treatment — is squarely our work. The well system itself is not, and ' +
+      'water heaters, and water treatment — is squarely our work. The well system itself is not, and ' +
       'keeping that line clear is how we stay honest and inside the license.',
     whatWeDo: [
       'Water lines, fixtures, and water heaters in well-water homes',
@@ -990,7 +990,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       { label: 'Water heater repair', href: '/services/water-heater-repair' },
     ],
     faqs: [
-      { q: 'Do you work on well-water homes?', a: 'Yes — the house side. Water lines, fixtures, heaters, and treatment inside the home are all ordinary plumbing we do everywhere.' },
+      { q: 'Do you work on well-water homes?', a: 'Yes — the house side. Water lines, fixtures, water heaters, and treatment inside the home are all ordinary plumbing we do everywhere.' },
       { q: 'Do you fix the well pump or pressure tank?', a: 'No. The well, pump, and pressure tank are separately licensed in Tennessee, and we refer those to a well contractor.' },
       { q: 'Do you cover well-water homes in Chattanooga?', a: 'Yes, the house-side work is covered inside Chattanooga along with the rest of the area.' },
       { q: 'Can you improve my well water?', a: 'Yes, on the house side — iron, sulfur, and sediment treatment after the water reaches the home.' },
@@ -1225,7 +1225,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     ],
     intro: [
       'Most gas calls come with another project attached: a new range, a tankless water heater that ' +
-        'needs more gas than the old tank, a heater, or a suspected leak. Whatever the reason, the ' +
+        'needs more gas than the old tank, a water heater, or a suspected leak. Whatever the reason, the ' +
         'line has to be sized for the load and tested before it is used.',
     ],
     sections: [
@@ -1245,7 +1245,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       { label: 'Emergency plumbing', href: '/services/emergency-plumbing' },
     ],
     faqs: [
-      { q: 'Do you run gas lines for a new range or heater?', a: 'Yes. We run and extend gas lines for appliances, water heaters, and heating, sized for the load and tested before use.' },
+      { q: 'Do you run gas lines for a new range or water heater?', a: 'Yes. We run and extend gas lines for appliances, water heaters, and heating, sized for the load and tested before use.' },
       { q: 'Why does my tankless install need a bigger gas line?', a: 'A tankless unit fires much harder than a tank, so it needs more gas at once. Sizing the line for that load is part of why a proper tankless install costs more.' },
       { q: 'I smell gas. What should I do?', a: 'Treat it as an emergency: leave, and call your gas utility from outside. Once it is safe, we can locate and repair the line.' },
       WARRANTY_FAQ,

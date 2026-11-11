@@ -53,7 +53,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
         heading: 'What actually determines the size',
         paragraphs: [
           'The number that matters is peak simultaneous demand — how much hot water the house needs during its busiest hour, not across a day. A shower running while the dishwasher fills is the kind of moment that decides whether a tank is big enough.',
-          'Then recovery rate: how fast the unit reheats once it is drawn down. A gas heater recovers considerably faster than an electric one of the same capacity, which means a smaller gas tank can serve a house that would need a larger electric one.',
+          'Then recovery rate: how fast the unit reheats once it is drawn down. A gas water heater recovers considerably faster than an electric one of the same capacity, which means a smaller gas tank can serve a house that would need a larger electric one.',
         ],
       },
       {
@@ -93,7 +93,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
 
   'tank-vs-tankless': {
     quickAnswer:
-      'For most households in this corridor, a good tank heater is the better value. Tankless earns its cost in a house with high or unpredictable hot water demand, a long expected stay, and — importantly here — water treatment to protect it. Without treatment, hard water works against a tankless unit harder than it works against a tank.',
+      'For most households in this corridor, a good tank water heater is the better value. Tankless earns its cost in a house with high or unpredictable hot water demand, a long expected stay, and — importantly here — water treatment to protect it. Without treatment, hard water works against a tankless unit harder than it works against a tank.',
     lede:
       'Tankless gets sold as the obvious upgrade. It is genuinely better at some things and genuinely worse at others, and which side you land on depends less on the units than on your house and how long you are staying in it.',
     sections: [
@@ -101,7 +101,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
         heading: 'What tankless is actually good at',
         paragraphs: [
           'It does not run out. For a household that regularly drains a tank — several showers back to back, a large family, a soaking tub — that is a real quality-of-life difference rather than a spec-sheet one.',
-          'It takes up far less space, which matters when the heater lives in a closet you would rather use for something else. And it has no standby loss, because it is not keeping forty gallons hot overnight.',
+          'It takes up far less space, which matters when the water heater lives in a closet you would rather use for something else. And it has no standby loss, because it is not keeping forty gallons hot overnight.',
         ],
       },
       {
@@ -152,14 +152,14 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
 
   'gas-vs-electric-water-heater': {
     quickAnswer:
-      'If the house already has gas to the heater location, gas is usually the better choice — it recovers faster and generally costs less to run. If it does not, the cost of bringing gas to it often outweighs the benefit, and a well-sized electric unit is the sensible answer.',
+      'If the house already has gas to the water heater location, gas is usually the better choice — it recovers faster and generally costs less to run. If it does not, the cost of bringing gas to it often outweighs the benefit, and a well-sized electric unit is the sensible answer.',
     lede:
-      'This decision is usually made for you by what is already at the heater location. Where it is genuinely open, the trade-off comes down to recovery speed against install cost.',
+      'This decision is usually made for you by what is already at the water heater location. Where it is genuinely open, the trade-off comes down to recovery speed against install cost.',
     sections: [
       {
         heading: 'Recovery is the real difference',
         paragraphs: [
-          'A gas heater reheats a drawn-down tank substantially faster than an electric one of the same size. In practice that means a household can get away with a smaller gas tank than electric, because it refills the hot water faster between demands.',
+          'A gas water heater reheats a drawn-down tank substantially faster than an electric one of the same size. In practice that means a household can get away with a smaller gas tank than electric, because it refills the hot water faster between demands.',
           'That is why a house that keeps running out on electric sometimes solves the problem by going gas at the same capacity, rather than by going to a bigger electric tank.',
         ],
       },
@@ -190,14 +190,14 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       ],
     },
     verdict:
-      'Use what is already there unless there is a reason not to. Bringing a new gas line to a heater that does not have one rarely pays for itself on running cost alone — but if you are running out of hot water on electric, gas is worth pricing properly before you buy a bigger tank.',
+      'Use what is already there unless there is a reason not to. Bringing a new gas line to a water heater that does not have one rarely pays for itself on running cost alone — but if you are running out of hot water on electric, gas is worth pricing properly before you buy a bigger tank.',
     faqs: [
       {
         q: 'Is gas actually cheaper to run?',
         a: 'Generally yes, though it depends on local rates and how much hot water you use. The bigger practical difference for most people is recovery speed rather than the bill.',
       },
       {
-        q: 'Is a gas heater safe?',
+        q: 'Is a gas water heater safe?',
         a: 'Yes, when it is vented correctly and inspected. Venting is exactly the part that gets cut short on rushed work, which is why we do not rush it.',
       },
       {
@@ -211,7 +211,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
 
   'water-heater-lifespan': {
     quickAnswer:
-      'Ten to fifteen years is the usual range for a tank heater, but water quality moves that number more than brand does. In hard water, without treatment or anode maintenance, tanks routinely fall short of it. That is the single biggest reason a heater here fails earlier than the label suggested.',
+      'Ten to fifteen years is the usual range for a tank water heater, but water quality moves that number more than brand does. In hard water, without treatment or anode maintenance, tanks routinely fall short of it. That is the single biggest reason a water heater here fails earlier than the label suggested.',
     lede:
       'People are often told a water heater lasts twelve years and then feel cheated when theirs goes at seven. The label is not lying exactly — it is describing a tank in reasonable water that got some maintenance. Change either of those and the number moves.',
     sections: [
@@ -225,7 +225,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       {
         heading: 'Why this matters more here',
         paragraphs: [
-          'Hard water is a real factor across this corridor, and we see its effects on heaters constantly — scale on elements, sediment in tanks, and units failing noticeably short of their expected life.',
+          'Hard water is a real factor across this corridor, and we see its effects on water heaters constantly — scale on elements, sediment in tanks, and units failing noticeably short of their expected life.',
           'We do not publish a regional hardness figure, because the honest answer is that it varies by supply and by property, and a number pulled off a regional average would be wrong for plenty of houses. We test at the house instead.',
         ],
       },
@@ -238,7 +238,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       },
     ],
     verdict:
-      'If your last heater failed early, the useful question is not which brand to buy next but what killed the last one. Usually it is water quality, and fitting the same tank into the same water gets you the same result.',
+      'If your last water heater failed early, the useful question is not which brand to buy next but what killed the last one. Usually it is water quality, and fitting the same tank into the same water gets you the same result.',
     faqs: [
       {
         q: 'Mine is 9 years old and fine. Should I replace it?',
@@ -259,9 +259,9 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
 
   'anode-rods': {
     quickAnswer:
-      'The anode rod is a sacrificial metal rod inside the tank that corrodes so the steel does not. It is consumable. When it is gone and nobody replaced it, the tank itself starts rusting — which is why so many heaters fail from the inside out.',
+      'The anode rod is a sacrificial metal rod inside the tank that corrodes so the steel does not. It is consumable. When it is gone and nobody replaced it, the tank itself starts rusting — which is why so many water heaters fail from the inside out.',
     lede:
-      'Almost nobody outside the trade knows this part exists, and it is the single component that most determines how long a tank heater lasts. It is also cheap and replaceable, which makes the general ignorance of it genuinely costly.',
+      'Almost nobody outside the trade knows this part exists, and it is the single component that most determines how long a tank water heater lasts. It is also cheap and replaceable, which makes the general ignorance of it genuinely costly.',
     sections: [
       {
         heading: 'How it works',
@@ -273,7 +273,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       {
         heading: 'What happens when it is spent',
         paragraphs: [
-          'The protection stops and the tank begins corroding from the inside. You will not see it. The first sign is usually rusty water, and the second is a leak from the tank body, which is the point at which the heater is finished.',
+          'The protection stops and the tank begins corroding from the inside. You will not see it. The first sign is usually rusty water, and the second is a leak from the tank body, which is the point at which the water heater is finished.',
           'That is the failure mode behind most "the tank just went" calls. It did not just go. It had been going for a while with nothing left protecting it.',
         ],
       },
@@ -291,7 +291,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
         a: 'It has to be pulled and looked at. If it is heavily eaten away or down to the core wire, it is done. That check is quick and it is worth folding into another visit.',
       },
       {
-        q: 'Is it worth doing on an older heater?',
+        q: 'Is it worth doing on an older water heater?',
         a: 'If the tank is already well along and showing rust in the water, possibly not — the corrosion may already have started. On a mid-life tank it is clearly worth it.',
       },
       {
@@ -312,14 +312,14 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       {
         heading: 'What the pressure does',
         paragraphs: [
-          'On a closed system without an expansion tank, every heating cycle spikes the pressure. The relief valve on the heater opens to release it, which is exactly what it is for — but it was designed as a safety device, not a daily-use valve.',
-          'The visible symptom is usually a heater relief valve that drips. People replace the valve, the new one drips too, and the actual cause is never addressed.',
+          'On a closed system without an expansion tank, every heating cycle spikes the pressure. The relief valve on the water heater opens to release it, which is exactly what it is for — but it was designed as a safety device, not a daily-use valve.',
+          'The visible symptom is usually a water heater relief valve that drips. People replace the valve, the new one drips too, and the actual cause is never addressed.',
         ],
       },
       {
         heading: 'What it costs you if you skip it',
         paragraphs: [
-          'Repeated pressure spikes shorten the life of the heater, the fixtures, and the supply joints. It is a small part working against your whole plumbing system every time the heater fires.',
+          'Repeated pressure spikes shorten the life of the water heater, the fixtures, and the supply joints. It is a small part working against your whole plumbing system every time the water heater fires.',
           'It also tends to shorten the tank itself, which makes skipping it a poor trade against the cost of the part.',
         ],
       },
@@ -332,7 +332,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
     ],
     faqs: [
       {
-        q: 'My heater relief valve keeps dripping. Is this why?',
+        q: 'My water heater relief valve keeps dripping. Is this why?',
         a: 'Very often, yes. A relief valve that discharges repeatedly on a closed system is usually telling you about thermal expansion rather than a failed valve.',
       },
       {
@@ -358,14 +358,14 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
         heading: 'The three arrangements',
         paragraphs: [
           'Atmospheric venting relies on hot gases rising naturally up a flue. It is simple and it works, but it depends on adequate combustion air and a properly sized, properly pitched flue.',
-          'Power venting uses a fan to push exhaust out, which allows the heater to sit where a natural flue is not practical. Direct vent draws combustion air from outside and exhausts outside through a sealed path, which is the arrangement you want in a tight space or a confined closet.',
+          'Power venting uses a fan to push exhaust out, which allows the water heater to sit where a natural flue is not practical. Direct vent draws combustion air from outside and exhausts outside through a sealed path, which is the arrangement you want in a tight space or a confined closet.',
         ],
       },
       {
         heading: 'Where it goes wrong',
         paragraphs: [
           'Reusing an old flue that was sized for a different appliance. Insufficient combustion air after a closet was sealed up or a house was tightened. Improper pitch, so exhaust does not draw. Or a vent terminating somewhere it can find its way back inside.',
-          'These are the failures we find on units that were swapped quickly and never inspected. The heater works, so nobody questions it.',
+          'These are the failures we find on units that were swapped quickly and never inspected. The water heater works, so nobody questions it.',
         ],
       },
       {
@@ -378,7 +378,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
     ],
     faqs: [
       {
-        q: 'Can the new heater use the existing vent?',
+        q: 'Can the new water heater use the existing vent?',
         a: 'Sometimes, but it has to be verified rather than assumed. A different unit can have different requirements, and reusing an unsuitable flue is one of the more common serious mistakes.',
       },
       {
@@ -395,15 +395,15 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
 
   'hard-water-and-water-heaters': {
     quickAnswer:
-      'Hard water shortens water heater life, and it does it in two ways at once: scale settles in the tank and insulates the burner or coats the elements, and aggressive water consumes the anode rod faster. Treating the water is usually cheaper over time than replacing heaters early.',
+      'Hard water shortens water heater life, and it does it in two ways at once: scale settles in the tank and insulates the burner or coats the elements, and aggressive water consumes the anode rod faster. Treating the water is usually cheaper over time than replacing water heaters early.',
     lede:
-      'If you have replaced a water heater sooner than you expected, the water is the first place to look. A heater is where hard water does its most expensive work, because heating is what makes minerals drop out of solution in the first place.',
+      'If you have replaced a water heater sooner than you expected, the water is the first place to look. A water heater is where hard water does its most expensive work, because heating is what makes minerals drop out of solution in the first place.',
     sections: [
       {
         heading: 'The mechanism',
         paragraphs: [
           'Dissolved minerals stay in solution while water is cold. Heat it, and they come out and deposit on the nearest hot surface — the bottom of a gas tank, or directly on the elements of an electric one.',
-          'On a gas heater that layer sits between the burner and the water, so the burner runs longer to do the same job and the steel above it runs hotter than it should. On electric, scale forms on the element itself until it burns out.',
+          'On a gas water heater that layer sits between the burner and the water, so the burner runs longer to do the same job and the steel above it runs hotter than it should. On electric, scale forms on the element itself until it burns out.',
         ],
       },
       {
@@ -416,22 +416,22 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       {
         heading: 'What actually helps',
         paragraphs: [
-          'Flushing the tank periodically removes sediment before it builds into a problem, and it is worth doing on a heater you intend to keep.',
-          'Treating the water addresses the cause. A softener stops the minerals reaching the heater at all, which protects the fixtures and appliances at the same time. That is the difference between managing the symptom and fixing it.',
+          'Flushing the tank periodically removes sediment before it builds into a problem, and it is worth doing on a water heater you intend to keep.',
+          'Treating the water addresses the cause. A softener stops the minerals reaching the water heater at all, which protects the fixtures and appliances at the same time. That is the difference between managing the symptom and fixing it.',
           'We test the water at the house rather than quoting a regional average, because hardness varies by supply and by property across this corridor and a number from somewhere else would be wrong for plenty of houses.',
         ],
       },
     ],
     verdict:
-      'If you are replacing a heater that failed early, price the treatment alongside it. Fitting the same tank into the same water gets the same outcome, and the second replacement costs more than the softener would have.',
+      'If you are replacing a water heater that failed early, price the treatment alongside it. Fitting the same tank into the same water gets the same outcome, and the second replacement costs more than the softener would have.',
     faqs: [
       {
         q: 'Is my water hard enough to matter?',
         a: 'Worth testing rather than assuming. We test at the house, because it varies by supply and property and a regional figure would be wrong for a lot of homes.',
       },
       {
-        q: 'Will a softener fix a heater that is already scaled?',
-        a: 'It stops it getting worse and protects everything downstream. Existing sediment in an old tank does not undo itself, so on a heater near the end the honest sequence is treatment plus replacement.',
+        q: 'Will a softener fix a water heater that is already scaled?',
+        a: 'It stops it getting worse and protects everything downstream. Existing sediment in an old tank does not undo itself, so on a water heater near the end the honest sequence is treatment plus replacement.',
       },
       {
         q: 'Does this affect tankless too?',
@@ -445,7 +445,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
   // ============================================================ WATER QUALITY
   'hard-water-in-bradley-county': {
     quickAnswer:
-      'Hard water is a real and common issue across this corridor, and its cost shows up gradually — scaled heaters, spotted fixtures, more soap, shorter appliance life. Whether treatment is worth it for your house depends on what your water actually tests at, which is why we test rather than quote an area average.',
+      'Hard water is a real and common issue across this corridor, and its cost shows up gradually — scaled water heaters, spotted fixtures, more soap, shorter appliance life. Whether treatment is worth it for your house depends on what your water actually tests at, which is why we test rather than quote an area average.',
     lede:
       'Water hardness is the mineral content — mostly calcium and magnesium — that the water picked up on its way to you. It is not a health problem. It is a plumbing and appliance problem, and it is one that accumulates quietly enough that most people never connect the symptoms to the cause.',
     sections: [
@@ -641,7 +641,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       {
         heading: 'Where it does the most damage',
         paragraphs: [
-          'The water heater, without much competition. Heat is what drives minerals out of solution, so the heater takes the brunt — sediment on the tank bottom over the burner, or scale directly on electric elements.',
+          'The water heater, without much competition. Heat is what drives minerals out of solution, so the water heater takes the brunt — sediment on the tank bottom over the burner, or scale directly on electric elements.',
           'Then anything with a moving seal. Shower cartridges, faucet valves, and toilet fill valves all rely on a clean seat, and mineral deposits are exactly what prevents that. A shower that has started dripping is often a scaled cartridge rather than a worn one.',
         ],
       },
@@ -655,7 +655,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
       {
         heading: 'Managing it versus fixing it',
         paragraphs: [
-          'Descaling fixtures and flushing the heater manages the symptoms and is worth doing. It does not change what is arriving at the house.',
+          'Descaling fixtures and flushing the water heater manages the symptoms and is worth doing. It does not change what is arriving at the house.',
           'Treatment at the main line addresses the cause and protects everything downstream at once, which is why the arithmetic usually favours it if the water tests genuinely hard. We would test first rather than assume.',
         ],
       },
@@ -1071,7 +1071,7 @@ export const GUIDE_CONTENT: Record<string, GuideContent> = {
         heading: 'What is actually different',
         paragraphs: [
           'Supply pipe is often a smaller diameter than in a site-built house, and drain runs are shallower with less fall because everything sits within a shallow floor cavity. That changes how a blockage behaves and how a fixture has to be plumbed.',
-          'Some fixtures and water heaters are specific to manufactured homes and are not interchangeable with standard units. Fitting a standard heater where a manufactured-home unit is required is a real and reasonably common mistake.',
+          'Some fixtures and water heaters are specific to manufactured homes and are not interchangeable with standard units. Fitting a standard water heater where a manufactured-home unit is required is a real and reasonably common mistake.',
         ],
       },
       {

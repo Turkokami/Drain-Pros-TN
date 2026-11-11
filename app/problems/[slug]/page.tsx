@@ -26,6 +26,7 @@ import { getServiceContent } from '@/content/service-content'
 import { CredentialStrip } from '@/components/ScopeStrip'
 import { PrimaryCTA, EmergencyCTA, BookOnlineCTA } from '@/components/CTA'
 import { GetService } from '@/components/GetService'
+import { ServiceTowns } from '@/components/ServiceTowns'
 import { Section, SectionHeading, Eyebrow, QuickAnswer, Prose, BulletList, FAQ } from '@/components/ui'
 import { buildMetadata } from '@/lib/seo'
 import {
@@ -52,7 +53,7 @@ export async function generateMetadata({
   const content = getProblemContent(slug)
   if (!problem || !content) return {}
   return buildMetadata({
-    title: `${problem.name} — What It Means and What to Do`,
+    title: problem.seoTitle ?? `${problem.name} — What It Means and What to Do`,
     description: content.quickAnswer,
     path: `/problems/${problem.slug}`,
     keywords: [
@@ -222,6 +223,8 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
             </div>
           </div>
         )}
+
+        {service && <ServiceTowns serviceSlug={service.slug} />}
       </Section>
 
       <GetService service={service?.name} />

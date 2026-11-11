@@ -52,7 +52,7 @@ export async function generateMetadata({
   const county = getCounty(slug)
   if (!county) return {}
   return buildMetadata({
-    title: `Plumbing Permits in ${county.name}, TN`,
+    title: `Plumbing Permits in ${county.name}, TN — How We Handle Them`,
     description: county.summary,
     path: `/permits/${county.slug}`,
     keywords: [

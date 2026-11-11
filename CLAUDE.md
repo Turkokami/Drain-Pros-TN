@@ -53,8 +53,14 @@ inspection. Drain Pros does not do them. Advertising those services on a
 Hamilton town page is a claim about who does the work that is not true.
 
 **63 of 380 service x location combinations are withheld.** Chattanooga,
-Ooltewah, Collegedale, Apison, Harrison, Georgetown and Birchwood publish 8
-permit-free services. Corridor towns publish all 19.
+Ooltewah, Collegedale, Apison, Harrison, Georgetown and Birchwood publish 10
+permit-free services. The other thirteen towns publish all 19.
+
+That split is a fact about the business, so copy must not round it off. Any
+sitewide claim of the form "all N towns" or "the full list everywhere" is
+false and is the same untrue claim about who does the work that turned the
+gate back on. Three such claims shipped on the homepage and were corrected on
+2026-11-11.
 
 The septic/well block is *not* part of that change and stays hard. It is a
 licensure question, not a permitting one — no office process makes it sellable.
@@ -167,6 +173,25 @@ the differentiator. "Permit-required work inside the city goes to a licensed
 partner" builds more trust than a service list that quietly omits things.
 
 No em-dash-heavy marketing voice. Plain verbs. Sentence case. A tradesman's register.
+
+### A city name never travels alone
+
+Every town name carries its own state, county, or corridor reference adjacent
+to it. Never a comma list of bare cities behind one trailing `TN` — that binds
+the state to the last name only, and the other two go out bare.
+
+All three of this site's lead towns collide with much larger places:
+Charleston with Charleston SC, Cleveland with Cleveland OH, Athens with Athens
+GA. The 2026-11-11 GSC export shows the cost: `clogged drain charleston sc`
+(42 impressions), plus Gallatin, Goodlettsville, Halls, Shelbyville and
+Freeport all pulling this site for towns it does not serve — 492 impressions
+of wrong-geography noise.
+
+Also qualify bare `heater`. It reads as HVAC, which Kevin is not licensed for,
+and the site was picking up `hvac repair calhoun tn` and `furnace repair
+harrison`. Write `water heater`. Never write "HVAC", "furnace" or "heating and
+air" anywhere, even to disclaim them — that argues for the match rather than
+against it.
 
 ---
 

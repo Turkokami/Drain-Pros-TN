@@ -31,6 +31,12 @@ export interface Guide {
   cluster: 'water-heating' | 'water-quality' | 'rural-property' | 'drains' | 'sump-pump' | 'working-with-us'
   /** Guides that compare two options render a comparison table. */
   comparison?: boolean
+  /**
+   * Optional SERP title override. The generated title is right for most pages;
+   * a handful already rank top-10 with no clicks and need a title that states
+   * the symptom and the place instead of the taxonomy. Falls back to `name`.
+   */
+  seoTitle?: string
 }
 
 export const GUIDES: Guide[] = [
@@ -77,6 +83,7 @@ export const GUIDES: Guide[] = [
   {
     slug: 'expansion-tanks',
     name: 'Do I Need an Expansion Tank?',
+    seoTitle: 'Do You Need an Expansion Tank? Tennessee Code, Explained',
     summary: 'What thermal expansion does to a closed system, and when code requires one.',
     service: 'water-heater-replacement',
     cluster: 'water-heating',

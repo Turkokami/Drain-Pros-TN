@@ -97,6 +97,22 @@ export const COUNTIES: CountyPage[] = [
   },
 ]
 
+/**
+ * The permit page for a town's county. Location pages use this to link the
+ * county that actually issues their permits.
+ *
+ * Permit pages were the most orphaned route group on the site - Bradley and
+ * McMinn had one or two inbound links each and all three sat at "Discovered -
+ * currently not indexed" in the 2026-11-11 GSC export, despite /permits
+ * ranking 14.2 and /permits/hamilton-county converting at the best CTR on the
+ * site. Every county in LOCATIONS has a page, but this still returns
+ * undefined rather than asserting, so adding a town in a new county cannot
+ * break the build.
+ */
+export function countyPageFor(county: County): CountyPage | undefined {
+  return COUNTIES.find((c) => c.county === county)
+}
+
 export function getCounty(slug: string): CountyPage | undefined {
   return COUNTIES.find((c) => c.slug === slug)
 }

@@ -19,6 +19,7 @@ import { CredentialStrip } from '@/components/ScopeStrip'
 import { PermitNote } from '@/components/PermitNote'
 import { PrimaryCTA, BookOnlineCTA } from '@/components/CTA'
 import { GetService } from '@/components/GetService'
+import { ServiceTowns } from '@/components/ServiceTowns'
 import { Section, SectionHeading, Eyebrow, QuickAnswer, Prose, FAQ } from '@/components/ui'
 import { buildMetadata } from '@/lib/seo'
 import {
@@ -45,7 +46,7 @@ export async function generateMetadata({
   const content = getGuideContent(slug)
   if (!guide || !content) return {}
   return buildMetadata({
-    title: guide.name,
+    title: guide.seoTitle ?? guide.name,
     description: content.quickAnswer,
     path: `/guides/${guide.slug}`,
     keywords: [
@@ -206,6 +207,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             </div>
           </div>
         )}
+
+        {service && <ServiceTowns serviceSlug={service.slug} label="Where we do this work" />}
       </Section>
 
       <GetService service={service?.name} />

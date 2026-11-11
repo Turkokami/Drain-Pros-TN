@@ -148,7 +148,7 @@ export const SERVICES: Service[] = [
   {
     slug: 'water-softener-installation',
     name: 'Water Softener Installation',
-    summary: 'Softening hard water to protect heaters, fixtures, and appliances.',
+    summary: 'Softening hard water to protect water heaters, fixtures, and appliances.',
     pillar: 'water-quality',
     licenseScope: 'in',
     requiresPermit: true,
@@ -172,7 +172,7 @@ export const SERVICES: Service[] = [
   {
     slug: 'well-property-plumbing',
     name: 'Plumbing for Well-Water Homes',
-    summary: 'Water lines, fixtures, heaters, and treatment on private-well properties.',
+    summary: 'Water lines, fixtures, water heaters, and treatment on private-well properties.',
     pillar: 'well-septic-property',
     licenseScope: 'in',
     requiresPermit: false,
@@ -269,7 +269,7 @@ export const SERVICES: Service[] = [
   {
     slug: 'gas-line-services',
     name: 'Gas Line Installation & Repair',
-    summary: 'Running and repairing gas lines for appliances and heaters.',
+    summary: 'Running and repairing gas lines for appliances and water heaters.',
     pillar: 'core',
     licenseScope: 'in',
     requiresPermit: true,

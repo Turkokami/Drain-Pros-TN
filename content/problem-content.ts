@@ -49,9 +49,9 @@ export const PROBLEM_CONTENT: Record<string, ProblemContent> = {
   // =========================================================== WATER HEATER
   'no-hot-water': {
     quickAnswer:
-      'Not an emergency unless there is also water on the floor. On a gas heater it is usually the pilot, thermocouple, or gas control; on electric it is usually a failed heating element or thermostat. Both are repairs, and most get done the same visit.',
+      'Not an emergency unless there is also water on the floor. On a gas water heater it is usually the pilot, thermocouple, or gas control; on electric it is usually a failed heating element or thermostat. Both are repairs, and most get done the same visit.',
     lede:
-      'No hot water is the most common water heater call there is, and it is worth knowing that it usually is not the whole heater. A tank that has stopped making hot water often has one failed part in it, and swapping that part costs a fraction of a replacement.',
+      'No hot water is the most common water heater call there is, and it is worth knowing that it usually is not the whole water heater. A tank that has stopped making hot water often has one failed part in it, and swapping that part costs a fraction of a replacement.',
     symptoms: [
       'Nothing hot at any tap in the house',
       'Hot water that runs out in a minute or two when it used to last',
@@ -59,8 +59,8 @@ export const PROBLEM_CONTENT: Record<string, ProblemContent> = {
       'Hot at one tap and not another, which usually points at the fixture instead',
     ],
     causes: [
-      'Gas heater: pilot out, a failed thermocouple, or a gas control valve that has quit',
-      'Electric heater: a burned-out upper or lower heating element, or a failed thermostat',
+      'Gas water heater: pilot out, a failed thermocouple, or a gas control valve that has quit',
+      'Electric water heater: a burned-out upper or lower heating element, or a failed thermostat',
       'A tripped breaker or a reset button that has popped on the unit itself',
       'Sediment built up over the burner, common on hard water, insulating the tank from its own flame',
       'A tank genuinely at the end of its life, usually past ten or twelve years',
@@ -92,14 +92,14 @@ export const PROBLEM_CONTENT: Record<string, ProblemContent> = {
 
   'water-heater-leaking': {
     quickAnswer:
-      'Treat this as urgent. If water is coming from the tank body itself, the tank has failed and it will not get better; shut off the water supply to the heater and call. If it is dripping from a fitting or the relief valve, it may be a repair.',
+      'Treat this as urgent. If water is coming from the tank body itself, the tank has failed and it will not get better; shut off the water supply to the water heater and call. If it is dripping from a fitting or the relief valve, it may be a repair.',
     lede:
       'A leaking water heater is one of the few plumbing problems that reliably gets worse rather than staying put. Forty or fifty gallons sitting on a floor or a stand is a lot of water, and a tank that has rusted through does not reseal itself.',
     symptoms: [
       'Water pooling on the floor under or around the tank',
-      'Rust-coloured staining down the side of the heater or on the stand',
+      'Rust-coloured staining down the side of the water heater or on the stand',
       'A steady drip from the pipe running down the side, which is the relief valve discharge',
-      'Damp or buckling flooring near the heater closet',
+      'Damp or buckling flooring near the water heater closet',
     ],
     causes: [
       'The tank itself corroded through, which is a replacement, not a repair',
@@ -109,7 +109,7 @@ export const PROBLEM_CONTENT: Record<string, ProblemContent> = {
       'Thermal expansion with no expansion tank, pushing the relief valve open repeatedly',
     ],
     rightNow: [
-      'Shut off the cold water supply valve on top of the heater, turning it clockwise.',
+      'Shut off the cold water supply valve on top of the water heater, turning it clockwise.',
       'On a gas unit, turn the gas control to "off". On electric, switch off the breaker.',
       'Do not try to drain a hot tank yourself — it is scalding and it is heavy.',
       'Move anything that matters off the floor nearby, then call.',
@@ -534,20 +534,20 @@ export const PROBLEM_CONTENT: Record<string, ProblemContent> = {
       'Weak flow at one tap while the rest of the house is fine',
       'Pressure across the whole house that has dropped gradually over years',
       'Pressure that falls off sharply when a second fixture is opened',
-      'Good cold pressure and weak hot, which usually points at the heater',
+      'Good cold pressure and weak hot, which usually points at the water heater',
     ],
     causes: [
       'A clogged aerator or cartridge at a single fixture, which is the easy one',
       'Corroded galvanized supply line narrowing internally, common in older housing stock',
       'A failed pressure regulator where the house has one',
-      'Scale from hard water building up in fixtures and the heater',
+      'Scale from hard water building up in fixtures and the water heater',
       'A partly closed valve, sometimes left that way after previous work',
       'A leak in the service line between the meter and the house',
     ],
     faqs: [
       {
         q: 'It is only the hot side. Why?',
-        a: 'Usually sediment or scale in the water heater, or a failing shutoff on the heater itself. That narrows it down a lot.',
+        a: 'Usually sediment or scale in the water heater, or a failing shutoff on the water heater itself. That narrows it down a lot.',
       },
       {
         q: 'Could low pressure mean a leak?',
@@ -555,7 +555,7 @@ export const PROBLEM_CONTENT: Record<string, ProblemContent> = {
       },
       {
         q: 'Is hard water causing this?',
-        a: 'Across Bradley and McMinn County, often partly yes. Scale accumulates in fixtures, valves, and the heater. Treating the cause is usually cheaper than replacing what it keeps damaging.',
+        a: 'Across Bradley and McMinn County, often partly yes. Scale accumulates in fixtures, valves, and the water heater. Treating the cause is usually cheaper than replacing what it keeps damaging.',
       },
       PRICING_FAQ,
       LICENSED_FAQ,
@@ -570,7 +570,7 @@ export const PROBLEM_CONTENT: Record<string, ProblemContent> = {
     symptoms: [
       'Rusty or brown water at first draw, clearing after a minute',
       'Discoloured water all the time, at every tap',
-      'Only the hot side discoloured, which points at the heater',
+      'Only the hot side discoloured, which points at the water heater',
       'Staining on fixtures, tubs, and laundry',
       'A metallic taste alongside the colour',
     ],
@@ -665,7 +665,7 @@ export const PROBLEM_CONTENT: Record<string, ProblemContent> = {
       },
       {
         q: 'Can you do it in the same visit as something else?',
-        a: 'Yes, and that is usually the sensible way to handle it. If we are already out for a drain or a heater, small fixture work while we are there costs you a lot less than a separate trip.',
+        a: 'Yes, and that is usually the sensible way to handle it. If we are already out for a drain or a water heater, small fixture work while we are there costs you a lot less than a separate trip.',
       },
       PRICING_FAQ,
       LICENSED_FAQ,
