@@ -54,7 +54,7 @@ export async function generateMetadata({
   // enough signal against a city 400 miles away with vastly more authority.
   // The county name is unambiguous and is already in the registry.
   return buildMetadata({
-    title: `Plumber in ${location.name}, TN — ${location.county} County`,
+    title: `Plumber & Drain Cleaning in ${location.name}, TN`,
     description: content.quickAnswer,
     path: `/service-areas/${location.slug}`,
     keywords: [

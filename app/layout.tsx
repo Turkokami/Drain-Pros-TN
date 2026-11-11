@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     template: `%s | ${name}`,
   },
   description:
-    'Licensed Tennessee plumber serving Charleston, Cleveland, Athens, and the US-11 corridor, ' +
-    'plus greater Chattanooga. Drain cleaning, emergency repair, water heaters. TN license #5045.',
+    'Licensed plumber in Charleston, TN and Bradley County. Drain cleaning, emergency ' +
+    'repair, water heaters. TN license #5045.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

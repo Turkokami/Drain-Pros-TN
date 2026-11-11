@@ -65,6 +65,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   if (!guide || !content) notFound()
 
   const service = getService(guide.service)
+  const relatedGuides = (guide.relatedGuides ?? [])
+    .map((g) => getGuide(g))
+    .filter((g): g is NonNullable<typeof g> => Boolean(g))
+  const relatedServices = (guide.relatedServices ?? [])
+    .map((s) => getService(s))
+    .filter((s): s is NonNullable<typeof s> => Boolean(s))
   const path = `/guides/${guide.slug}`
   const siblings = guidesByCluster(guide.cluster).filter((g) => g.slug !== guide.slug)
 
@@ -202,6 +208,40 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                   className="inline-flex items-center border border-ink/20 px-4 py-2 font-body text-sm text-ink hover:border-copper hover:text-copper"
                 >
                   {g.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {relatedGuides.length > 0 && (
+          <div className="mt-10 border-t border-ink/10 pt-8">
+            <p className="eyebrow text-copper">Worth reading</p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              {relatedGuides.map((g) => (
+                <a
+                  key={g.slug}
+                  href={`/guides/${g.slug}`}
+                  className="inline-flex items-center border border-ink/20 px-4 py-2 font-body text-sm text-ink hover:border-copper hover:text-copper"
+                >
+                  {g.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {relatedServices.length > 0 && (
+          <div className="mt-10 border-t border-ink/10 pt-8">
+            <p className="eyebrow text-copper">Related services</p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              {relatedServices.map((s) => (
+                <a
+                  key={s.slug}
+                  href={`/services/${s.slug}`}
+                  className="inline-flex items-center border border-ink/20 px-4 py-2 font-body text-sm text-ink hover:border-copper hover:text-copper"
+                >
+                  {s.name}
                 </a>
               ))}
             </div>

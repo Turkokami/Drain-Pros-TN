@@ -42,6 +42,33 @@ const CLEVELAND: LocationContent = {
   ],
   localSections: [
     {
+      heading: 'Drain cleaning in Cleveland',
+      paragraphs: [
+        'Most Cleveland drain calls are one of three things: a kitchen line closing up with grease, '
+          + 'a main line catching on roots at a lateral joint, or a fixture branch that has never '
+          + 'drained properly since the house was worked on. They are not the same job and they do '
+          + 'not get the same tool.',
+        'A cable clears a blockage. Jetting scours the pipe wall back to full bore, which is what a '
+          + 'grease line or a root-filled lateral actually needs if you do not want it back in six '
+          + 'months. We camera first on anything recurring, so the choice is made on what the pipe '
+          + 'looks like rather than on what is quickest. That is the whole difference between '
+          + 'hydro jetting and cabling.',
+      ],
+    },
+    {
+      heading: 'Emergency plumber in Cleveland',
+      paragraphs: [
+        'Cleveland is about fifteen minutes from our base in Charleston, which is why after-hours '
+          + 'calls here are ones we can actually take rather than book for the morning. A burst '
+          + 'supply line, a sewer backing up into a tub, or a water heater that has let go are all '
+          + 'reasons to call rather than fill in a form.',
+        'The first thing worth knowing is where your main shutoff is, because the minutes before we '
+          + 'arrive are the ones that decide how much of the floor comes up afterwards. If you cannot '
+          + 'find it or it will not turn, say so on the phone and we will talk you through the next '
+          + 'best isolation point.',
+      ],
+    },
+    {
       heading: "Cleveland's older core and its newer subdivisions",
       paragraphs: [
         'The mid-century neighborhoods near the center of Cleveland are where we see the classic ' +
@@ -910,6 +937,20 @@ const BENTON: LocationContent = {
     'The full service list runs across Benton, from a drain that will not clear to a water heater replacement. Where a job needs a permit, our office pulls it with Polk County and books the inspection.',
   ],
   localSections: [
+    {
+      heading: 'Benton plumbing services',
+      paragraphs: [
+        'The full list runs in Benton: drain cleaning and sewer camera work, emergency and leak '
+          + 'repair, water heater repair and replacement, repipes, fixtures, water service lines, '
+          + 'and water treatment. Polk County accepts a permit application from our license, so '
+          + 'where a job needs one our office files it and books the inspection rather than '
+          + 'handing it back to you.',
+        'Being twenty minutes out rather than forty matters most on the jobs you did not plan. A '
+          + 'line backing up on a Sunday or a water heater letting go in a crawlspace is a '
+          + 'different conversation when the nearest licensed plumber is already in the county '
+          + 'next door.',
+      ],
+    },
     {
       heading: 'No plumber anchored in Polk County',
       paragraphs: [

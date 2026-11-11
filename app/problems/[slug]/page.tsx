@@ -22,6 +22,7 @@ import { getProblemContent } from '@/content/problem-content'
 import { photoForProblem } from '@/lib/gallery'
 import { BeforeAfterPair } from '@/components/BeforeAfter'
 import { getService } from '@/config/services'
+import { getGuide } from '@/config/guides'
 import { getServiceContent } from '@/content/service-content'
 import { CredentialStrip } from '@/components/ScopeStrip'
 import { PrimaryCTA, EmergencyCTA, BookOnlineCTA } from '@/components/CTA'
@@ -72,6 +73,12 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
   if (!problem || !content) notFound()
 
   const service = getService(problem.service)
+  const relatedServices = (problem.relatedServices ?? [])
+    .map((s) => getService(s))
+    .filter((s): s is NonNullable<typeof s> => Boolean(s))
+  const relatedGuides = (problem.relatedGuides ?? [])
+    .map((g) => getGuide(g))
+    .filter((g): g is NonNullable<typeof g> => Boolean(g))
   const serviceContent = service ? getServiceContent(service.slug) : null
   const path = `/problems/${problem.slug}`
   const siblings = problemsByGroup(problem.group).filter((p) => p.slug !== problem.slug)
@@ -218,6 +225,40 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
                   className="inline-flex items-center border border-ink/20 px-4 py-2 font-body text-sm text-ink hover:border-copper hover:text-copper"
                 >
                   {p.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {relatedServices.length > 0 && (
+          <div className="mt-10 border-t border-ink/10 pt-8">
+            <p className="eyebrow text-copper">Related services</p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              {relatedServices.map((s) => (
+                <a
+                  key={s.slug}
+                  href={`/services/${s.slug}`}
+                  className="inline-flex items-center border border-ink/20 px-4 py-2 font-body text-sm text-ink hover:border-copper hover:text-copper"
+                >
+                  {s.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {relatedGuides.length > 0 && (
+          <div className="mt-10 border-t border-ink/10 pt-8">
+            <p className="eyebrow text-copper">Worth reading</p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              {relatedGuides.map((g) => (
+                <a
+                  key={g.slug}
+                  href={`/guides/${g.slug}`}
+                  className="inline-flex items-center border border-ink/20 px-4 py-2 font-body text-sm text-ink hover:border-copper hover:text-copper"
+                >
+                  {g.name}
                 </a>
               ))}
             </div>

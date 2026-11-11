@@ -58,7 +58,7 @@ const DESCRIPTION =
   'across Charleston, Cleveland, Athens, the US-11 corridor, and greater Chattanooga. TN license #5045.'
 
 export const metadata = buildMetadata({
-  title: 'Plumbing Services — Charleston & the Bradley–McMinn Corridor',
+  title: 'Plumbing Services in Cleveland & Charleston, TN',
   description: DESCRIPTION,
   path: '/services',
   keywords: [

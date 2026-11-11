@@ -177,6 +177,23 @@ export default function HomePage() {
                   A licensed plumber your corridor actually has.
                 </p>
                 <p className="mt-2 font-mono text-spec uppercase text-mist">{TAGLINE}</p>
+                <p className="mt-4 text-paper/80">
+                  Biggest market we cover:{' '}
+                  <a
+                    href="/service-areas/cleveland-tn"
+                    className="text-verdigris underline underline-offset-4"
+                  >
+                    plumber in Cleveland, TN
+                  </a>
+                  . Home base:{' '}
+                  <a
+                    href="/service-areas/charleston-tn"
+                    className="text-verdigris underline underline-offset-4"
+                  >
+                    Charleston, TN
+                  </a>
+                  .
+                </p>
                 <p className="mt-4 max-w-prose text-lead text-paper/85 speakable">{HERO_ANSWER}</p>
               </div>
               <div className="flex flex-col gap-3 reveal reveal-2">

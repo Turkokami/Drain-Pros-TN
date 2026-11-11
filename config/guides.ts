@@ -37,6 +37,16 @@ export interface Guide {
    * the symptom and the place instead of the taxonomy. Falls back to `name`.
    */
   seoTitle?: string
+  /**
+   * Services beyond this page's bound one. The brief asks every sump page
+   * to link both sump services and every drain problem to link both drain
+   * cleaning and camera inspection; each page only ever linked its own
+   * parent. Service pages enforce their own scope, so this carries no
+   * town claim and needs no guard check.
+   */
+  relatedServices?: string[]
+  /** Guides outside this one's cluster. */
+  relatedGuides?: string[]
 }
 
 export const GUIDES: Guide[] = [
@@ -167,6 +177,7 @@ export const GUIDES: Guide[] = [
   // sump content all assumes a basement.
   {
     slug: 'sump-pump-sizing',
+    relatedServices: ['sump-pump-repair'],
     seoTitle: 'What Size Sump Pump Do I Need?',
     name: 'What Size Sump Pump Do I Need?',
     summary: 'Sizing to how fast the pit actually fills, not to the horsepower on the old one.',
@@ -175,6 +186,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'pedestal-vs-submersible',
+    relatedServices: ['sump-pump-repair'],
     seoTitle: 'Pedestal vs. Submersible Sump Pump',
     name: 'Pedestal or Submersible Sump Pump?',
     summary: 'What each is good at, what each costs you later, and which pit suits which.',
@@ -184,6 +196,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'sump-pump-battery-backup',
+    relatedGuides: ['what-we-refer-out'],
+    relatedServices: ['sump-pump-repair'],
     name: 'Do I Need a Battery Backup Sump Pump?',
     summary: 'The storm that floods the house is often the storm that takes the power out.',
     service: 'sump-pump-replacement',
@@ -191,6 +205,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'sump-pump-lifespan',
+    relatedServices: ['sump-pump-replacement'],
     seoTitle: 'How Long Should a Sump Pump Last?',
     name: 'How Long Should a Sump Pump Last?',
     summary: 'What actually wears one out, and the cheap test that tells you where yours is.',
@@ -199,6 +214,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'crawlspace-water-east-tennessee',
+    relatedServices: ['sump-pump-repair'],
     name: 'Water in a Crawlspace in East Tennessee',
     summary: 'Why it happens on clay soil here, and the order to fix it in.',
     service: 'sump-pump-replacement',

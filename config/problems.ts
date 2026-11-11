@@ -38,6 +38,21 @@ export interface Problem {
    * the symptom and the place instead of the taxonomy. Falls back to `name`.
    */
   seoTitle?: string
+  /**
+   * Guides from OUTSIDE this problem's bound service. root-intrusion is
+   * bound to camera-inspection, so drain-cleaning's guides never reached
+   * it, and it is the second-largest impression page on the site sitting
+   * at position 78. Slugs are validated by the linter's registry check.
+   */
+  relatedGuides?: string[]
+  /**
+   * Services beyond this page's bound one. The brief asks every sump page
+   * to link both sump services and every drain problem to link both drain
+   * cleaning and camera inspection; each page only ever linked its own
+   * parent. Service pages enforce their own scope, so this carries no
+   * town claim and needs no guard check.
+   */
+  relatedServices?: string[]
 }
 
 export const PROBLEMS: Problem[] = [
@@ -71,6 +86,7 @@ export const PROBLEMS: Problem[] = [
   // --- Drain and sewer ----------------------------------------------------
   {
     slug: 'sewer-backup',
+    relatedServices: ['camera-inspection'],
     seoTitle: 'Sewer Backup in Your Home: What to Do First',
     name: 'Sewage Backing Up',
     summary: 'Waste coming up through a floor drain, tub, or toilet.',
@@ -80,6 +96,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'sewage-smell',
+    relatedServices: ['camera-inspection'],
     seoTitle: 'Sewer Smell or Rotten Egg Smell in the House? Causes',
     name: 'Sewage Smell in the House',
     summary: 'A sewer or rotten-egg smell that keeps coming back.',
@@ -89,6 +106,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'main-line-clog',
+    relatedServices: ['camera-inspection'],
     seoTitle: 'Main Sewer Line Clog: Signs & How It\'s Cleared',
     name: 'Main Line Clog',
     summary: 'More than one drain backing up at the same time.',
@@ -98,6 +116,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'recurring-backups',
+    relatedServices: ['drain-cleaning'],
     seoTitle: 'Drain Keeps Backing Up? Causes & Fixes',
     name: 'A Drain That Keeps Backing Up',
     summary: 'Cleared before, and it came back in the same spot.',
@@ -115,6 +134,8 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'root-intrusion',
+    relatedServices: ['drain-cleaning'],
+    relatedGuides: ['hydro-jetting-vs-cabling'],
     seoTitle: 'Tree Roots in Sewer Line: Signs, Camera Check & Fixes',
     name: 'Tree Roots in the Sewer Line',
     summary: 'Roots finding a joint or crack and filling the pipe.',
@@ -128,6 +149,8 @@ export const PROBLEMS: Problem[] = [
   // is stated on every one of these: we do not wire the circuit.
   {
     slug: 'sump-pump-not-working',
+    relatedGuides: ['what-we-refer-out'],
+    relatedServices: ['sump-pump-replacement'],
     seoTitle: 'Sump Pump Not Working? What to Check First',
     name: 'Sump Pump Not Turning On',
     summary: 'The pit is filling and the pump is doing nothing about it.',
@@ -137,6 +160,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'sump-pump-running-constantly',
+    relatedServices: ['sump-pump-replacement'],
     name: 'Sump Pump Runs and Never Shuts Off',
     summary: 'Running non-stop, or cycling every couple of minutes in dry weather.',
     service: 'sump-pump-repair',
@@ -145,6 +169,8 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'sump-pump-noise',
+    relatedGuides: ['what-we-refer-out'],
+    relatedServices: ['sump-pump-replacement'],
     seoTitle: 'Noisy Sump Pump: What the Sounds Mean',
     name: 'Sump Pump Making a Noise',
     summary: 'Grinding, rattling, or a bang from the pit every time it shuts off.',
@@ -154,6 +180,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'sump-discharge-line-blocked',
+    relatedServices: ['sump-pump-replacement'],
     seoTitle: 'Sump Pump Discharge Line Blocked or Frozen',
     name: 'Sump Discharge Line Blocked or Frozen',
     summary: 'The pump runs, the pit does not empty, and water comes back down the pipe.',
@@ -163,6 +190,7 @@ export const PROBLEMS: Problem[] = [
   },
   {
     slug: 'water-in-crawlspace',
+    relatedServices: ['sump-pump-repair'],
     name: 'Standing Water in the Crawlspace',
     summary: 'Water under the house after rain, on a property that may never have had a pump.',
     service: 'sump-pump-replacement',
