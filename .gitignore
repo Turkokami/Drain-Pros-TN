@@ -3,3 +3,9 @@ node_modules
 .env*.local
 .vercel
 *.tsbuildinfo
+
+# AI files generated at build time by scripts/ai-files.mjs
+/public/llms.txt
+/public/llms-full.txt
+/public/**/*.md
+!/public/**/README.md

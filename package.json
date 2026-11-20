@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run lint:scope:prod && next build",
+    "build": "npm run lint:scope:prod && next build && node scripts/ai-files.mjs --mode next --out public",
     "start": "next start",
     "lint:scope": "tsx scripts/lint-scope.ts",
     "lint:scope:prod": "BUILD_TARGET=production tsx scripts/lint-scope.ts",
