@@ -4,6 +4,7 @@ import './globals.css'
 import { SiteHeader, SiteFooter, StickyCallBar } from '@/components/SiteChrome'
 import { businessName } from '@/lib/site'
 import { origin } from '@/lib/schema/graph'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const archivo = Archivo({ subsets: ['latin'], variable: '--font-archivo', display: 'swap' })
 const source = Source_Sans_3({ subsets: ['latin'], variable: '--font-source', display: 'swap' })
@@ -40,6 +41,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <SiteFooter />
         <StickyCallBar />
+        {/* Vercel Speed Insights (free tier): first-party page-speed readings, cookieless. */}
+        <SpeedInsights />
       </body>
     </html>
   )
